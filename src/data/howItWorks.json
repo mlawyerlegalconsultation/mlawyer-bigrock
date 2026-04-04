@@ -1,0 +1,103 @@
+{
+    "hero": {
+        "badge": "HOW IT WORKS",
+        "titlePrefix": "Your Legal Journey, ",
+        "titleSuffix": "Simplified.",
+        "description": "From finding the right advocate to your final consultation, we've streamlined the process to be fast, secure, and stress-free."
+    },
+    "stepByStep": {
+        "subtitle": "The Process",
+        "title": "5 Simple Steps to Legal Help",
+        "steps": [
+            {
+                "id": 1,
+                "title": "Search & Filter",
+                "description": "Browse through our extensive list of verified advocates using filters.",
+                "icon": "FaSearch"
+            },
+            {
+                "id": 2,
+                "title": "Book a Consultation",
+                "description": "Select a time slot that works for you. Our real-time scheduling system makes booking instant and easy.",
+                "icon": "FaCalendarAlt"
+            },
+            {
+                "id": 3,
+                "title": "Make Payment",
+                "description": "Complete your secure payment to confirm your booking. We support multiple payment methods for your convenience.",
+                "icon": "FaCreditCard"
+            },
+            {
+                "id": 4,
+                "title": "Connect Securely",
+                "description": "Join your video or audio consultation directly through our secure, encrypted platform.",
+                "icon": "FaVideo"
+            },
+            {
+                "id": 5,
+                "title": "Rate & Review",
+                "description": "After your consultation, share your feedback to help others and improve our community.",
+                "icon": "FaStar"
+            }
+        ]
+    },
+    "userTypes": {
+        "clients": {
+            "title": "For Clients",
+            "items": [
+                "Access to verified, top-rated advocates.",
+                "Transparent pricing with no hidden fees.",
+                "Secure payments and data privacy."
+            ],
+            "buttonText": "Find an Advocate",
+            "buttonLink": "/customer"
+        },
+        "lawyers": {
+            "title": "For Advocates",
+            "items": [
+                "Expand your practice tailored to your schedule.",
+                "Guaranteed payments for every consultation.",
+                "Powerful tools to manage clients and cases."
+            ],
+            "buttonText": "Join as Advocate",
+            "buttonLink": "/lawyer"
+        }
+    },
+    "trustSafety": {
+        "subtitle": "Safety First",
+        "title": "Why You Can Trust Us",
+        "features": [
+            {
+                "icon": "FaShieldAlt",
+                "title": "Verified Advocates",
+                "description": "Every advocate on our platform undergoes a rigorous document verification process to ensure legitimacy."
+            },
+            {
+                "icon": "FaLock",
+                "title": "Bank-Grade Security",
+                "description": "Your data and consultations are encrypted with 256-bit SSL technology. Privacy is our top priority."
+            },
+            {
+                "icon": "FaHeadset",
+                "title": "24/7 Support",
+                "description": "Our dedicated support team is available round the clock to assist you with any queries or issues."
+            }
+        ]
+    },
+    "cta": {
+        "title": "Ready to Solve Your Legal Matters?",
+        "description": "Join thousands of verified users who trust MLawyer for quick, reliable, and secure legal advice.",
+        "buttons": [
+            {
+                "text": "Find an Advocate",
+                "link": "/customer",
+                "type": "primary"
+            },
+            {
+                "text": "I'm an Advocate",
+                "link": "/lawyer",
+                "type": "secondary"
+            }
+        ]
+    }
+}

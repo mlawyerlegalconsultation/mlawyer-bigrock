@@ -1,0 +1,225 @@
+{
+    "hero": {
+        "badge": "For Legal Professionals",
+        "titlePrefix": "Practice Law on",
+        "titleSuffix": "Your Terms",
+        "subtitle": "Join 2,000+ advocates earning flexible income while helping clients nationwide. No office. No overhead. Just your expertise.",
+        "ctaText": "Start Your Application"
+    },
+    "whyChoose": {
+        "title": "Why Advocates Choose MLawyer",
+        "subtitle": "Boost your career with a platform designed for your growth and flexibility.",
+        "features": [
+            {
+                "icon": "FaMoneyBillWave",
+                "title": "Earn More, Work Smart",
+                "items": [
+                    "Accept cases during free hours",
+                    "Average advocates earn ₹30k-₹80k/mo (extra)",
+                    "Get paid within 24 hours"
+                ]
+            },
+            {
+                "icon": "FaClock",
+                "title": "Complete Flexibility",
+                "items": [
+                    "Work from home, office, or anywhere",
+                    "Set your own availability",
+                    "No minimum hours required"
+                ]
+            },
+            {
+                "icon": "FaChartLine",
+                "title": "Grow Your Practice",
+                "items": [
+                    "Reach clients beyond your city",
+                    "Build your online reputation",
+                    "Get client reviews and ratings",
+                    "Establish yourself as an expert"
+                ]
+            },
+            {
+                "icon": "FaTools",
+                "title": "Professional Tools",
+                "items": [
+                    "Integrated calendar management",
+                    "Client communication platform",
+                    "Automated invoicing"
+                ]
+            }
+        ]
+    },
+    "howItWorks": {
+        "title": "How It Works for Lawyers",
+        "subtitle": "A simple, streamlined process to get you started.",
+        "steps": [
+            {
+                "number": "1",
+                "title": "Quick Registration",
+                "desc": "Sign up in minutes",
+                "img": "lawyer.png",
+                "items": [
+                    "Basic info",
+                    "Verify your identity",
+                    "Cell no. & email authentication"
+                ]
+            },
+            {
+                "number": "2",
+                "title": "Profile Creation",
+                "desc": "Build your brand",
+                "img": "heroimage.png",
+                "items": [
+                    "Create Bio",
+                    "Choose specialization",
+                    "Set your own availability"
+                ]
+            },
+            {
+                "number": "3",
+                "title": "Verification",
+                "desc": "24-48 hours",
+                "img": "how_it_works_hero.png",
+                "items": [
+                    "Our team will do the verification",
+                    "Processing background checks",
+                    "You will receive the approval alerts"
+                ]
+            },
+            {
+                "number": "4",
+                "title": "Go Live",
+                "desc": "Start accepting cases",
+                "img": "lawyer_hero_new.png",
+                "items": [
+                    "Update your profile",
+                    "Access your Dashboard",
+                    "Accept Terms & Conditions"
+                ]
+            },
+            {
+                "number": "5",
+                "title": "Consult & Earn",
+                "desc": "Get paid instantly",
+                "img": "customer_pay.svg",
+                "items": [
+                    "Provide legal consultations",
+                    "Build your reputation",
+                    "Earn money within 24 hours"
+                ]
+            }
+        ]
+    },
+    "requirements": {
+        "eligibility": {
+            "title": "Eligibility Criteria",
+            "items": [
+                "Valid Bar Council registration",
+                "Active practicing certificate",
+                "Minimum 0-1 year of experience (freshers welcome!)",
+                "Good standing with bar council",
+                "Professional indemnity insurance (recommended)"
+            ]
+        },
+        "documents": {
+            "title": "Documents Needed",
+            "items": [
+                "Bar Council enrollment certificate",
+                "Practicing certificate",
+                "Government-issued ID proof",
+                "Recent photograph",
+                "Educational certificates"
+            ]
+        }
+    },
+    "practiceAreas": {
+        "title": "Practice Areas We Need",
+        "subtitle": "We welcome lawyers from all practice areas, with high demand for:",
+        "areas": [
+            {
+                "name": "Family & Matrimonial",
+                "highDemand": true
+            },
+            {
+                "name": "Property & Real Estate",
+                "highDemand": true
+            },
+            {
+                "name": "Criminal Law",
+                "highDemand": false
+            },
+            {
+                "name": "Corporate & Business",
+                "highDemand": false
+            },
+            {
+                "name": "Consumer Protection",
+                "highDemand": false
+            },
+            {
+                "name": "Labour & Employment",
+                "highDemand": false
+            },
+            {
+                "name": "Cyber Law",
+                "highDemand": true
+            },
+            {
+                "name": "Tax Law",
+                "highDemand": false
+            },
+            {
+                "name": "Intellectual Property",
+                "highDemand": false
+            },
+            {
+                "name": "Immigration Law",
+                "highDemand": false
+            }
+        ]
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about joining MLawyer",
+        "questions": [
+            {
+                "q": "Is there a fee to join MLawyer?",
+                "a": "No, joining MLawyer is completely free. We only charge a small platform fee when you successfully complete a consultation and receive payment from a client."
+            },
+            {
+                "q": "How do I get paid?",
+                "a": "Payments are processed instantly after a consultation is completed. We transfer the earnings directly to your registered bank account within 24 hours."
+            },
+            {
+                "q": "Can I choose my own working hours?",
+                "a": "Absolutely! MLawyer is designed for flexibility. You can set your status to 'Available' or 'Offline' whenever you want, and scheduled consultations are based on the slots you open."
+            },
+            {
+                "q": "How does the verification process work?",
+                "a": "We require a valid Bar Council ID and a practicing certificate. Once uploaded, our team verifies these documents within 24 hours to ensure quality and trust on our platform."
+            },
+            {
+                "q": "Can I decline a case or consultation request?",
+                "a": "Yes, you have full control over which cases you accept. You can review the client's brief query before accepting a consultation request."
+            },
+            {
+                "q": "What kind of support does MLawyer provide?",
+                "a": "We provide technical support, automated invoicing, and a dedicated partner success team to help you optimize your profile and grow your practice."
+            }
+        ]
+    },
+    "cta": {
+        "title": "Ready to Transform Your Practice?",
+        "subtitle": "Join MLawyer Today and start connecting with clients who need your expertise.",
+        "buttons": {
+            "google": {
+                "subText": "Get it on",
+                "mainText": "Google Play"
+            },
+            "apple": {
+                "subText": "Download on the",
+                "mainText": "App Store"
+            }
+        }
+    }
+}

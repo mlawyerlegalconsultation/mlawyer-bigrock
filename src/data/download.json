@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "badge": "Download Now",
+    "title": "Get MLawyer on Your Device",
+    "subtitle": "Access legal services anytime, anywhere. Download our app for customers or lawyers and experience the future of legal assistance."
+  },
+  "customer": {
+    "title": "For Customers",
+    "description": "Find trusted lawyers, book consultations, and manage your legal matters—all from your phone.",
+    "features": [
+      "Browse verified lawyers",
+      "Instant chat & video calls",
+      "Secure document sharing",
+      "Track your cases"
+    ],
+    "playStore": "https://play.google.com/store",
+    "appStore": "https://apps.apple.com"
+  },
+  "lawyer": {
+    "title": "For Lawyers",
+    "description": "Grow your practice, connect with clients, and manage appointments efficiently with our lawyer app.",
+    "features": [
+      "Receive client requests",
+      "Manage appointments",
+      "Secure payments",
+      "Build your reputation"
+    ],
+    "playStore": "https://play.google.com/store",
+    "appStore": "https://apps.apple.com"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Legal Experience?",
+    "subtitle": "Join thousands of users who trust MLawyer for their legal needs."
+  }
+}

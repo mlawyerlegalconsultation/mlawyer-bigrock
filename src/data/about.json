@@ -1,0 +1,161 @@
+{
+  "hero": {
+    "badge": "About MLawyer",
+    "title": "India's First App for Lawyer Consultation",
+    "subtitle": "Connecting you with the best legal minds across the country. We're on a mission to make legal help accessible, affordable, and hassle-free for every Indian."
+  },
+  "features": {
+    "title": "Why We Stand Out",
+    "subtitle": "Discover the advantages that make MLawyer the preferred choice for legal consultations",
+    "items": [
+      {
+        "title": "Face to Face Consultation",
+        "desc": "Connect personally with experts through high-quality video calls from anywhere, anytime.",
+        "icon": "PiVideoCamera"
+      },
+      {
+        "title": "Verified Advocates",
+        "desc": "Access a network of 5000+ thoroughly vetted and experienced legal professionals across India.",
+        "icon": "PiSealCheck"
+      },
+      {
+        "title": "Affordable Pricing",
+        "desc": "Get top-tier legal advice starting at just ₹550. Transparent pricing with no hidden fees.",
+        "icon": "PiCurrencyInr"
+      },
+      {
+        "title": "No Need to Travel",
+        "desc": "Save time and effort by consulting from the comfort of your home or office.",
+        "icon": "PiHouse"
+      },
+      {
+        "title": "Secure & Confidential",
+        "desc": "Your privacy is our priority. All consultations and data are protected securely.",
+        "icon": "PiShieldCheck"
+      },
+      {
+        "title": "24/7 Availability",
+        "desc": "Book consultations anytime. Our platform is available round the clock for your convenience.",
+        "icon": "PiClock"
+      }
+    ]
+  },
+  "stats": {
+    "title": "Our Impact in Numbers",
+    "items": [
+      {
+        "label": "Verified Advocates",
+        "value": "5,000+"
+      },
+      {
+        "label": "Happy Clients",
+        "value": "50,000+"
+      },
+      {
+        "label": "Consultations Done",
+        "value": "1,00,000+"
+      },
+      {
+        "label": "Cities Covered",
+        "value": "500+"
+      },
+      {
+        "label": "Languages Supported",
+        "value": "10+"
+      },
+      {
+        "label": "Client Satisfaction",
+        "value": "98%"
+      }
+    ]
+  },
+  "missionVision": {
+    "title": "Our Purpose",
+    "subtitle": "Driving change in the legal landscape of India",
+    "mission": {
+      "title": "Our Mission",
+      "desc": "To democratize access to legal justice by making expert consultation accessible, affordable, and understandable for every Indian citizen, regardless of their location, language, or economic background. We believe everyone deserves quality legal guidance.",
+      "icon": "PiTarget"
+    },
+    "vision": {
+      "title": "Our Vision",
+      "desc": "To be the most trusted and comprehensive digital legal ecosystem in India, bridging the gap between those seeking justice and those preserving it. We envision a future where legal help is just a click away for 1.4 billion Indians.",
+      "icon": "PiEye"
+    },
+    "values": [
+      {
+        "title": "Integrity",
+        "desc": "We maintain the highest standards of honesty and transparency in all our dealings.",
+        "icon": "PiShield"
+      },
+      {
+        "title": "Accessibility",
+        "desc": "Legal help should be available to everyone, not just the privileged few.",
+        "icon": "PiHandshake"
+      },
+      {
+        "title": "Innovation",
+        "desc": "We continuously improve our platform to serve you better with cutting-edge technology.",
+        "icon": "PiLightbulb"
+      }
+    ]
+  },
+  "team": {
+    "title": "Meet Our Leadership",
+    "subtitle": "The passionate minds behind MLawyer's mission",
+    "members": [
+      {
+        "name": "Rahul Sharma",
+        "role": "Founder & CEO",
+        "image": "",
+        "bio": "Former corporate lawyer with 15+ years of experience, driven to make legal help accessible."
+      },
+      {
+        "name": "Priya Patel",
+        "role": "Co-Founder & COO",
+        "image": "",
+        "bio": "Tech entrepreneur passionate about using technology for social good."
+      },
+      {
+        "name": "Amit Kumar",
+        "role": "Chief Legal Officer",
+        "image": "",
+        "bio": "Supreme Court advocate ensuring the highest standards of legal compliance."
+      }
+    ]
+  },
+  "timeline": {
+    "title": "Our Journey",
+    "subtitle": "From an idea to India's leading legal consultation platform",
+    "milestones": [
+      {
+        "year": "2022",
+        "title": "The Beginning",
+        "desc": "MLawyer was founded with a vision to democratize legal access in India."
+      },
+      {
+        "year": "2023",
+        "title": "Platform Launch",
+        "desc": "Launched our mobile app with 500+ verified advocates across 10 cities."
+      },
+      {
+        "year": "2024",
+        "title": "Rapid Growth",
+        "desc": "Crossed 25,000+ consultations and expanded to 200+ cities pan-India."
+      },
+      {
+        "year": "2025",
+        "title": "National Presence",
+        "desc": "5,000+ advocates, 500+ cities, and 1,00,000+ successful consultations."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Solve Your Legal Issues?",
+    "subtitle": "Join thousands of satisfied users who found the right legal help on MLawyer. Get expert advice from verified advocates at affordable prices.",
+    "btnText": "Book Consultation",
+    "btnLink": "/customer",
+    "secondaryBtnText": "Become an Advocate",
+    "secondaryBtnLink": "/lawyer"
+  }
+}

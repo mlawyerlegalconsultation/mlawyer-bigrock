@@ -1,0 +1,165 @@
+{
+   "hero": {
+      "badge": "Trusted Legal Platform",
+      "titlePrefix": "Your Legal Partner",
+      "titleSuffix": "Just a Tap Away",
+      "subtitle": "MLawyer – An online lawyer consultation booking platform that connects you with verified advocates instantly for expert legal opinions through video consultations.",
+      "ctaClient": "I Need Legal Help",
+      "ctaLawyer": "I'm an Advocate",
+      "trustText": "",
+      "stats": [
+         {
+            "label": "Verified Experts",
+            "icon": "FaShieldAlt"
+         },
+         {
+            "label": "Cost Effective",
+            "icon": "FaRupeeSign"
+         },
+         {
+            "label": "4.9/5 Rating",
+            "icon": "FaStar"
+         }
+      ]
+   },
+   "twoPath": {
+      "client": {
+         "title": "Get Expert Legal Consultations",
+         "features": [
+            "Find specialized advocates instantly",
+            "Transparent pricing, no surprises",
+            "Secure video consultations",
+            "Active support & confidentiality"
+         ],
+         "cta": "Find an Advocate"
+      },
+      "lawyer": {
+         "title": "Grow Your Practice Digitally",
+         "features": [
+            "Set your own schedule",
+            "Reach clients anywhere",
+            "Zero office overhead",
+            "Earn while you consult"
+         ],
+         "cta": "Join as an Advocate"
+      }
+   },
+   "whyChoose": {
+      "heading": "Why Choose MLawyer",
+      "subHeading": "Find a lawyer consultation app that helps you get legal advice and expert opinions. Get instant access to the best advocates in Chennai, Coimbatore, and across other districts for reliable legal guidance.",
+      "lawyerHeading": "Join the Network",
+      "lawyerSubHeading": "MLawyer is the best app for the lawyers/advocates to consult clients across the country and earn through secure online consultations.",
+      "clientBenefits": [
+         {
+            "title": "Instant advocate availability",
+            "desc": "Connect with experts in minutes.",
+            "icon": "PiUserCheck"
+         },
+         {
+            "title": "Verified Credentials",
+            "desc": "Every advocate is vetted and licensed.",
+            "icon": "PiCertificate"
+         },
+         {
+            "title": "Confidential consultations",
+            "desc": "Your privacy is protected with the highest level of security",
+            "icon": "PiShieldCheck"
+         },
+         {
+            "title": "Affordable options",
+            "desc": "Affordable and transparent pricing for everyone",
+            "icon": "PiWallet"
+         }
+      ],
+      "lawyerBenefits": [
+         {
+            "title": "Flexible income stream",
+            "desc": "Get paid for every consultation within 24 hours.",
+            "icon": "PiWallet"
+         },
+         {
+            "title": "Flexible Application",
+            "desc": "A complete digital office for modern legal practice.",
+            "icon": "PiBriefcase"
+         },
+         {
+            "title": "Secure payments",
+            "desc": "Secure and guaranteed payments for your consultations.",
+            "icon": "PiLockKey"
+         },
+         {
+            "title": "Professional growth",
+            "desc": "Expand your practice by connecting with more clients.",
+            "icon": "PiChartLineUp"
+         }
+      ]
+   },
+   "testimonials": {
+      "heading": "Success Stories",
+      "subHeading": "Trusted by Clients & Advocates",
+      "items": [
+         {
+            "id": 1,
+            "name": "Sarah Jenkins",
+            "role": "Client",
+            "image": "https://randomuser.me/api/portraits/women/44.jpg",
+            "content": "I needed legal advice for my startup but didn't know where to turn. MLawyer connected me with an expert in minutes. The video consultation was seamless.",
+            "rating": 5
+         },
+         {
+            "id": 2,
+            "name": "David Chen",
+            "role": "Corporate Lawyer",
+            "image": "https://randomuser.me/api/portraits/men/32.jpg",
+            "content": "This platform has transformed how I manage my practice. I can reach clients nationwide and the integrated tools save me hours of administrative work every week.",
+            "rating": 5
+         },
+         {
+            "id": 3,
+            "name": "Emily Rodriguez",
+            "role": "Client",
+            "image": "https://randomuser.me/api/portraits/women/68.jpg",
+            "content": "Transparent pricing is a game-changer. I knew exactly what I was paying for. The advocate was professional, empathetic, and resolved my issue quickly.",
+            "rating": 5
+         }
+      ]
+   },
+   "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Answers to common legal consultation questions in Chennai",
+      "questions": [
+         {
+            "question": "How can I talk to a lawyer online in Chennai?",
+            "answer": "You can easily talk to a lawyer online through MLawyer by booking a consultation. Submit your query and connect with an expert lawyer via call or online consultation."
+         },
+         {
+            "question": "What is the cost of legal consultation in Chennai?",
+            "answer": "The cost depends on the type of case and the lawyer’s expertise. MLawyer offers affordable and transparent pricing for all legal services."
+         },
+         {
+            "question": "Can I get legal advice for divorce online?",
+            "answer": "Yes, you can consult experienced divorce lawyers online for advice on mutual divorce, child custody, and alimony."
+         },
+         {
+            "question": "Do you provide legal notice drafting services?",
+            "answer": "Yes, MLawyer provides professional legal notice drafting services for various legal matters, including disputes and complaints."
+         },
+         {
+            "question": "How long does it take to resolve a legal case?",
+            "answer": "The timeline depends on the nature of the case and legal procedures involved. Our lawyers will provide a clear estimate after consultation."
+         },
+         {
+            "question": "Is online legal consultation safe and confidential?",
+            "answer": "Yes, all consultations are completely secure and confidential. MLawyer works only with verified legal professionals to ensure privacy and trust."
+         }
+      ]
+   },
+   "downloadApp": {
+      "badge": "Available on iOS & Android",
+      "titlePrefix": "Legal Help in ",
+      "titleSuffix": "Your Pocket",
+      "description": "Experience the future of legal consultations with MLawyer. Download the app today and connect with verified advocates anytime, anywhere.",
+      "qrText": "Scan to download",
+      "qrSubbox": "For iOS & Android"
+   }
+}

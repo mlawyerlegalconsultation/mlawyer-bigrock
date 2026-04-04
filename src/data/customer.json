@@ -1,0 +1,171 @@
+{
+  "hero": {
+    "titlePrefix": "Legal Problems?",
+    "titleSuffix": "Expert Solutions in Minutes",
+    "subtitle": "Don't navigate legal complexities alone. Connect with experienced advocates who understand your needs.",
+    "ctaText": "Find Your Advocate Now"
+  },
+  "problemSolution": {
+    "title": "The Problem We Solve",
+    "subtitle": "Why choose MLawyer over traditional methods?",
+    "mLawyer": {
+      "title": "MLawyer Way",
+      "items": [
+        "Instant matching with specialists",
+        "See fees upfront",
+        "Consult from anywhere"
+      ]
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Get legal help in 5 simple steps",
+    "steps": [
+      {
+        "icon": "FaSearch",
+        "title": "Describe Your Legal Issue",
+        "desc": "Choose your category or describe your situation in your own words. Our smart matching system understands your needs."
+      },
+      {
+        "icon": "FaUserTie",
+        "title": "Browse & Choose Your Advocate",
+        "desc": "View detailed advocate profiles, see specializations, experience, ratings, and compare consultation fees."
+      },
+      {
+        "icon": "FaCalendarCheck",
+        "title": "Book Your Consultation",
+        "desc": "Select immediate or scheduled consultation and receive instant confirmation."
+      },
+      {
+        "icon": "FaComments",
+        "title": "Get Expert Guidance",
+        "desc": "Secure, encrypted communication. Share documents safely, take notes, and receive follow-up recommendations."
+      },
+      {
+        "icon": "FaStar",
+        "title": "Rate & Review",
+        "desc": "Help other clients by sharing your experience."
+      }
+    ]
+  },
+  "services": {
+    "title": "Legal Services We Cover",
+    "subtitle": "Comprehensive legal assistance for every aspect of life",
+    "list": [
+      {
+        "icon": "FaHeartBroken",
+        "title": "Family Lawyer",
+        "items": [
+          "Divorce & separation",
+          "Child custody",
+          "Domestic violence",
+          "Adoption"
+        ]
+      },
+      {
+        "icon": "FaHome",
+        "title": "Property Lawyer",
+        "items": [
+          "Property disputes",
+          "Rent agreements",
+          "Title verification",
+          "Property registration"
+        ]
+      },
+      {
+        "icon": "FaGavel",
+        "title": "Criminal Lawyer",
+        "items": [
+          "FIR consultations",
+          "Bail applications",
+          "Legal defense",
+          "Victim rights"
+        ]
+      },
+      {
+        "icon": "FaBriefcase",
+        "title": "Corporate Lawyer",
+        "items": [
+          "Business formation",
+          "Contracts & agreements",
+          "Compliance issues",
+          "Partnership disputes"
+        ]
+      },
+      {
+        "icon": "FaShoppingCart",
+        "title": "Consumer Rights Lawyer",
+        "items": [
+          "Product defects",
+          "Service complaints",
+          "Refund issues",
+          "Online fraud"
+        ]
+      },
+      {
+        "icon": "FaUserInjured",
+        "title": "Labour Lawyer",
+        "items": [
+          "Wrongful termination",
+          "Workplace harassment",
+          "Salary disputes",
+          "Contract issues"
+        ]
+      }
+    ]
+  },
+  "security": {
+    "title": "Security & Privacy",
+    "subtitle": "Your confidentiality is guaranteed",
+    "features": [
+      {
+        "icon": "FaLock",
+        "title": "Secure Communication",
+        "desc": "All conversations are confidentialy."
+      },
+      {
+        "icon": "FaFileShield",
+        "title": "Verified advocate profiles",
+        "desc": "All advocates are credential-verified"
+      },
+      {
+        "icon": "FaUserShield",
+        "title": "Anonymous Consultations",
+        "desc": "Use the platform without revealing identity"
+      },
+      {
+        "icon": "FaShieldAlt",
+        "title": "Data Protection Compliant",
+        "desc": "We follow strict privacy regulations"
+      }
+    ]
+  },
+  "faq": {
+    "title": "FAQ for Clients",
+    "subtitle": "Common questions answered",
+    "questions": [
+      {
+        "q": "How quickly can I connect with a Advocates ?",
+        "a": "Immediately for urgent issues, or schedule for a convenient time. Most requests are matched within 5-15 minutes."
+      },
+      {
+        "q": "Are the Advocates verified?",
+        "a": "Yes, all advocates are credential-verified with valid bar council registration and practicing certificates."
+      },
+      {
+        "q": "Is my information confidential?",
+        "a": "Absolutely. All consultations are protected by attorney-client privilege and encrypted communications."
+      },
+      {
+        "q": "What payment methods do you accept?",
+        "a": "Credit/debit cards, UPI, net banking, and digital wallets."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Legal Help?",
+    "subtitle": "Download MLawyer now and connect with expert advocates instantly.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  }
+}
