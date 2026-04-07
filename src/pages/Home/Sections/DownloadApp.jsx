@@ -27,8 +27,8 @@ const DownloadApp = () => {
     <section ref={ref} className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="bg-primary dark:bg-gray-800 rounded-3xl p-8 md:p-16 relative overflow-hidden max-w-6xl mx-auto shadow-2xl transition-colors duration-300">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-secondary/20 rounded-full blur-3xl -ml-20 -mb-20"></div>
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-secondary/20 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none"></div>
           <div className="flex flex-col lg:flex-row items-center gap-12 relative z-10">
             <div className="flex-1 text-center lg:text-left">
               <span className="inline-block py-1 px-3 rounded-full bg-warning/10 border border-white/20 text-success text-sm font-semibold mb-6 backdrop-blur-sm">

@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
+import { useScroll, useTransform, motion } from 'motion/react';
 import { PiUserCheck, PiCertificate, PiShieldCheck, PiWallet, PiChartLineUp, PiBriefcase, PiLockKey } from 'react-icons/pi';
 import ClientImage from '../../../assets/img/customer.png';
 import LawyerImage from '../../../assets/img/lawyerr.png';
@@ -6,37 +7,23 @@ import PopIn from '../../../components/animations/PopIn';
 
 const WhyChoose = () => {
    const containerRef = useRef(null);
-   const trackRef = useRef(null);
-   useEffect(() => {
-      const handleScroll = () => {
-         if (!containerRef.current || !trackRef.current) return;
-         const container = containerRef.current;
-         const rect = container.getBoundingClientRect();
-         const viewportHeight = window.innerHeight;
-         const scrollDist = -rect.top;
-         const totalScrollable = rect.height - viewportHeight;
-         let progress = 0;
-         if (scrollDist > 0) {
-            progress = scrollDist / totalScrollable;
-         }
-         progress = Math.max(0, Math.min(progress, 1));
-         const translate = progress * 50;
-         trackRef.current.style.transform = `translateX(-${translate}%)`;
-      };
-      window.addEventListener('scroll', handleScroll);
-      handleScroll();
-      return () => window.removeEventListener('scroll', handleScroll);
-   }, []);
+   const { scrollYProgress } = useScroll({
+      target: containerRef,
+      offset: ["start start", "end end"]
+   });
+
+   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
 
    return (
       <section ref={containerRef} className="relative h-[250vh]">
          <div className="sticky top-0 h-screen overflow-hidden">
-            <div ref={trackRef} className="flex h-full w-[200vw] will-change-transform">
-               <div className="w-screen h-full pt-28 pb-8 px-4 md:px-12 lg:p-20 flex flex-col justify-start lg:justify-center bg-white dark:bg-gray-900 transition-colors duration-300 relative">
-                  <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full lg:h-auto overflow-y-auto lg:overflow-visible no-scrollbar">
+            <motion.div style={{ x }} className="flex h-full w-[200vw] will-change-transform">
+               {/* First Slide: For Clients */}
+               <div className="w-1/2 h-full pt-28 pb-8 px-4 md:px-12 lg:p-20 flex flex-col justify-start lg:justify-center bg-white dark:bg-gray-900 transition-colors duration-300 relative overflow-hidden">
+                  <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-8 lg:gap-12 items-center h-auto overflow-visible no-scrollbar">
                      <div className="pb-8 lg:pb-0">
                         <span className="text-secondary font-bold tracking-wider uppercase mb-2 block animate-pulse text-lg md:text-xl">Why Choose MLawyer ?</span>
-                        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 md:mb-8 max-w-xl transition-colors">Get reliable legal advice and expert opinion anytime with a trusted lawyer consultation app. Connect with experienced and <h1 className='inline'> best advocates across Chennai, Coimbatore </h1> and beyond for reliable legal guidance.</p>
+                        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 md:mb-8 max-w-xl transition-colors">Get reliable legal advice and expert opinion anytime with a trusted lawyer consultation app. Connect with experienced and <span className="inline font-bold">best advocates across Chennai, Coimbatore</span> and beyond for reliable legal guidance.</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                            <PopIn delay={0}>
                               <div className="bg-gray-50 dark:bg-gray-800 p-4 md:p-6 rounded-2xl hover:shadow-md transition-shadow">
@@ -75,8 +62,10 @@ const WhyChoose = () => {
                      </div>
                   </div>
                </div>
-               <div className="w-screen h-full pt-28 pb-8 px-4 md:px-12 lg:p-20 flex flex-col justify-start lg:justify-center bg-primary text-white relative">
-                  <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full lg:h-auto overflow-y-auto lg:overflow-visible no-scrollbar">
+               
+               {/* Second Slide: For Lawyers */}
+               <div className="w-1/2 h-full pt-28 pb-8 px-4 md:px-12 lg:p-20 flex flex-col justify-start lg:justify-center bg-primary text-white relative overflow-hidden">
+                  <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-8 lg:gap-12 items-center h-auto overflow-visible no-scrollbar">
                      <div className="order-2 lg:order-1 hidden lg:block rounded-3xl h-125 w-full relative overflow-hidden">
                         <div className="absolute inset-0 flex items-center justify-center">
                            <img src={LawyerImage} alt="Best Lawyer in Coimbatore" loading="lazy" className='rounded-xl' />
@@ -110,7 +99,7 @@ const WhyChoose = () => {
                      </div>
                   </div>
                </div>
-            </div>
+            </motion.div>
          </div>
       </section>
    );

@@ -7,8 +7,8 @@ const HIWCTA = () => {
     const { cta } = howItWorksData;
     return (
         <section className="py-24 bg-primary relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] -mr-20 -mt-20"></div>
-            <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-400/20 rounded-full blur-[80px] -ml-20 -mb-20"></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-[100px] -mr-20 -mt-20 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-400/20 rounded-full blur-[80px] -ml-20 -mb-20 pointer-events-none"></div>
             <div className="container mx-auto px-6 relative z-10 text-center">
                 <PopIn>
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
