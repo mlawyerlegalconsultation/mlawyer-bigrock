@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from './Sections/Hero';
 import Features from './Sections/Features';
 import Mission from './Sections/Mission';
+import BoardMembers from './Sections/BoardMembers';
 import AboutCTA from './Sections/AboutCTA';
 
 import Seo from '../../components/Seo';
@@ -15,6 +16,7 @@ const About = () => {
                 keywords="about MLawyer, legal tech company, legal access mission, law startup, connect with lawyers, legal technology team"
             />
             <Hero />
+            <BoardMembers />
             <Features />
             {/* <Mission /> */}
             <AboutCTA />
