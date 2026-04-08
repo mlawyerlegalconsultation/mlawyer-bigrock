@@ -4,7 +4,14 @@ import { FaLinkedin, FaFacebook, FaInstagram, FaXTwitter } from 'react-icons/fa6
 import logo from '../assets/img/Logo.png';
 
 const Footer = () => {
-    const navItems = ['Home', 'For Clients', 'For Lawyers', 'How It Works', 'Pricing', 'About Us', 'Contact'];
+    const navItems = ['Home', 'For Customers', 'For Lawyers', 'How It Works', 'Pricing', 'About Us', 'Blogs', 'Contact Us'];
+
+    const getPath = (item) => {
+        if (item === 'Home') return '/';
+        if (item === 'For Customers') return '/customer';
+        if (item === 'For Lawyers') return '/lawyer';
+        return `/${item.toLowerCase().replace(/\s+/g, '-')}`;
+    };
 
     return (
         <footer className="bg-primary/5 dark:bg-gray-900 text-gray-800 dark:text-gray-300 pt-16 pb-8 border-t border-primary/10 dark:border-gray-700 transition-colors duration-300">
@@ -44,7 +51,7 @@ const Footer = () => {
                             {navItems.map((item) => (
                                 <Link
                                     key={item}
-                                    to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                                    to={getPath(item)}
                                     className="text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition-colors"
                                 >
                                     {item}

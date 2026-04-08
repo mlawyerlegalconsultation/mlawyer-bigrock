@@ -105,7 +105,7 @@ const FamilyLaw = () => {
                 </PopIn>
                 <PopIn delay={0.1}>
                     <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
-                        <img src={familyLawImg} alt="family-lawyer" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
+                        <img src={familyLawImg} alt="family-lawyer-in-chennai" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
                     </div>
                 </PopIn>
             </div>
