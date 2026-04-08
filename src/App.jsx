@@ -30,7 +30,7 @@ function App() {
         <Route path="blog/:slug" element={<Blog />} />
         <Route path="customer">
           <Route index element={<Customer />} />
-          <Route path="divorce-lawyer" element={<FamilyLaw />} />
+          <Route path="family-lawyer" element={<FamilyLaw />} />
           <Route path="online-legal-consultation" element={<PropertyLaw />} />
           <Route path="legal-criminal-lawyer" element={<CriminalLaw />} />
           <Route path="best-corporate-lawyers" element={<CorporateLaw />} />

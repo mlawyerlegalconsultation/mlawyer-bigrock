@@ -9,29 +9,41 @@ import {
     FaUserPlus,
     FaLongArrowAltRight
 } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import PopIn from '../../../components/animations/PopIn';
 
 const services = [
     {
         title: 'Divorce & Family Lawyer',
-        description: 'Get expert guidance from experienced divorce lawyers in Chennai. We ensure sensitive handling of family matters with complete confidentiality.',
+        description: (
+            <>
+                Get expert guidance from experienced{' '}
+                <Link to="/customer/family-lawyer" className="text-primary hover:underline font-semibold">
+                    family lawyers in Chennai
+                </Link>
+                . We ensure sensitive handling of family matters with complete confidentiality.
+            </>
+        ),
         icon: <FaUserFriends />,
         color: 'bg-rose-50 text-rose-600',
-        points: ['Mutual divorce', 'Contested divorce', 'Child custody', 'Alimony and maintenance']
+        points: ['Mutual divorce', 'Contested divorce', 'Child custody', 'Alimony and maintenance'],
+        link: '/customer/family-lawyer'
     },
     {
         title: 'Property & Civil Lawyer',
         description: 'Resolve legal issues related to property disputes and ownership conflicts. Our legal experts provide clear and practical solutions to protect your rights.',
         icon: <FaHome />,
         color: 'bg-amber-50 text-amber-600',
-        points: ['Property disputes', 'Land ownership conflicts', 'Civil cases', 'Recovery matters']
+        points: ['Property disputes', 'Land ownership conflicts', 'Civil cases', 'Recovery matters'],
+        link: '/customer/online-legal-consultation'
     },
     {
         title: 'Criminal Lawyer',
         description: 'Consult top criminal lawyers in Chennai for bail applications and legal defense. We provide strong legal representation and strategic guidance.',
         icon: <FaBalanceScale />,
         color: 'bg-slate-900 text-slate-100 dark:bg-slate-800',
-        points: ['Bail applications', 'FIR-related cases', 'Legal defense services']
+        points: ['Bail applications', 'FIR-related cases', 'Legal defense services'],
+        link: '/customer/legal-criminal-lawyer'
     },
     {
         title: 'Legal Documentation',
@@ -45,7 +57,8 @@ const services = [
         description: 'Comprehensive legal support for businesses, including registration and compliance. Build and grow your business with trusted legal guidance.',
         icon: <FaRocket />,
         color: 'bg-indigo-50 text-indigo-600',
-        points: ['Company registration', 'GST filing', 'Legal compliance', 'Startup legal advisory']
+        points: ['Company registration', 'GST filing', 'Legal compliance', 'Startup legal advisory'],
+        link: '/customer/best-corporate-lawyers'
     }
 ];
 
@@ -98,10 +111,18 @@ const ChennaiLegalConsultation = () => {
                                     <div className={`w-14 h-14 rounded-2xl ${service.color} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm mx-auto`}>
                                         {service.icon}
                                     </div>
-                                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary transition-colors">{service.title}</h4>
-                                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+                                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary transition-colors">
+                                        {service.link ? (
+                                            <Link to={service.link} className="hover:text-primary transition-colors">
+                                                {service.title}
+                                            </Link>
+                                        ) : (
+                                            service.title
+                                        )}
+                                    </h4>
+                                    <div className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-1">
                                         {service.description}
-                                    </p>
+                                    </div>
                                     <ul className="space-y-2 border-t border-slate-100 dark:border-gray-800 pt-6 w-full flex flex-col items-center">
                                         {service.points.map((point, pIdx) => (
                                             <li key={pIdx} className="flex items-center gap-2 text-xs font-medium text-gray-500 dark:text-gray-500">

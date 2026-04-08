@@ -16,7 +16,7 @@ const Services = () => {
         {
             icon: "FaHeartBroken",
             title: "Family Lawyer",
-            link: "divorce-lawyer",
+            link: "family-lawyer",
             items: [
                 "Divorce & Separation",
                 "Child Custody & Visitation Rights",

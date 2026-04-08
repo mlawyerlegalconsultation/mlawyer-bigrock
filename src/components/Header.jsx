@@ -12,7 +12,7 @@ const Header = () => {
   const { scrollYProgress } = useScroll();
 
   const customerServices = [
-    { label: 'Family Lawyer', path: '/customer/divorce-lawyer' },
+    { label: 'Family Lawyer', path: '/customer/family-lawyer' },
     { label: 'Property Lawyer', path: '/customer/online-legal-consultation' },
     { label: 'Criminal Lawyer', path: '/customer/legal-criminal-lawyer' },
     { label: 'Corporate Lawyer', path: '/customer/best-corporate-lawyers' },

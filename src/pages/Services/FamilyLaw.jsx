@@ -5,6 +5,7 @@ import PopIn from '../../components/animations/PopIn';
 import familyLawImg from '../../assets/img/services/family-law.png';
 import FAQSection from '../../components/FAQSection';
 import Breadcrumb from '../../components/Breadcrumb';
+import { PiSealCheck, PiShieldCheck, PiCurrencyInr, PiUsers, PiClock, PiHouse } from 'react-icons/pi';
 
 const FamilyLaw = () => {
     useEffect(() => {
@@ -71,13 +72,13 @@ const FamilyLaw = () => {
                 <meta name="geo.region" content="Chennai,Coimbatore" />
                 <meta name="msnbot" content="index,follow" />
                 <meta name="allow-search" content="yes" />
-                <link rel="canonical" href="https://www.mlawyer.in/customer/divorce-lawyer" />
+                <link rel="canonical" href="https://www.mlawyer.in/customer/family-lawyer" />
                 <meta httpEquiv="content-language" content="en-us" />
 
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Consult Family Lawyer | Divorce Lawyers in Chennai - MlLawyer" />
-                <meta property="og:url" content="https://www.mlawyer.in/customer/divorce-lawyer" />
+                <meta property="og:url" content="https://www.mlawyer.in/customer/family-lawyer" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"
@@ -104,7 +105,7 @@ const FamilyLaw = () => {
                 </PopIn>
                 <PopIn delay={0.1}>
                     <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
-                        <img src={familyLawImg} alt="divorce-lawyer" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
+                        <img src={familyLawImg} alt="family-lawyer" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
                     </div>
                 </PopIn>
             </div>
@@ -160,6 +161,44 @@ const FamilyLaw = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="w-full px-6 mt-16 mb-20">
+                <div className="max-w-7xl mx-auto">
+                    <PopIn>
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                                What Makes Mlawyer the Right Choice for Family Lawyers in Chennai
+                            </h2>
+                            <div className="w-20 h-1.5 bg-secondary mx-auto rounded-full"></div>
+                        </div>
+                    </PopIn>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            { title: "Trusted experts in family and divorce law cases", icon: <PiSealCheck /> },
+                            { title: "Your Information Remains fully secure", icon: <PiShieldCheck /> },
+                            { title: "Transparent and affordable legal fee structure", icon: <PiCurrencyInr /> },
+                            { title: "Get support across all stages of your legal process", icon: <PiUsers /> },
+                            { title: "Timely support with easy access to legal experts", icon: <PiClock /> },
+                            { title: "Trusted legal services across Chennai, Madurai, and Coimbatore", icon: <PiHouse /> }
+                        ].map((item, index) => (
+                            <PopIn key={index} delay={index * 0.1}>
+                                <div className="h-full p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center gap-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                                    <div className="w-16 h-16 bg-teal-50 dark:bg-gray-700/50 rounded-2xl flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
+                                        <div className="text-4xl text-secondary group-hover:text-primary transition-colors duration-300">
+                                            {item.icon}
+                                        </div>
+                                    </div>
+                                    <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 leading-tight">
+                                        {item.title}
+                                    </h4>
+                                </div>
+                            </PopIn>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
             <FAQSection faqs={faqs} />
         </div >
     );
