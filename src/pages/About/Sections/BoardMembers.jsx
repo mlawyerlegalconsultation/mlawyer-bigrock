@@ -34,7 +34,7 @@ const BoardMembers = () => {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
                     {boardMembers.members.map((member, index) => (
                         <motion.div
                             key={index}
@@ -42,7 +42,7 @@ const BoardMembers = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-transparent hover:border-primary/20"
+                            className="w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.33%-1rem)] lg:w-[calc(25%-1.5rem)] lg:max-w-[320px] bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border border-transparent hover:border-primary/20"
                         >
                             <div className="relative overflow-hidden aspect-[4/5]">
                                 <img
