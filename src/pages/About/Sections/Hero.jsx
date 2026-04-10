@@ -22,7 +22,7 @@ const Hero = () => {
                         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 dark:text-white tracking-tight transition-colors">
                             <span className="text-primary dark:text-secondary">{hero.title.split(' for ')[0]}</span>
                             <br className="hidden lg:block" />
-                            <span className="text-secondary dark:text-secondary">for {hero.title.split(' for ')[1]}</span>
+                            <span className="text-secondary dark:text-secondary"> for {hero.title.split(' for ')[1]}</span>
                         </h1>
                         <p className="text-lg md:text-xl text-primary/70 dark:text-gray-300 leading-relaxed max-w-2xl transition-colors">
                             {hero.subtitle}
