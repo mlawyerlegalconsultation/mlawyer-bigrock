@@ -96,7 +96,8 @@ const Hero = () => {
                             {heroImages.map((image, index) => (
                                 <img
                                     key={index}
-                                    loading="lazy"
+                                    loading={index === 0 ? "eager" : "lazy"}
+                                    fetchPriority={index === 0 ? "high" : "low"}
                                     src={image}
                                     alt={`online lawyer consultation booking`}
                                     style={{
