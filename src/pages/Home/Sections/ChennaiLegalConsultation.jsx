@@ -182,11 +182,11 @@ const ChennaiLegalConsultation = () => {
                                     Increase your consultation opportunities via digital channels.
                                 </p>
                             </div>
-                            <button className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-primary text-white font-bold py-4 px-8 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20">
+                            <Link to={'/lawyer'} className="flex items-center justify-center gap-3 bg-slate-900 dark:bg-primary text-white font-bold py-4 px-8 rounded-2xl hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20">
                                 <FaUserPlus />
                                 Get Started as an Advocate
                                 <FaLongArrowAltRight />
-                            </button>
+                            </Link>
                         </div>
                     </PopIn>
                 </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaUserShield, FaGavel, FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 import PopIn from '../../../components/animations/PopIn';
 
@@ -48,9 +49,9 @@ const TwoPath = () => {
                                 ))}
                             </div>
                             <PopIn delay={0.5}>
-                            <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 cursor-pointer">
+                            <Link to="/download" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 cursor-pointer">
                                 {twoPath.client.cta} <FaArrowRight />
-                            </button>
+                            </Link>
                             </PopIn>
                         </div>
                         <div className="bg-primary text-white p-10 rounded-3xl flex flex-col items-start hover:shadow-xl transition-all duration-300 group relative overflow-hidden">
@@ -74,9 +75,9 @@ const TwoPath = () => {
                                 ))}
                             </div>
                             <PopIn delay={0.5}>
-                            <button className="relative w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors shadow-lg cursor-pointer">
+                            <Link to="/download" className="relative w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors shadow-lg cursor-pointer text-center">
                                 {twoPath.lawyer.cta} <FaArrowRight />
-                            </button>
+                            </Link>
                             </PopIn>
                         </div>
                 </div>

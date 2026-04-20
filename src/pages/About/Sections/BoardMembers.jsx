@@ -2,7 +2,7 @@ import React from 'react';
 import aboutData from '../../../data/about.json';
 import { motion } from 'motion/react';
 import board1 from '../../../assets/members/1.jpeg';
-import board2 from '../../../assets/members/2.jpeg';
+import board2 from '../../../assets/members/2.png';
 import board3 from '../../../assets/members/3.jpeg';
 import board4 from '../../../assets/img/board/board4.png';
 

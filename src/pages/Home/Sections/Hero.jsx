@@ -64,7 +64,7 @@ const Hero = () => {
                         <p className='text-primary/80 dark:text-gray-300'>Available on Android and iOS. Scan here to install the app right away.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <PopIn delay={0.1}>
-                                <Link to="#" className="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                                <Link to="/download" className="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
                                     <FaUserCheck className="text-xl" />
                                     {hero.ctaClient}
                                 </Link>
