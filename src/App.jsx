@@ -11,6 +11,8 @@ import CriminalLaw from './pages/Services/CriminalLaw';
 import CorporateLaw from './pages/Services/CorporateLaw';
 import ConsumerRight from './pages/Services/ConsumerRight';
 import LabourLaw from './pages/Services/LabourLaw';
+import StartupLawyer from './pages/Services/StartupLawyer';
+import NRILegalSupport from './pages/Services/NRILegalSupport';
 import Lawyer from './pages/Lawyer/Lawyer';
 import HowItWorks from './pages/HowItWorks/HowItWorks';
 import Pricing from './pages/Pricing/Pricing';
@@ -19,6 +21,12 @@ import Contact from './pages/Contact/Contact';
 import Download from './pages/Download/Download';
 import Waitlist from './pages/Waitlist/Waitlist';
 import NotFound from './pages/NotFound';
+import Chennai from './pages/Cities/Chennai';
+import Coimbatore from './pages/Cities/Coimbatore';
+import Madurai from './pages/Cities/Madurai';
+import Trichy from './pages/Cities/Trichy';
+import Tirunelveli from './pages/Cities/Tirunelveli';
+import MoreCities from './pages/Cities/More';
 
 import './App.css';
 
@@ -38,6 +46,10 @@ function App() {
           <Route path="consumer-right-lawyer-app" element={<ConsumerRight />} />
           <Route path="labour-lawyer-advisor" element={<LabourLaw />} />
         </Route>
+        <Route path="services">
+          <Route path="startup-lawyer" element={<StartupLawyer />} />
+          <Route path="nri-legal-support" element={<NRILegalSupport />} />
+        </Route>
         <Route path="lawyer" element={<Lawyer />} />
         <Route path="how-it-works" element={<HowItWorks />} />
         <Route path="pricing" element={<Pricing />} />
@@ -45,6 +57,14 @@ function App() {
         <Route path="contact-us" element={<Contact />} />
         <Route path="download" element={<Download />} />
         <Route path="waitlist" element={<Waitlist />} />
+        <Route path="cities">
+          <Route index element={<MoreCities />} />
+          <Route path="chennai" element={<Chennai />} />
+          <Route path="coimbatore" element={<Coimbatore />} />
+          <Route path="madurai" element={<Madurai />} />
+          <Route path="trichy" element={<Trichy />} />
+          <Route path="tirunelveli" element={<Tirunelveli />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

@@ -1,4 +1,5 @@
 import Hero from './Sections/Hero';
+import TrustProof from './Sections/TrustProof';
 import ChennaiLegalConsultation from './Sections/ChennaiLegalConsultation';
 import YoutubeShorts from './Sections/YoutubeShorts';
 import TwoPath from './Sections/TwoPath';
@@ -55,6 +56,7 @@ const Home = () => {
         <meta name="twitter:image:alt" content="Online-Lawyer-consultation-App" />
       </Helmet>
       <Hero />
+      <TrustProof />
       <ChennaiLegalConsultation />
       {/* <YoutubeShorts /> */}
       <TwoPath />

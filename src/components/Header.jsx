@@ -18,6 +18,8 @@ const Header = () => {
     { label: 'Corporate Lawyer', path: '/customer/best-corporate-lawyers' },
     { label: 'Consumer Rights Lawyer', path: '/customer/consumer-right-lawyer-app' },
     { label: 'Labour Lawyer', path: '/customer/labour-lawyer-advisor' },
+    { label: 'Startup Lawyer', path: '/services/startup-lawyer' },
+    { label: 'NRI Legal Support', path: '/services/nri-legal-support' },
   ];
 
   const toggleMenu = () => {
