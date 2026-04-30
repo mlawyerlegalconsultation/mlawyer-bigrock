@@ -45,11 +45,11 @@ const PricingHero = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 text-left border border-gray-200 dark:border-gray-600">
                                 <p className="text-gray-700 dark:text-gray-300 font-medium">15 min consultation</p>
-                                <p className="text-2xl font-bold text-secondary mt-2">₹550</p>
+                                <p className="text-2xl font-bold text-secondary mt-2">₹550 <span className="text-lg text-gray-500 dark:text-gray-400 mb-2 font-medium">+ GST</span></p>
                             </div>
                             <div className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 text-left border border-gray-200 dark:border-gray-600">
                                 <p className="text-gray-700 dark:text-gray-300 font-medium">30 min consultation</p>
-                                <p className="text-2xl font-bold text-secondary mt-2">₹900</p>
+                                <p className="text-2xl font-bold text-secondary mt-2">₹900 <span className="text-lg text-gray-500 dark:text-gray-400 mb-2 font-medium">+ GST</span></p>
                             </div>
                             <div className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-6 text-left border border-gray-200 dark:border-gray-600">
                                 <p className="text-gray-700 dark:text-gray-300 font-medium">Session Recording</p>
@@ -60,7 +60,7 @@ const PricingHero = () => {
                                 <p className="text-2xl font-bold text-secondary mt-2">₹100</p>
                             </div>
                         </div>
-                         <Link to="/waitlist" className="block w-full py-3 px-6 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300">
+                        <Link to="/waitlist" className="block mt-5 w-full py-3 px-6 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300">
                             Find Your Lawyer Now →
                         </Link>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-6">This reduces user hesitation and improves conversion rate.</p>
