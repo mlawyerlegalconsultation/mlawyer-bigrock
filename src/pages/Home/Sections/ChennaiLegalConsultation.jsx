@@ -35,7 +35,7 @@ const services = [
         icon: <FaHome />,
         color: 'bg-amber-50 text-amber-600',
         points: ['Property disputes', 'Land ownership conflicts', 'Civil cases', 'Recovery matters'],
-        link: '/customer/online-legal-consultation'
+        link: '/customer/property-lawyer'
     },
     {
         title: 'Criminal Lawyer',
