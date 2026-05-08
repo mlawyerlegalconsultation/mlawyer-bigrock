@@ -38,7 +38,10 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-10 h-20 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group">
           <img src={logo} alt="MLawyer Logo" loading="lazy" className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" />
-          <div className="text-white font-bold text-lg sm:text-xl tracking-wide">MLawyer</div>
+          <div className="flex flex-col leading-tight">
+            <span className="text-white font-bold text-lg sm:text-xl tracking-wide">MLawyer</span>
+            <span className="text-white/80 text-[11px] sm:text-xs font-medium tracking-wide">Legal Consultation</span>
+          </div>
         </Link>
         <nav className="hidden lg:block">
           <ul className="flex items-center lg:space-x-5 xl:space-x-8">

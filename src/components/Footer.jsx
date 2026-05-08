@@ -20,7 +20,10 @@ const Footer = () => {
                     <div>
                         <Link to="/" className="flex items-center gap-2 mb-6 group">
                             <img src={logo} alt="MLawyer Logo" loading="lazy" className="h-14 w-auto object-contain bg-primary rounded-full p-2" />
-                            <div className="text-primary dark:text-secondary font-bold text-3xl tracking-wide">MLawyer</div>
+                            <div className="flex flex-col leading-tight">
+                                <span className="text-primary dark:text-secondary font-bold text-3xl tracking-wide">MLawyer</span>
+                                <span className="text-primary/80 dark:text-secondary/80 text-sm font-medium tracking-wide">Legal Consultation</span>
+                            </div>
                         </Link>
                         <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                             Your gateway to trusted legal experts—anytime, anywhere. Secure, professional and transparent.
@@ -75,7 +78,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="border-t border-primary/10 pt-8 mt-8 text-center text-gray-500 text-sm">
-                    <p>&copy; {new Date().getFullYear()} MLawyer. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} MLawyer Legal Consultation (P) Ltd . All rights reserved.</p>
                 </div>
             </div>
         </footer>
