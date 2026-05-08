@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "verify:dist": "powershell -ExecutionPolicy Bypass -File ./scripts/verify-dist.ps1",
+    "build:verify": "npm run build && npm run verify:dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },

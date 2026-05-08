@@ -57,6 +57,30 @@ src/
     npm run preview
     ```
 
+## Safe Production Deploy (Avoid Blank Screen)
+
+When deploying Vite builds, `index.html` references hashed files in `assets/`.
+If old `index.html` or old assets are served, users can see a blank page with 404/MIME errors.
+
+1. Build and verify:
+    ```bash
+    npm run build:verify
+    ```
+
+2. Deploy in this order:
+    1. Upload `dist/assets/` first.
+    2. Upload `dist/index.html` last.
+
+3. Purge CDN/hosting cache after upload.
+
+4. Smoke test in Incognito on first load.
+
+Extra command:
+```bash
+npm run verify:dist
+```
+This checks that every asset referenced in `dist/index.html` is actually present in `dist/assets/`.
+
 ## 🌐 Routing
 
 The application uses `react-router-dom` for navigation.
