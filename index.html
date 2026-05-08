@@ -25,6 +25,32 @@
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   </noscript>
+  <script>
+    (function () {
+      const reloadFlag = 'mlawyer-bundle-reload';
+
+      function reloadWithCacheBuster() {
+        if (sessionStorage.getItem(reloadFlag) === '1') {
+          return;
+        }
+
+        sessionStorage.setItem(reloadFlag, '1');
+        const currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.set('_v', Date.now().toString());
+        window.location.replace(currentUrl.toString());
+      }
+
+      window.addEventListener('error', function (event) {
+        const eventTarget = event?.target;
+        const isModuleScript = eventTarget?.tagName === 'SCRIPT' && eventTarget?.type === 'module';
+        const errorMessage = String(event?.message || '');
+
+        if (isModuleScript || /Failed to load module script|text\/html|404/.test(errorMessage)) {
+          reloadWithCacheBuster();
+        }
+      }, true);
+    })();
+  </script>
 </head>
 
 <body>
