@@ -4,17 +4,6 @@ ErrorDocument 404 /404.html
 # Default file
 DirectoryIndex index.html
 
-# Disable content negotiation so filenames are resolved literally
-Options -MultiViews
-
-<IfModule mod_headers.c>
-  <FilesMatch "^(index|404)\.html$">
-    Header set Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
-  </FilesMatch>
-</IfModule>
-
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
@@ -23,11 +12,10 @@ Options -MultiViews
   RewriteCond %{HTTP_HOST} !^www\.mlawyer\.in$ [NC]
   RewriteRule ^ https://www.mlawyer.in%{REQUEST_URI} [L,R=301]
 
-  # Let real files and assets serve normally; only rewrite actual app routes.
-  RewriteCond %{REQUEST_URI} !^/assets/ [NC]
+  # React routing (SPA)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [QSA,L]
+  RewriteRule ^ index.html [L]
 </IfModule>
 
 <IfModule mod_headers.c>
@@ -51,8 +39,7 @@ Options -MultiViews
 # Enable Browser Caching
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresDefault "access plus 0 seconds"
-  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresDefault "access plus 1 month"
   ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
