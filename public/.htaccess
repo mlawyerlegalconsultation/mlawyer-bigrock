@@ -20,6 +20,7 @@ DirectoryIndex index.html
   RewriteRule ^ %{REQUEST_URI} [R=302,L,CO=mlawyer_reload_once:1:.mlawyer.in:/]
 
   # React routing (SPA)
+  RewriteCond %{REQUEST_URI} !\.(css|js|mjs|map|json|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|txt|xml)$ [NC]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
@@ -27,6 +28,18 @@ DirectoryIndex index.html
 
 <IfModule mod_headers.c>
   Header always set Content-Security-Policy "upgrade-insecure-requests"
+
+  # Avoid stale index.html pointing to old hashed bundles.
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/javascript .js
+  AddType application/javascript .mjs
 </IfModule>
 
 # Enable Gzip Compression
