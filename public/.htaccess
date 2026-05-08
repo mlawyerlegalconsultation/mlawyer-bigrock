@@ -4,6 +4,9 @@ ErrorDocument 404 /404.html
 # Default file
 DirectoryIndex index.html
 
+# Disable content negotiation so filenames are resolved literally
+Options -MultiViews
+
 <IfModule mod_headers.c>
   <FilesMatch "^(index|404)\.html$">
     Header set Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate"
@@ -24,7 +27,7 @@ DirectoryIndex index.html
   RewriteCond %{REQUEST_URI} !^/assets/ [NC]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [L]
+  RewriteRule ^ index.html [QSA,L]
 </IfModule>
 
 <IfModule mod_headers.c>
