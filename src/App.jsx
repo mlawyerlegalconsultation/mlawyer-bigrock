@@ -20,6 +20,8 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Download from './pages/Download/Download';
 import Waitlist from './pages/Waitlist/Waitlist';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
 import NotFound from './pages/NotFound';
 import Chennai from './pages/Cities/Chennai';
 import Coimbatore from './pages/Cities/Coimbatore';
@@ -57,6 +59,8 @@ function App() {
         <Route path="contact-us" element={<Contact />} />
         <Route path="download" element={<Download />} />
         <Route path="waitlist" element={<Waitlist />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="cities">
           <Route index element={<MoreCities />} />
           <Route path="chennai" element={<Chennai />} />
