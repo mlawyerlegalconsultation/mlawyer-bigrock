@@ -12,6 +12,13 @@ DirectoryIndex index.html
   RewriteCond %{HTTP_HOST} !^www\.mlawyer\.in$ [NC]
   RewriteRule ^ https://www.mlawyer.in%{REQUEST_URI} [L,R=301]
 
+  # Reload once per browser session for HTML route requests.
+  # Sets a session cookie on first hit, then skips on subsequent requests.
+  RewriteCond %{HTTP:Accept} text/html [NC]
+  RewriteCond %{REQUEST_URI} !\.(css|js|mjs|map|json|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|txt|xml)$ [NC]
+  RewriteCond %{HTTP_COOKIE} !(^|;\s*)mlawyer_reload_once=1(;|$) [NC]
+  RewriteRule ^ %{REQUEST_URI} [R=302,L,CO=mlawyer_reload_once:1:.mlawyer.in:/]
+
   # React routing (SPA)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
