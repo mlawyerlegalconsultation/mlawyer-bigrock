@@ -23,11 +23,7 @@ import Waitlist from './pages/Waitlist/Waitlist';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
 import NotFound from './pages/NotFound';
-import Chennai from './pages/Cities/Chennai';
-import Coimbatore from './pages/Cities/Coimbatore';
-import Madurai from './pages/Cities/Madurai';
-import Trichy from './pages/Cities/Trichy';
-import Tirunelveli from './pages/Cities/Tirunelveli';
+
 import MoreCities from './pages/Cities/More';
 
 import './App.css';
@@ -63,11 +59,7 @@ function App() {
         <Route path="terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="cities">
           <Route index element={<MoreCities />} />
-          <Route path="chennai" element={<Chennai />} />
-          <Route path="coimbatore" element={<Coimbatore />} />
-          <Route path="madurai" element={<Madurai />} />
-          <Route path="trichy" element={<Trichy />} />
-          <Route path="tirunelveli" element={<Tirunelveli />} />
+
         </Route>
         <Route path="*" element={<NotFound />} />
       </Route>

@@ -74,30 +74,30 @@ const TrustProof = () => {
                   <p className="text-sm text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-8">Find verified advocates near you</p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                     <Link to="/cities/chennai" className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
+                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
                         <h4 className="font-semibold text-lg text-gray-900 dark:text-white">Chennai</h4>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Find top advocates in Chennai for all practice areas.</p>
-                     </Link>
+                     </div>
 
-                     <Link to="/cities/coimbatore" className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
+                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
                         <h4 className="font-semibold text-lg text-gray-900 dark:text-white">Coimbatore</h4>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Search verified advocates in Coimbatore.</p>
-                     </Link>
+                     </div>
 
-                     <Link to="/cities/madurai" className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
+                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
                         <h4 className="font-semibold text-lg text-gray-900 dark:text-white">Madurai</h4>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Local legal support and consultations in Madurai.</p>
-                     </Link>
+                     </div>
 
-                     <Link to="/cities/trichy" className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
+                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
                         <h4 className="font-semibold text-lg text-gray-900 dark:text-white">Trichy</h4>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Trusted advocates serving Trichy clients.</p>
-                     </Link>
+                     </div>
 
-                     <Link to="/cities/tirunelveli" className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
+                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800">
                         <h4 className="font-semibold text-lg text-gray-900 dark:text-white">Tirunelveli</h4>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Find local legal expertise in Tirunelveli.</p>
-                     </Link>
+                     </div>
                   </div>
                </div>
             </PopIn>
