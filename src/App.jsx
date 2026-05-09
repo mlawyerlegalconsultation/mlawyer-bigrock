@@ -57,10 +57,6 @@ function App() {
         <Route path="waitlist" element={<Waitlist />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms-and-conditions" element={<TermsAndConditions />} />
-        <Route path="cities">
-          <Route index element={<MoreCities />} />
-
-        </Route>
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

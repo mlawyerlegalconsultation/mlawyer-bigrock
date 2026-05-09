@@ -121,7 +121,7 @@ const FamilyLaw = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             <div className="space-y-8 order-2 lg:order-1">
                                 <div>
-                                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Family Lawyers in Chennai</h2>
+                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Family Lawyers in Chennai</h2>
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                                         Family-related legal issues often involve both emotional stress and complex procedures, making
                                         professional guidance essential. Matters such as divorce, child custody, maintenance, and property
@@ -286,7 +286,7 @@ const FamilyLaw = () => {
                                 on your specific needs.
                             </p>
                             <div className="pt-4 pb-2">
-                                <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Lawyer Now
                                 </Link>
                             </div>

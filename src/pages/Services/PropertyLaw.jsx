@@ -111,7 +111,7 @@ const PropertyLaw = () => {
             <div className="w-full px-6">
                 <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 dark:border-gray-700">
                     <div className="space-y-16">
-                        
+
                         {/* Section 1 */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             <div className="space-y-8 order-2 lg:order-1">
@@ -217,7 +217,7 @@ const PropertyLaw = () => {
                                         Disputes can arise due to various reasons, including unclear ownership, boundary issues, or contractual disagreements. Experienced property lawyers specialize in resolving such conflicts through negotiation, mediation, or litigation. Their approach focuses on achieving quick and effective solutions while minimizing stress for clients.
                                     </p>
                                 </div>
-                                
+
                                 <div className="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-700">
                                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Role of a Property Advocate in Legal Proceedings</h3>
                                     <ul className="space-y-3">
@@ -256,7 +256,7 @@ const PropertyLaw = () => {
                                 In addition to property services, MLawyer also offers support from a <a href="https://www.mlawyer.in/customer/best-corporate-lawyers" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">corporate lawyer</a>, <a href="https://www.mlawyer.in/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">online lawyer consultation</a>, and resources on <a href="https://www.mlawyer.in/blog/importance-of-patta-chitta-complete-guide-for-property-owners" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ownership</a>, making it a convenient one-stop solution for complete legal assistance.
                             </p>
                             <div className="pt-4 pb-2">
-                                <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Property Lawyer
                                 </Link>
                             </div>

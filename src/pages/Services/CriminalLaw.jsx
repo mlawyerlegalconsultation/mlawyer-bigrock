@@ -122,7 +122,7 @@ const CriminalLaw = () => {
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                                         Facing allegations or legal complaints can create stress and uncertainty. Professional legal representation ensures that every aspect of the case is examined carefully, including evidence, witness statements, police procedures, and legal documentation.
                                     </p>
-                                    
+
                                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">We handle legal matters such as:</h3>
                                     <ul className="space-y-2">
                                         {[
@@ -194,7 +194,7 @@ const CriminalLaw = () => {
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                                         Understanding criminal law requires detailed knowledge of legal procedures, evidence rules, investigation methods, and courtroom practices. Legal professionals help clients navigate these procedures while ensuring compliance with legal requirements.
                                     </p>
-                                    
+
                                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">The Legal Process Includes:</h4>
                                     <ol className="space-y-3 ml-2 list-decimal list-inside text-lg text-gray-600 dark:text-gray-300">
                                         <li>Filing of complaints or FIRs</li>
@@ -259,7 +259,7 @@ const CriminalLaw = () => {
                                 Along with criminal matters, MLawyer also offers support through experienced <Link to="/customer/property-lawyer" className="text-primary hover:underline font-bold">property advocates</Link>, handles family offense cases through our <Link to="/customer/family-lawyer" className="text-primary hover:underline font-bold">family law experts</Link>, and provides assistance from skilled <Link to="/customer/best-corporate-lawyers" className="text-primary hover:underline font-bold">corporate lawyers</Link>, ensuring complete and reliable legal services across multiple practice areas.
                             </p>
                             <div className="pt-4 pb-2">
-                                <Link to="/contact" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Criminal Lawyer
                                 </Link>
                             </div>
