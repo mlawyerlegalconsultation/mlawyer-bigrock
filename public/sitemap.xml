@@ -16,9 +16,9 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mlawyer.in/customer/family-lawyer</loc>
+    <loc>https://www.mlawyer.in/family-lawyers</loc>
     <lastmod>2026-05-14</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.mlawyer.in/property-lawyers</loc>
@@ -26,32 +26,24 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>
-      https://www.mlawyer.in/customer/legal-criminal-lawyer
-    </loc>
+    <loc>https://www.mlawyer.in/legal-criminal-lawyers</loc>
     <lastmod>2026-05-14</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>
-      https://www.mlawyer.in/customer/best-corporate-lawyers
-    </loc>
+    <loc>https://www.mlawyer.in/best-corporate-lawyers</loc>
     <lastmod>2026-05-14</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>
-      https://www.mlawyer.in/customer/consumer-right-lawyer-app
-    </loc>
+    <loc>https://www.mlawyer.in/consumer-right-lawyer-app</loc>
     <lastmod>2026-05-14</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>
-      https://www.mlawyer.in/customer/labour-lawyer-advisor
-    </loc>
+    <loc>https://www.mlawyer.in/labour-lawyer-advisor</loc>
     <lastmod>2026-05-14</lastmod>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.mlawyer.in/services/startup-lawyer</loc>
@@ -102,11 +94,6 @@
     <loc>https://www.mlawyer.in/terms-and-conditions</loc>
     <lastmod>2026-05-14</lastmod>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.mlawyer.in/customer/property-lawyers</loc>
-    <lastmod>2026-05-14</lastmod>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>
