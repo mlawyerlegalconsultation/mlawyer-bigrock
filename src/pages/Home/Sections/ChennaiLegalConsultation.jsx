@@ -18,7 +18,7 @@ const services = [
         description: (
             <>
                 Get expert guidance from experienced{' '}
-                <Link to="/customer/family-lawyer" className="text-primary hover:underline font-semibold">
+                <Link to="/family-lawyers" className="text-primary hover:underline font-semibold">
                     family lawyers in Chennai
                 </Link>
                 . We ensure sensitive handling of family matters with complete confidentiality.
@@ -27,7 +27,7 @@ const services = [
         icon: <FaUserFriends />,
         color: 'bg-rose-50 text-rose-600',
         points: ['Mutual divorce', 'Contested divorce', 'Child custody', 'Alimony and maintenance'],
-        link: '/customer/family-lawyer'
+        link: '/family-lawyers'
     },
     {
         title: 'Property & Civil Lawyer',
@@ -43,7 +43,7 @@ const services = [
         icon: <FaBalanceScale />,
         color: 'bg-slate-900 text-slate-100 dark:bg-slate-800',
         points: ['Bail applications', 'FIR-related cases', 'Legal defense services'],
-        link: '/customer/legal-criminal-lawyer'
+        link: '/legal-criminal-lawyers'
     },
     {
         title: 'Legal Documentation',
@@ -58,7 +58,7 @@ const services = [
         icon: <FaRocket />,
         color: 'bg-indigo-50 text-indigo-600',
         points: ['Company registration', 'GST filing', 'Legal compliance', 'Startup legal advisory'],
-        link: '/customer/best-corporate-lawyers'
+        link: '/best-corporate-lawyers'
     }
 ];
 

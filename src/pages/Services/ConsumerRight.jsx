@@ -70,13 +70,13 @@ const ConsumerRight = () => {
                 <meta name="geo.region" content="Chennai,Coimbatore" />
                 <meta name="msnbot" content="index,follow" />
                 <meta name="allow-search" content="yes" />
-                <link rel="canonical" href="https://www.mlawyer.in/customer/consumer-right-lawyer-app" />
+                <link rel="canonical" href="https://www.mlawyer.in/consumer-right-lawyer-app" />
                 <meta httpEquiv="content-language" content="en-us" />
 
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="MlLawyer-Consumer Court  Advocate | Lawyers  Near Me | Consumer Right lawyer app" />
-                <meta property="og:url" content="https://www.mlawyer.in/customer/consumer-right-lawyer-app" />
+                <meta property="og:url" content="https://www.mlawyer.in/consumer-right-lawyer-app" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"

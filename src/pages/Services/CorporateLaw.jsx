@@ -156,13 +156,13 @@ const CorporateLaw = () => {
                 <meta name="geo.region" content="Chennai,Tamil Nadu" />
                 <meta name="msnbot" content="index,follow" />
                 <meta name="allow-search" content="yes" />
-                <link rel="canonical" href="https://www.mlawyer.in/customer/best-corporate-lawyers" />
+                <link rel="canonical" href="https://www.mlawyer.in/best-corporate-lawyers" />
                 <meta httpEquiv="content-language" content="en-us" />
 
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Corporate Law Firms & Lawyers in Chennai | Advocates Near Me" />
-                <meta property="og:url" content="https://www.mlawyer.in/customer/best-corporate-lawyers" />
+                <meta property="og:url" content="https://www.mlawyer.in/best-corporate-lawyers" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"
@@ -354,7 +354,7 @@ const CorporateLaw = () => {
                                 Corporate disputes require careful handling and expert legal support. At Mlawyer, we are committed to connecting you with trusted professionals who can guide you through every step of your legal journey. Whether you need assistance with business setup, contracts, or compliance matters, finding the right corporate lawyer is the first step toward resolution.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                In addition to corporate law, we also provide support in <Link to="/property-lawyers" className="text-primary hover:underline font-semibold">property law</Link> matters such as ownership disputes, documentation, and legal verification, as well as <Link to="/customer/legal-criminal-lawyer" className="text-primary hover:underline font-semibold">criminal law</Link> cases where timely legal representation is crucial. Our platform ensures you are connected with the right legal expert based on your specific needs.
+                                In addition to corporate law, we also provide support in <Link to="/property-lawyers" className="text-primary hover:underline font-semibold">property law</Link> matters such as ownership disputes, documentation, and legal verification, as well as <Link to="/legal-criminal-lawyers" className="text-primary hover:underline font-semibold">criminal law</Link> cases where timely legal representation is crucial. Our platform ensures you are connected with the right legal expert based on your specific needs.
                             </p>
                             <div className="pt-4 pb-2">
                                 <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">

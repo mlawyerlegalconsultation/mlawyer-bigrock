@@ -70,13 +70,13 @@ const PropertyLaw = () => {
                 <meta name="geo.region" content="Chennai,Coimbatore" />
                 <meta name="msnbot" content="index,follow" />
                 <meta name="allow-search" content="yes" />
-                <link rel="canonical" href="https://www.mlawyer.in/customer/property-law" />
+                <link rel="canonical" href="https://www.mlawyer.in/property-lawyers" />
                 <meta httpEquiv="content-language" content="en-us" />
 
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Consult Property Lawyers and Advocates in Chennai | Coimbatore" />
-                <meta property="og:url" content="https://www.mlawyer.in/customer/property-law" />
+                <meta property="og:url" content="https://www.mlawyer.in/property-lawyers" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"
@@ -253,7 +253,7 @@ const PropertyLaw = () => {
                                 MLawyer is a trusted choice among online property lawyers in Chennai, offering clear guidance and reliable support for all real estate transactions. The firm provides a precise property legal opinion, helping clients make informed decisions while ensuring every legal property matter is handled with accuracy and compliance.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                In addition to property services, MLawyer also offers support from a <a href="https://www.mlawyer.in/customer/best-corporate-lawyers" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">corporate lawyer</a>, <a href="https://www.mlawyer.in/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">online lawyer consultation</a>, and resources on <a href="https://www.mlawyer.in/blog/importance-of-patta-chitta-complete-guide-for-property-owners" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ownership</a>, making it a convenient one-stop solution for complete legal assistance.
+                                In addition to property services, MLawyer also offers support from a <a href="https://www.mlawyer.in/best-corporate-lawyers" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">corporate lawyer</a>, <a href="https://www.mlawyer.in/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">online lawyer consultation</a>, and resources on <a href="https://www.mlawyer.in/blog/importance-of-patta-chitta-complete-guide-for-property-owners" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ownership</a>, making it a convenient one-stop solution for complete legal assistance.
                             </p>
                             <div className="pt-4 pb-2">
                                 <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">

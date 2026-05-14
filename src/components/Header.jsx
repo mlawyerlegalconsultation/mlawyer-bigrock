@@ -12,12 +12,12 @@ const Header = () => {
   const { scrollYProgress } = useScroll();
 
   const customerServices = [
-    { label: 'Family Lawyer', path: '/customer/family-lawyer' },
+    { label: 'Family Lawyer', path: '/family-lawyers' },
     { label: 'Property Lawyer', path: '/property-lawyers' },
-    { label: 'Criminal Lawyer', path: '/customer/legal-criminal-lawyer' },
-    { label: 'Corporate Lawyer', path: '/customer/best-corporate-lawyers' },
-    { label: 'Consumer Rights Lawyer', path: '/customer/consumer-right-lawyer-app' },
-    { label: 'Labour Lawyer', path: '/customer/labour-lawyer-advisor' },
+    { label: 'Criminal Lawyer', path: '/legal-criminal-lawyers' },
+    { label: 'Corporate Lawyer', path: '/best-corporate-lawyers' },
+    { label: 'Consumer Rights Lawyer', path: '/consumer-right-lawyer-app' },
+    { label: 'Labour Lawyer', path: '/labour-lawyer-advisor' },
     { label: 'Startup Lawyer', path: '/services/startup-lawyer' },
     { label: 'NRI Legal Support', path: '/services/nri-legal-support' },
   ];

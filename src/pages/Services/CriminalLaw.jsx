@@ -69,13 +69,13 @@ const CriminalLaw = () => {
                 <meta name="geo.region" content="Chennai,Coimbatore" />
                 <meta name="msnbot" content="index,follow" />
                 <meta name="allow-search" content="yes" />
-                <link rel="canonical" href="https://www.mlawyer.in/customer/criminal-law" />
+                <link rel="canonical" href="https://www.mlawyer.in/legal-criminal-lawyers" />
                 <meta httpEquiv="content-language" content="en-us" />
 
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Criminal Lawyers in Chennai and Coimbatore | Legal Advocates" />
-                <meta property="og:url" content="https://www.mlawyer.in/customer/criminal-law" />
+                <meta property="og:url" content="https://www.mlawyer.in/legal-criminal-lawyers" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"
@@ -256,7 +256,7 @@ const CriminalLaw = () => {
                                 Every criminal case at MLawyer is carefully reviewed under applicable criminal law to ensure accurate legal handling and a strong defense strategy based on evidence, facts, and procedural correctness. We provide continuous legal guidance throughout the criminal justice process to protect client rights and interests.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Along with criminal matters, MLawyer also offers support through experienced <Link to="/property-lawyers" className="text-primary hover:underline font-bold">property advocates</Link>, handles family offense cases through our <Link to="/customer/family-lawyer" className="text-primary hover:underline font-bold">family law experts</Link>, and provides assistance from skilled <Link to="/customer/best-corporate-lawyers" className="text-primary hover:underline font-bold">corporate lawyers</Link>, ensuring complete and reliable legal services across multiple practice areas.
+                                Along with criminal matters, MLawyer also offers support through experienced <Link to="/property-lawyers" className="text-primary hover:underline font-bold">property advocates</Link>, handles family offense cases through our <Link to="/family-lawyers" className="text-primary hover:underline font-bold">family law experts</Link>, and provides assistance from skilled <Link to="/best-corporate-lawyers" className="text-primary hover:underline font-bold">corporate lawyers</Link>, ensuring complete and reliable legal services across multiple practice areas.
                             </p>
                             <div className="pt-4 pb-2">
                                 <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">

@@ -35,15 +35,13 @@ function App() {
         <Route index element={<Home />} />
         <Route path="blogs" element={<AllBlogs />} />
         <Route path="blog/:slug" element={<Blog />} />
-        <Route path="customer">
-          <Route index element={<Customer />} />
-          <Route path="family-lawyer" element={<FamilyLaw />} />
-          <Route path="legal-criminal-lawyer" element={<CriminalLaw />} />
-          <Route path="best-corporate-lawyers" element={<CorporateLaw />} />
-          <Route path="consumer-right-lawyer-app" element={<ConsumerRight />} />
-          <Route path="labour-lawyer-advisor" element={<LabourLaw />} />
-        </Route>
+        <Route path="customer" element={<Customer />} />
+        <Route path="family-lawyers" element={<FamilyLaw />} />
         <Route path="property-lawyers" element={<PropertyLaw />} />
+        <Route path="legal-criminal-lawyers" element={<CriminalLaw />} />
+        <Route path="best-corporate-lawyers" element={<CorporateLaw />} />
+        <Route path="consumer-right-lawyer-app" element={<ConsumerRight />} />
+        <Route path="labour-lawyer-advisor" element={<LabourLaw />} />
         <Route path="services">
           <Route path="startup-lawyer" element={<StartupLawyer />} />
           <Route path="nri-legal-support" element={<NRILegalSupport />} />

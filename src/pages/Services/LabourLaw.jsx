@@ -71,7 +71,7 @@ const LabourLaw = () => {
                 <meta name="geo.region" content="Chennai,Coimbatore" />
                 <meta name="msnbot" content="index,follow" />
                 <meta name="allow-search" content="yes" />
-                <link rel="canonical" href="https://www.mlawyer.in/customer/labour-lawyer-advisor" />
+                <link rel="canonical" href="https://www.mlawyer.in/labour-lawyer-advisor" />
                 <meta httpEquiv="content-language" content="en-us" />
 
                 <meta property="og:locale" content="en_US" />
@@ -80,7 +80,7 @@ const LabourLaw = () => {
                     property="og:title"
                     content="MlLawyer-Employment & Industrial Labour Law Lawyers & Advisor near me"
                 />
-                <meta property="og:url" content="https://www.mlawyer.in/customer/labour-lawyer-advisor" />
+                <meta property="og:url" content="https://www.mlawyer.in/labour-lawyer-advisor" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"

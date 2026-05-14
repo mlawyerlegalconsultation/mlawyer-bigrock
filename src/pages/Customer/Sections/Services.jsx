@@ -16,7 +16,7 @@ const Services = () => {
         {
             icon: "FaHeartBroken",
             title: "Family Lawyer",
-            link: "family-lawyer",
+            link: "family-lawyers",
             items: [
                 "Divorce & Separation",
                 "Child Custody & Visitation Rights",
@@ -40,7 +40,7 @@ const Services = () => {
         {
             icon: "FaGavel",
             title: "Criminal Lawyer",
-            link: "legal-criminal-lawyer",
+            link: "legal-criminal-lawyers",
             items: [
                 "FIR Filing & Police Complaints",
                 "Bail (Anticipatory & Regular Bail)",
@@ -113,7 +113,7 @@ const Services = () => {
                                     ))}
                                 </ul>
                                 <Link
-                                    to={`/customer/${service.link}`}
+                                    to={`/${service.link}`}
                                     className="mt-6 text-primary dark:text-secondary font-semibold text-sm hover:underline transition-colors inline-block"
                                 >
                                     Read More

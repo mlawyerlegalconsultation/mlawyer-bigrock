@@ -75,13 +75,13 @@ const FamilyLaw = () => {
                 <meta name="geo.region" content="Chennai,Coimbatore" />
                 <meta name="msnbot" content="index,follow" />
                 <meta name="allow-search" content="yes" />
-                <link rel="canonical" href="https://www.mlawyer.in/customer/family-lawyer" />
+                <link rel="canonical" href="https://www.mlawyer.in/family-lawyers" />
                 <meta httpEquiv="content-language" content="en-us" />
 
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Best Family &amp; Divorce Lawyers Near Me in Chennai | Coimbatore" />
-                <meta property="og:url" content="https://www.mlawyer.in/customer/family-lawyer" />
+                <meta property="og:url" content="https://www.mlawyer.in/family-lawyers" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"
@@ -281,7 +281,7 @@ const FamilyLaw = () => {
                             </p>
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 In addition to family law, we also provide support in <Link to="/property-lawyers" className="text-primary hover:underline font-semibold">property law</Link> matters such as ownership
-                                disputes, documentation, and legal verification, as well as <Link to="/customer/legal-criminal-lawyer" className="text-primary hover:underline font-semibold">criminal law</Link> cases where timely legal
+                                disputes, documentation, and legal verification, as well as <Link to="/legal-criminal-lawyers" className="text-primary hover:underline font-semibold">criminal law</Link> cases where timely legal
                                 representation is crucial. Our platform ensures you are connected with the right legal expert based
                                 on your specific needs.
                             </p>
