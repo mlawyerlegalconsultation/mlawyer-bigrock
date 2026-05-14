@@ -13,7 +13,7 @@ const Header = () => {
 
   const customerServices = [
     { label: 'Family Lawyer', path: '/customer/family-lawyer' },
-    { label: 'Property Lawyer', path: '/customer/property-lawyer' },
+    { label: 'Property Lawyer', path: '/property-lawyers' },
     { label: 'Criminal Lawyer', path: '/customer/legal-criminal-lawyer' },
     { label: 'Corporate Lawyer', path: '/customer/best-corporate-lawyers' },
     { label: 'Consumer Rights Lawyer', path: '/customer/consumer-right-lawyer-app' },

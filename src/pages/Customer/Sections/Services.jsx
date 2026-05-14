@@ -28,7 +28,7 @@ const Services = () => {
         {
             icon: "FaHome",
             title: "Property Lawyer",
-            link: "property-lawyer",
+            link: "property-lawyers",
             items: [
                 "Property Purchase & Sale Agreements",
                 "Property Registration & Documentation",

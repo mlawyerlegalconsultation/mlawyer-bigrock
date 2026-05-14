@@ -280,7 +280,7 @@ const FamilyLaw = () => {
                                 lawyer is the first step toward resolution.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                In addition to family law, we also provide support in <Link to="/customer/property-lawyer" className="text-primary hover:underline font-semibold">property law</Link> matters such as ownership
+                                In addition to family law, we also provide support in <Link to="/property-lawyers" className="text-primary hover:underline font-semibold">property law</Link> matters such as ownership
                                 disputes, documentation, and legal verification, as well as <Link to="/customer/legal-criminal-lawyer" className="text-primary hover:underline font-semibold">criminal law</Link> cases where timely legal
                                 representation is crucial. Our platform ensures you are connected with the right legal expert based
                                 on your specific needs.

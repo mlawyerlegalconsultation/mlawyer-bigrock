@@ -38,12 +38,12 @@ function App() {
         <Route path="customer">
           <Route index element={<Customer />} />
           <Route path="family-lawyer" element={<FamilyLaw />} />
-          <Route path="property-lawyer" element={<PropertyLaw />} />
           <Route path="legal-criminal-lawyer" element={<CriminalLaw />} />
           <Route path="best-corporate-lawyers" element={<CorporateLaw />} />
           <Route path="consumer-right-lawyer-app" element={<ConsumerRight />} />
           <Route path="labour-lawyer-advisor" element={<LabourLaw />} />
         </Route>
+        <Route path="property-lawyers" element={<PropertyLaw />} />
         <Route path="services">
           <Route path="startup-lawyer" element={<StartupLawyer />} />
           <Route path="nri-legal-support" element={<NRILegalSupport />} />
