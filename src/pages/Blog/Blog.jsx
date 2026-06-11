@@ -472,6 +472,28 @@ const Blog = () => {
                 </div>
               )}
 
+              {/* Legal Services Widget */}
+              <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm">
+                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                  <span className="w-1.5 h-6 bg-primary rounded-full mr-3"></span>
+                  Our Services
+                </h3>
+                <nav className="flex flex-col gap-2">
+                  <Link to="/family-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
+                    Family & Divorce Lawyers
+                  </Link>
+                  <Link to="/property-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
+                    Property & Civil Lawyers
+                  </Link>
+                  <Link to="/legal-criminal-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
+                    Criminal Defense Lawyers
+                  </Link>
+                  <Link to="/best-corporate-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
+                    Corporate & Business Lawyers
+                  </Link>
+                </nav>
+              </div>
+
               {/* Share section */}
               <div className="flex flex-col gap-4 px-2">
                 <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">Share this story:</span>

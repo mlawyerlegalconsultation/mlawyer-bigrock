@@ -93,9 +93,9 @@ const AllBlogs = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-16">
+        <div className="flex flex-col lg:flex-row gap-12">
           {/* Main Content Area */}
-          <div className="">
+          <div className="lg:w-2/3">
             {error && (
               <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-8">
                 <p className="text-red-700">{error}</p>
@@ -108,7 +108,7 @@ const AllBlogs = () => {
               </div>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {filteredBlogs.map((blog) => (
                 <Link
                   key={blog.slug}
@@ -152,6 +152,31 @@ const AllBlogs = () => {
               ))}
             </div>
           </div>
+
+          {/* Sidebar */}
+          <aside className="lg:w-1/3 space-y-8">
+            {/* Legal Services Widget */}
+            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-1.5 h-6 bg-primary rounded-full mr-3"></span>
+                Our Services
+              </h3>
+              <nav className="flex flex-col gap-2">
+                <Link to="/family-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
+                  Family & Divorce Lawyers
+                </Link>
+                <Link to="/property-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
+                  Property & Civil Lawyers
+                </Link>
+                <Link to="/legal-criminal-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
+                  Criminal Defense Lawyers
+                </Link>
+                <Link to="/best-corporate-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
+                  Corporate & Business Lawyers
+                </Link>
+              </nav>
+            </div>
+          </aside>
         </div>
       </div>
 
