@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiMinus, FiPlus } from 'react-icons/fi';
+import { Helmet } from 'react-helmet-async';
 import PopIn from '../../../components/animations/PopIn';
 import homeData from '../../../data/home.json';
 
@@ -11,8 +12,26 @@ const FAQ = () => {
         setOpenIndex(index === openIndex ? -1 : index);
     };
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faq.questions.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer
+            }
+        }))
+    };
+
     return (
         <section className="py-16 lg:py-5 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify(faqSchema)}
+                </script>
+            </Helmet>
             <div className="container mx-auto px-6 max-w-4xl">
                 <PopIn>
                     <div className="text-center mb-12">
