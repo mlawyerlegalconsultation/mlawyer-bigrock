@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PopIn from '../../components/animations/PopIn';
-import familyLawImg from '../../assets/img/services/family-law.png';
-import familyLawConsultation from '../../assets/img/services/family_law_consultation.png';
-import familyCourtGavel from '../../assets/img/services/family_court_gavel.png';
-import familySupportLegal from '../../assets/img/services/family_support_legal.png';
+import familyLawImg from '../../assets/img/services/family-lawyers-in-chennai.png';
+import familyLawConsultation from '../../assets/img/services/best-divorce-lawyers-in-chennai.png';
+import familyCourtGavel from '../../assets/img/services/family-law-attorneys.png';
+import familySupportLegal from '../../assets/img/services/family-lawyer-near-me.png';
 import FAQSection from '../../components/FAQSection';
 import Breadcrumb from '../../components/Breadcrumb';
 import { PiSealCheck, PiShieldCheck, PiCurrencyInr, PiUsers, PiClock, PiHouse } from 'react-icons/pi';
@@ -336,7 +336,7 @@ const FamilyLaw = () => {
                                 With access to experienced family law attorneys, you can approach your case with confidence. Whether you need assistance with divorce, custody, or financial matters, finding the right divorce lawyer is the first step toward resolution.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                In addition to family law, we also provide support in <a href="https://www.mlawyer.in/customer/online-legal-consultation" className="text-primary hover:underline font-semibold">property law</a> matters such as ownership disputes, documentation, and legal verification, as well as <a href="https://www.mlawyer.in/customer/legal-criminal-lawyer" className="text-primary hover:underline font-semibold">criminal law</a> cases where timely legal representation is crucial. Our platform ensures you are connected with the right legal expert based on your specific needs.
+                                In addition to family law, we also provide support in <Link to="/property-lawyers" className="text-primary hover:underline font-semibold">property law</Link> matters such as ownership disputes, documentation, and legal verification, as well as <Link to="/legal-criminal-lawyers" className="text-primary hover:underline font-semibold">criminal law</Link> cases where timely legal representation is crucial. Our platform ensures you are connected with the right legal expert based on your specific needs.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 We also connect you with the best family lawyers in Coimbatore, offering trusted legal support for divorce, custody, property and criminal matters across the city. Take action today and get the legal support you need to protect your rights and secure your future.

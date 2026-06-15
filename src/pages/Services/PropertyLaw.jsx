@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PopIn from '../../components/animations/PopIn';
-import propertyLawImg from '../../assets/img/services/property-law.png';
-import propertyTransaction from '../../assets/img/services/property_transaction.png';
-import propertyDisputeCourt from '../../assets/img/services/property_dispute_court.png';
-import propertyVerification from '../../assets/img/services/property_verification.png';
+import propertyLawImg from '../../assets/img/services/property-lawyers-in-chennai.png';
+import propertyTransaction from '../../assets/img/services/property-transaction.png';
+import propertyDisputeCourt from '../../assets/img/services/property-disputes-and-court.png';
+import propertyVerification from '../../assets/img/services/property-verification.png';
 import FAQSection from '../../components/FAQSection';
 import Breadcrumb from '../../components/Breadcrumb';
 import { PiSealCheck, PiShieldCheck, PiHouse, PiUsers, PiNotebook, PiWarning } from 'react-icons/pi';
@@ -336,7 +336,7 @@ const PropertyLaw = () => {
                                     MLawyer is a trusted choice among online property lawyers in Chennai, offering clear guidance and reliable support for all real estate transactions. As experienced lawyers in Chennai for property matters, the firm provides precise property legal opinions, helping clients make informed decisions while ensuring every legal property issue is handled with accuracy and compliance.
                                 </p>
                                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                    In addition to property services, MLawyer also offers support from a <Link to="/family-lawyers" className="text-primary hover:underline font-semibold">family lawyer</Link>, <a href="https://www.mlawyer.in/customer/best-corporate-lawyers" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">corporate lawyer</a>, and <a href="https://www.mlawyer.in/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">online lawyer consultation</a>, making it a convenient one-stop solution for complete legal assistance.
+                                    In addition to property services, MLawyer also offers support from a <Link to="/family-lawyers" className="text-primary hover:underline font-semibold">family lawyer</Link>, <Link to="/best-corporate-lawyers" className="text-primary hover:underline font-semibold">corporate lawyer</Link>, and <Link to="/" className="text-primary hover:underline font-semibold">online lawyer consultation</Link>, making it a convenient one-stop solution for complete legal assistance.
                                 </p>
                             </div>
 

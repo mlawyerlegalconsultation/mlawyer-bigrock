@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PopIn from '../../components/animations/PopIn';
-import nriLawImg from '../../assets/img/services/nri_legal_photo.png';
+import nriLawImg from '../../assets/img/services/nri-legal-support.png';
 import FAQSection from '../../components/FAQSection';
 import Breadcrumb from '../../components/Breadcrumb';
 

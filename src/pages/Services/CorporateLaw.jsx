@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PopIn from '../../components/animations/PopIn';
-import corporateLawImg from '../../assets/img/services/corporate-law.png';
-import corporateLawConsultation from '../../assets/img/services/corporate_law_consultation.png';
-import corporateSupportLegal from '../../assets/img/services/corporate_legal_support.png';
-import corporateCourtGavel from '../../assets/img/services/corporate_court_gavel.png';
+import corporateLawImg from '../../assets/img/services/best-corporate-law-firms-in-chennai.png';
+import corporateLawConsultation from '../../assets/img/services/corporate-law-consultation.png';
+import corporateSupportLegal from '../../assets/img/services/legal-support-for-corporate.png';
+import corporateCourtGavel from '../../assets/img/services/corporate-litigation.png';
 import FAQSection from '../../components/FAQSection';
 import Breadcrumb from '../../components/Breadcrumb';
 import { PiSealCheck, PiShieldCheck, PiCurrencyInr, PiUsers, PiClock, PiHouse } from 'react-icons/pi';
@@ -13,74 +13,73 @@ import { PiSealCheck, PiShieldCheck, PiCurrencyInr, PiUsers, PiClock, PiHouse } 
 const companyTypes = [
     {
         title: 'Private Limited Company',
-        description: 'Preferred by startups and growing businesses. Requires incorporation, annual filings, statutory compliance, and regular board meetings with limited liability protection for shareholders.'
+        description: 'Private limited companies are among the most preferred business structures for startups and growing businesses. They require incorporation under the Companies Act, annual filings, statutory compliance, and regular board meetings. Shareholders enjoy limited liability protection.'
     },
     {
         title: 'Public Limited Company',
-        description: 'Can raise capital from the public through shares and must follow stricter disclosure, reporting, and governance obligations.'
+        description: 'Public limited companies can raise capital from the public through shares and are subject to stricter compliance and disclosure obligations. These companies require regular reporting and strong corporate governance practices.'
     },
     {
         title: 'Limited Liability Partnership (LLP)',
-        description: 'Combines partnership flexibility with limited liability benefits, along with registration, agreement drafting, and periodic compliance.'
+        description: 'LLPs combine the operational flexibility of partnerships with limited liability benefits. LLPs require proper registration, partnership agreements, and periodic statutory compliance.'
     },
     {
         title: 'One Person Company (OPC)',
-        description: 'Allows a single entrepreneur to run a company with separate legal identity, limited liability, and simplified management.'
+        description: 'An OPC allows individual entrepreneurs to establish a company with separate legal identity and limited liability protection while maintaining simplified management structures.'
     },
     {
         title: 'Partnership Firm',
-        description: 'Operates through partnership agreements that define rights, responsibilities, and profit sharing, making legal documentation essential.'
+        description: 'Partnership firms are governed by partnership agreements that define the rights, responsibilities, and profit-sharing arrangements among partners. Proper legal documentation is essential for avoiding disputes and ensuring operational clarity.'
     }
 ];
 
 const disputeCases = [
     {
         title: 'Contract and Commercial Disputes',
-        description: 'Handles service agreements, vendor contracts, partnership arrangements, and commercial transaction disputes through negotiation, arbitration, or litigation.'
+        description: 'Disputes related to service agreements, vendor contracts, partnership arrangements, and commercial transactions are common among corporate companies. An experienced commercial lawyer can help businesses resolve such disputes through negotiation, arbitration, or litigation.'
     },
     {
         title: 'Shareholder Disputes',
-        description: 'Addresses conflicts involving management decisions, profit distribution, and ownership rights that can affect business stability.'
+        description: 'Conflicts between shareholders regarding management decisions, profit distribution, or ownership rights can significantly affect business operations and stability.'
     },
     {
         title: 'Employment and HR Disputes',
-        description: 'Supports matters involving employment contracts, workplace policies, employee termination, harassment claims, and labor law compliance.'
+        description: 'Corporate employers may face legal matters related to employment contracts, workplace policies, employee termination, harassment claims, and labor law compliance.'
     },
     {
         title: 'Regulatory and Compliance Cases',
-        description: 'Covers penalties, investigations, and legal proceedings arising from missed statutory requirements and compliance failures.'
+        description: 'Failure to comply with statutory requirements can lead to penalties, investigations, or legal proceedings. Proper corporate legal guidance helps businesses manage regulatory obligations effectively.'
     },
     {
         title: 'Intellectual Property Cases',
-        description: 'Protects trademarks, copyrights, patents, trade secrets, and confidential business information tied to brand and business assets.'
+        description: 'Businesses require legal protection for trademarks, copyrights, patents, trade secrets, and confidential business information to protect their brand identity and assets.'
     }
 ];
 
 const supportItems = [
     {
         title: 'Business Setup and Legal Structuring',
-        description: 'Company incorporation, entity selection, and legal structuring for startups and established businesses.'
+        description: 'We assist in company incorporation, entity selection, and legal structuring for startups and established businesses.'
     },
     {
         title: 'Contract Drafting and Legal Review',
-        description: 'Drafting and reviewing business agreements to ensure clarity, compliance, and risk protection.'
+        description: 'We prepare and review all types of business agreements to ensure clarity, compliance, and risk protection.'
     },
     {
         title: 'Compliance and Regulatory Support',
-        description: 'Assistance with statutory filings, governance requirements, and ongoing corporate compliance.'
+        description: 'We help companies stay compliant with corporate laws, statutory filings, and governance requirements.'
     },
     {
         title: 'Dispute Handling and Resolution',
-        description: 'Representation for shareholder disputes, partnership issues, and commercial conflicts through legal strategy and negotiation.'
+        description: 'We manage shareholder disputes, partnership issues, and commercial conflicts through legal negotiation and representation.'
     },
     {
         title: 'Corporate Transactions and Advisory',
-        description: 'Legal support for mergers, acquisitions, restructuring, and ongoing business advisory.'
+        description: 'We support mergers, acquisitions, restructuring, and provide ongoing legal advisory for business growth.'
     }
 ];
 
 const laws = [
-    'Companies Act, 2013',
     'Limited Liability Partnership Act, 2008',
     'Indian Contract Act, 1872',
     'Competition Act, 2002',
@@ -101,8 +100,8 @@ const rolePoints = [
 
 const faqs = [
     {
-        question: 'Why should businesses hire corporate law firms in Chennai?',
-        answer: 'Corporate law firms in Chennai, Coimbatore, Madurai, and across Tamil Nadu help businesses manage legal compliance, commercial agreements, corporate disputes, mergers, and regulatory matters efficiently while protecting business interests.'
+        question: 'Why should businesses hire corporate law firm in Chennai?',
+        answer: 'Corporate law firm in Chennai,Coimbatore,Madurai and across Tamil Nadu help businesses manage legal compliance, commercial agreements, corporate disputes, mergers, and regulatory matters efficiently while protecting business interests.'
     },
     {
         question: 'How do corporate lawyers help in business compliance?',
@@ -113,8 +112,8 @@ const faqs = [
         answer: 'Choose a corporate advocate or attorney near me based on experience, expertise in corporate law, industry knowledge, legal strategy, and ability to handle complex business legal matters effectively.'
     },
     {
-        question: 'Can MLawyer help with corporate legal matters online?',
-        answer: 'Yes. MLawyer provides online corporate legal support for business setup, contracts, compliance, disputes, and advisory services so businesses can get practical help quickly.'
+        question: 'What services do top corporate law firms in Chennai provide?',
+        answer: 'Top corporate law firms in Chennai assist businesses with company formation, contract drafting, mergers and acquisitions, regulatory compliance, corporate governance and dispute resolution.'
     }
 ];
 
@@ -175,7 +174,7 @@ const CorporateLaw = () => {
                     content="Trusted corporate law firms and corporate lawyers in Chennai offering legal support for employer compliance, salary disputes, contracts, and business matters."
                 />
                 <meta name="twitter:image" content="https://www.mlawyer.in/Logo.png" />
-                <meta name="twitter:image:alt" content="corporate-law-firms-chennai" />
+                <meta name="twitter:image:alt" content="best corporate law firms in chennai" />
                 <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
             </Helmet>
 
@@ -184,14 +183,14 @@ const CorporateLaw = () => {
             <div className="w-full px-6 pt-12 pb-2 mb-0 text-center">
                 <PopIn>
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                        Corporate Law Firms in Chennai
+                        Best Corporate Law Firms in Chennai
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
                     <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
                         <img
                             src={corporateLawImg}
-                            alt="corporate law firms in chennai"
+                            alt="best corporate law firms in chennai"
                             loading="lazy"
                             className="w-full h-auto object-cover max-h-[500px]"
                         />
@@ -203,23 +202,29 @@ const CorporateLaw = () => {
                 <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 dark:border-gray-700">
                     <div className="space-y-16">
 
+                        {/* Intro Paragraphs */}
+                        <div className="space-y-4">
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Businesses require strong legal support to manage operations, compliance, commercial agreements, and corporate disputes effectively. <Link to="/" className="text-primary hover:underline font-bold">MLawyer</Link> provides professional corporate legal services for <Link to="/services/startup-lawyer" className="text-primary hover:underline font-semibold">startups</Link>, private companies, LLPs, partnerships, and established organizations across various industries. As one of the best corporate law firms in Chennai, we offer practical legal solutions tailored to business requirements.
+                            </p>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Our experienced <Link to="/best-corporate-lawyers" className="text-primary hover:underline font-semibold">corporate lawyers in Chennai</Link> assist in online for clients with company incorporation, contract drafting, mergers and acquisitions, shareholder disputes, employment matters, and regulatory compliance.
+                            </p>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
                         {/* Section 1 */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             <div className="space-y-8 order-2 lg:order-1">
                                 <div>
-                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Corporate Law Firms in Chennai</h2>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        Businesses require strong legal support to manage operations, compliance, commercial agreements, and corporate disputes effectively. MLawyer provides professional corporate legal services for startups, private companies, LLPs, partnerships, and established organizations across various industries. As one of the trusted online corporate law firms in Chennai, we offer practical legal solutions tailored to business requirements.
-                                    </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        Our experienced corporate lawyers in Chennai assist online for clients with company incorporation, contract drafting, mergers and acquisitions, shareholder disputes, employment matters, and regulatory compliance.
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Role of Corporate Lawyers in Chennai in Handling Corporate Disputes</h3>
+                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Role of Corporate Lawyers in Chennai in Handling Corporate Disputes</h2>
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                                         Corporate lawyers provide legal support to businesses in managing corporate operations, compliance requirements, and commercial matters. They help companies make legally sound decisions while reducing business risks and handling disputes effectively.
+                                    </p>
+                                    <p className="text-lg text-gray-900 dark:text-white mb-3 font-semibold">
+                                        Their role includes assisting businesses with:
                                     </p>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
                                         {rolePoints.map((item) => (
@@ -246,22 +251,24 @@ const CorporateLaw = () => {
                             </div>
                             <div className="space-y-8">
                                 <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Type of Companies and Their Legal Requirement</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                                        Different types of business entities operate under different legal structures and compliance requirements. Selecting the appropriate business structure is important for taxation, liability protection, management flexibility, and long-term growth.
+                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Corporate Law Firm in Chennai</h2>
+                                    <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3">Corporate Compliance and Companies Act Legal Support</h3>
+                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                                        Corporate legal matters in India are mainly governed by the Companies Act, 2013, which regulates company formation, management, compliance, shareholder rights, and corporate governance. Businesses must follow this Act to ensure lawful operations and avoid legal complications.
                                     </p>
-                                    <div className="space-y-4 pl-4 border-l-2 border-primary/20">
-                                        {companyTypes.map((company) => (
-                                            <div key={company.title}>
-                                                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">{company.title}</h4>
-                                                <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                    {company.description}
-                                                </p>
-                                            </div>
+                                    <p className="text-lg text-gray-900 dark:text-white mb-3 font-semibold">
+                                        Other important laws related to corporate legal matters include:
+                                    </p>
+                                    <ul className="space-y-2 mb-4">
+                                        {laws.map((law, idx) => (
+                                            <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+                                                <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
+                                                <span className="text-md leading-relaxed">{law}</span>
+                                            </li>
                                         ))}
-                                    </div>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mt-6">
-                                        Our experienced corporate lawyers assist businesses in selecting suitable legal structures while ensuring full compliance with applicable corporate regulations.
+                                    </ul>
+                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                        <Link to="/" className="text-primary hover:underline font-bold">MLawyer</Link> assists businesses in complying with these laws through professional corporate legal guidance and compliance support.
                                     </p>
                                 </div>
                             </div>
@@ -270,8 +277,36 @@ const CorporateLaw = () => {
                         {/* Divider */}
                         <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
 
-                        {/* Section 2b */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Section 3 (Box Type) */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">Type of Companies and Their Legal Requirement</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Different types of business entities operate under different legal structures and compliance requirements. Selecting the appropriate business structure is important for taxation, liability protection, management flexibility, and long-term growth.
+                                </p>
+                            </div>
+
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {companyTypes.map((company, idx) => (
+                                    <div key={idx} className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-gray-700/50 dark:to-gray-700/30 rounded-2xl p-6 border border-teal-100 dark:border-gray-600 hover:shadow-md transition-all">
+                                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{company.title}</h4>
+                                        <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">{company.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="text-center max-w-3xl mx-auto pt-4">
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Our experienced corporate lawyers assist businesses in selecting suitable legal structures while ensuring full compliance with applicable corporate regulations.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Section 4 */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                             <div className="space-y-8 order-2 lg:order-1">
                                 <div>
                                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Corporate Litigation and Commercial Dispute Cases</h3>
@@ -301,57 +336,33 @@ const CorporateLaw = () => {
                         {/* Divider */}
                         <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
 
-                        {/* Section 3 */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                            <div className="space-y-8">
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Corporate Compliance and Companies Act Legal Support</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        Corporate legal matters in India are mainly governed by the Companies Act, 2013, which regulates company formation, management, compliance, shareholder rights, and corporate governance. Businesses must follow this Act to ensure lawful operations and avoid legal complications.
-                                    </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        Other important laws related to corporate legal matters include:
-                                    </p>
-                                    <ul className="space-y-3 mb-4">
-                                        {laws.map((law, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
-                                                <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
-                                                <span className="text-lg leading-relaxed">{law}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        MLawyer assists businesses in complying with these laws through professional corporate legal guidance and compliance support.
-                                    </p>
-                                </div>
+                        {/* Section 5 (Box Type) */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">How MLawyer Advocates Help You in Corporate Legal Matters</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    MLawyer provides complete legal assistance to businesses to ensure smooth operations and full compliance with corporate laws. Our focus is to deliver practical legal solutions that protect your business at every stage.
+                                </p>
                             </div>
 
-                            <div className="space-y-8">
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">How MLawyer Advocates Help You in Corporate Legal Matters</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                                        MLawyer provides complete legal assistance to businesses to ensure smooth operations and full compliance with corporate laws. Our focus is to deliver practical legal solutions that protect your business at every stage.
-                                    </p>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        {supportItems.map((item, idx) => (
-                                            <div key={idx} className="p-5 bg-teal-50/50 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-                                                <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-1">{item.title}</h4>
-                                                <p className="text-sm text-gray-600 dark:text-gray-400">{item.description}</p>
-                                            </div>
-                                        ))}
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                                {supportItems.map((item, idx) => (
+                                    <div key={idx} className="p-5 bg-teal-50/50 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                                        <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h4>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400">{item.description}</p>
                                     </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
 
                         {/* Divider */}
                         <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
 
-                        {/* Section 4 */}
+                        {/* Section 6 */}
                         <div className="text-center max-w-4xl mx-auto space-y-6">
                             <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Get Expert Legal Help Today</h3>
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                Corporate disputes require careful handling and expert legal support. At Mlawyer, we are committed to connecting you with trusted professionals who can guide you through every step of your legal journey. Whether you need assistance with business setup, contracts, or compliance matters, finding the right corporate lawyer is the first step toward resolution.
+                                Corporate disputes require careful handling and expert legal support. At <Link to="/" className="text-primary hover:underline font-semibold">Mlawyer</Link>, we are committed to connecting you with trusted professionals who can guide you through every step of your legal journey. Whether you need assistance with business setup, contracts, or compliance matters, finding the right <Link to="/best-corporate-lawyers" className="text-primary hover:underline font-semibold">corporate lawyer</Link> is the first step toward resolution.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 In addition to corporate law, we also provide support in <Link to="/property-lawyers" className="text-primary hover:underline font-semibold">property law</Link> matters such as ownership disputes, documentation, and legal verification, as well as <Link to="/legal-criminal-lawyers" className="text-primary hover:underline font-semibold">criminal law</Link> and <Link to="/family-lawyers" className="text-primary hover:underline font-semibold">family law</Link> cases where timely legal representation is crucial. Our platform ensures you are connected with the right legal expert based on your specific needs.
@@ -410,4 +421,3 @@ const CorporateLaw = () => {
 };
 
 export default CorporateLaw;
-
