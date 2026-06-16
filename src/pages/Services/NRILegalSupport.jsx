@@ -102,8 +102,8 @@ const NRILegalSupport = () => {
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
-                    <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
-                        <img src={nriLawImg} alt="nri-legal-support" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
+                    <div className="w-full rounded-xl overflow-hidden mb-4">
+                        <img src={nriLawImg} alt="nri-legal-support" loading="lazy" className="w-full h-auto object-cover max-h-[350px] md:max-h-[450px] lg:max-h-[500px] rounded-xl" />
                     </div>
                 </PopIn>
             </div>
@@ -129,14 +129,14 @@ const NRILegalSupport = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                         <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                             NRI Legal Support provides specialized legal guidance for Non-Resident Indians who have business, property, or personal matters in India. NRI law addresses the unique legal challenges faced by Indians living abroad, including property management, inheritance, taxation, investment regulations, and family matters. With proper legal support, NRIs can effectively manage their Indian affairs from anywhere in the world.
                         </p>
 
-                        <div className="mt-6">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Key areas covered under NRI Legal Support:</h3>
-                            <ul className="space-y-4">
+                        <div>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Key areas covered under NRI Legal Support:</h3>
+                            <ul className="space-y-2.5">
                                 {[
                                     "Property Matters – Purchase, sale, rental, disputes, and remote management of Indian property",
                                     "Inheritance and Succession – Will documentation, succession planning, and asset distribution",
@@ -153,7 +153,7 @@ const NRILegalSupport = () => {
                             </ul>
                         </div>
 
-                        <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mt-6">
+                        <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                             MLawyer helps you connect with experienced NRI lawyers for comprehensive <h3 className="inline font-bold text-gray-900 dark:text-white text-lg"><Link to="/download" className="text-primary hover:underline">online legal consultation</Link></h3> and support on all matters related to your affairs in India. Whether you need guidance on property management, inheritance planning, taxation compliance, or family matters, our network of NRI-specialized attorneys can help you navigate the complexities of Indian law from abroad. Get connected with qualified lawyers across India who understand the unique needs of NRIs.
                         </div>
                     </div>

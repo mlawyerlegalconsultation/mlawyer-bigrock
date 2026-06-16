@@ -187,12 +187,12 @@ const CorporateLaw = () => {
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
-                    <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
+                    <div className="w-full rounded-xl overflow-hidden mb-4">
                         <img
                             src={corporateLawImg}
                             alt="best corporate law firms in chennai"
                             loading="lazy"
-                            className="w-full h-auto object-cover max-h-[500px]"
+                            className="w-full h-auto object-cover max-h-[350px] md:max-h-[450px] lg:max-h-[500px] rounded-xl"
                         />
                     </div>
                 </PopIn>
@@ -200,7 +200,7 @@ const CorporateLaw = () => {
 
             <div className="w-full px-6">
                 <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 dark:border-gray-700">
-                    <div className="space-y-16">
+                    <div className="space-y-10">
 
                         {/* Intro Paragraphs */}
                         <div className="space-y-4">
@@ -223,21 +223,21 @@ const CorporateLaw = () => {
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                                         Corporate lawyers provide legal support to businesses in managing corporate operations, compliance requirements, and commercial matters. They help companies make legally sound decisions while reducing business risks and handling disputes effectively.
                                     </p>
-                                    <p className="text-lg text-gray-900 dark:text-white mb-3 font-semibold">
+                                    <p className="text-2xl text-gray-900 dark:text-white mb-3 font-semibold">
                                         Their role includes assisting businesses with:
                                     </p>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
                                         {rolePoints.map((item) => (
                                             <div key={item} className="flex items-start gap-2">
                                                 <div className="w-1.5 h-1.5 mt-2 rounded-full bg-primary shrink-0" />
-                                                <span className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{item}</span>
+                                                <span className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">{item}</span>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
                             </div>
-                            <div className="order-1 lg:order-2">
-                                <img src={corporateLawConsultation} alt="Corporate Law Consultation" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={corporateLawConsultation} alt="Corporate Law Consultation" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 
@@ -246,20 +246,27 @@ const CorporateLaw = () => {
 
                         {/* Section 2 */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                            <div>
-                                <img src={corporateSupportLegal} alt="Legal Support for Corporate" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="space-y-6 order-2 lg:order-1">
+                                <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Corporate Law Firm in Chennai</h2>
+                                <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">Corporate Compliance and Companies Act Legal Support</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Corporate legal matters in India are mainly governed by the Companies Act, 2013, which regulates company formation, management, compliance, shareholder rights, and corporate governance. Businesses must follow this Act to ensure lawful operations and avoid legal complications.
+                                </p>
                             </div>
-                            <div className="space-y-8">
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={corporateSupportLegal} alt="Legal Support for Corporate" className="w-full h-auto max-h-[400px] rounded-xl object-contain" />
+                            </div>
+                        </div>
+
+                        {/* Section 2 Part B: Corporate Legal Frameworks */}
+                        <div className="p-8 bg-teal-50/20 dark:bg-gray-800/40 rounded-2xl border border-teal-100/50 dark:border-gray-700">
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Key Corporate Legal Frameworks in India</h3>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                                 <div>
-                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Corporate Law Firm in Chennai</h2>
-                                    <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3">Corporate Compliance and Companies Act Legal Support</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        Corporate legal matters in India are mainly governed by the Companies Act, 2013, which regulates company formation, management, compliance, shareholder rights, and corporate governance. Businesses must follow this Act to ensure lawful operations and avoid legal complications.
-                                    </p>
                                     <p className="text-lg text-gray-900 dark:text-white mb-3 font-semibold">
                                         Other important laws related to corporate legal matters include:
                                     </p>
-                                    <ul className="space-y-2 mb-4">
+                                    <ul className="space-y-2">
                                         {laws.map((law, idx) => (
                                             <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
                                                 <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
@@ -267,6 +274,8 @@ const CorporateLaw = () => {
                                             </li>
                                         ))}
                                     </ul>
+                                </div>
+                                <div className="flex flex-col justify-center">
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                         <Link to="/" className="text-primary hover:underline font-bold">MLawyer</Link> assists businesses in complying with these laws through professional corporate legal guidance and compliance support.
                                     </p>
@@ -286,11 +295,15 @@ const CorporateLaw = () => {
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div className="flex flex-wrap justify-center gap-6">
                                 {companyTypes.map((company, idx) => (
-                                    <div key={idx} className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-gray-700/50 dark:to-gray-700/30 rounded-2xl p-6 border border-teal-100 dark:border-gray-600 hover:shadow-md transition-all">
-                                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{company.title}</h4>
-                                        <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">{company.description}</p>
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex">
+                                        <div className="w-full bg-gradient-to-br from-teal-50 to-blue-50 dark:from-gray-700/50 dark:to-gray-700/30 rounded-2xl p-6 border border-teal-100 dark:border-gray-600 hover:shadow-md transition-all flex flex-col justify-between">
+                                            <div>
+                                                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{company.title}</h4>
+                                                <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">{company.description}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -306,30 +319,45 @@ const CorporateLaw = () => {
                         <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
 
                         {/* Section 4 */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             <div className="space-y-8 order-2 lg:order-1">
                                 <div>
                                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Corporate Litigation and Commercial Dispute Cases</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                                         Corporate cases involve legal disputes or regulatory matters affecting companies, stakeholders, employees, and business operations. Each corporate case requires proper legal analysis, documentation, and strategic representation.
                                     </p>
-                                    <div className="space-y-4">
-                                        {disputeCases.map((caseItem) => (
-                                            <div key={caseItem.title} className="p-5 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-                                                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{caseItem.title}</h4>
-                                                <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                    {caseItem.description}
-                                                </p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mt-6">
+                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                         Our experienced corporate lawyers provide comprehensive legal representation for handling different types of corporate cases professionally and efficiently.
                                     </p>
                                 </div>
                             </div>
-                            <div className="order-1 lg:order-2">
-                                <img src={corporateCourtGavel} alt="Corporate Litigation" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={corporateCourtGavel} alt="Corporate Litigation" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                            </div>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Dispute Cases Grid */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Common Corporate Dispute Cases We Manage</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    We assist businesses in resolving various corporate disputes through expert representation:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {disputeCases.map((caseItem, idx) => (
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex">
+                                        <div className="w-full p-6 bg-gradient-to-br from-teal-50/30 to-blue-50/30 dark:from-gray-700/50 dark:to-gray-700/30 rounded-2xl border border-teal-100/50 dark:border-gray-600 hover:shadow-md transition-all flex flex-col justify-between">
+                                            <div>
+                                                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{caseItem.title}</h4>
+                                                <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">{caseItem.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -345,11 +373,15 @@ const CorporateLaw = () => {
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                            <div className="flex flex-wrap justify-center gap-6">
                                 {supportItems.map((item, idx) => (
-                                    <div key={idx} className="p-5 bg-teal-50/50 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-                                        <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h4>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">{item.description}</p>
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex">
+                                        <div className="w-full p-5 bg-teal-50/50 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow flex flex-col justify-between">
+                                            <div>
+                                                <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h4>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400">{item.description}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -367,8 +399,8 @@ const CorporateLaw = () => {
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 In addition to corporate law, we also provide support in <Link to="/property-lawyers" className="text-primary hover:underline font-semibold">property law</Link> matters such as ownership disputes, documentation, and legal verification, as well as <Link to="/legal-criminal-lawyers" className="text-primary hover:underline font-semibold">criminal law</Link> and <Link to="/family-lawyers" className="text-primary hover:underline font-semibold">family law</Link> cases where timely legal representation is crucial. Our platform ensures you are connected with the right legal expert based on your specific needs.
                             </p>
-                            <div className="pt-4 pb-2">
-                                <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                             <div className="pt-4 pb-2">
+                                <Link to="/download" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Lawyer Now
                                 </Link>
                             </div>
@@ -398,7 +430,7 @@ const CorporateLaw = () => {
                             { title: "Timely support with easy access to legal experts", icon: <PiClock /> },
                             { title: "Trusted legal services across Chennai, Madurai, and Coimbatore", icon: <PiHouse /> }
                         ].map((item, index) => (
-                            <PopIn key={index} delay={index * 0.1}>
+                            <PopIn key={index} delay={index * 0.1} className="w-full h-full">
                                 <div className="h-full p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center gap-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
                                     <div className="w-16 h-16 bg-teal-50 dark:bg-gray-700/50 rounded-2xl flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
                                         <div className="text-4xl text-secondary group-hover:text-primary transition-colors duration-300">

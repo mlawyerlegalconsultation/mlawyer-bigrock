@@ -111,15 +111,15 @@ const CriminalLaw = () => {
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
-                    <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
-                        <img src={criminalLawImg} alt="criminal lawyers in chennai" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
+                    <div className="w-full rounded-xl overflow-hidden mb-4">
+                        <img src={criminalLawImg} alt="criminal lawyers in chennai" loading="lazy" className="w-full h-auto object-cover max-h-[350px] md:max-h-[450px] lg:max-h-[500px] rounded-xl" />
                     </div>
                 </PopIn>
             </div>
 
             <div className="w-full px-6">
                 <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 dark:border-gray-700">
-                    <div className="space-y-16">
+                    <div className="space-y-10">
 
                         {/* Intro Paragraphs */}
                         <div className="space-y-4">
@@ -142,37 +142,49 @@ const CriminalLaw = () => {
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                                         Facing allegations or legal complaints can create stress and uncertainty. This is why experienced criminal defence lawyer in chennai, play an important role in protecting the rights of individuals involved in criminal cases. Professional legal representation ensures that every aspect of the case is examined carefully, including evidence, witness statements, police procedures, and legal documentation.
                                     </p>
-                                    <p className="text-lg text-gray-900 dark:text-white mb-3 font-semibold">
-                                        Criminal defense lawyers assist clients in handling different types of legal matters such as:
-                                    </p>
-                                    <ul className="space-y-2 mb-6">
-                                        {[
-                                            "Bail and anticipatory bail petitions",
-                                            "Cybercrime and online fraud matters",
-                                            "Financial and property-related offenses",
-                                            "Domestic and family-related criminal disputes",
-                                            "Assault and harassment complaints",
-                                            "White-collar crimes",
-                                            "Cheque bounce and fraud allegations",
-                                            "Criminal litigation and trial representation",
-                                            "Appeals and revision petitions"
-                                        ].map((item, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
-                                                <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
-                                                <span className="text-lg leading-relaxed">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        When dealing with property transactions or disputes, Criminal Lawyers Chennai offer valuable legal support at every stage. A Criminal Lawyer Chennai examines all relevant facts, legal documents, and ownership details to identify potential risks and recommend effective solutions.
+                                        When dealing with criminal charges or investigations, having a skilled criminal lawyer in Chennai offers valuable legal support at every stage. A criminal defense advocate examines all relevant facts, police reports, and evidence to identify procedural gaps and recommend the best defense strategy.
                                     </p>
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        Proper legal assistance can help prevent future disputes, safeguard investments, and ensure that property matters are handled in accordance with applicable laws.
+                                        Proper legal assistance can help protect your rights, safeguard your freedom, and ensure that your case is handled in accordance with the legal system.
                                     </p>
                                 </div>
                             </div>
-                            <div className="order-1 lg:order-2">
-                                <img src={criminalDefenseLawyer} alt="Criminal Defense Lawyer" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={criminalDefenseLawyer} alt="Criminal Defense Lawyer" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                            </div>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Criminal Defense Cases List Grid */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Criminal Defense Representation & Legal Assistance</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Criminal defense lawyers assist clients in handling different types of legal matters such as:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {[
+                                    "Bail and anticipatory bail petitions",
+                                    "Cybercrime and online fraud matters",
+                                    "Financial and property-related offenses",
+                                    "Domestic and family-related criminal disputes",
+                                    "Assault and harassment complaints",
+                                    "White-collar crimes",
+                                    "Cheque bounce and fraud allegations",
+                                    "Criminal litigation and trial representation",
+                                    "Appeals and revision petitions"
+                                ].map((item, idx) => (
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex">
+                                        <div className="w-full p-5 bg-teal-50/40 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow flex items-start gap-3">
+                                            <PiSealCheck className="text-secondary text-2xl shrink-0 mt-0.5" />
+                                            <span className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">{item}</span>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -181,49 +193,64 @@ const CriminalLaw = () => {
 
                         {/* Section 2 */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                            <div>
-                                <img src={criminalLegalSupport} alt="Criminal Legal Support" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="space-y-6 order-2 lg:order-1">
+                                <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Trusted Criminal Advocate in Chennai for Case Support</h2>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Choosing the right online criminal lawyers chennai can make a significant difference in the handling of a legal matter. A knowledgeable advocate provides strategic legal advice, explains court procedures clearly, and represents clients effectively during hearings and investigations.
+                                </p>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Legal representation is not limited to court appearances alone. A criminal lawyer chennai also helps clients prepare legal documents, file petitions, review evidence, communicate with legal authorities, and develop defense strategies based on the nature of the criminal cases involved.
+                                </p>
                             </div>
-                            <div className="space-y-8">
-                                <div>
-                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Trusted Criminal Advocate in Chennai for Case Support</h2>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        Choosing the right online criminal lawyers chennai can make a significant difference in the handling of a legal matter. A knowledgeable advocate provides strategic legal advice, explains court procedures clearly, and represents clients effectively during hearings and investigations.
-                                    </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        Legal representation is not limited to court appearances alone. A criminal lawyer chennai also helps clients prepare legal documents, file petitions, review evidence, communicate with legal authorities, and develop defense strategies based on the nature of the criminal cases involved.
-                                    </p>
-                                </div>
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={criminalLegalSupport} alt="Criminal Legal Support" className="w-full h-auto max-h-[400px] rounded-xl object-contain" />
+                            </div>
+                        </div>
 
-                                <div className="p-6 bg-teal-50 dark:bg-gray-800/50 rounded-2xl border border-teal-100 dark:border-gray-700">
-                                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Professional legal support is important in situations involving:</h4>
-                                    <ul className="space-y-2">
-                                        {[
-                                            "Police complaints and FIR-related matters",
-                                            "Arrest and detention issues",
-                                            "Bail applications",
-                                            "Criminal litigation support",
-                                            "Legal notices and responses",
-                                            "Trial court representation",
-                                            "Criminal appeals and revisions",
-                                            "Investigation-related legal assistance"
-                                        ].map((item, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+                        {/* Section 2 Part B: Criminal Law Case Strategy */}
+
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Navigating Criminal Investigations and Defense Strategy</h3>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                A criminal attorney lawyer ensures that clients understand their rights during police inquiries, investigations, and court processes. Proper legal guidance helps individuals manage criminal justice procedures effectively and avoid unnecessary legal complications.
+                            </p>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                A legal criminal lawyer in online also identifies procedural gaps, inconsistencies in evidence, and possible defense arguments that can support the case. Strong preparation and legal knowledge are essential for achieving favorable outcomes in criminal law matters.
+                            </p>
+                        </div>
+
+
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Critical Situations Support Grid */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Critical situations requiring professional legal support</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Our criminal advocates offer timely assistance and solid defense representation in the following scenarios:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {[
+                                    "Police complaints and FIR-related matters",
+                                    "Arrest and detention issues",
+                                    "Bail applications",
+                                    "Criminal litigation support",
+                                    "Legal notices and responses",
+                                    "Trial court representation",
+                                    "Criminal appeals and revisions",
+                                    "Investigation-related legal assistance"
+                                ].map((item, idx) => (
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] flex">
+                                        <div className="w-full p-5 bg-teal-50/40 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow flex flex-col justify-between">
+                                            <div className="flex items-start gap-3">
                                                 <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
-                                                <span className="text-lg leading-relaxed">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        A criminal attorney lawyer ensures that clients understand their rights during police inquiries, investigations, and court processes. Proper legal guidance helps individuals manage criminal justice procedures effectively and avoid unnecessary legal complications.
-                                    </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        A legal criminal lawyer in online also identifies procedural gaps, inconsistencies in evidence, and possible defense arguments that can support the case. Strong preparation and legal knowledge are essential for achieving favorable outcomes in criminal law matters.
-                                    </p>
-                                </div>
+                                                <span className="text-md font-semibold text-gray-900 dark:text-white leading-relaxed">{item}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -238,25 +265,48 @@ const CriminalLaw = () => {
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                                         Criminal law deals with offenses that are considered violations against society or individuals under legal statutes. It covers a wide range of matters, including theft, fraud, assault, cybercrime, financial crimes, domestic violence, and other legal offenses.
                                     </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                         Understanding criminal law requires detailed knowledge of legal procedures, evidence rules, investigation methods, and courtroom practices. Legal professionals help clients navigate these procedures while ensuring compliance with legal requirements.
                                     </p>
-
-                                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">The legal process in criminal cases often includes:</h4>
-                                    <ol className="space-y-3 ml-2 list-decimal list-inside text-lg text-gray-600 dark:text-gray-300">
-                                        <li>Filing of complaints or FIRs</li>
-                                        <li>Police investigation</li>
-                                        <li>Collection of evidence</li>
-                                        <li>Bail applications</li>
-                                        <li>Court hearings and trial proceedings</li>
-                                        <li>Witness examination</li>
-                                        <li>Judgment and sentencing</li>
-                                        <li>Appeals and legal remedies</li>
-                                    </ol>
                                 </div>
                             </div>
-                            <div className="order-1 lg:order-2">
-                                <img src={criminalCourtTrial} alt="Criminal Court Trial" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={criminalCourtTrial} alt="Criminal Court Trial" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                            </div>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Judicial Process Step Grid */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Standard Criminal Judicial Process in India</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    The legal process in criminal cases typically follows these procedural stages:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {[
+                                    { step: "01", title: "Filing of complaints/FIRs", desc: "Initiating the legal record of the alleged criminal offense." },
+                                    { step: "02", title: "Police investigation", desc: "Gathering facts, searching scenes, and questioning key witnesses." },
+                                    { step: "03", title: "Collection of evidence", desc: "Securing documents, forensics, and physical materials." },
+                                    { step: "04", title: "Bail applications", desc: "Requesting release from custody while awaiting trial." },
+                                    { step: "05", title: "Court hearings & trial", desc: "Presenting arguments and evidence before a judge." },
+                                    { step: "06", title: "Witness examination", desc: "Cross-examining witnesses to substantiate facts." },
+                                    { step: "07", title: "Judgment & sentencing", desc: "Pronouncing guilt or innocence and the legal penalty." },
+                                    { step: "08", title: "Appeals & remedies", desc: "Challenging court orders at higher judicial levels." }
+                                ].map((item, idx) => (
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] flex">
+                                        <div className="w-full p-5 bg-teal-50/50 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow flex flex-col justify-between">
+                                            <div>
+                                                <span className="text-2xl font-bold text-secondary mb-2 block">{item.step}</span>
+                                                <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-1">{item.title}</h4>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -276,7 +326,7 @@ const CriminalLaw = () => {
                                 </p>
                             </div>
 
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div className="flex flex-wrap justify-center gap-6">
                                 {[
                                     {
                                         title: "Property and Financial Offenses",
@@ -338,16 +388,20 @@ const CriminalLaw = () => {
                                         ]
                                     }
                                 ].map((caseType, idx) => (
-                                    <div key={idx} className="bg-gradient-to-br from-teal-50 to-blue-50 dark:from-gray-700/50 dark:to-gray-700/30 rounded-2xl p-6 border border-teal-100 dark:border-gray-600 hover:shadow-md transition-all">
-                                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{caseType.title}</h4>
-                                        <ul className="space-y-2">
-                                            {caseType.items.map((item, itemIdx) => (
-                                                <li key={itemIdx} className="flex items-start gap-2 text-gray-600 dark:text-gray-300">
-                                                    <div className="w-1.5 h-1.5 mt-2 rounded-full bg-primary flex-shrink-0"></div>
-                                                    <span className="text-md leading-relaxed">{item}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex">
+                                        <div className="w-full bg-gradient-to-br from-teal-50 to-blue-50 dark:from-gray-700/50 dark:to-gray-700/30 rounded-2xl p-6 border border-teal-100 dark:border-gray-600 hover:shadow-md transition-all flex flex-col justify-between">
+                                            <div>
+                                                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">{caseType.title}</h4>
+                                                <ul className="space-y-2">
+                                                    {caseType.items.map((item, itemIdx) => (
+                                                        <li key={itemIdx} className="flex items-start gap-2 text-gray-600 dark:text-gray-300">
+                                                            <div className="w-1.5 h-1.5 mt-2 rounded-full bg-primary flex-shrink-0"></div>
+                                                            <span className="text-md leading-relaxed">{item}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -365,8 +419,8 @@ const CriminalLaw = () => {
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 Along with criminal matters, <Link to="/" className="text-primary hover:underline font-bold">MLawyer</Link> also offers support through experienced <Link to="/property-lawyers" className="text-primary hover:underline font-bold">property advocates</Link>, handles <Link to="/family-lawyers" className="text-primary hover:underline font-bold">family offense</Link> cases, and provides assistance from skilled <Link to="/best-corporate-lawyers" className="text-primary hover:underline font-bold">corporate lawyers</Link>, ensuring complete and reliable legal services across multiple practice areas.
                             </p>
-                            <div className="pt-4 pb-2">
-                                <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                             <div className="pt-4 pb-2">
+                                <Link to="/download" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Criminal Lawyer
                                 </Link>
                             </div>
@@ -396,7 +450,7 @@ const CriminalLaw = () => {
                             { title: "Timely support with easy access to legal experts", icon: <PiClock /> },
                             { title: "Trusted legal services across Chennai, Madurai, and Coimbatore", icon: <PiHouse /> }
                         ].map((item, index) => (
-                            <PopIn key={index} delay={index * 0.1}>
+                            <PopIn key={index} delay={index * 0.1} className="w-full h-full">
                                 <div className="h-full p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center gap-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
                                     <div className="w-16 h-16 bg-teal-50 dark:bg-gray-700/50 rounded-2xl flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
                                         <div className="text-4xl text-secondary group-hover:text-primary transition-colors duration-300">

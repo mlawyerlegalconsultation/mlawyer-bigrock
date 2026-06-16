@@ -102,8 +102,8 @@ const StartupLawyer = () => {
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
-                    <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
-                        <img src={startupLawImg} alt="startup-legal-consultation" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
+                    <div className="w-full rounded-xl overflow-hidden mb-4">
+                        <img src={startupLawImg} alt="startup-legal-consultation" loading="lazy" className="w-full h-auto object-cover max-h-[350px] md:max-h-[450px] lg:max-h-[500px] rounded-xl" />
                     </div>
                 </PopIn>
             </div>
@@ -129,14 +129,14 @@ const StartupLawyer = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                         <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                             Startup law provides the legal framework necessary to establish, operate, and scale a successful business. It encompasses all the legal aspects that startups need to consider, from formation and compliance to investor relations and intellectual property protection. Understanding startup law helps entrepreneurs avoid legal pitfalls and build a solid foundation for growth.
                         </p>
 
-                        <div className="mt-6">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Key areas covered under Startup Lawyer:</h3>
-                            <ul className="space-y-4">
+                        <div>
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Key areas covered under Startup Lawyer:</h3>
+                            <ul className="space-y-2.5">
                                 {[
                                     "Business Formation – Choosing the right business structure and completing incorporation",
                                     "Intellectual Property – Protecting patents, trademarks, copyrights, and trade secrets",
@@ -153,7 +153,7 @@ const StartupLawyer = () => {
                             </ul>
                         </div>
 
-                        <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mt-6">
+                        <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                             MLawyer connects you with experienced startup lawyers who provide expert <h3 className="inline font-bold text-gray-900 dark:text-white text-lg"><Link to="/download" className="text-primary hover:underline">online legal consultation</Link></h3> and guidance for all your startup legal needs. From business formation and intellectual property protection to investor negotiations and compliance, our network of startup attorneys helps you make informed legal decisions and avoid costly mistakes. Get connected with qualified startup lawyers across India who understand the unique challenges of building a successful business.
                         </div>
                     </div>

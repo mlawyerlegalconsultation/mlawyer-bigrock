@@ -22,7 +22,7 @@ const FAQSection = ({ faqs }) => {
 
             <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                    <PopIn key={index} delay={index * 0.1}>
+                    <PopIn key={index} delay={index * 0.1} className="w-full">
                         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden transition-all duration-300">
                             <button
                                 onClick={() => toggleFAQ(index)}

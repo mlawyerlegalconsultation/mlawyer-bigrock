@@ -95,28 +95,32 @@ const FamilyLaw = () => {
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
-                    <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
-                        <img src={familyLawImg} alt="family lawyers in chennai" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
+                    <div className="w-full rounded-xl overflow-hidden mb-4">
+                        <img src={familyLawImg} alt="family lawyers in chennai" loading="lazy" className="w-full h-auto object-cover max-h-[350px] md:max-h-[450px] lg:max-h-[500px] rounded-xl" />
                     </div>
                 </PopIn>
             </div>
 
             <div className="w-full px-6">
                 <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 dark:border-gray-700">
-                    <div className="space-y-16">
+                    <div className="space-y-10">
+
+                        {/* Intro Paragraphs */}
+                        <div className="space-y-4">
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Family-related legal issues often involve both emotional stress and complex procedures, making professional guidance essential. Matters such as divorce, child custody, maintenance, and property disputes require careful handling to protect your rights and achieve a fair outcome. At Mlawyer, we help you connect with experienced chennai’s family lawyer who approach every case with clarity, discretion, and a solution-focused mindset.
+                            </p>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Our panel of skilled family law attorneys is committed to delivering practical legal support tailored to your situation. By working with trusted Online family lawyers in Coimbatore, Chennai and other cities for reliable legal advice ,you can benefit from structured guidance and informed advice, helping you navigate legal challenges with greater confidence and move toward a resolution that supports your long-term interests.
+                            </p>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
 
                         {/* Section 1 */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             <div className="space-y-8 order-2 lg:order-1">
-                                <div>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        Family-related legal issues often involve both emotional stress and complex procedures, making professional guidance essential. Matters such as divorce, child custody, maintenance, and property disputes require careful handling to protect your rights and achieve a fair outcome. At Mlawyer, we help you connect with experienced chennai’s family lawyer who approach every case with clarity, discretion, and a solution-focused mindset.
-                                    </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        Our panel of skilled family law attorneys is committed to delivering practical legal support tailored to your situation. By working with trusted Online family lawyers in Coimbatore, Chennai and other cities for reliable legal advice ,you can benefit from structured guidance and informed advice, helping you navigate legal challenges with greater confidence and move toward a resolution that supports your long-term interests.
-                                    </p>
-                                </div>
-
                                 <div>
                                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Legal Guidance You Can Expect from a Family Lawyers Chennai</h2>
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
@@ -127,8 +131,8 @@ const FamilyLaw = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="order-1 lg:order-2">
-                                <img src={familyLawConsultation} alt="best divorce lawyers in chennai" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={familyLawConsultation} alt="best divorce lawyers in chennai" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 
@@ -152,73 +156,67 @@ const FamilyLaw = () => {
                         <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
 
                         {/* Section 2 */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                            <div>
-                                <img src={familySupportLegal} alt="family lawyer near me" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                            <div className="lg:col-span-2 space-y-4">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Detailed Legal Support for Every Type of Family Matter</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    We provide comprehensive support across all areas of family law to ensure that your legal needs are addressed effectively.
+                                </p>
                             </div>
-                            <div className="space-y-8">
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Detailed Legal Support for Every Type of Family Matter</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                                        We provide comprehensive support across all areas of family law to ensure that your legal needs are addressed effectively.
-                                    </p>
-                                    <div className="space-y-6 pl-4 border-l-2 border-primary/20">
-                                        <div>
-                                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Divorce and Separation</h4>
-                                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                A skilled divorce lawyer helps you through every stage, from filing to final settlement. They ensure proper documentation and strong representation.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Child Custody and Guardianship</h4>
-                                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                Legal experts assist in securing fair custody arrangements while prioritizing the child’s well-being.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Maintenance and Alimony</h4>
-                                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                A divorce lawyer helps determine fair financial support based on individual circumstances.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Domestic Disputes</h4>
-                                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                If you are facing domestic issues, a qualified divorce advocate in chennai can guide you through legal procedures and ensure protection under the law.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Property and Asset Division</h4>
-                                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                A divorce lawyer ensures fair distribution of assets and resolves disputes related to shared property.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="flex justify-center lg:justify-end">
+                                <img src={familySupportLegal} alt="family lawyer near me" className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-xl" />
+                            </div>
+                        </div>
 
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">How Long Divorce Cases usually takes in India</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        The duration of a divorce case depends on the type of case and the level of dispute between the parties.
-                                    </p>
-                                    <div className="space-y-4 mb-4">
-                                        <div className="p-5 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-                                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Mutual Consent Divorce</h4>
-                                            <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                This is the fastest method and usually takes 6 to 18 months, depending on court procedures and compliance with legal requirements.
-                                            </p>
-                                        </div>
-                                        <div className="p-5 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-                                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Contested Divorce</h4>
-                                            <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">
-                                                In cases where both parties disagree, the process can take 2 to 5 years or more, depending on the complexity of the case and court timelines.
-                                            </p>
+                        {/* Service Areas Grid */}
+                        <div className="flex flex-wrap justify-center gap-6">
+                            {[
+                                { title: "Divorce and Separation", desc: "A skilled divorce lawyer helps you through every stage, from filing to final settlement. They ensure proper documentation and strong representation." },
+                                { title: "Child Custody and Guardianship", desc: "Legal experts assist in securing fair custody arrangements while prioritizing the child’s well-being." },
+                                { title: "Maintenance and Alimony", desc: "A divorce lawyer helps determine fair financial support based on individual circumstances." },
+                                { title: "Domestic Disputes", desc: "If you are facing domestic issues, a qualified divorce advocate in chennai can guide you through legal procedures and ensure protection under the law." },
+                                { title: "Property and Asset Division", desc: "A divorce lawyer ensures fair distribution of assets and resolves disputes related to shared property." }
+                            ].map((item, idx) => (
+                                <div key={idx} className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex">
+                                    <div className="w-full p-6 bg-teal-50/30 dark:bg-gray-800/40 rounded-2xl border border-teal-100/50 dark:border-gray-750 hover:shadow-md transition-shadow duration-300 flex flex-col justify-between">
+                                        <div>
+                                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h4>
+                                            <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">{item.desc}</p>
                                         </div>
                                     </div>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        An experienced divorce lawyer helps in speeding up the process by ensuring proper documentation and avoiding unnecessary delays.
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* How Long Divorce Cases Section */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">How Long Divorce Cases usually takes in India</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    The duration of a divorce case depends on the type of case and the level of dispute between the parties.
+                                </p>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Mutual Consent Divorce</h4>
+                                    <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">
+                                        This is the fastest method and usually takes 6 to 18 months, depending on court procedures and compliance with legal requirements.
                                     </p>
                                 </div>
+                                <div className="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Contested Divorce</h4>
+                                    <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">
+                                        In cases where both parties disagree, the process can take 2 to 5 years or more, depending on the complexity of the case and court timelines.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="text-center max-w-3xl mx-auto">
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    An experienced divorce lawyer helps in speeding up the process by ensuring proper documentation and avoiding unnecessary delays.
+                                </p>
                             </div>
                         </div>
 
@@ -254,30 +252,41 @@ const FamilyLaw = () => {
                                         A family lawyer for divorce helps you understand which law applies to your case and how it impacts your legal rights.
                                     </p>
                                 </div>
+                            </div>
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={familyCourtGavel} alt="family law attorneys" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                            </div>
+                        </div>
 
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Proven Process for Efficient Legal Case Handling</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                                        We follow a structured approach to deliver efficient legal solutions:
-                                    </p>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        {[
-                                            { title: "Consultation", desc: "Connect with a legal expert to evaluate your case and options." },
-                                            { title: "Case Evaluation", desc: "Experts analyze your situation and identify the best strategy." },
-                                            { title: "Documentation", desc: "A divorce lawyer ensures all required documents are prepared correctly." },
-                                            { title: "Representation", desc: "Your case is handled professionally in court or through negotiation." },
-                                            { title: "Resolution", desc: "We aim for fair and timely outcomes to help you move forward." }
-                                        ].map((step, idx) => (
-                                            <div key={idx} className="p-5 bg-teal-50/50 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-                                                <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-1">{step.title}</h4>
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Our Proven Process Section */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Proven Process for Efficient Legal Case Handling</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    We follow a structured approach to deliver efficient legal solutions:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {[
+                                    { title: "Consultation", desc: "Connect with a legal expert to evaluate your case and options." },
+                                    { title: "Case Evaluation", desc: "Experts analyze your situation and identify the best strategy." },
+                                    { title: "Documentation", desc: "A divorce lawyer ensures all required documents are prepared correctly." },
+                                    { title: "Representation", desc: "Your case is handled professionally in court or through negotiation." },
+                                    { title: "Resolution", desc: "We aim for fair and timely outcomes to help you move forward." }
+                                ].map((step, idx) => (
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(20%-20px)] flex">
+                                        <div className="w-full p-5 bg-teal-50/50 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow flex flex-col justify-between">
+                                            <div>
+                                                <span className="text-2xl font-bold text-secondary mb-2 block">0{idx + 1}</span>
+                                                <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-2">{step.title}</h4>
                                                 <p className="text-sm text-gray-600 dark:text-gray-400">{step.desc}</p>
                                             </div>
-                                        ))}
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="order-1 lg:order-2">
-                                <img src={familyCourtGavel} alt="family law attorneys" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                                ))}
                             </div>
                         </div>
 
@@ -341,8 +350,8 @@ const FamilyLaw = () => {
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 We also connect you with the best family lawyers in Coimbatore, offering trusted legal support for divorce, custody, property and criminal matters across the city. Take action today and get the legal support you need to protect your rights and secure your future.
                             </p>
-                            <div className="pt-4 pb-2">
-                                <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                             <div className="pt-4 pb-2">
+                                <Link to="/download" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Lawyer Now
                                 </Link>
                             </div>
@@ -371,7 +380,7 @@ const FamilyLaw = () => {
                             { title: "Timely support with easy access to legal experts", icon: <PiClock /> },
                             { title: "Trusted legal services across Chennai, Madurai, and Coimbatore", icon: <PiHouse /> }
                         ].map((item, index) => (
-                            <PopIn key={index} delay={index * 0.1}>
+                            <PopIn key={index} delay={index * 0.1} className="w-full h-full">
                                 <div className="h-full p-8 bg-white dark:bg-gray-800 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center gap-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
                                     <div className="w-16 h-16 bg-teal-50 dark:bg-gray-700/50 rounded-2xl flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
                                         <div className="text-4xl text-secondary group-hover:text-primary transition-colors duration-300">

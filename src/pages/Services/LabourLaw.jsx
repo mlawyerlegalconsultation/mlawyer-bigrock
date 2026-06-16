@@ -5,6 +5,7 @@ import PopIn from '../../components/animations/PopIn';
 import labourLawImg from '../../assets/img/services/labour-lawyer-advisor.png';
 import FAQSection from '../../components/FAQSection';
 import Breadcrumb from '../../components/Breadcrumb';
+import { PiSealCheck, PiShieldCheck, PiCurrencyInr, PiUsers, PiClock, PiHouse } from 'react-icons/pi';
 
 const LabourLaw = () => {
     useEffect(() => {
@@ -105,48 +106,76 @@ const LabourLaw = () => {
             <div className="w-full px-6 pt-12 pb-2 mb-0 text-center">
                 <PopIn>
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                        Labour Lawyer
+                        Labour Lawyer & Advisor
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
-                    <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
-                        <img src={labourLawImg} alt="labour-lawyer-advisor" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
+                    <div className="w-full rounded-xl overflow-hidden mb-4">
+                        <img src={labourLawImg} alt="labour-lawyer-advisor" loading="lazy" className="w-full h-auto object-cover max-h-[350px] md:max-h-[450px] lg:max-h-[500px] rounded-xl" />
                     </div>
                 </PopIn>
             </div>
 
             <div className="w-full px-6">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 lg:p-12 shadow-sm border border-gray-100 dark:border-gray-700">
-                    <div className="mb-10 p-6 bg-teal-50 dark:bg-gray-700/50 rounded-xl">
-                        <h3 className="text-xl font-semibold text-primary dark:text-teal-400 mb-4">Core Areas of Labour Lawyer</h3>
-                        <div className="grid md:grid-cols-2 gap-4">
-                            {[
-                                "Employment Contracts & Agreements",
-                                "Wrongful Termination & Unlawful Dismissal",
-                                "Salary, Wages & Bonus Disputes",
-                                "Workplace Harassment & POSH Complaints",
-                                "Employee Rights & Benefits (PF, ESI, Gratuity)"
-                            ].map((area, idx) => (
-                                <div key={idx} className="flex items-start gap-3">
-                                    <div className="w-2 h-2 mt-2 rounded-full bg-secondary flex-shrink-0"></div>
-                                    <span className="text-gray-700 dark:text-gray-300">{area}</span>
-                                </div>
-                            ))}
+                <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 dark:border-gray-700">
+                    <div className="space-y-10">
+
+                        {/* Intro Paragraphs */}
+                        <div className="space-y-4">
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Labour law, also called employment law, governs the relationship between employers and employees. It sets standards for safe and healthy working conditions, wages and remuneration, and specifically addresses the rights and duties of employers and employees. Its purpose is to promote fair labour standards, equitable workplaces, and to protect workers’ rights, health, and dignity.
+                            </p>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Labor legislation in India is governed by a number of statutes such as the Code on Wages 2019, Industrial Relations Code 2020, Occupational Safety Health and Working Conditions Code 2020, and Code on Social Security 2020. At Mlawyer, we help you connect with verified employment and labor lawyers who provide reliable guidance.
+                            </p>
                         </div>
-                    </div>
 
-                    <div className="space-y-8">
-                        <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                            Labour Lawyer, also called employment lawyer, governs the relationship between employers and employees.Labour law sets standards for safe and healthy working conditions, wages and remuneration and specifically addresses the rights and duties of employers and employees. Its purpose is to promote fair labour standards, equitable workplaces and to protect workers’ rights, health and dignity.
-                        </p>
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
 
-                        <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                            Labor legislation in India is governed by a number of statutes such as the Code on Wages 2019, Industrial Relations Code 2020, Occupational Safety Health and Working Conditions Code 2020 and Code on Social Security 2020.
-                        </p>
+                        {/* Section 1: Core Areas of Labour Lawyer */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Core Areas of Labour and Employment Law Support</h2>
+                                <p className="text-lg text-gray-650 dark:text-gray-300 leading-relaxed">
+                                    Our panel of expert labour lawyers provides complete legal assistance across all major areas of employment law:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {[
+                                    { title: "Employment Contracts & Agreements", desc: "Drafting, reviewing, and negotiating employment agreements, NDA clauses, and service terms." },
+                                    { title: "Wrongful Termination & Dismissal", desc: "Legal representation and advice for unlawful dismissal, redundancy, and exit disputes." },
+                                    { title: "Salary, Wages & Bonus Disputes", desc: "Assistance in recovery of unpaid wages, bonuses, gratuity, and overtime compensation." },
+                                    { title: "Workplace Harassment & POSH", desc: "Guidance on POSH guidelines, handling harassment claims, and ensuring workplace safety." },
+                                    { title: "Employee Rights & Benefits", desc: "Ensuring compliance and resolving issues related to PF (Provident Fund), ESI, and gratuity." }
+                                ].map((item, idx) => (
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex">
+                                        <div className="w-full p-6 bg-teal-55/10 dark:bg-gray-800/40 rounded-xl border border-teal-100/50 dark:border-gray-700 hover:shadow-md transition-shadow duration-300 flex flex-col gap-4">
+                                            <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-gray-700/50 flex items-center justify-center shrink-0">
+                                                <PiSealCheck className="text-secondary text-3xl" />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h4>
+                                                <p className="text-md text-gray-650 dark:text-gray-300 leading-relaxed">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
 
-                        <div className="mt-6">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Objectives of Labour Lawyer:</h3>
-                            <ul className="space-y-4">
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Section 2: Objectives */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Key Objectives of Labour Law Regulations</h3>
+                                <p className="text-lg text-gray-650 dark:text-gray-300 leading-relaxed">
+                                    Labour laws are designed to achieve balance, safety, and fairness in the workplace:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
                                 {[
                                     "Protect workers’ rights and welfare",
                                     "Ensure fair wages and safe working conditions",
@@ -154,17 +183,28 @@ const LabourLaw = () => {
                                     "Regulate employer-employee relationships",
                                     "Provide mechanisms for dispute resolution"
                                 ].map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
-                                        <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
-                                        <span className="text-lg leading-relaxed">{item}</span>
-                                    </li>
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(20%-20px)] flex">
+                                        <div className="w-full p-5 bg-teal-55/10 dark:bg-gray-800 rounded-xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow flex items-start gap-3">
+                                            <PiSealCheck className="text-secondary text-2xl shrink-0 mt-0.5" />
+                                            <span className="text-md text-gray-750 dark:text-gray-300 leading-relaxed">{item}</span>
+                                        </div>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         </div>
 
-                        <div className="mt-6">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Types of Labour Lawyer Issues:</h3>
-                            <ul className="space-y-4">
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Section 3: Types of Issues */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Common Labour and Employment Issues We Handle</h3>
+                                <p className="text-lg text-gray-655 dark:text-gray-300 leading-relaxed">
+                                    Employees and employers face various issues requiring professional legal intervention:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
                                 {[
                                     "Unfair dismissal or termination",
                                     "Non-payment or delayed wages",
@@ -172,41 +212,113 @@ const LabourLaw = () => {
                                     "Unsafe working conditions",
                                     "Contractual disputes"
                                 ].map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
-                                        <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
-                                        <span className="text-lg leading-relaxed">{item}</span>
-                                    </li>
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(20%-20px)] flex">
+                                        <div className="w-full p-5 bg-gray-50/50 dark:bg-gray-800/50 rounded-xl border border-gray-150 dark:border-gray-700 hover:shadow-md transition-shadow flex flex-col justify-between">
+                                            <div className="flex items-start gap-3">
+                                                <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
+                                                <span className="text-md font-semibold text-gray-900 dark:text-white leading-relaxed">{item}</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         </div>
 
-                        <div className="mt-6">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Dispute Resolution Mechanisms:</h3>
-                            <ul className="space-y-4">
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Section 4: Dispute Resolution */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Dispute Resolution Mechanisms</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Employment disputes can be resolved through various statutory and legal mechanisms:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
                                 {[
-                                    "Labour Courts",
-                                    "Industrial Tribunals",
-                                    "Conciliation and mediation processes",
-                                    "Government labour departments"
-                                ].map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
-                                        <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
-                                        <span className="text-lg leading-relaxed">{item}</span>
-                                    </li>
+                                    { title: "Labour Courts", desc: "Specialized courts that adjudicate disputes regarding individual employee grievances." },
+                                    { title: "Industrial Tribunals", desc: "Hear collective disputes, wages restructuring, and industrial-level disagreements." },
+                                    { title: "Conciliation & Mediation", desc: "Alternative dispute resolution (ADR) to settle differences amicably out of court." },
+                                    { title: "Labour Departments", desc: "Government departments enforcing labor standards and addressing complaints." }
+                                ].map((step, idx) => (
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] flex">
+                                        <div className="w-full p-5 bg-teal-55/10 dark:bg-gray-800 rounded-xl border border-teal-100/30 dark:border-gray-700 hover:shadow-md transition-shadow flex flex-col justify-between">
+                                            <div>
+                                                <span className="text-2xl font-bold text-secondary mb-2 block">0{idx + 1}</span>
+                                                <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-2">{step.title}</h4>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{step.desc}</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
                         </div>
 
-                        <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mt-6">
-                            Mlawyer, the online legal consultation platform consists of a <h3 className="inline font-bold text-gray-900 dark:text-white text-lg"><Link to="/download" className="text-primary hover:underline">labour lawyer</Link></h3> and <Link to="/download" className="text-primary hover:underline">labour law advisor</Link> to help with <h3 className="inline font-bold text-gray-900 dark:text-white text-lg"><Link to="/download" className="text-primary hover:underline">industrial labour lawyer</Link></h3>, an employment labour lawyer, and more. If you are searching for labour lawyers near me, your search ends at Mlawyer. We help you connect you with an employment labour lawyer at an affordable consultation fee.
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Section 5: Get Expert Legal Help */}
+                        <div className="text-center max-w-4xl mx-auto space-y-6">
+                            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Get Expert Labour Legal Help Today</h3>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                If you are searching for a trusted <strong>labour lawyer near me</strong> or need a qualified <strong>labour law advisor</strong> to resolve employment matters, Mlawyer connects you with leading professionals immediately.
+                            </p>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Our platform enables seamless connection with employment and labor law advocates who provide reliable counsel and representation in court. Take proactive steps to protect your rights, resolve disputes, and ensure legal compliance.
+                            </p>
+                            <div className="pt-4 pb-2">
+                                <Link to="/download" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                    Consult a Labour Lawyer
+                                </Link>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
+            {/* Trust Section */}
+            <div className="w-full px-6 mt-16 mb-20">
+                <div className="max-w-7xl mx-auto">
+                    <PopIn>
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                                What Makes Mlawyer the Right Choice for Labour Lawyers
+                            </h2>
+                            <div className="w-20 h-1.5 bg-secondary mx-auto rounded-full"></div>
+                        </div>
+                    </PopIn>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            { title: "Trusted experts in labour and employment law cases", icon: <PiSealCheck /> },
+                            { title: "Your personal information remains fully secure", icon: <PiShieldCheck /> },
+                            { title: "Transparent and affordable legal fee structure", icon: <PiCurrencyInr /> },
+                            { title: "Get support across all stages of your legal process", icon: <PiUsers /> },
+                            { title: "Timely support with easy access to legal experts", icon: <PiClock /> },
+                            { title: "Trusted legal services across Chennai, Madurai, and Coimbatore", icon: <PiHouse /> }
+                        ].map((item, index) => (
+                            <PopIn key={index} delay={index * 0.1} className="w-full h-full">
+                                <div className="h-full p-8 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center gap-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                                    <div className="w-16 h-16 bg-teal-50 dark:bg-gray-700/50 rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
+                                        <div className="text-4xl text-secondary group-hover:text-primary transition-colors duration-300">
+                                            {item.icon}
+                                        </div>
+                                    </div>
+                                    <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 leading-tight">
+                                        {item.title}
+                                    </h4>
+                                </div>
+                            </PopIn>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
             <FAQSection faqs={faqs} />
         </div>
     );
 };
 
 export default LabourLaw;
-

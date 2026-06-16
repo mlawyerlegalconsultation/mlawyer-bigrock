@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-primary dark:bg-primary/50 backdrop-blur-xl transition-all duration-300 shadow-sm">
-      <div className="container mx-auto px-4 sm:px-10 h-20 flex justify-between items-center">
+      <div className="w-full px-4 sm:px-10 h-20 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group">
           <img src={logo} alt="MLawyer Logo" loading="lazy" className="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" />
           <div className="flex flex-col leading-tight">
@@ -44,7 +44,7 @@ const Header = () => {
           </div>
         </Link>
         <nav className="hidden lg:block">
-          <ul className="flex items-center lg:space-x-5 xl:space-x-8">
+          <ul className="flex items-center lg:space-x-6 xl:space-x-10">
             {navItems.map((item) => {
               const path = getPath(item);
               const isCustomerItem = item === 'For Customers';
@@ -55,7 +55,7 @@ const Header = () => {
                   <li key={item} className="relative group">
                     <Link
                       to={path}
-                      className={`inline-flex items-center gap-2 font-medium lg:text-xs xl:text-sm transition-all relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full hover:text-secondary ${isActive ? 'text-secondary after:w-full' : 'text-white/90 after:w-0'
+                      className={`inline-flex items-center gap-2 font-medium lg:text-[15px] xl:text-base transition-all relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full hover:text-secondary ${isActive ? 'text-secondary after:w-full' : 'text-white/90 after:w-0'
                         }`}
                     >
                       {item}
@@ -87,7 +87,7 @@ const Header = () => {
                 <li key={item}>
                   <Link
                     to={path}
-                    className={`font-medium lg:text-xs xl:text-sm transition-all relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full hover:text-secondary ${isActive ? 'text-secondary after:w-full' : 'text-white/90 after:w-0'
+                    className={`font-medium lg:text-[15px] xl:text-base transition-all relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full hover:text-secondary ${isActive ? 'text-secondary after:w-full' : 'text-white/90 after:w-0'
                       }`}
                   >
                     {item}

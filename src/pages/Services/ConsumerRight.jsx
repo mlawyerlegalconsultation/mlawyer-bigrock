@@ -102,8 +102,8 @@ const ConsumerRight = () => {
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
-                    <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
-                        <img src={consumerLawImg} alt="consumer-right-lawyer-app" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
+                    <div className="w-full rounded-xl overflow-hidden mb-4">
+                        <img src={consumerLawImg} alt="consumer-right-lawyer-app" loading="lazy" className="w-full h-auto object-cover max-h-[350px] md:max-h-[450px] lg:max-h-[500px] rounded-xl" />
                     </div>
                 </PopIn>
             </div>
@@ -128,52 +128,53 @@ const ConsumerRight = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-8">
+                    <div className="space-y-6">
                         <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                             Consumer rights are laws designed to protect buyers and ensure they are treated fairly when purchasing products or services.These rights safeguard consumers against unfair trade practices, defective products, misleading advertisements, and exploitation by sellers or service providers. In India, consumer rights are primarily protected under the Consumer Protection Act 2019, which provides a comprehensive framework for addressing consumer grievances and disputes.
                         </p>
 
-                        <div className="mt-6">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Common Consumer Issues:</h3>
-                            <ul className="space-y-4">
-                                {[
-                                    "Defective or substandard products",
-                                    "False or misleading advertisements",
-                                    "Overcharging or hidden costs",
-                                    "Poor or deficient services",
-                                    "Unfair contract terms"
-                                ].map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
-                                        <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
-                                        <span className="text-lg leading-relaxed">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Common Consumer Issues:</h3>
+                                <ul className="space-y-2.5">
+                                    {[
+                                        "Defective or substandard products",
+                                        "False or misleading advertisements",
+                                        "Overcharging or hidden costs",
+                                        "Poor or deficient services",
+                                        "Unfair contract terms"
+                                    ].map((item, idx) => (
+                                        <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+                                            <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
+                                            <span className="text-lg leading-relaxed">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Objectives of Consumer Rights Lawyer:</h3>
+                                <ul className="space-y-2.5">
+                                    {[
+                                        "Protect consumers from exploitation",
+                                        "Ensure fair trade practices",
+                                        "Promote transparency in business transactions",
+                                        "Provide simple and speedy grievance redressal"
+                                    ].map((item, idx) => (
+                                        <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
+                                            <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
+                                            <span className="text-lg leading-relaxed">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
 
-                        <div className="mt-6">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Objectives of Consumer Rights Lawyer:</h3>
-                            <ul className="space-y-4">
-                                {[
-                                    "Protect consumers from exploitation",
-                                    "Ensure fair trade practices",
-                                    "Promote transparency in business transactions",
-                                    "Provide simple and speedy grievance redressal"
-                                ].map((item, idx) => (
-                                    <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
-                                        <div className="w-1.5 h-1.5 mt-2.5 rounded-full bg-primary flex-shrink-0"></div>
-                                        <span className="text-lg leading-relaxed">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mt-6">
+                        <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                             Want clarity on your consumer rights? MLawyer connects you with best consumer court lawyers for expert legal support, helping you easily find consumer court lawyers near me and access the most reliable <h3 className="inline font-bold text-gray-900 dark:text-white text-lg"><Link to="/download" className="text-primary hover:underline">consumer right lawyer app</Link></h3> for quick guidance and resolution. The <h3 className="inline font-bold text-gray-900 dark:text-white text-lg">consumer court lawyer fees</h3> are affordable in our app, allowing you to choose the right <Link to="/download" className="text-primary hover:underline">consumer court advocate</Link> for legal opinions.
                         </div>
                     </div>
                 </div>
-
             </div>
             <FAQSection faqs={faqs} />
         </div>

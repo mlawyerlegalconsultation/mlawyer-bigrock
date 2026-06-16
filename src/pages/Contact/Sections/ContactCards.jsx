@@ -10,7 +10,8 @@ const iconMap = {
 
 const ContactCards = () => {
     const { contactInfo } = contactData;
-    const displayCards = contactInfo.slice(0, 2); // Only first 2 cards
+    // Only display Chat to support
+    const displayCards = contactInfo.filter(item => item.id === 2);
 
     return (
         <section className="py-12 lg:py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -55,12 +56,12 @@ const ContactCards = () => {
 
                     {/* Right side - Google Map */}
                     <PopIn delay={0.2}>
-                        <div className="h-full min-h-[400px] rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700">
+                        <div className="h-full min-h-[300px] rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-700">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.929051223272!2d80.2442147!3d13.040187999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267c6ce73f5f1%3A0x43c2f1b63767e78c!2sFlyDesk%20WorkSpace%20Chennai!5e0!3m2!1sen!2sin!4v1778843981974!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.929051223272!2d80.2442147!3d13.040187999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267c6ce73f5f1%3A0x43c2f1b63767e78c!2sFlyDesk%20WorkSpace%20Chennai!5e0!3m2!1sen!2sin!4v1778843981974!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
-                                style={{ border: 0, minHeight: '400px' }}
+                                style={{ border: 0, minHeight: '300px' }}
                                 allowFullScreen=""
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"

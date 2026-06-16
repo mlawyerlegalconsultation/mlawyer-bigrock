@@ -111,18 +111,18 @@ const PropertyLaw = () => {
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
-                    <div className="w-full max-w-5xl mx-auto rounded-2xl overflow-hidden mb-4">
-                        <img src={propertyLawImg} alt="property lawyers in chennai" loading="lazy" className="w-full h-auto object-cover max-h-[500px]" />
+                    <div className="w-full rounded-xl overflow-hidden mb-4">
+                        <img src={propertyLawImg} alt="property lawyers in chennai" loading="lazy" className="w-full h-auto object-cover max-h-[350px] md:max-h-[450px] lg:max-h-[500px] rounded-xl" />
                     </div>
                 </PopIn>
             </div>
 
             <div className="w-full px-6">
                 <div className="bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 dark:border-gray-700">
-                    <div className="space-y-16">
+                    <div className="space-y-10">
 
                         {/* H1 Intro Paragraph */}
-                        <div className="max-w-4xl mx-auto text-center">
+                        <div className="max-w-6x mx-auto text-center">
                             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
                                 MLawyer serves as a comprehensive destination for all types of property-related legal matters, offering clients reliable and result-oriented solutions under one roof. The firm is committed to being a preferred choice for individuals and businesses seeking high-quality legal advice from experienced professionals with strong expertise in both civil and common law, particularly in property-related cases. With a focus on professionalism, clarity, and client satisfaction, MLawyer delivers trusted legal support tailored to every property need.
                             </p>
@@ -136,29 +136,44 @@ const PropertyLaw = () => {
                             <div className="space-y-8 order-2 lg:order-1">
                                 <div>
                                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Expert Property Lawyer Chennai for All Property Matters</h2>
-                                    <ul className="space-y-4 mb-6">
-                                        {[
-                                            "Professional support for residential, commercial and land-related property issues",
-                                            <span>Guidance on property buying, selling and <a href="https://www.mlawyer.in/blog/importance-of-patta-chitta-complete-guide-for-property-owners" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ownership</a> transfer processes</span>,
-                                            "Verification and preparation of all essential legal documents",
-                                            "Clear legal opinion to ensure safe and risk-free transactions",
-                                            "Assistance in resolving property disputes and title-related concerns",
-                                            "Legal support for registration, agreements, and compliance procedures",
-                                            "End-to-end legal aid to protect your property rights and investments"
-                                        ].map((item, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 text-gray-600 dark:text-gray-300">
-                                                <PiSealCheck className="text-secondary text-2xl shrink-0 mt-0.5" />
-                                                <span className="text-lg leading-relaxed">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                         In Chennai’s competitive property market, working with the leading Online property lawyer in Chennai, Coimbatore, Madurai, Trichy and across Tamil Nadu, India ensures you receive high-quality guidance tailored to your needs. Their expertise covers everything from title verification to dispute resolution, making them a valuable partner in any property-related matter.
                                     </p>
                                 </div>
                             </div>
-                            <div className="order-1 lg:order-2">
-                                <img src={propertyTransaction} alt="Property Transaction" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={propertyTransaction} alt="Property Transaction" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                            </div>
+                        </div>
+
+                        {/* Divider */}
+                        <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
+
+                        {/* Property Support Services Grid */}
+                        <div className="space-y-8">
+                            <div className="text-center max-w-3xl mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Complete Legal Assistance for Property Matters</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    We offer comprehensive legal support for various real estate transactions and disputes:
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {[
+                                    { text: "Professional support for residential, commercial and land-related property issues" },
+                                    { text: <span>Guidance on property buying, selling and <a href="https://www.mlawyer.in/blog/importance-of-patta-chitta-complete-guide-for-property-owners" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">ownership</a> transfer processes</span> },
+                                    { text: "Verification and preparation of all essential legal documents" },
+                                    { text: "Clear legal opinion to ensure safe and risk-free transactions" },
+                                    { text: "Assistance in resolving property disputes and title-related concerns" },
+                                    { text: "Legal support for registration, agreements, and compliance procedures" },
+                                    { text: "End-to-end legal aid to protect your property rights and investments" }
+                                ].map((item, idx) => (
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] flex">
+                                        <div className="w-full p-5 bg-teal-50/40 dark:bg-gray-800 rounded-2xl border border-teal-100 dark:border-gray-700 hover:shadow-md transition-shadow flex items-start gap-3">
+                                            <PiSealCheck className="text-secondary text-2xl shrink-0 mt-0.5" />
+                                            <span className="text-md text-gray-700 dark:text-gray-300 leading-relaxed">{item.text}</span>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
 
@@ -167,29 +182,30 @@ const PropertyLaw = () => {
 
                         {/* Section 2 */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                            <div>
-                                <img src={propertyVerification} alt="Property Verification" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="space-y-6 order-2 lg:order-1">
+                                <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Property Law Services Under the Transfer of Property Act</h2>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    The Transfer of Property Act, 1882 governs the legal process of transferring immovable property in India, including sale, lease, mortgage, and exchange. Our experienced property lawyers provide complete legal support to ensure every transaction is carried out in accordance with this Act, helping clients avoid disputes and legal complications.
+                                </p>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    As a trusted legal services lawyer, we assist with drafting and reviewing agreements, verifying documents, and offering accurate legal guidance tailored to your property needs. Our approach ensures clarity, compliance, and smooth execution of all property-related matters with a strong focus on protecting your legal rights.
+                                </p>
                             </div>
-                            <div className="space-y-8">
-                                <div>
-                                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Property Law Services Under the Transfer of Property Act</h2>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        The Transfer of Property Act, 1882 governs the legal process of transferring immovable property in India, including sale, lease, mortgage, and exchange. Our experienced property lawyers provide complete legal support to ensure every transaction is carried out in accordance with this Act, helping clients avoid disputes and legal complications.
-                                    </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        As a trusted legal services lawyer, we assist with drafting and reviewing agreements, verifying documents, and offering accurate legal guidance tailored to your property needs. Our approach ensures clarity, compliance, and smooth execution of all property-related matters with a strong focus on protecting your legal rights.
-                                    </p>
-                                </div>
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={propertyVerification} alt="Property Verification" className="w-full h-auto max-h-[400px] rounded-xl object-contain" />
+                            </div>
+                        </div>
 
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Real Estate Lawyer for Property Transactions and Disputes</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                        A skilled real estate lawyer plays a vital role in simplifying complex property dealings. They provide expert support in handling contracts, negotiations, and compliance issues. Whether you are dealing with residential plots, commercial spaces, or joint ventures, a qualified lawyer ensures that all aspects of the transaction are legally compliant.
-                                    </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        From drafting agreements to resolving a property dispute, legal professionals ensure that your rights are protected at every step. Their role extends beyond documentation—they also represent clients in court when necessary, offering strong legal representation.
-                                    </p>
-                                </div>
+                        {/* Section 2 Part B: Real Estate Lawyer */}
+                        <div className="p-8 bg-teal-50/20 dark:bg-gray-800/40 rounded-2xl border border-teal-100/50 dark:border-gray-700">
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Real Estate Lawyer for Property Transactions and Disputes</h3>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    A skilled real estate lawyer plays a vital role in simplifying complex property dealings. They provide expert support in handling contracts, negotiations, and compliance issues. Whether you are dealing with residential plots, commercial spaces, or joint ventures, a qualified lawyer ensures that all aspects of the transaction are legally compliant.
+                                </p>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    From drafting agreements to resolving a property dispute, legal professionals ensure that your rights are protected at every step. Their role extends beyond documentation—they also represent clients in court when necessary, offering strong legal representation.
+                                </p>
                             </div>
                         </div>
 
@@ -204,7 +220,7 @@ const PropertyLaw = () => {
                                     Experienced property lawyer in chennai provide a wide range of services tailored to meet the needs of individuals and businesses. These include:
                                 </p>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div className="flex flex-wrap justify-center gap-6">
                                 {[
                                     {
                                         title: "1. Title Verification and Due Diligence",
@@ -236,13 +252,15 @@ const PropertyLaw = () => {
                                         icon: <PiUsers className="text-secondary text-3xl" />
                                     }
                                 ].map((service, idx) => (
-                                    <div key={idx} className="p-6 bg-teal-50/35 dark:bg-gray-800 rounded-2xl border border-teal-100/50 dark:border-gray-700 hover:shadow-md transition-shadow duration-300 flex flex-col gap-4">
-                                        <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-gray-700/50 flex items-center justify-center shrink-0">
-                                            {service.icon}
-                                        </div>
-                                        <div>
-                                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{service.title}</h4>
-                                            <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">{service.desc}</p>
+                                    <div key={idx} className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex">
+                                        <div className="w-full p-6 bg-teal-50/35 dark:bg-gray-800 rounded-2xl border border-teal-100/50 dark:border-gray-700 hover:shadow-md transition-shadow duration-300 flex flex-col gap-4">
+                                            <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-gray-700/50 flex items-center justify-center shrink-0">
+                                                {service.icon}
+                                            </div>
+                                            <div>
+                                                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{service.title}</h4>
+                                                <p className="text-md text-gray-600 dark:text-gray-300 leading-relaxed">{service.desc}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
@@ -254,13 +272,13 @@ const PropertyLaw = () => {
 
                         {/* Section 4 */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                            <div className="space-y-8 order-2 lg:order-1">
+                            <div className="order-2 lg:order-1">
                                 <div className="p-6 bg-teal-55/20 dark:bg-gray-800/40 rounded-2xl border border-teal-100/50 dark:border-gray-700">
                                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Role of a Property Advocate in Legal Proceedings</h3>
                                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                                         A qualified property advocate plays a crucial role in representing clients in legal proceedings. Whether it’s a civil dispute or a complex litigation case, they provide strong legal representation to protect your interests.
                                     </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                                    <p className="text-lg text-gray-650 dark:text-gray-300 leading-relaxed mb-4">
                                         Their responsibilities include:
                                     </p>
                                     <ul className="space-y-3 mb-4">
@@ -280,29 +298,32 @@ const PropertyLaw = () => {
                                         With their expertise, clients can navigate legal challenges with greater ease and confidence.
                                     </p>
                                 </div>
-
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Importance of Legal Property Verification</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-3">
-                                        Before purchasing any property, it is essential to verify its legal status. This includes checking ownership records, approvals, and compliance with zoning laws. Professional property lawyers conduct detailed verification processes to ensure that the property is free from legal complications.
-                                    </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        This step is especially important in Chennai, where rapid urban development can sometimes lead to documentation discrepancies. Proper verification protects buyers from potential fraud and financial loss.
-                                    </p>
-                                </div>
-
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Resolving Property Disputes Efficiently</h3>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-3">
-                                        Disputes can arise due to various reasons, including unclear ownership, boundary issues, or contractual disagreements. Experienced property lawyers specialize in resolving such conflicts through negotiation, mediation, or litigation.
-                                    </p>
-                                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                                        Their approach focuses on achieving quick and effective solutions while minimizing stress for clients. By addressing disputes promptly, they help prevent long-term legal complications.
-                                    </p>
-                                </div>
                             </div>
-                            <div className="order-1 lg:order-2">
-                                <img src={propertyDisputeCourt} alt="Property Disputes and Court" className="w-full h-auto rounded-3xl shadow-xl object-cover" />
+                            <div className="order-1 lg:order-2 flex items-center justify-center">
+                                <img src={propertyDisputeCourt} alt="Property Disputes and Court" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                            </div>
+                        </div>
+
+                        {/* Section 4 Part B - Side-by-side details */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div className="p-6 bg-gray-50/50 dark:bg-gray-800/50 rounded-2xl border border-gray-150 dark:border-gray-700">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Importance of Legal Property Verification</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-3">
+                                    Before purchasing any property, it is essential to verify its legal status. This includes checking ownership records, approvals, and compliance with zoning laws. Professional property lawyers conduct detailed verification processes to ensure that the property is free from legal complications.
+                                </p>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    This step is especially important in Chennai, where rapid urban development can sometimes lead to documentation discrepancies. Proper verification protects buyers from potential fraud and financial loss.
+                                </p>
+                            </div>
+
+                            <div className="p-6 bg-gray-50/50 dark:bg-gray-800/50 rounded-2xl border border-gray-150 dark:border-gray-700">
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Resolving Property Disputes Efficiently</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-3">
+                                    Disputes can arise due to various reasons, including unclear ownership, boundary issues, or contractual disagreements. Experienced property lawyers specialize in resolving such conflicts through negotiation, mediation, or litigation.
+                                </p>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Their approach focuses on achieving quick and effective solutions while minimizing stress for clients. By addressing disputes promptly, they help prevent long-term legal complications.
+                                </p>
                             </div>
                         </div>
 
@@ -313,7 +334,7 @@ const PropertyLaw = () => {
                         <div className="text-center max-w-4xl mx-auto space-y-8">
                             <div>
                                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Tailored Legal Solutions for Every Client</h3>
-                                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                <p className="text-lg w-full text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                                     Every property transaction is unique, requiring customized legal solutions. Professional property lawyers understand this and provide personalized services based on individual needs. Whether you are a first-time buyer or a seasoned investor, they ensure that your legal requirements are met efficiently.
                                 </p>
                                 <div className="flex flex-wrap justify-center gap-6 mb-6">
@@ -341,7 +362,7 @@ const PropertyLaw = () => {
                             </div>
 
                             <div className="pt-4 pb-2">
-                                <Link to="/contact-us" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                <Link to="/download" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Property Lawyer
                                 </Link>
                             </div>
