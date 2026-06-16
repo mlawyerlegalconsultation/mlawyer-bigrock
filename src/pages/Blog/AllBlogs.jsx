@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { getAllBlogs } from "./blogService";
-import { Calendar, ChevronRight, Loader2, Search, TrendingUp, Sparkles, Send, Mail, ArrowRight } from "lucide-react";
+import { Calendar, ChevronRight, Loader2, Search, TrendingUp, Sparkles, Send, Mail, ArrowRight, Users, Building, Shield, Briefcase } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const AllBlogs = () => {
@@ -93,9 +93,9 @@ const AllBlogs = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="w-full">
           {/* Main Content Area */}
-          <div className="lg:w-2/3">
+          <div>
             {error && (
               <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-8">
                 <p className="text-red-700">{error}</p>
@@ -108,7 +108,7 @@ const AllBlogs = () => {
               </div>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {filteredBlogs.map((blog) => (
                 <Link
                   key={blog.slug}
@@ -153,30 +153,96 @@ const AllBlogs = () => {
             </div>
           </div>
 
-          {/* Sidebar */}
-          <aside className="lg:w-1/3 space-y-8">
-            {/* Legal Services Widget */}
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm">
-              <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                <span className="w-1.5 h-6 bg-primary rounded-full mr-3"></span>
-                Legal Solutions
-              </h3>
-              <nav className="flex flex-col gap-2">
-                <Link to="/family-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
-                  Family & Divorce Lawyers
-                </Link>
-                <Link to="/property-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
-                  Property & Civil Lawyers
-                </Link>
-                <Link to="/legal-criminal-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
-                  Criminal Defense Lawyers
-                </Link>
-                <Link to="/best-corporate-lawyers" className="text-sm font-semibold text-gray-600 hover:text-primary transition-colors py-1">
-                  Corporate & Business Lawyers
-                </Link>
-              </nav>
+          {/* Legal Solutions Widget Section below blogs card */}
+          <div className="mt-20 mb-4 bg-gray-50 dark:bg-gray-800/40 rounded-3xl p-8 md:p-12 border border-gray-100 dark:border-gray-800 shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+            
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
+                  <span className="w-1.5 h-6 bg-primary rounded-full mr-3"></span>
+                  Legal Solutions
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
+                  Connect with our top-rated legal professionals across various practice areas
+                </p>
+              </div>
             </div>
-          </aside>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link 
+                to="/family-lawyers" 
+                className="group flex flex-col p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/30 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+                  <Users className="w-6 h-6" />
+                </div>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors text-base">
+                  Family & Divorce Lawyers
+                </h4>
+                <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed flex-grow">
+                  Empathetic guidance for divorce, child custody, and family disputes.
+                </p>
+                <span className="text-primary text-xs font-bold flex items-center mt-4 group-hover:gap-1.5 transition-all">
+                  Consult Now <ChevronRight className="w-3.5 h-3.5 ml-1" />
+                </span>
+              </Link>
+
+              <Link 
+                to="/property-lawyers" 
+                className="group flex flex-col p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/30 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+                  <Building className="w-6 h-6" />
+                </div>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors text-base">
+                  Property & Civil Lawyers
+                </h4>
+                <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed flex-grow">
+                  Assistance with title verification, property registration, and civil disputes.
+                </p>
+                <span className="text-primary text-xs font-bold flex items-center mt-4 group-hover:gap-1.5 transition-all">
+                  Consult Now <ChevronRight className="w-3.5 h-3.5 ml-1" />
+                </span>
+              </Link>
+
+              <Link 
+                to="/legal-criminal-lawyers" 
+                className="group flex flex-col p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/30 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-rose-50 dark:bg-rose-950/30 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+                  <Shield className="w-6 h-6" />
+                </div>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors text-base">
+                  Criminal Defense Lawyers
+                </h4>
+                <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed flex-grow">
+                  Dedicated representation for bail, trial defense, and compliance.
+                </p>
+                <span className="text-primary text-xs font-bold flex items-center mt-4 group-hover:gap-1.5 transition-all">
+                  Consult Now <ChevronRight className="w-3.5 h-3.5 ml-1" />
+                </span>
+              </Link>
+
+              <Link 
+                to="/best-corporate-lawyers" 
+                className="group flex flex-col p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 hover:border-primary/30 dark:hover:border-primary/30 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-950/30 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-sm">
+                  <Briefcase className="w-6 h-6" />
+                </div>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors text-base">
+                  Corporate & Business Lawyers
+                </h4>
+                <p className="text-gray-500 dark:text-gray-400 text-xs leading-relaxed flex-grow">
+                  Company formation, contract drafting, and business compliance support.
+                </p>
+                <span className="text-primary text-xs font-bold flex items-center mt-4 group-hover:gap-1.5 transition-all">
+                  Consult Now <ChevronRight className="w-3.5 h-3.5 ml-1" />
+                </span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
