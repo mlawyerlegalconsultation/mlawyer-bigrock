@@ -42,7 +42,7 @@ const FAQSection = ({ faqs }) => {
                                     : 'max-h-0 opacity-0'
                                     } overflow-hidden`}
                             >
-                                <p className="px-6 pb-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed border-t border-gray-50 dark:border-gray-700 pt-4">
+                                <p className="px-6 pb-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed border-t border-gray-50 dark:border-gray-700 pt-4 whitespace-pre-line">
                                     {faq.answer}
                                 </p>
                             </div>

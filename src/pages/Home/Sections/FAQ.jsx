@@ -67,7 +67,7 @@ const FAQ = () => {
                                 <div
                                     className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
                                 >
-                                    <div className="px-6 pb-6 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed transition-colors duration-300">
+                                    <div className="px-6 pb-6 pt-0 text-gray-600 dark:text-gray-300 leading-relaxed transition-colors duration-300 whitespace-pre-line">
                                         {item.answer}
                                     </div>
                                 </div>

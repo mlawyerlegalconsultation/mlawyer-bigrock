@@ -18,7 +18,7 @@ const FamilyLaw = () => {
     const faqs = [
         {
             question: "How do I choose the best family lawyers in Coimbatore?",
-            answer: "Look for: Experience in family law, Positive client reviews, Transparent fee structure, Strong communication skills, Successful handling of similar cases"
+            answer: "Look for:\nExperience in family law\nPositive client reviews\nTransparent fee structure\nStrong communication skills\nSuccessful handling of similar cases"
         },
         {
             question: "Can a family lawyer Chennai handle child custody disputes?",
@@ -27,6 +27,30 @@ const FamilyLaw = () => {
         {
             question: "How can Mlawyer help me find a family lawyers Chennai?",
             answer: "Mlawyer is a trusted platform that connects you with the best family lawyer Chennai based on your specific legal needs. Simply visit our platform, describe your case, and get matched with a verified and experienced family lawyer Chennai who can guide you every step of the way."
+        },
+        {
+            question: "How can I find the best family lawyer near me in Chennai?",
+            answer: "Finding the best family lawyer near you in Chennai involves checking experience, client reviews, and specialization in family law. Platforms like MLawyer help you instantly connect with verified family lawyers Chennai for quick and reliable legal support."
+        },
+        {
+            question: "What is the cost of hiring a divorce lawyer in Chennai?",
+            answer: "The cost of hiring a divorce lawyer in Chennai depends on the complexity of the case and whether it is a mutual or contested divorce. Mutual divorce cases are generally more affordable, while contested cases may involve higher legal fees due to court proceedings."
+        },
+        {
+            question: "Can I consult a family lawyer online near me?",
+            answer: "Yes, you can consult a family lawyer online near you through legal platforms like MLawyer. Online consultation allows you to get legal advice, understand your rights, and begin the divorce process without visiting a lawyer’s office."
+        },
+        {
+            question: "How long does a divorce process take in Chennai?",
+            answer: "The duration of a divorce case in Chennai depends on the type of divorce. Mutual divorce usually takes around 6 months, while contested divorce cases may take several months to years depending on the complexity and court proceedings."
+        },
+        {
+            question: "What documents are required to file a divorce case in Chennai?",
+            answer: "To file a divorce case, you typically need a marriage certificate, identity proof, address proof of both spouses, passport-size photographs, and supporting evidence if it is a contested divorce. A lawyer can guide you based on your case."
+        },
+        {
+            question: "Why should I choose a local family lawyer near me ?",
+            answer: "Choosing a local family lawyer near you in Coimbatore,Chennai,madurai or across tamil nadu ensures better knowledge of local court procedures, faster case handling and easier communication. This can help in achieving a smoother and quicker resolution of your case."
         }
     ];
 
