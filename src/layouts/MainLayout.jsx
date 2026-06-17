@@ -2,6 +2,7 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import LatestFromMLawyer from '../components/LatestFromMLawyer';
 import NotificationBar from '../components/NotificationBar';
 import SuccessToast from '../components/SuccessToast';
 
@@ -36,6 +37,7 @@ const MainLayout = () => {
       <main className="flex-grow">
         <Outlet />
       </main>
+      <LatestFromMLawyer />
       <Footer />
     </div>
   );
