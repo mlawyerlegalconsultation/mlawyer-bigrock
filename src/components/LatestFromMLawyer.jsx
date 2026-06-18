@@ -100,24 +100,24 @@ const LatestFromMLawyer = () => {
             onClick={() => setSelectedReel(null)}
           />
           
+          {/* Close button at screen top-right */}
+          <button 
+            onClick={() => setSelectedReel(null)}
+            className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition-all duration-300 shadow-lg border border-white/10 hover:scale-105"
+            aria-label="Close modal"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          
           {/* Modal content wrapper */}
-          <div className="relative w-full max-w-[420px] bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-gray-800 animate-scale-up">
-            {/* Close button inside modal container */}
-            <button 
-              onClick={() => setSelectedReel(null)}
-              className="absolute top-4 right-4 z-30 p-2 rounded-full bg-black/50 hover:bg-black/75 text-white transition-colors duration-300"
-              aria-label="Close modal"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
+          <div className="relative w-full max-w-[360px] bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-gray-800 animate-scale-up">
             {/* Embedded Iframe Player */}
             <div className="w-full bg-black flex justify-center">
               <iframe
                 src={`https://www.instagram.com/reel/${selectedReel}/embed/`}
-                className="w-full h-[650px] block"
+                className="w-full h-[490px] block"
                 scrolling="no"
                 allowTransparency="true"
                 style={{ border: 'none', overflow: 'hidden' }}
