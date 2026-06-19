@@ -30,14 +30,14 @@ const LatestFromMLawyer = () => {
         <FloatingIcon Icon={() => <FaPhoneAlt className="text-3xl" />} className="top-[55%] left-[3%]" delay={0.5} duration={6} color="secondary" />
         <FloatingIcon Icon={() => <FaFileContract className="text-4xl" />} className="top-[75%] left-[10%]" delay={2} duration={7} color="primary" />
         <FloatingIcon Icon={() => <FaHandshake className="text-5xl" />} className="top-[45%] left-[12%]" delay={3} duration={9} color="secondary" />
-        
+
         {/* Right side icons */}
         <FloatingIcon Icon={() => <FaBalanceScale className="text-5xl" />} className="top-[15%] right-[6%]" delay={1} duration={8} color="primary" />
         <FloatingIcon Icon={() => <FaShieldAlt className="text-4xl" />} className="top-[35%] right-[4%]" delay={2.5} duration={7} color="secondary" />
         <FloatingIcon Icon={() => <FaCheckCircle className="text-3xl" />} className="top-[60%] right-[8%]" delay={0.8} duration={6} color="primary" />
         <FloatingIcon Icon={() => <FaUserTie className="text-4xl" />} className="top-[80%] right-[5%]" delay={1.8} duration={8} color="secondary" />
         <FloatingIcon Icon={() => <MdSecurity className="text-5xl" />} className="top-[50%] right-[12%]" delay={3.5} duration={9} color="primary" />
-        
+
         {/* Scattered/Top/Bottom icons */}
         <FloatingIcon Icon={() => <MdVerified className="text-3xl" />} className="top-[5%] left-[25%]" delay={2.2} duration={7} color="secondary" />
         <FloatingIcon Icon={() => <FaGavel className="text-3xl" />} className="top-[8%] right-[25%]" delay={1.2} duration={6} color="primary" />
@@ -62,9 +62,9 @@ const LatestFromMLawyer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto justify-items-center">
           {reels.map((id, index) => (
             <PopIn key={id} delay={0.2 + index * 0.1} className="w-full flex justify-center">
-              <div className="relative w-full max-w-[340px] rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-md bg-white group/card">
+              <div className="relative w-full max-w-[340px] h-[450px] rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-md bg-white group/card">
                 {/* Clickable Overlay */}
-                <div 
+                <div
                   onClick={() => setSelectedReel(id)}
                   className="absolute inset-0 z-20 cursor-pointer bg-black/0 hover:bg-black/20 transition-all duration-300 flex items-center justify-center group"
                 >
@@ -95,13 +95,13 @@ const LatestFromMLawyer = () => {
       {selectedReel && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm animate-fade-in">
           {/* Click outside container to close */}
-          <div 
-            className="absolute inset-0 cursor-zoom-out" 
+          <div
+            className="absolute inset-0 cursor-zoom-out"
             onClick={() => setSelectedReel(null)}
           />
-          
+
           {/* Close button at screen top-right */}
-          <button 
+          <button
             onClick={() => setSelectedReel(null)}
             className="absolute top-6 right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition-all duration-300 shadow-lg border border-white/10 hover:scale-105"
             aria-label="Close modal"
@@ -110,9 +110,9 @@ const LatestFromMLawyer = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          
+
           {/* Modal content wrapper */}
-          <div className="relative w-full max-w-[360px] bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-gray-800 animate-scale-up">
+          <div className="relative w-full max-w-[360px] h-[440px] bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-gray-800 animate-scale-up">
             {/* Embedded Iframe Player */}
             <div className="w-full bg-black flex justify-center">
               <iframe
