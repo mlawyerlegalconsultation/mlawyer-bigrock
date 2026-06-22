@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaGavel, FaPhoneAlt, FaShieldAlt, FaFileContract, FaBalanceScale, FaCheckCircle, FaUserTie, FaHandshake } from 'react-icons/fa';
 import { MdVerified, MdSecurity } from 'react-icons/md';
 import PopIn from './animations/PopIn';
@@ -17,8 +17,61 @@ const FloatingIcon = ({ Icon, className, delay = 0, duration = 6, color = 'prima
 );
 
 const LatestFromMLawyer = () => {
-  const reels = ['DY3p92DSYo6', 'DYpJiV1SeVB', 'DYj7r78yXvS', 'DZDAQqElDnk'];
+  const [reels, setReels] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [selectedReel, setSelectedReel] = useState(null);
+
+  useEffect(() => {
+    const accessToken = import.meta.env.VITE_INSTAGRAM_ACCESS_TOKEN;
+    if (!accessToken) {
+      return;
+    }
+
+    const fetchReels = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch(
+          `https://graph.instagram.com/me/media?fields=id,media_type,permalink,caption,timestamp&limit=50&access_token=${accessToken}`
+        );
+        if (!response.ok) {
+          throw new Error(`Failed to fetch Instagram media: ${response.statusText}`);
+        }
+        const data = await response.json();
+        if (data && Array.isArray(data.data)) {
+          // Prioritize video media type (reels)
+          const videoItems = data.data.filter(item => item.media_type === 'VIDEO');
+          
+          let selectedItems = [...videoItems];
+          
+          // If we have fewer than 4 videos, fill the remaining slots with other post types (images, carousels)
+          if (selectedItems.length < 4) {
+            const nonVideoItems = data.data.filter(item => item.media_type !== 'VIDEO');
+            selectedItems = [...selectedItems, ...nonVideoItems];
+          }
+
+          const extractedReels = selectedItems
+            .map(item => {
+              const match = item.permalink ? item.permalink.match(/\/(?:reel|p|tv)\/([a-zA-Z0-9_-]+)/) : null;
+              return match ? match[1] : null;
+            })
+            .filter(Boolean)
+            .slice(0, 4);
+
+          setReels(extractedReels);
+        }
+      } catch (err) {
+        console.error('Error fetching Instagram reels:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchReels();
+  }, []);
+
+  if (!loading && reels.length === 0) {
+    return null;
+  }
 
   return (
     <section className="relative overflow-hidden py-16 bg-gradient-to-b from-teal-200 to-teal-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
@@ -59,35 +112,57 @@ const LatestFromMLawyer = () => {
           </PopIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto justify-items-center">
-          {reels.map((id, index) => (
-            <PopIn key={id} delay={0.2 + index * 0.1} className="w-full flex justify-center">
-              <div className="relative w-full max-w-[340px] h-[450px] rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-md bg-white group/card">
-                {/* Clickable Overlay */}
-                <div
-                  onClick={() => setSelectedReel(id)}
-                  className="absolute inset-0 z-20 cursor-pointer bg-black/0 hover:bg-black/20 transition-all duration-300 flex items-center justify-center group"
-                >
-                  {/* Play Icon */}
-                  <div className="w-14 h-14 rounded-full bg-white/90 text-teal-600 flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-350 shadow-lg">
-                    <svg className="w-6 h-6 fill-current translate-x-[2px]" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto justify-items-center">
+          {loading ? (
+            Array.from({ length: 4 }).map((_, index) => (
+              <div
+                key={index}
+                className="w-full max-w-[340px] rounded-2xl border border-gray-100 dark:border-gray-800 shadow-md bg-white dark:bg-gray-800/40 p-4 flex flex-col justify-between animate-pulse"
+                style={{ aspectRatio: '340 / 450' }}
+              >
+                <div className="w-full h-[350px] bg-gray-200 dark:bg-gray-700/60 rounded-xl" />
+                <div className="flex items-center space-x-3 mt-3">
+                  <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700/60" />
+                  <div className="flex-1 space-y-2">
+                    <div className="h-3 bg-gray-200 dark:bg-gray-700/60 rounded w-1/3" />
+                    <div className="h-2 bg-gray-200 dark:bg-gray-700/60 rounded w-1/2" />
                   </div>
                 </div>
-
-                <iframe
-                  src={`https://www.instagram.com/reel/${id}/embed/`}
-                  className="w-full h-[490px] block relative z-10"
-                  scrolling="no"
-                  allowTransparency="true"
-                  style={{ border: 'none', overflow: 'hidden' }}
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-view"
-                  title={`Instagram Reel ${id}`}
-                />
               </div>
-            </PopIn>
-          ))}
+            ))
+          ) : (
+            reels.map((id, index) => (
+              <PopIn key={id} delay={0.2 + index * 0.1} className="w-full flex justify-center">
+                <div
+                  className="relative w-full max-w-[340px] rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-md bg-white dark:bg-gray-800 group/card transition-colors duration-300"
+                  style={{ aspectRatio: '340 / 450' }}
+                >
+                  {/* Clickable Overlay */}
+                  <div
+                    onClick={() => setSelectedReel(id)}
+                    className="absolute inset-0 z-20 cursor-pointer bg-black/0 hover:bg-black/20 transition-all duration-300 flex items-center justify-center group"
+                  >
+                    {/* Play Icon */}
+                    <div className="w-14 h-14 rounded-full bg-white/90 text-teal-600 flex items-center justify-center opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-350 shadow-lg">
+                      <svg className="w-6 h-6 fill-current translate-x-[2px]" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <iframe
+                    src={`https://www.instagram.com/reel/${id}/embed/`}
+                    className="absolute inset-x-0 top-0 w-full h-[112%] block z-10"
+                    scrolling="no"
+                    allowTransparency="true"
+                    style={{ border: 'none', overflow: 'hidden' }}
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-view"
+                    title={`Instagram Reel ${id}`}
+                  />
+                </div>
+              </PopIn>
+            ))
+          )}
         </div>
       </div>
 
@@ -112,12 +187,15 @@ const LatestFromMLawyer = () => {
           </button>
 
           {/* Modal content wrapper */}
-          <div className="relative w-full max-w-[360px] h-[440px] bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-gray-800 animate-scale-up">
+          <div
+            className="relative w-full max-w-[360px] bg-white dark:bg-gray-900 rounded-3xl overflow-hidden shadow-2xl z-10 border border-gray-200 dark:border-gray-800 animate-scale-up"
+            style={{ aspectRatio: '360 / 440' }}
+          >
             {/* Embedded Iframe Player */}
-            <div className="w-full bg-black flex justify-center">
+            <div className="w-full h-full bg-black">
               <iframe
                 src={`https://www.instagram.com/reel/${selectedReel}/embed/`}
-                className="w-full h-[490px] block"
+                className="absolute inset-x-0 top-0 w-full h-[112%] block"
                 scrolling="no"
                 allowTransparency="true"
                 style={{ border: 'none', overflow: 'hidden' }}
