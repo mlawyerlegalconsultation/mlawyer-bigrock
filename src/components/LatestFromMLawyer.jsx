@@ -12,9 +12,11 @@ const FloatingIcon = ({ Icon, className, delay = 0, duration = 6, color = 'prima
       animationDelay: `${delay}s`
     }}
   >
-    <Icon />
+    {React.createElement(Icon)}
   </div>
 );
+
+const FALLBACK_REELS = ['C1-sRZSPyUo', 'C2-nWd9PAtP', 'C-Eye8tylhw', 'C-AiMGLRmxG'];
 
 const LatestFromMLawyer = () => {
   const [reels, setReels] = useState([]);
@@ -24,6 +26,8 @@ const LatestFromMLawyer = () => {
   useEffect(() => {
     const accessToken = import.meta.env.VITE_INSTAGRAM_ACCESS_TOKEN;
     if (!accessToken) {
+      console.warn('Instagram access token is missing. Falling back to default reels.');
+      setReels(FALLBACK_REELS);
       return;
     }
 
@@ -34,7 +38,16 @@ const LatestFromMLawyer = () => {
           `https://graph.instagram.com/me/media?fields=id,media_type,permalink,caption,timestamp&limit=50&access_token=${accessToken}`
         );
         if (!response.ok) {
-          throw new Error(`Failed to fetch Instagram media: ${response.statusText}`);
+          let errMsg = response.statusText;
+          try {
+            const errData = await response.json();
+            if (errData && errData.error && errData.error.message) {
+              errMsg = errData.error.message;
+            }
+          } catch {
+            // Ignore JSON parsing failure for error response
+          }
+          throw new Error(`Failed to fetch Instagram media: ${errMsg || response.status}`);
         }
         const data = await response.json();
         if (data && Array.isArray(data.data)) {
@@ -57,10 +70,20 @@ const LatestFromMLawyer = () => {
             .filter(Boolean)
             .slice(0, 4);
 
-          setReels(extractedReels);
+          if (extractedReels.length > 0) {
+            setReels(extractedReels);
+          } else {
+            console.warn('No Instagram posts found. Falling back to default reels.');
+            setReels(FALLBACK_REELS);
+          }
+        } else {
+          console.warn('Invalid Instagram API response structure. Falling back to default reels.');
+          setReels(FALLBACK_REELS);
         }
       } catch (err) {
         console.error('Error fetching Instagram reels:', err);
+        console.warn('Falling back to default reels.');
+        setReels(FALLBACK_REELS);
       } finally {
         setLoading(false);
       }
