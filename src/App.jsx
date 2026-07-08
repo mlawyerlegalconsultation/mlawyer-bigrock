@@ -1,64 +1,74 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Loader2 } from 'lucide-react';
 import MainLayout from './layouts/MainLayout';
-import Home from './pages/Home/Home';
-import AllBlogs from './pages/Blog/AllBlogs';
-import Blog from './pages/Blog/Blog';
-import Customer from './pages/Customer/Customer';
-import FamilyLaw from './pages/Services/FamilyLaw';
-import PropertyLaw from './pages/Services/PropertyLaw';
-import CriminalLaw from './pages/Services/CriminalLaw';
-import CorporateLaw from './pages/Services/CorporateLaw';
-import ConsumerRight from './pages/Services/ConsumerRight';
-import LabourLaw from './pages/Services/LabourLaw';
-import StartupLawyer from './pages/Services/StartupLawyer';
-import NRILegalSupport from './pages/Services/NRILegalSupport';
-import Lawyer from './pages/Lawyer/Lawyer';
-import HowItWorks from './pages/HowItWorks/HowItWorks';
-import Pricing from './pages/Pricing/Pricing';
-import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
-import Download from './pages/Download/Download';
-import Waitlist from './pages/Waitlist/Waitlist';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsAndConditions from './pages/TermsAndConditions';
-import NotFound from './pages/NotFound';
 
-import MoreCities from './pages/Cities/More';
+const Home = lazy(() => import('./pages/Home/Home'));
+const AllBlogs = lazy(() => import('./pages/Blog/AllBlogs'));
+const Blog = lazy(() => import('./pages/Blog/Blog'));
+const Customer = lazy(() => import('./pages/Customer/Customer'));
+const FamilyLaw = lazy(() => import('./pages/Services/FamilyLaw'));
+const PropertyLaw = lazy(() => import('./pages/Services/PropertyLaw'));
+const CriminalLaw = lazy(() => import('./pages/Services/CriminalLaw'));
+const CorporateLaw = lazy(() => import('./pages/Services/CorporateLaw'));
+const ConsumerRight = lazy(() => import('./pages/Services/ConsumerRight'));
+const LabourLaw = lazy(() => import('./pages/Services/LabourLaw'));
+const StartupLawyer = lazy(() => import('./pages/Services/StartupLawyer'));
+const NRILegalSupport = lazy(() => import('./pages/Services/NRILegalSupport'));
+const Lawyer = lazy(() => import('./pages/Lawyer/Lawyer'));
+const HowItWorks = lazy(() => import('./pages/HowItWorks/HowItWorks'));
+const Pricing = lazy(() => import('./pages/Pricing/Pricing'));
+const About = lazy(() => import('./pages/About/About'));
+const Contact = lazy(() => import('./pages/Contact/Contact'));
+const Download = lazy(() => import('./pages/Download/Download'));
+const Waitlist = lazy(() => import('./pages/Waitlist/Waitlist'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 import './App.css';
 
+const PageLoader = () => (
+  <div className="flex flex-col items-center justify-center min-h-[60vh] bg-teal-50/20 dark:bg-gray-950/20">
+    <Loader2 className="w-12 h-12 animate-spin text-primary dark:text-teal-400 mb-4" />
+    <p className="text-primary/70 dark:text-gray-400 font-medium">Loading page...</p>
+  </div>
+);
+
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path="blogs" element={<AllBlogs />} />
-        <Route path="blog/:slug" element={<Blog />} />
-        <Route path="customer" element={<Customer />} />
-        <Route path="family-lawyers" element={<FamilyLaw />} />
-        <Route path="property-lawyers" element={<PropertyLaw />} />
-        <Route path="legal-criminal-lawyers" element={<CriminalLaw />} />
-        <Route path="best-corporate-lawyers" element={<CorporateLaw />} />
-        <Route path="consumer-right-lawyer-app" element={<ConsumerRight />} />
-        <Route path="labour-lawyer-advisor" element={<LabourLaw />} />
-        <Route path="services">
-          <Route path="startup-lawyer" element={<StartupLawyer />} />
-          <Route path="nri-legal-support" element={<NRILegalSupport />} />
+    <Suspense fallback={<PageLoader />}>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<AllBlogs />} />
+          <Route path="blog/:slug" element={<Blog />} />
+          <Route path="customer" element={<Customer />} />
+          <Route path="family-lawyers" element={<FamilyLaw />} />
+          <Route path="property-lawyers" element={<PropertyLaw />} />
+          <Route path="legal-criminal-lawyers" element={<CriminalLaw />} />
+          <Route path="best-corporate-lawyers" element={<CorporateLaw />} />
+          <Route path="consumer-right-lawyer-app" element={<ConsumerRight />} />
+          <Route path="labour-lawyer-advisor" element={<LabourLaw />} />
+          <Route path="services">
+            <Route path="startup-lawyer" element={<StartupLawyer />} />
+            <Route path="nri-legal-support" element={<NRILegalSupport />} />
+          </Route>
+          <Route path="lawyer" element={<Lawyer />} />
+          <Route path="how-it-works" element={<HowItWorks />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="about-us" element={<About />} />
+          <Route path="contact-us" element={<Contact />} />
+          <Route path="download" element={<Download />} />
+          <Route path="waitlist" element={<Waitlist />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
-        <Route path="lawyer" element={<Lawyer />} />
-        <Route path="how-it-works" element={<HowItWorks />} />
-        <Route path="pricing" element={<Pricing />} />
-        <Route path="about-us" element={<About />} />
-        <Route path="contact-us" element={<Contact />} />
-        <Route path="download" element={<Download />} />
-        <Route path="waitlist" element={<Waitlist />} />
-        <Route path="privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="terms-and-conditions" element={<TermsAndConditions />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+      </Routes>
+    </Suspense>
   );
 }
 
 export default App
+

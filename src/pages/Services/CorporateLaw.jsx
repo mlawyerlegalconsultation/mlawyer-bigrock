@@ -237,7 +237,7 @@ const CorporateLaw = () => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={corporateLawConsultation} alt="Corporate Law Consultation" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                                <img src={corporateLawConsultation} alt="Corporate Law Consultation" loading="lazy" decoding="async" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 
@@ -254,7 +254,7 @@ const CorporateLaw = () => {
                                 </p>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={corporateSupportLegal} alt="Legal Support for Corporate" className="w-full h-auto max-h-[400px] rounded-xl object-contain" />
+                                <img src={corporateSupportLegal} alt="Legal Support for Corporate" loading="lazy" decoding="async" className="w-full h-auto max-h-[400px] rounded-xl object-contain" />
                             </div>
                         </div>
 
@@ -332,7 +332,7 @@ const CorporateLaw = () => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={corporateCourtGavel} alt="Corporate Litigation" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                                <img src={corporateCourtGavel} alt="Corporate Litigation" loading="lazy" decoding="async" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 

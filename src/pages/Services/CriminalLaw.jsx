@@ -151,7 +151,7 @@ const CriminalLaw = () => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={criminalDefenseLawyer} alt="Criminal Defense Lawyer" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                                <img src={criminalDefenseLawyer} alt="Criminal Defense Lawyer" loading="lazy" decoding="async" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 
@@ -203,7 +203,7 @@ const CriminalLaw = () => {
                                 </p>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={criminalLegalSupport} alt="Criminal Legal Support" className="w-full h-auto max-h-[400px] rounded-xl object-contain" />
+                                <img src={criminalLegalSupport} alt="Criminal Legal Support" loading="lazy" decoding="async" className="w-full h-auto max-h-[400px] rounded-xl object-contain" />
                             </div>
                         </div>
 
@@ -271,7 +271,7 @@ const CriminalLaw = () => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={criminalCourtTrial} alt="Criminal Court Trial" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                                <img src={criminalCourtTrial} alt="Criminal Court Trial" loading="lazy" decoding="async" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 

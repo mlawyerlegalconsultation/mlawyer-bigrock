@@ -1,7 +1,6 @@
 import Hero from './Sections/Hero';
 import TrustProof from './Sections/TrustProof';
 import ChennaiLegalConsultation from './Sections/ChennaiLegalConsultation';
-import YoutubeShorts from './Sections/YoutubeShorts';
 import TwoPath from './Sections/TwoPath';
 import WhyChoose from './Sections/WhyChoose';
 import Testimonials from './Sections/Testimonials';
@@ -58,7 +57,6 @@ const Home = () => {
       <Hero />
       <TrustProof />
       <ChennaiLegalConsultation />
-      {/* <YoutubeShorts /> */}
       <TwoPath />
       <WhyChoose />
       <Testimonials />

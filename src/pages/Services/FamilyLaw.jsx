@@ -156,7 +156,7 @@ const FamilyLaw = () => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={familyLawConsultation} alt="best divorce lawyers in chennai" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                                <img src={familyLawConsultation} alt="best divorce lawyers in chennai" loading="lazy" decoding="async" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 
@@ -188,7 +188,7 @@ const FamilyLaw = () => {
                                 </p>
                             </div>
                             <div className="flex justify-center lg:justify-end">
-                                <img src={familySupportLegal} alt="family lawyer near me" className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-xl" />
+                                <img src={familySupportLegal} alt="family lawyer near me" loading="lazy" decoding="async" className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-xl" />
                             </div>
                         </div>
 
@@ -278,7 +278,7 @@ const FamilyLaw = () => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={familyCourtGavel} alt="family law attorneys" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                                <img src={familyCourtGavel} alt="family law attorneys" loading="lazy" decoding="async" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 

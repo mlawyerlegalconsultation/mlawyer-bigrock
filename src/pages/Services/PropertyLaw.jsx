@@ -142,7 +142,7 @@ const PropertyLaw = () => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={propertyTransaction} alt="Property Transaction" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                                <img src={propertyTransaction} alt="Property Transaction" loading="lazy" decoding="async" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 
@@ -192,7 +192,7 @@ const PropertyLaw = () => {
                                 </p>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={propertyVerification} alt="Property Verification" className="w-full h-auto max-h-[400px] rounded-xl object-contain" />
+                                <img src={propertyVerification} alt="Property Verification" loading="lazy" decoding="async" className="w-full h-auto max-h-[400px] rounded-xl object-contain" />
                             </div>
                         </div>
 
@@ -300,7 +300,7 @@ const PropertyLaw = () => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex items-center justify-center">
-                                <img src={propertyDisputeCourt} alt="Property Disputes and Court" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
+                                <img src={propertyDisputeCourt} alt="Property Disputes and Court" loading="lazy" decoding="async" className="w-full h-auto max-h-[450px] rounded-xl object-contain" />
                             </div>
                         </div>
 

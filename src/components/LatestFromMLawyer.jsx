@@ -178,6 +178,7 @@ const LatestFromMLawyer = () => {
                     className="absolute inset-x-0 top-0 w-full h-[112%] block z-10"
                     scrolling="no"
                     allowTransparency="true"
+                    loading="lazy"
                     style={{ border: 'none', overflow: 'hidden' }}
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-view"
                     title={`Instagram Reel ${id}`}
