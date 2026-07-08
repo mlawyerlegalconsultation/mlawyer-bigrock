@@ -3,20 +3,20 @@ import PopIn from '../../../components/animations/PopIn';
 import lawyerData from '../../../data/lawyer.json';
 
 // Import images
-import lawyerImg from '../../../assets/img/lawyer_register.svg';
-import heroImg from '../../../assets/img/lawyer_profile.svg';
-import hiwHeroImg from '../../../assets/img/lawyer_verification.svg';
-import lawyerHeroNewImg from '../../../assets/img/lawyer_live.svg';
-import customerPayImg from '../../../assets/img/lawyer_earn.svg';
+import lawyerImg from '../../../assets/img/images/lawyer_register.webp';
+import heroImg from '../../../assets/img/images/lawyer_profile.webp';
+import hiwHeroImg from '../../../assets/img/images/lawyer_verification.webp';
+import lawyerHeroNewImg from '../../../assets/img/images/lawyer_live.webp';
+import customerPayImg from '../../../assets/img/images/lawyer_earn.webp';
 
 
 const images = {
-    'lawyer.png': lawyerImg,
-    'heroimage.png': heroImg,
-    'how_it_works_hero.png': hiwHeroImg,
-    'lawyer_hero_new.png': lawyerHeroNewImg,
-    'customer_pay.svg': customerPayImg,
-    'lawyer_register.svg': lawyerImg
+    'lawyer.webp': lawyerImg,
+    'heroimage.webp': heroImg,
+    'how_it_works_hero.webp': hiwHeroImg,
+    'lawyer_hero_new.webp': lawyerHeroNewImg,
+    'customer_pay.webp': customerPayImg,
+    'lawyer_register.webp': lawyerImg
 };
 
 
@@ -65,7 +65,7 @@ const TimelineItem = ({ step, index, total }) => {
                             {step.number}
                         </div>
                         <img 
-                            src={images[step.img] || images['lawyer_register.svg']} 
+                            src={images[step.img] || images['lawyer_register.webp']} 
                             alt={step.title} 
                             loading="lazy"
                             className="w-full h-full object-contain p-4 transform group-hover:scale-110 transition-transform duration-700"

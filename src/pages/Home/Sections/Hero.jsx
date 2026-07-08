@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaShieldAlt, FaUserCheck, FaRupeeSign, FaStar } from 'react-icons/fa';
 import PopIn from '../../../components/animations/PopIn';
-import Image1 from '../../../assets/img/c1.png';
-import Image2 from '../../../assets/img/c2.png';
-import Image3 from '../../../assets/img/c3.png';
+import Image1 from '../../../assets/img/images/c1.webp';
+import Image2 from '../../../assets/img/images/c2.webp';
+import Image3 from '../../../assets/img/images/c3.webp';
 import { useRole } from '../../../context/RoleContext';
 
 const heroImages = [Image1, Image2, Image3];

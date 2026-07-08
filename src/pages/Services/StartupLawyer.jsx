@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PopIn from '../../components/animations/PopIn';
-import startupLawImg from '../../assets/img/services/startup-legal-consultation.png';
+import startupLawImg from '../../assets/img/images/startup-legal-consultation.webp';
 import FAQSection from '../../components/FAQSection';
 import Breadcrumb from '../../components/Breadcrumb';
 

@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'motion/react';
 import { PiUserCheck, PiCertificate, PiShieldCheck, PiWallet, PiChartLineUp, PiBriefcase, PiLockKey } from 'react-icons/pi';
-import ClientImage from '../../../assets/img/customer.png';
-import LawyerImage from '../../../assets/img/lawyerr.png';
+import ClientImage from '../../../assets/img/images/customer.webp';
+import LawyerImage from '../../../assets/img/images/lawyerr.webp';
 import PopIn from '../../../components/animations/PopIn';
 
 const WhyChoose = () => {

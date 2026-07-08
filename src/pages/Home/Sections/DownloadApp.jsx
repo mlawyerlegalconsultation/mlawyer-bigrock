@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { FaApple, FaGooglePlay } from 'react-icons/fa';
 // eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useTransform } from 'motion/react';
-import QRCodeImage from '../../../assets/img/qr.png';
+import QRCodeImage from '../../../assets/img/images/qr.webp';
 import PopIn from '../../../components/animations/PopIn';
 
 const downloadApp = {

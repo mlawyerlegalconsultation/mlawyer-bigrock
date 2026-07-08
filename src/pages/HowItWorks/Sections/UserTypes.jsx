@@ -2,8 +2,8 @@ import React from 'react';
 import { FaUserTie, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import PopIn from '../../../components/animations/PopIn';
-import ClientsImage from '../../../assets/img/clients.png';
-import LawyerImage from '../../../assets/img/lawyer.png';
+import ClientsImage from '../../../assets/img/images/clients.webp';
+import LawyerImage from '../../../assets/img/images/lawyer.webp';
 import howItWorksData from '../../../data/howItWorks.json';
 
 const UserTypes = () => {

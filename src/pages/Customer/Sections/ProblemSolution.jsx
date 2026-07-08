@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import PopIn from '../../../components/animations/PopIn';
-import img1 from '../../../assets/img/customer_match.svg';
-import img2 from '../../../assets/img/customer_pay.svg';
-import img3 from '../../../assets/img/customer_consult.svg';
+import img1 from '../../../assets/img/images/customer_match.webp';
+import img2 from '../../../assets/img/images/customer_pay.webp';
+import img3 from '../../../assets/img/images/customer_consult.webp';
 
 const images = [img1, img2, img3];
 

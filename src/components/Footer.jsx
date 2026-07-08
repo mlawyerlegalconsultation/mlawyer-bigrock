@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaFacebook, FaInstagram, FaXTwitter } from 'react-icons/fa6';
-import logo from '../assets/img/Logo.png';
+import logo from '../assets/img/images/Logo.webp';
 
 const Footer = () => {
     const navItems = ['Home', 'For Customers', 'For Lawyers', 'How It Works', 'Pricing', 'About Us', 'Blogs', 'Contact Us'];

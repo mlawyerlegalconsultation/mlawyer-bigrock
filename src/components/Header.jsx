@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, useScroll } from "motion/react";
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/img/Logo.png';
+import logo from '../assets/img/images/Logo.webp';
 import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import navItems from '../data/menu.json';
 

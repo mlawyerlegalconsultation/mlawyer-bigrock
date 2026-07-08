@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import PopIn from '../../components/animations/PopIn';
-import consumerLawImg from '../../assets/img/services/consumer-right-lawyer-app.png';
+import consumerLawImg from '../../assets/img/images/consumer-right-lawyer-app.webp';
 import FAQSection from '../../components/FAQSection';
 import Breadcrumb from '../../components/Breadcrumb';
 
