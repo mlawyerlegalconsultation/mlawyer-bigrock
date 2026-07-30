@@ -320,11 +320,11 @@ const Blog = () => {
   };
 
   // Helper for consistent URLs
-  const baseUrl = "https://mlawyer.com";
+  const baseUrl = "https://www.mlawyer.in";
   const currentUrl = blog?.canonical || `${baseUrl}/blog/${slug}`;
   const displayTitle = blog?.seoTitle || blog?.title || "Blog";
   const displayDescription = blog?.seoDescription || blog?.description || "Read our latest story";
-  const displayImage = blog?.cover || blog?.coverImage || "https://mlawyer.in/Logo.png";
+  const displayImage = blog?.cover || blog?.coverImage || `${baseUrl}/Logo.png`;
 
   // Structured Data (JSON-LD)
   const jsonLd = {
@@ -337,6 +337,14 @@ const Blog = () => {
       "@type": "Person",
       "name": blog?.author || "MLawyer Team"
     },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MLawyer",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${baseUrl}/Logo.png`
+      }
+    },
     "description": displayDescription,
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -346,6 +354,31 @@ const Blog = () => {
 
   // Create a base string for the title to avoid any dynamic character issues
   const cleanTitle = (displayTitle || "").replace(/^#\s*/, "").replace(/^-+\s*/, "").trim();
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.mlawyer.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.mlawyer.in/blogs"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": cleanTitle,
+        "item": currentUrl
+      }
+    ]
+  };
 
   return (
     <article className="bg-white min-h-screen">
@@ -378,6 +411,9 @@ const Blog = () => {
 
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbJsonLd)}
         </script>
       </Helmet>
 

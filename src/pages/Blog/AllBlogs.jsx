@@ -49,12 +49,34 @@ const AllBlogs = () => {
     );
   }
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.mlawyer.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.mlawyer.in/blogs"
+      }
+    ]
+  };
+
   return (
     <div className="bg-white min-h-screen ">
       <Helmet>
         <title>Our Blog | MLawyer Insights</title>
         <meta name="description" content="Explore our latest thoughts, tutorials, and industry insights on technology, development, and innovation." />
-        <link rel="canonical" href={window.location.href} />
+        <link rel="canonical" href="https://www.mlawyer.in/blogs" />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbJsonLd)}
+        </script>
       </Helmet>
 
       <div className="max-w-7xl mx-auto pt-4 pb-12 px-4 sm:px-6 lg:px-8">

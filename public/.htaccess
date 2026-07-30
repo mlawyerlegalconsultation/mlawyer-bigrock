@@ -12,6 +12,9 @@ DirectoryIndex index.html
   RewriteCond %{HTTP_HOST} !^www\.mlawyer\.in$ [NC]
   RewriteRule ^ https://www.mlawyer.in%{REQUEST_URI} [L,R=301]
 
+  # Route sitemap.xml to sitemap.php dynamically
+  RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
   # React routing (SPA)
   RewriteCond %{REQUEST_URI} !\.(css|js|mjs|map|json|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|txt|xml)$ [NC]
   RewriteCond %{REQUEST_FILENAME} !-f
