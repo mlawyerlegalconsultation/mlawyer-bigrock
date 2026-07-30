@@ -15,6 +15,9 @@ DirectoryIndex index.html
   # Route sitemap.xml to sitemap.php dynamically
   RewriteRule ^sitemap\.xml$ sitemap.php [L]
 
+  # Server-Side Render blog posts for SEO & Googlebot
+  RewriteRule ^blog/([a-zA-Z0-9\-]+)/?$ blog-ssr.php?slug=$1 [L,QSA]
+
   # React routing (SPA)
   RewriteCond %{REQUEST_URI} !\.(css|js|mjs|map|json|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|txt|xml)$ [NC]
   RewriteCond %{REQUEST_FILENAME} !-f
