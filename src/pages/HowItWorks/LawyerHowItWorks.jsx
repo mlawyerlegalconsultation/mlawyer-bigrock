@@ -31,7 +31,7 @@ const LawyerHowItWorks = () => {
                                     </p>
                                 </PopIn>
                                 <PopIn delay={0.3}>
-                                    <Link to="/lawyer-signup" className="inline-flex items-center gap-2 px-8 py-4 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300">
+                                    <Link to="/register-advocate" className="inline-flex items-center gap-2 px-8 py-4 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300">
                                         Start Your Free Application →
                                     </Link>
                                 </PopIn>
@@ -166,18 +166,18 @@ const LawyerHowItWorks = () => {
                 <div className="container mx-auto px-6 relative z-10 text-center">
                     <PopIn>
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                            Ready to Expand Your Practice?
+                            Ready to Modernize Your Legal Practice?
                         </h2>
                     </PopIn>
                     <PopIn delay={0.1}>
                         <p className="text-lg text-teal-100 max-w-2xl mx-auto mb-10 leading-relaxed">
-                            Join hundreds of lawyers who are already growing their client base and earning more with MLawyer. Registration is completely free.
+                            Join thousands of lawyers across India who are growing their client base with MLawyer.
                         </p>
                     </PopIn>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <PopIn delay={0.2}>
                             <Link
-                                to="/lawyer-signup"
+                                to="/register-advocate"
                                 className="px-8 py-4 font-bold rounded-xl transition-all duration-300 min-w-[200px] bg-secondary text-white shadow-lg hover:bg-secondary/90 hover:-translate-y-1"
                             >
                                 Start Free Application

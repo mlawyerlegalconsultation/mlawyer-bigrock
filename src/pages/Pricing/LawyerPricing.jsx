@@ -34,7 +34,7 @@ const LawyerPricing = () => {
                             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 font-medium">
                                 Yes, you read that right. <span className="text-secondary font-bold">Completely FREE.</span>
                             </p>
-                            <Link to="/lawyer-signup" className="block w-full py-3 px-6 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
+                            <Link to="/register-advocate" className="block w-full py-3 px-6 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
                                 Start Free Application <FaArrowRight />
                             </Link>
                         </div>
@@ -200,7 +200,7 @@ const LawyerPricing = () => {
 
                     <PopIn delay={0.4}>
                         <div className="mt-12">
-                            <Link to="/lawyer-signup" className="inline-flex items-center gap-2 px-8 py-4 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300">
+                            <Link to="/register-advocate" className="inline-flex items-center gap-2 px-8 py-4 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300">
                                 Start Your Free Application <FaArrowRight />
                             </Link>
                         </div>
