@@ -24,6 +24,7 @@ const Download = lazy(() => import('./pages/Download/Download'));
 const Waitlist = lazy(() => import('./pages/Waitlist/Waitlist'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
+const RegisterAdvocate = lazy(() => import('./pages/RegisterAdvocate/RegisterAdvocate'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 import './App.css';
@@ -55,6 +56,7 @@ function App() {
             <Route path="nri-legal-support" element={<NRILegalSupport />} />
           </Route>
           <Route path="lawyer" element={<Lawyer />} />
+          <Route path="register-advocate" element={<RegisterAdvocate />} />
           <Route path="how-it-works" element={<HowItWorks />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="about-us" element={<About />} />

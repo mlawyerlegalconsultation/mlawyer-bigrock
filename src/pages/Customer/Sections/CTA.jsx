@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaApple, FaAndroid } from 'react-icons/fa';
+import { FaApple, FaGooglePlay } from 'react-icons/fa';
 import PopIn from '../../../components/animations/PopIn';
 
 const CTA = () => {
@@ -17,22 +16,32 @@ const CTA = () => {
                 </PopIn>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <PopIn delay={0.1}>
-                        <Link to="#" className="px-8 py-4 bg-white dark:bg-gray-200 text-primary dark:text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-2xl hover:bg-gray-50 dark:hover:bg-gray-300 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto">
-                            <FaAndroid className="text-2xl" />
+                        <a 
+                            href="https://play.google.com/store/apps/details?id=com.mlawyer.customer&pcampaignid=web_share"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-4 bg-white dark:bg-gray-200 text-primary dark:text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-2xl hover:bg-gray-50 dark:hover:bg-gray-300 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto"
+                        >
+                            <FaGooglePlay className="text-2xl text-emerald-600" />
                             <div className="text-left">
                                 <div className="text-xs uppercase font-semibold text-gray-500 dark:text-gray-600">Get it on</div>
                                 <div className="text-lg leading-none">Google Play</div>
                             </div>
-                        </Link>
+                        </a>
                     </PopIn>
                     <PopIn delay={0.2}>
-                        <Link to="#" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto">
+                        <a 
+                            href="https://apps.apple.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto"
+                        >
                             <FaApple className="text-2xl" />
                             <div className="text-left">
                                 <div className="text-xs uppercase font-semibold text-teal-100 dark:text-gray-300">Download on the</div>
                                 <div className="text-lg leading-none">App Store</div>
                             </div>
-                        </Link>
+                        </a>
                     </PopIn>
                 </div>
             </div>

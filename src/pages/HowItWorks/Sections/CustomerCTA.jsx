@@ -21,7 +21,7 @@ const CustomerCTA = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <PopIn delay={0.2}>
                         <Link
-                            to="/lawyers"
+                            to="/download"
                             className="px-8 py-4 font-bold rounded-xl transition-all duration-300 min-w-[200px] bg-secondary text-white shadow-lg hover:bg-secondary/90 hover:-translate-y-1"
                         >
                             Find a Lawyer

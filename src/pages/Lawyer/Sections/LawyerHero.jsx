@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGavel, FaPhoneAlt, FaShieldAlt, FaFileContract, FaBalanceScale, FaCheckCircle, FaUserTie, FaHandshake } from 'react-icons/fa';
+import { FaGavel, FaPhoneAlt, FaShieldAlt, FaFileContract, FaBalanceScale, FaCheckCircle, FaUserTie, FaHandshake, FaGooglePlay } from 'react-icons/fa';
 import { MdVerified, MdSecurity } from 'react-icons/md';
 import PopIn from '../../../components/animations/PopIn';
 import lawyerData from '../../../data/lawyer.json';
@@ -65,11 +65,20 @@ const LawyerHero = () => {
                         </p>
                     </PopIn>
                     <PopIn delay={0.2}>
-                        <div className="flex justify-center">
-                            <Link to="#" className="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 group">
+                        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+                            <Link to="/register-advocate" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
                                 <span>{hero.ctaText}</span>
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </Link>
+                            <a 
+                                href="https://play.google.com/store/apps/details?id=com.mlawyer.lawyer&hl=en_IN" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto px-8 py-4 bg-secondary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2.5 group"
+                            >
+                                <FaGooglePlay className="text-xl group-hover:scale-110 transition-transform" />
+                                <span>Download MLawyer Pro</span>
+                            </a>
                         </div>
                     </PopIn>
                 </div>

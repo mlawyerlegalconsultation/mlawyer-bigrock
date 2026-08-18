@@ -13,7 +13,7 @@
       "Secure document sharing",
       "Track your cases"
     ],
-    "playStore": "https://play.google.com/store",
+    "playStore": "https://play.google.com/store/apps/details?id=com.mlawyer.customer&pcampaignid=web_share",
     "appStore": "https://apps.apple.com"
   },
   "lawyer": {
@@ -25,7 +25,7 @@
       "Secure payments",
       "Build your reputation"
     ],
-    "playStore": "https://play.google.com/store",
+    "playStore": "https://play.google.com/store/apps/details?id=com.mlawyer.lawyer&hl=en_IN",
     "appStore": "https://apps.apple.com"
   },
   "cta": {

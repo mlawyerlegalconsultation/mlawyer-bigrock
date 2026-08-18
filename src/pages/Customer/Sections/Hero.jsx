@@ -60,7 +60,7 @@ const Hero = () => {
                     </PopIn>
                     <PopIn delay={0.2}>
                         <div className="flex justify-center">
-                            <Link to="#" className="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+                            <Link to="/download" className="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
                                 <FaSearch className="text-xl" />
                                 Find Your Advocate Now
                             </Link>

@@ -60,7 +60,7 @@ const PricingHero = () => {
                                 <p className="text-2xl font-bold text-secondary mt-2">₹100</p>
                             </div>
                         </div>
-                        <Link to="/waitlist" className="block mt-5 w-full py-3 px-6 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300">
+                        <Link to="/download" className="block mt-5 w-full py-3 px-6 bg-secondary hover:bg-secondary/90 text-white font-bold rounded-xl shadow-lg transition-all duration-300">
                             Find Your Lawyer Now →
                         </Link>
                         <p className="text-sm text-gray-500 dark:text-gray-400 mt-6">This reduces user hesitation and improves conversion rate.</p>

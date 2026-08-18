@@ -21,20 +21,30 @@ const LawyerCTA = () => {
 
                     <PopIn delay={0.2}>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <button className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-lg">
-                                <FaGooglePlay className="text-2xl" />
+                            <a 
+                                href="https://play.google.com/store/apps/details?id=com.mlawyer.lawyer&hl=en_IN" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 shadow-lg group"
+                            >
+                                <FaGooglePlay className="text-2xl text-emerald-400 group-hover:scale-110 transition-transform" />
                                 <div className="text-left">
                                     <div className="text-xs uppercase opacity-80">{cta.buttons.google.subText}</div>
                                     <div className="text-lg font-bold leading-none">{cta.buttons.google.mainText}</div>
                                 </div>
-                            </button>
-                            <button className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-lg">
-                                <FaAppStoreIos className="text-2xl" />
+                            </a>
+                            <a 
+                                href="https://apps.apple.com" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 shadow-lg group"
+                            >
+                                <FaAppStoreIos className="text-2xl text-white group-hover:scale-110 transition-transform" />
                                 <div className="text-left">
                                     <div className="text-xs uppercase opacity-80">{cta.buttons.apple.subText}</div>
                                     <div className="text-lg font-bold leading-none">{cta.buttons.apple.mainText}</div>
                                 </div>
-                            </button>
+                            </a>
                         </div>
                     </PopIn>
                 </div>

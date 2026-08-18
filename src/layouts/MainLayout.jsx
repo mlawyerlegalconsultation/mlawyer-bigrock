@@ -27,9 +27,9 @@ const MainLayout = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <SuccessToast 
-        show={showSubmitSuccess} 
-        message="Your waitlist application has been submitted successfully!" 
+      <SuccessToast
+        show={showSubmitSuccess}
+        message="Your waitlist application has been submitted successfully!"
         onClose={() => setShowSubmitSuccess(false)}
       />
       <NotificationBar />
@@ -37,7 +37,7 @@ const MainLayout = () => {
       <main className="flex-grow">
         <Outlet />
       </main>
-      <LatestFromMLawyer />
+      {/* <LatestFromMLawyer /> */}
       <Footer />
     </div>
   );
