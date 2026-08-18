@@ -57,7 +57,7 @@
                 "number": "1",
                 "title": "Quick Registration",
                 "desc": "Sign up in minutes",
-                "img": "lawyer.webp",
+                "img": "lawyer_register.svg",
                 "items": [
                     "Basic info",
                     "Verify your identity",
@@ -68,7 +68,7 @@
                 "number": "2",
                 "title": "Profile Creation",
                 "desc": "Build your brand",
-                "img": "heroimage.webp",
+                "img": "lawyer_profile.svg",
                 "items": [
                     "Create Bio",
                     "Choose specialization",
@@ -79,7 +79,7 @@
                 "number": "3",
                 "title": "Verification",
                 "desc": "24-48 hours",
-                "img": "how_it_works_hero.webp",
+                "img": "lawyer_verification.svg",
                 "items": [
                     "Our team will do the verification",
                     "Processing background checks",
@@ -90,7 +90,7 @@
                 "number": "4",
                 "title": "Go Live",
                 "desc": "Start accepting cases",
-                "img": "lawyer_hero_new.webp",
+                "img": "lawyer_live.svg",
                 "items": [
                     "Update your profile",
                     "Access your Dashboard",
@@ -101,7 +101,7 @@
                 "number": "5",
                 "title": "Consult & Earn",
                 "desc": "Get paid instantly",
-                "img": "customer_pay.webp",
+                "img": "lawyer_earn.svg",
                 "items": [
                     "Provide legal consultations",
                     "Build your reputation",

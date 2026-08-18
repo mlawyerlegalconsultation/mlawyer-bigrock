@@ -14,7 +14,7 @@ const Madurai = () => {
       <h1 className="text-3xl font-bold mb-4">Advocates in Madurai</h1>
       <p className="text-gray-600 mb-6">Local legal expertise and consultation options in Madurai.</p>
 
-      <Link to="/waitlist" className="inline-block bg-secondary text-white py-2 px-4 rounded-md">Find Lawyers in Madurai</Link>
+      <Link to="/download" className="inline-block bg-secondary text-white py-2 px-4 rounded-md">Find Lawyers in Madurai</Link>
     </main>
   );
 };

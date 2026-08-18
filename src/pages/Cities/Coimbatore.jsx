@@ -14,7 +14,7 @@ const Coimbatore = () => {
       <h1 className="text-3xl font-bold mb-4">Advocates in Coimbatore</h1>
       <p className="text-gray-600 mb-6">Search verified advocates in Coimbatore for consultations and legal support.</p>
 
-      <Link to="/waitlist" className="inline-block bg-secondary text-white py-2 px-4 rounded-md">Find Lawyers in Coimbatore</Link>
+      <Link to="/download" className="inline-block bg-secondary text-white py-2 px-4 rounded-md">Find Lawyers in Coimbatore</Link>
     </main>
   );
 };

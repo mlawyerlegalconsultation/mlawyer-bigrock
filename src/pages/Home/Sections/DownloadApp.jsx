@@ -43,24 +43,33 @@ const DownloadApp = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <PopIn delay={0.2}>
-                  <button className="flex items-center gap-3 bg-white text-gray-900 px-6 py-3.5 rounded-xl font-bold hover:bg-gray-100 transition-all hover:-translate-y-1 shadow-lg w-48 justify-center cursor-pointer">
-                    <FaGooglePlay className="text-xl" />
+                  <a 
+                    href="https://play.google.com/store/apps/details?id=com.mlawyer.customer&pcampaignid=web_share"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-white text-gray-900 px-6 py-3.5 rounded-xl font-bold hover:bg-gray-100 transition-all hover:-translate-y-1 shadow-lg w-48 justify-center cursor-pointer"
+                  >
+                    <FaGooglePlay className="text-xl text-emerald-600" />
                     <div className="text-left">
                       <div className="text-[10px] uppercase font-semibold text-gray-500">Get it on</div>
                       <div className="text-sm leading-none">Google Play</div>
                     </div>
-                  </button>
+                  </a>
                 </PopIn>
                 <PopIn delay={0.1}>
-                  <button className="flex items-center gap-3 bg-transparent border border-white/30 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-white/10 transition-all hover:-translate-y-1 w-48 justify-center cursor-pointer">
+                  <a 
+                    href="https://apps.apple.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-transparent border border-white/30 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-white/10 transition-all hover:-translate-y-1 w-48 justify-center cursor-pointer"
+                  >
                     <FaApple className="text-2xl" />
                     <div className="text-left">
                       <div className="text-[10px] uppercase font-semibold text-white/60">Download on the</div>
                       <div className="text-sm leading-none">App Store</div>
                     </div>
-                  </button>
+                  </a>
                 </PopIn>
-
               </div>
             </div>
             <div className="flex-1 flex justify-center lg:justify-end items-center">

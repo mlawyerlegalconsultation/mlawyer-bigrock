@@ -30,9 +30,9 @@ const Contact = () => {
                         Download our app today and get legal assistance at your fingertips.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <button className="px-8 py-3 bg-white text-primary dark:text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 cursor-pointer">
+                        <Link to="/download" className="px-8 py-3 bg-white text-primary dark:text-gray-900 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200 cursor-pointer">
                             Download Now
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>

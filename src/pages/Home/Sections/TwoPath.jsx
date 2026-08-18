@@ -75,7 +75,7 @@ const TwoPath = () => {
                                 ))}
                             </div>
                             <PopIn delay={0.5}>
-                            <Link to="/download" className="relative w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors shadow-lg cursor-pointer text-center">
+                            <Link to="/register-advocate" className="relative w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors shadow-lg cursor-pointer text-center">
                                 {twoPath.lawyer.cta} <FaArrowRight />
                             </Link>
                             </PopIn>

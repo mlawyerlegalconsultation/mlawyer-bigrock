@@ -14,7 +14,7 @@ const Chennai = () => {
       <h1 className="text-3xl font-bold mb-4">Advocates in Chennai</h1>
       <p className="text-gray-600 mb-6">Find verified, experienced advocates in Chennai for consultations, documentation and case support.</p>
 
-      <Link to="/waitlist" className="inline-block bg-secondary text-white py-2 px-4 rounded-md">Find Lawyers in Chennai</Link>
+      <Link to="/download" className="inline-block bg-secondary text-white py-2 px-4 rounded-md">Find Lawyers in Chennai</Link>
     </main>
   );
 };

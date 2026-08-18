@@ -2,21 +2,25 @@ import React from 'react';
 import PopIn from '../../../components/animations/PopIn';
 import lawyerData from '../../../data/lawyer.json';
 
-// Import images
-import lawyerImg from '../../../assets/img/images/lawyer_register.webp';
-import heroImg from '../../../assets/img/images/lawyer_profile.webp';
-import hiwHeroImg from '../../../assets/img/images/lawyer_verification.webp';
-import lawyerHeroNewImg from '../../../assets/img/images/lawyer_live.webp';
-import customerPayImg from '../../../assets/img/images/lawyer_earn.webp';
-
+// Import SVG images
+import lawyerRegisterSvg from '../../../assets/img/images/lawyer_register.svg';
+import lawyerProfileSvg from '../../../assets/img/images/lawyer_profile.svg';
+import lawyerVerificationSvg from '../../../assets/img/images/lawyer_verification.svg';
+import lawyerLiveSvg from '../../../assets/img/images/lawyer_live.svg';
+import lawyerEarnSvg from '../../../assets/img/images/lawyer_earn.svg';
 
 const images = {
-    'lawyer.webp': lawyerImg,
-    'heroimage.webp': heroImg,
-    'how_it_works_hero.webp': hiwHeroImg,
-    'lawyer_hero_new.webp': lawyerHeroNewImg,
-    'customer_pay.webp': customerPayImg,
-    'lawyer_register.webp': lawyerImg
+    'lawyer_register.svg': lawyerRegisterSvg,
+    'lawyer_profile.svg': lawyerProfileSvg,
+    'lawyer_verification.svg': lawyerVerificationSvg,
+    'lawyer_live.svg': lawyerLiveSvg,
+    'lawyer_earn.svg': lawyerEarnSvg,
+    'lawyer.webp': lawyerRegisterSvg,
+    'heroimage.webp': lawyerProfileSvg,
+    'how_it_works_hero.webp': lawyerVerificationSvg,
+    'lawyer_hero_new.webp': lawyerLiveSvg,
+    'customer_pay.webp': lawyerEarnSvg,
+    'lawyer_register.webp': lawyerRegisterSvg
 };
 
 

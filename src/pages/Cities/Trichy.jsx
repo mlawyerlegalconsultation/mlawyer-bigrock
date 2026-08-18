@@ -14,7 +14,7 @@ const Trichy = () => {
       <h1 className="text-3xl font-bold mb-4">Advocates in Trichy</h1>
       <p className="text-gray-600 mb-6">Trusted advocates serving clients in Trichy across practice areas.</p>
 
-      <Link to="/waitlist" className="inline-block bg-secondary text-white py-2 px-4 rounded-md">Find Lawyers in Trichy</Link>
+      <Link to="/download" className="inline-block bg-secondary text-white py-2 px-4 rounded-md">Find Lawyers in Trichy</Link>
     </main>
   );
 };
