@@ -708,17 +708,6 @@ const RegisterAdvocate = () => {
                   </div>
                 </div>
 
-                {/* Role (Fixed as LAWYER) */}
-                <div>
-                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
-                    Registration Role
-                  </label>
-                  <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-900/80 border border-gray-200 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-300 font-medium">
-                    <FaUserTie className="text-primary dark:text-teal-400" />
-                    <span>LAWYER (Advocate / Legal Professional)</span>
-                  </div>
-                </div>
-
                 {/* Password and Confirm Password */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Password */}
