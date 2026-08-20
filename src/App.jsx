@@ -22,9 +22,12 @@ const About = lazy(() => import('./pages/About/About'));
 const Contact = lazy(() => import('./pages/Contact/Contact'));
 const Download = lazy(() => import('./pages/Download/Download'));
 const Waitlist = lazy(() => import('./pages/Waitlist/Waitlist'));
-const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const PrivacyPolicy = lazy(() => import('./pages/LegalPrivacy'));
 const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
 const RegisterAdvocate = lazy(() => import('./pages/RegisterAdvocate/RegisterAdvocate'));
+const Login = lazy(() => import('./pages/Auth/Login'));
+const ProfileAdvocate = lazy(() => import('./pages/ProfileAdvocate/ProfileAdvocate'));
+const AllAdvocates = lazy(() => import('./pages/Advocates/AllAdvocates'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 import './App.css';
@@ -44,6 +47,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="blogs" element={<AllBlogs />} />
           <Route path="blog/:slug" element={<Blog />} />
+          <Route path="advocates" element={<AllAdvocates />} />
+          <Route path="all-advocates" element={<AllAdvocates />} />
           <Route path="customer" element={<Customer />} />
           <Route path="family-lawyers" element={<FamilyLaw />} />
           <Route path="property-lawyers" element={<PropertyLaw />} />
@@ -57,6 +62,8 @@ function App() {
           </Route>
           <Route path="lawyer" element={<Lawyer />} />
           <Route path="register-advocate" element={<RegisterAdvocate />} />
+          <Route path="login" element={<Login />} />
+          <Route path="profile-advocate" element={<ProfileAdvocate />} />
           <Route path="how-it-works" element={<HowItWorks />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="about-us" element={<About />} />
@@ -73,4 +80,5 @@ function App() {
 }
 
 export default App
+
 

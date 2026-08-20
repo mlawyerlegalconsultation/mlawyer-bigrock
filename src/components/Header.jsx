@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import { motion, useScroll } from "motion/react";
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/img/images/Logo.webp';
-import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronDown, FaChevronUp, FaUserTie } from 'react-icons/fa';
 import navItems from '../data/menu.json';
+import { useAuth } from '../context/AuthContext';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCustomerServicesOpen, setIsCustomerServicesOpen] = useState(false);
   const location = useLocation();
   const { scrollYProgress } = useScroll();
+  const { isAuthenticated, lawyerDetails } = useAuth();
 
   const customerServices = [
     { label: 'Family Lawyer', path: '/family-lawyers' },
@@ -97,8 +99,26 @@ const Header = () => {
             })}
           </ul>
         </nav>
-        <div className="flex items-center gap-4">
-          <Link to="/download" className="hidden sm:block px-6 py-2.5 bg-secondary text-white font-bold rounded-lg cursor-pointer shadow-lg hover:shadow-secondary/20 hover:-translate-y-0.5 transition-all duration-300 text-sm">
+        <div className="flex items-center gap-3">
+          {isAuthenticated ? (
+            <Link
+              to="/profile-advocate"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-white/15 hover:bg-white/25 text-white font-semibold rounded-lg border border-white/20 transition-all duration-300 text-sm shadow-sm"
+            >
+              <FaUserTie className="text-secondary text-xs" />
+              <span>{lawyerDetails?.firstName ? `Adv. ${lawyerDetails.firstName}` : 'Advocate Portal'}</span>
+            </Link>
+          ) : (
+            <Link
+              to="/login"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/15 transition-all duration-300 text-sm hover:border-secondary"
+            >
+              <FaUserTie className="text-secondary text-xs" />
+              <span>Advocate Login</span>
+            </Link>
+          )}
+
+          <Link to="/download" className="hidden sm:block px-5 py-2 bg-secondary text-white font-bold rounded-lg cursor-pointer shadow-md hover:shadow-secondary/20 hover:-translate-y-0.5 transition-all duration-300 text-sm">
             Download App
           </Link>
           <button
@@ -112,6 +132,35 @@ const Header = () => {
       </div>
       <div className={`lg:hidden absolute top-20 left-0 w-full bg-primary border-t border-white/10 shadow-2xl transition-all duration-300 ease-in-out origin-top ${isMobileMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 h-0 pointer-events-none'}`}>
         <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
+          {isAuthenticated ? (
+            <Link
+              to="/profile-advocate"
+              className="flex items-center gap-2 px-4 py-3 bg-white/15 text-white font-bold rounded-xl border border-white/20"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <FaUserTie className="text-secondary" />
+              <span>Advocate Portal Dashboard</span>
+            </Link>
+          ) : (
+            <div className="grid grid-cols-2 gap-2">
+              <Link
+                to="/login"
+                className="flex items-center justify-center gap-2 px-3 py-2.5 bg-white/10 text-white font-semibold rounded-xl border border-white/15 text-sm text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <FaUserTie className="text-secondary text-xs" />
+                <span>Advocate Login</span>
+              </Link>
+              <Link
+                to="/register-advocate"
+                className="flex items-center justify-center gap-1 px-3 py-2.5 bg-secondary text-white font-bold rounded-xl text-sm text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span>Register Advocate</span>
+              </Link>
+            </div>
+          )}
+
           {navItems.map((item) => {
             const path = getPath(item);
             const isCustomerItem = item === 'For Customers';
@@ -176,6 +225,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
+
       <motion.div
         style={{
           scaleX: scrollYProgress,

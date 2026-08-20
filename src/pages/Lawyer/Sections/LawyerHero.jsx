@@ -66,7 +66,7 @@ const LawyerHero = () => {
                     </PopIn>
                     <PopIn delay={0.2}>
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                            <Link to="/register-advocate" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
+                            <Link to="/login" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
                                 <span>{hero.ctaText}</span>
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </Link>

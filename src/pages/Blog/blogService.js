@@ -7,6 +7,8 @@ const BLOG_CONFIG = {
   branch: 'main'
 };
 
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour (3,600,000 ms)
+
 /**
  * Fetches the list of all published blogs from the repository's index.json
  */
@@ -16,12 +18,11 @@ export async function getAllBlogs(githubToken = null) {
   const fallbackUrl = `https://api.github.com/repos/${owner}/${repo}/contents/index.json`;
 
   try {
-    // Check localStorage first for basic caching
-    const cached = localStorage.getItem('blog_index_cache');
+    // Check sessionStorage first for caching (1 hour)
+    const cached = sessionStorage.getItem('blog_index_cache');
     if (cached) {
       const { data, timestamp } = JSON.parse(cached);
-      // Cache for 1 hour
-      if (Date.now() - timestamp < 3600000) {
+      if (Date.now() - timestamp < CACHE_TTL_MS) {
         return data;
       }
     }
@@ -44,7 +45,7 @@ export async function getAllBlogs(githubToken = null) {
     const data = await response.json();
 
     // Update cache
-    localStorage.setItem('blog_index_cache', JSON.stringify({
+    sessionStorage.setItem('blog_index_cache', JSON.stringify({
       data,
       timestamp: Date.now()
     }));
@@ -53,7 +54,7 @@ export async function getAllBlogs(githubToken = null) {
   } catch (error) {
     console.error('Failed to fetch blog list:', error);
     // Fallback to cache if exists even if expired
-    const cached = localStorage.getItem('blog_index_cache');
+    const cached = sessionStorage.getItem('blog_index_cache');
     if (cached) return JSON.parse(cached).data;
     return [];
   }
@@ -68,13 +69,12 @@ export async function getBlogContent(slug, githubToken = null) {
   const fallbackUrl = `https://api.github.com/repos/${owner}/${repo}/contents/blogs/${slug}.md`;
 
   try {
-    // Check localStorage cache
+    // Check sessionStorage cache (1 hour)
     const cachedKey = `blog_content_${slug}`;
-    const cached = localStorage.getItem(cachedKey);
+    const cached = sessionStorage.getItem(cachedKey);
     if (cached) {
       const { data, timestamp } = JSON.parse(cached);
-      // Cache for 24 hours for content
-      if (Date.now() - timestamp < 86400000) {
+      if (Date.now() - timestamp < CACHE_TTL_MS) {
         return data;
       }
     }
@@ -112,7 +112,7 @@ export async function getBlogContent(slug, githubToken = null) {
     }
 
     // Update cache
-    localStorage.setItem(cachedKey, JSON.stringify({
+    sessionStorage.setItem(cachedKey, JSON.stringify({
       data: result,
       timestamp: Date.now()
     }));
@@ -121,7 +121,7 @@ export async function getBlogContent(slug, githubToken = null) {
   } catch (error) {
     console.error(`Failed to fetch blog ${slug}:`, error);
     const cachedKey = `blog_content_${slug}`;
-    const cached = localStorage.getItem(cachedKey);
+    const cached = sessionStorage.getItem(cachedKey);
     if (cached) return JSON.parse(cached).data;
     return null;
   }

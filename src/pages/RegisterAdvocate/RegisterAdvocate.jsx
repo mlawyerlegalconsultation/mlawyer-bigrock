@@ -22,6 +22,7 @@ import {
 import { MdCheckCircleOutline, MdErrorOutline, MdVerified, MdSecurity } from 'react-icons/md';
 import PopIn from '../../components/animations/PopIn';
 import Seo from '../../components/Seo';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 // Floating icon component
 const FloatingIcon = ({ Icon, className, delay = 0, duration = 6, color = 'primary' }) => (
@@ -353,6 +354,16 @@ const RegisterAdvocate = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl relative z-10">
+        {/* Breadcrumb Navigation */}
+        <div className="mb-4 flex justify-center sm:justify-start">
+          <Breadcrumbs
+            items={[
+              { label: 'Login', path: '/login' },
+              { label: 'Register as Advocate' },
+            ]}
+          />
+        </div>
+
         {/* Header Badge & Title */}
         <div className="text-center mb-8 md:mb-12">
           <PopIn>
@@ -367,8 +378,8 @@ const RegisterAdvocate = () => {
 
         {/* Form Card Container */}
         <div>
-
           <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-10 shadow-2xl border border-teal-100 dark:border-gray-700 relative">
+
 
             {isRegistrationSuccess ? (
               /* Success State */
@@ -822,8 +833,8 @@ const RegisterAdvocate = () => {
                 <div className="text-center pt-2">
                   <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                     Already registered as an advocate?{' '}
-                    <Link to="/download" className="text-secondary font-bold hover:underline">
-                      Download the MLawyer Advocate App
+                    <Link to="/login" className="text-secondary font-bold hover:underline">
+                      Log in to Advocate Portal
                     </Link>
                   </p>
                 </div>

@@ -1,0 +1,222 @@
+export const advocatesList = [
+  {
+    id: 1,
+    name: 'Adv. Rajesh K. Sundaram',
+    mobile: '90XXXXXX62',
+    experience: '18+ Years Exp.',
+    specialization: 'Corporate Law & Arbitration',
+    secondarySpecialization: 'M&A, Commercial Contracts & Compliance',
+    category: 'Corporate Law',
+    avatar: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 2,
+    name: 'Adv. Priya Ramanathan',
+    mobile: '98XXXXXX41',
+    experience: '14+ Years Exp.',
+    specialization: 'Family & Matrimonial Law',
+    secondarySpecialization: 'Divorce, Child Custody & Maintenance',
+    category: 'Family Law',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 3,
+    name: 'Adv. Anand Venkatesh',
+    mobile: '94XXXXXX85',
+    experience: '16+ Years Exp.',
+    specialization: 'Criminal Defense & Cyber Crime',
+    secondarySpecialization: 'Bail Matters & White-Collar Defense',
+    category: 'Criminal Defense',
+    avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 4,
+    name: 'Adv. Meenakshi Natarajan',
+    mobile: '91XXXXXX37',
+    experience: '12+ Years Exp.',
+    specialization: 'Property & Real Estate Law',
+    secondarySpecialization: 'Title Deeds & Land Dispute Litigation',
+    category: 'Property Law',
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 5,
+    name: 'Adv. Karthik Subramanian',
+    mobile: '97XXXXXX19',
+    experience: '10+ Years Exp.',
+    specialization: 'Civil Litigation & Contract Law',
+    secondarySpecialization: 'Injunctions, Recovery & Consumer Claims',
+    category: 'Civil Litigation',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 6,
+    name: 'Adv. Deepa Vijayakumar',
+    mobile: '96XXXXXX84',
+    experience: '15+ Years Exp.',
+    specialization: 'Labour & Employment Law',
+    secondarySpecialization: 'Industrial Disputes & Service Matters',
+    category: 'Labour Law',
+    avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 7,
+    name: 'Adv. S. Vigneshwar',
+    mobile: '93XXXXXX55',
+    experience: '11+ Years Exp.',
+    specialization: 'Taxation & GST Advisory',
+    secondarySpecialization: 'Direct & Indirect Tax Litigation',
+    category: 'Corporate Law',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 8,
+    name: 'Adv. Shalini Swaminathan',
+    mobile: '95XXXXXX28',
+    experience: '13+ Years Exp.',
+    specialization: 'Intellectual Property (IPR)',
+    secondarySpecialization: 'Trademarks, Copyright & Patents',
+    category: 'Corporate Law',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 9,
+    name: 'Adv. M. Jayakumar',
+    mobile: '90XXXXXX71',
+    experience: '20+ Years Exp.',
+    specialization: 'Constitutional & High Court Writs',
+    secondarySpecialization: 'Public Interest Litigation (PIL)',
+    category: 'Civil Litigation',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 10,
+    name: 'Adv. Ananya Chandrasekhar',
+    mobile: '99XXXXXX14',
+    experience: '9+ Years Exp.',
+    specialization: 'Startup & Venture Legal Counsel',
+    secondarySpecialization: 'Fundraising, ESOPs & Founder Agreements',
+    category: 'Corporate Law',
+    avatar: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 11,
+    name: 'Adv. Balaji Narayanan',
+    mobile: '92XXXXXX60',
+    experience: '17+ Years Exp.',
+    specialization: 'Banking & Financial Frauds (SARFAESI)',
+    secondarySpecialization: 'DRT & NCLT Insovency Proceedings',
+    category: 'Corporate Law',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 12,
+    name: 'Adv. Revathi Krishnamurthy',
+    mobile: '98XXXXXX92',
+    experience: '12+ Years Exp.',
+    specialization: 'NRI Legal Services & Property Dispute',
+    secondarySpecialization: 'Power of Attorney & Remote Partition',
+    category: 'Property Law',
+    avatar: 'https://images.unsplash.com/photo-1580894732488-823cb2137aa8?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 13,
+    name: 'Adv. G. Saravanan',
+    mobile: '94XXXXXX33',
+    experience: '19+ Years Exp.',
+    specialization: 'Criminal Trial & Sessions Court',
+    secondarySpecialization: 'IPC Offences, Police FIR Quashing',
+    category: 'Criminal Defense',
+    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 14,
+    name: 'Adv. Lavanya Sridhar',
+    mobile: '96XXXXXX50',
+    experience: '8+ Years Exp.',
+    specialization: 'Consumer Protection & Medical Negligence',
+    secondarySpecialization: 'District & State Consumer Commission',
+    category: 'Civil Litigation',
+    avatar: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 15,
+    name: 'Adv. K. Ramesh Babu',
+    mobile: '91XXXXXX89',
+    experience: '22+ Years Exp.',
+    specialization: 'Commercial Arbitration & Contracts',
+    secondarySpecialization: 'Domestic & International Arbitrations',
+    category: 'Corporate Law',
+    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 16,
+    name: 'Adv. Divya Padmanabhan',
+    mobile: '97XXXXXX47',
+    experience: '10+ Years Exp.',
+    specialization: 'Cyber Crime & Data Privacy (DPDP)',
+    secondarySpecialization: 'Online Defamation & Financial Phishing',
+    category: 'Criminal Defense',
+    avatar: 'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 17,
+    name: 'Adv. T. Murugesan',
+    mobile: '93XXXXXX98',
+    experience: '15+ Years Exp.',
+    specialization: 'Land Acquisition & Revenue Disputes',
+    secondarySpecialization: 'Patta/Chitta, Survey & Mutation Claims',
+    category: 'Property Law',
+    avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 18,
+    name: 'Adv. Harini Raghavan',
+    mobile: '95XXXXXX63',
+    experience: '13+ Years Exp.',
+    specialization: 'Domestic Violence & Mediation',
+    secondarySpecialization: 'Pre-litigation Settlement & Conciliation',
+    category: 'Family Law',
+    avatar: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 19,
+    name: 'Adv. S. Chellappa',
+    mobile: '90XXXXXX18',
+    experience: '21+ Years Exp.',
+    specialization: 'Motor Accident Claims (MACT)',
+    secondarySpecialization: 'Insurance Disputes & Compensation',
+    category: 'Civil Litigation',
+    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  },
+  {
+    id: 20,
+    name: 'Adv. Bhavani Shankar',
+    mobile: '98XXXXXX76',
+    experience: '16+ Years Exp.',
+    specialization: 'Corporate Governance & Insolvency (IBC)',
+    secondarySpecialization: 'NCLAT Appeals & Creditor Representation',
+    category: 'Corporate Law',
+    avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=240&auto=format&fit=crop&q=80',
+    verified: true
+  }
+];
