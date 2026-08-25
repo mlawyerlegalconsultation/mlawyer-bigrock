@@ -60,7 +60,7 @@ const ConsumerRight = () => {
                 />
                 <meta
                     name="keywords"
-                    content="consumer court lawyers near me,consumer court lawyer fees,consumer court advocate,consumer right lawyer app"
+                    content="Consumer Rights Lawyers in Chennai | MLawyer"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="revisit-after" content="Daily" />

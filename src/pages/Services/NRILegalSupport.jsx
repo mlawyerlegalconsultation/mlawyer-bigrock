@@ -61,7 +61,7 @@ const NRILegalSupport = () => {
                 />
                 <meta
                     name="keywords"
-                    content="NRI legal support, NRI lawyer, legal services for NRI, NRI property lawyer, NRI inheritance lawyer, NRI taxation"
+                    content="NRI Legal Support In Chennai | MLawyer"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="revisit-after" content="Daily" />

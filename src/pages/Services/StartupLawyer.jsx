@@ -61,7 +61,7 @@ const StartupLawyer = () => {
                 />
                 <meta
                     name="keywords"
-                    content="startup lawyer, startup legal services, business incorporation lawyer, IP protection, startup attorney, funding agreement lawyer"
+                    content="Best Startup Lawyers In Chennai | MLawyer"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="revisit-after" content="Daily" />

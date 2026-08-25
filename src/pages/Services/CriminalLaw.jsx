@@ -69,7 +69,7 @@ const CriminalLaw = () => {
                 />
                 <meta
                     name="keywords"
-                    content="criminal lawyers in chennai, criminal advocate in chennai, criminal defense lawyers, criminal attorney lawyer, legal criminal lawyer"
+                    content="Best Criminal Lawyers In Chennai | MLawyer"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="revisit-after" content="Daily" />
@@ -419,7 +419,7 @@ const CriminalLaw = () => {
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 Along with criminal matters, <Link to="/" className="text-primary hover:underline font-bold">MLawyer</Link> also offers support through experienced <Link to="/property-lawyers" className="text-primary hover:underline font-bold">property advocates</Link>, handles <Link to="/family-lawyers" className="text-primary hover:underline font-bold">family offense</Link> cases, and provides assistance from skilled <Link to="/best-corporate-lawyers" className="text-primary hover:underline font-bold">corporate lawyers</Link>, ensuring complete and reliable legal services across multiple practice areas.
                             </p>
-                             <div className="pt-4 pb-2">
+                            <div className="pt-4 pb-2">
                                 <Link to="/download" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Criminal Lawyer
                                 </Link>

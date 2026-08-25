@@ -77,7 +77,7 @@ const FamilyLaw = () => {
                 />
                 <meta
                     name="keywords"
-                    content="family lawyers in chennai, divorce lawyer chennai, best divorce lawyers in chennai, divorce advocate in chennai, family lawyer near me, family lawyer for divorce, family law attorneys"
+                    content="Best Family Lawyers In Chennai | MLawyer"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="revisit-after" content="Daily" />
@@ -374,7 +374,7 @@ const FamilyLaw = () => {
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 We also connect you with the best family lawyers in Coimbatore, offering trusted legal support for divorce, custody, property and criminal matters across the city. Take action today and get the legal support you need to protect your rights and secure your future.
                             </p>
-                             <div className="pt-4 pb-2">
+                            <div className="pt-4 pb-2">
                                 <Link to="/download" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Lawyer Now
                                 </Link>

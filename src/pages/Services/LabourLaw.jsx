@@ -62,7 +62,7 @@ const LabourLaw = () => {
                 />
                 <meta
                     name="keywords"
-                    content="labour lawyer,labour law advisor,industrial labour law,labour lawyers near me,employment labour lawyer"
+                    content="Best Employment & Industrial Labour Law Lawyers & Advisor In Chennai | MLawyer"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="revisit-after" content="Daily" />

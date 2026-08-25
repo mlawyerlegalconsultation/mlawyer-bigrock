@@ -62,14 +62,14 @@ const PropertyLaw = () => {
     return (
         <div className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300 min-h-screen">
             <Helmet>
-                <title>Consult Property Lawyers and Advocates in Chennai | Coimbatore</title>
+                <title>Property Lawyers In Chennai | MLawyer</title>
                 <meta
                     name="description"
-                    content="Find trusted property lawyers in Chennai and Coimbatore at MLawyer for property dispute, land issues, legal verification, and civil matters near you."
+                    content="Get expert criminal lawyers in Chennai for criminal cases, bail, legal disputes, and representation. Find trusted legal support with MLawyer."
                 />
                 <meta
                     name="keywords"
-                    content="property lawyers in chennai, real estate lawyer, property lawyer chennai, property lawyers"
+                    content="Property Lawyers In Chennai | MLawyer"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="revisit-after" content="Daily" />
@@ -84,18 +84,18 @@ const PropertyLaw = () => {
 
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Consult Property Lawyers and Advocates in Chennai | Coimbatore" />
+                <meta property="og:title" content="Property Lawyers In Chennai | MLawyer" />
                 <meta property="og:url" content="https://www.mlawyer.in/property-lawyers" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"
-                    content="Find trusted property lawyers in Chennai and Coimbatore at MLawyer for property dispute, land issues, legal verification, and civil matters near you."
+                    content="Get expert criminal lawyers in Chennai for criminal cases, bail, legal disputes, and representation. Find trusted legal support with MLawyer."
                 />
 
-                <meta name="twitter:title" content="Consult Property Lawyers and Advocates in Chennai | Coimbatore" />
+                <meta name="twitter:title" content="Property Lawyers In Chennai | MLawyer" />
                 <meta
                     name="twitter:description"
-                    content="Find trusted property lawyers in Chennai and Coimbatore at MLawyer for property dispute, land issues, legal verification, and civil matters near you."
+                    content="Get expert criminal lawyers in Chennai for criminal cases, bail, legal disputes, and representation. Find trusted legal support with MLawyer."
                 />
                 <meta name="twitter:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta name="twitter:image:alt" content="Online-Legal-consultation-App" />

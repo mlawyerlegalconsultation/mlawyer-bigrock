@@ -138,14 +138,14 @@ const CorporateLaw = () => {
     return (
         <div className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300 min-h-screen">
             <Helmet>
-                <title>Corporate Law Firms & Lawyers in Chennai | Advocates Near Me</title>
+                <title>Best Corporate Lawyers In Chennai | MLawyer</title>
                 <meta
                     name="description"
-                    content="Trusted corporate law firms and corporate lawyers in Chennai offering legal support for employer compliance, salary disputes, contracts, and business matters."
+                    content="Find trusted corporate lawyers in Chennai with MLawyer. Get expert legal advice for businesses, contracts, disputes, compliance, and corporate matters."
                 />
                 <meta
                     name="keywords"
-                    content="corporate law firms in chennai, corporate lawyers in chennai, corporate attorney near me, business lawyer chennai, advocates near me"
+                    content="Best Corporate Lawyers In Chennai | MLawyer"
                 />
                 <meta name="robots" content="index, follow" />
                 <meta name="revisit-after" content="Daily" />
@@ -160,18 +160,18 @@ const CorporateLaw = () => {
 
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Corporate Law Firms & Lawyers in Chennai | Advocates Near Me" />
+                <meta property="og:title" content="Best Corporate Lawyers In Chennai | MLawyer" />
                 <meta property="og:url" content="https://www.mlawyer.in/best-corporate-lawyers" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"
-                    content="Trusted corporate law firms and corporate lawyers in Chennai offering legal support for employer compliance, salary disputes, contracts, and business matters."
+                    content="Find trusted corporate lawyers in Chennai with MLawyer. Get expert legal advice for businesses, contracts, disputes, compliance, and corporate matters."
                 />
 
-                <meta name="twitter:title" content="Corporate Law Firms & Lawyers in Chennai | Advocates Near Me" />
+                <meta name="twitter:title" content="Best Corporate Lawyers In Chennai | MLawyer" />
                 <meta
                     name="twitter:description"
-                    content="Trusted corporate law firms and corporate lawyers in Chennai offering legal support for employer compliance, salary disputes, contracts, and business matters."
+                    content="Find trusted corporate lawyers in Chennai with MLawyer. Get expert legal advice for businesses, contracts, disputes, compliance, and corporate matters."
                 />
                 <meta name="twitter:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta name="twitter:image:alt" content="best corporate law firms in chennai" />
@@ -183,7 +183,7 @@ const CorporateLaw = () => {
             <div className="w-full px-6 pt-12 pb-2 mb-0 text-center">
                 <PopIn>
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                        Best Corporate Law Firms in Chennai
+                        Best Corporate Lawyers In Chennai
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
@@ -399,7 +399,7 @@ const CorporateLaw = () => {
                             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 In addition to corporate law, we also provide support in <Link to="/property-lawyers" className="text-primary hover:underline font-semibold">property law</Link> matters such as ownership disputes, documentation, and legal verification, as well as <Link to="/legal-criminal-lawyers" className="text-primary hover:underline font-semibold">criminal law</Link> and <Link to="/family-lawyers" className="text-primary hover:underline font-semibold">family law</Link> cases where timely legal representation is crucial. Our platform ensures you are connected with the right legal expert based on your specific needs.
                             </p>
-                             <div className="pt-4 pb-2">
+                            <div className="pt-4 pb-2">
                                 <Link to="/download" className="inline-flex items-center justify-center bg-primary text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:bg-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                     Consult a Lawyer Now
                                 </Link>
