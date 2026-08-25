@@ -53,10 +53,10 @@ const ConsumerRight = () => {
     return (
         <div className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300 min-h-screen">
             <Helmet>
-                <title>MlLawyer-Consumer Court  Advocate | Lawyers  Near Me | Consumer Right lawyer app</title>
+                <title>Consumer Rights Lawyers in Chennai | MLawyer</title>
                 <meta
                     name="description"
-                    content="Use our consumer rights app to connect with advocates near you. View court lawyer fees, get legal advice, and resolve complaints with expert support."
+                    content="Find trusted consumer rights lawyers in Chennai with MLawyer. Get expert legal help for consumer complaints, disputes, refunds, and unfair practices."
                 />
                 <meta
                     name="keywords"
@@ -75,18 +75,18 @@ const ConsumerRight = () => {
 
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="MlLawyer-Consumer Court  Advocate | Lawyers  Near Me | Consumer Right lawyer app" />
+                <meta property="og:title" content="Consumer Rights Lawyers in Chennai | MLawyer" />
                 <meta property="og:url" content="https://www.mlawyer.in/consumer-right-lawyer-app" />
                 <meta property="og:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta
                     property="og:description"
-                    content="Use our consumer rights app to connect with advocates near you. View court lawyer fees, get legal advice, and resolve complaints with expert support."
+                    content="Find trusted consumer rights lawyers in Chennai with MLawyer. Get expert legal help for consumer complaints, disputes, refunds, and unfair practices."
                 />
 
-                <meta name="twitter:title" content="MlLawyer-Consumer Court  Advocate | Lawyers  Near Me | Consumer Right lawyer app" />
+                <meta name="twitter:title" content="Consumer Rights Lawyers in Chennai | MLawyer" />
                 <meta
                     name="twitter:description"
-                    content="Use our consumer rights app to connect with advocates near you. View court lawyer fees, get legal advice, and resolve complaints with expert support."
+                    content="Find trusted consumer rights lawyers in Chennai with MLawyer. Get expert legal help for consumer complaints, disputes, refunds, and unfair practices."
                 />
                 <meta name="twitter:image" content="https://www.mlawyer.in/Logo.png" />
                 <meta name="twitter:image:alt" content="consumer-right-lawyer-app" />
@@ -98,7 +98,7 @@ const ConsumerRight = () => {
             <div className="w-full px-6 pt-12 pb-2 mb-0 text-center">
                 <PopIn>
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                        Consumer Rights Lawyer
+                        Consumer Rights Lawyers in Chennai
                     </h1>
                 </PopIn>
                 <PopIn delay={0.1}>
