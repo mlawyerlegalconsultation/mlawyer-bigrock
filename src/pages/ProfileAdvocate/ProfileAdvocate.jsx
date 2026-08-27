@@ -682,7 +682,7 @@ const ProfileAdvocate = () => {
               {isApproved ? (
                 <div
                   className="absolute bottom-1 right-1 p-2 rounded-xl bg-emerald-500 text-white shadow-lg flex items-center justify-center text-sm"
-                  title="Verified Profile Photo (Locked)"
+                  title="Verified Profile Photo"
                 >
                   <MdVerified className="text-base" />
                 </div>
@@ -854,7 +854,7 @@ const ProfileAdvocate = () => {
                 <div className="space-y-0.5">
                   <h4 className="font-bold text-sm sm:text-base text-emerald-950 dark:text-emerald-100 flex items-center gap-2">
                     <MdVerified className="text-emerald-500 text-lg" />
-                    <span>Verified Advocate Profile (Locked)</span>
+                    <span>Verified Advocate Profile</span>
                   </h4>
                   <p className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-300 leading-relaxed">
                     Your profile and Bar Council credentials have been verified and approved by MLawyer Compliance. To maintain legal compliance, verified advocate credentials are locked against direct edits.

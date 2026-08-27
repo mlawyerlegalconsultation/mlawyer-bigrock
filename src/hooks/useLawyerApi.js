@@ -435,3 +435,41 @@ export const useUploadDocumentMutation = (userId, token) => {
     },
   });
 };
+
+/**
+ * Format photo URL for mock and profile advocates
+ */
+export const getLawyerAvatarUrl = (profileUrl) => {
+  if (!profileUrl) return null;
+  if (profileUrl.startsWith('http://') || profileUrl.startsWith('https://')) {
+    return profileUrl;
+  }
+  const cleanPath = profileUrl.startsWith('/') ? profileUrl : `/${profileUrl}`;
+  return `${BASE_API_URL}${cleanPath}`;
+};
+
+/**
+ * Hook to fetch mock advocates list from backend
+ * GET https://api.mlawyer.in/lawyer/get_lawyer_mock_details?page={page}&size={size}
+ */
+export const useLawyerMockDetails = (page = 0, size = 10) => {
+  return useQuery({
+    queryKey: ['lawyerMockDetails', page, size],
+    queryFn: async () => {
+      const response = await fetch(`${BASE_API_URL}/lawyer/get_lawyer_mock_details?page=${page}&size=${size}`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      const data = await response.json();
+
+      if (response.ok && (data.statusCode === 200 || data.status === 'OK') && Array.isArray(data.result?.lawyerMockDetails)) {
+        return data.result.lawyerMockDetails;
+      }
+      throw new Error(data?.error?.message || data?.message || 'Failed to fetch advocates list.');
+    },
+    staleTime: 1000 * 60 * 5, // 5 minutes cache
+    refetchOnWindowFocus: false,
+  });
+};
+

@@ -1,19 +1,21 @@
 import React from 'react';
-import { 
-   PiSealCheck, 
-   PiShieldCheck, 
-   PiClock, 
-   PiUsers, 
-   PiLockKey, 
-   PiPhoneCall, 
-   PiBriefcase, 
-   PiScales, 
-   PiCheckCircleFill, 
+import {
+   PiSealCheck,
+   PiShieldCheck,
+   PiClock,
+   PiUsers,
+   PiLockKey,
+   PiPhoneCall,
+   PiBriefcase,
+   PiScales,
+   PiCheckCircleFill,
    PiArrowRight
 } from 'react-icons/pi';
 import PopIn from '../../../components/animations/PopIn';
 import { Link } from 'react-router-dom';
-import { advocatesList } from '../../../data/advocatesData';
+import { normalizeLawyerMock } from '../../../data/advocatesData';
+import { useLawyerMockDetails } from '../../../hooks/useLawyerApi';
+import advocateImg from '../../../assets/img/advocate.png';
 
 const trustItems = [
    {
@@ -49,7 +51,15 @@ const trustItems = [
 ];
 
 const TrustProof = () => {
-   const homeAdvocates = advocatesList.slice(0, 3);
+   const { data: mockLawyers, isLoading: isLawyersLoading } = useLawyerMockDetails(0, 3);
+
+   const homeAdvocates = React.useMemo(() => {
+      if (mockLawyers && Array.isArray(mockLawyers) && mockLawyers.length > 0) {
+         return mockLawyers.slice(0, 3).map((item, idx) => normalizeLawyerMock(item, idx));
+      }
+      return [];
+   }, [mockLawyers]);
+
 
    return (
       <section className="relative overflow-hidden py-14 md:py-20 bg-white dark:bg-gray-950 transition-colors duration-300">
@@ -118,24 +128,49 @@ const TrustProof = () => {
             </PopIn>
 
             {/* Explore Our Advocates Section */}
-            <PopIn delay={0.35}>
-               <div className="max-w-6xl mx-auto mt-16 pt-12 border-t border-gray-100 dark:border-gray-800">
-                  <div className="text-center max-w-3xl mx-auto mb-10">
-                     <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-teal-300 font-semibold text-xs uppercase tracking-wider mb-3">
-                        <PiScales className="text-base text-secondary" /> Verified Legal Counsel
-                     </span>
-                     <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3">
-                        Explore Our Advocates
-                     </h3>
-                     <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
-                        Connect directly with experienced, bar-certified advocates across key legal specializations.
-                     </p>
-                  </div>
+            <div className="max-w-6xl mx-auto mt-16 pt-12 border-t border-gray-100 dark:border-gray-800">
+               <div className="text-center max-w-3xl mx-auto mb-10">
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-teal-300 font-semibold text-xs uppercase tracking-wider mb-3">
+                     <PiScales className="text-base text-secondary" /> Verified Legal Counsel
+                  </span>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+                     Explore Our Advocates
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                     Connect directly with experienced, bar-certified advocates across key legal specializations.
+                  </p>
+               </div>
 
-                  {/* Advocates Grid - 3 Cards */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                     {homeAdvocates.map((advocate) => (
-                        <article 
+               {/* Advocates Grid - 3 Cards */}
+               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {isLawyersLoading ? (
+                     Array.from({ length: 3 }).map((_, idx) => (
+                        <div
+                           key={`skeleton-${idx}`}
+                           className="h-[320px] rounded-3xl p-6 border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 animate-pulse flex flex-col justify-between"
+                        >
+                           <div>
+                              <div className="flex items-center gap-4 mb-4">
+                                 <div className="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-800 shrink-0" />
+                                 <div className="flex-1 space-y-2">
+                                    <div className="h-4 bg-gray-200 dark:bg-gray-800 rounded w-24" />
+                                    <div className="h-5 bg-gray-200 dark:bg-gray-800 rounded w-40" />
+                                 </div>
+                              </div>
+                              <div className="space-y-3 pt-3 border-t border-gray-100 dark:border-gray-800">
+                                 <div className="h-4 bg-gray-200 dark:bg-gray-800 rounded w-3/4" />
+                                 <div className="grid grid-cols-2 gap-2 pt-2">
+                                    <div className="h-12 bg-gray-200 dark:bg-gray-800 rounded-xl" />
+                                    <div className="h-12 bg-gray-200 dark:bg-gray-800 rounded-xl" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="h-10 bg-gray-200 dark:bg-gray-800 rounded-xl mt-4" />
+                        </div>
+                     ))
+                  ) : (
+                     homeAdvocates.map((advocate) => (
+                        <article
                            key={advocate.id}
                            className="group relative bg-white dark:bg-gray-900 rounded-3xl p-6 border border-gray-100 dark:border-gray-800 hover:border-teal-200 dark:hover:border-gray-700 shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
                         >
@@ -143,14 +178,16 @@ const TrustProof = () => {
                               {/* Top Bar: Profile Photo & Full Name */}
                               <div className="flex items-center gap-4 mb-4">
                                  <div className="relative shrink-0">
-                                    <img
-                                       src={advocate.avatar}
-                                       alt={advocate.name}
-                                       className="w-16 h-16 md:w-18 md:h-18 rounded-2xl object-cover ring-2 ring-teal-100 dark:ring-gray-700 shadow-sm"
-                                       loading="lazy"
-                                    />
+                                    <div className="w-16 h-16 md:w-18 md:h-18 rounded-full bg-teal-50/80 dark:bg-gray-800 p-1.5 ring-2 ring-teal-100 dark:ring-gray-700 shadow-sm flex items-center justify-center overflow-hidden">
+                                       <img
+                                          src={advocateImg}
+                                          alt={advocate.name}
+                                          className="w-full h-full rounded-full object-contain"
+                                          loading="lazy"
+                                       />
+                                    </div>
                                     {advocate.verified && (
-                                       <span 
+                                       <span
                                           className="absolute -bottom-1 -right-1 bg-white dark:bg-gray-900 rounded-full p-0.5 text-secondary text-lg shadow"
                                           title="Bar Certified & Verified"
                                        >
@@ -158,6 +195,7 @@ const TrustProof = () => {
                                        </span>
                                     )}
                                  </div>
+
 
                                  <div className="flex-1 min-w-0">
                                     <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-md bg-primary/10 text-primary dark:bg-secondary/10 dark:text-secondary mb-1">
@@ -170,25 +208,29 @@ const TrustProof = () => {
                               </div>
 
                               {/* Details Section */}
-                              <div className="space-y-2.5 pt-3 border-t border-gray-100 dark:border-gray-800 text-sm">
-                                 {/* Specialization */}
-                                 <div className="flex items-start gap-2.5">
-                                    <div className="w-6 h-6 rounded-lg bg-teal-50 dark:bg-gray-800 flex items-center justify-center text-primary dark:text-teal-300 shrink-0 mt-0.5">
-                                       <PiScales className="text-sm" />
+                              <div className="space-y-3 pt-3 border-t border-gray-100 dark:border-gray-800 text-sm">
+                                 {/* Specialization as Chip UI */}
+                                 <div>
+                                    <div className="flex items-center gap-1.5 mb-2">
+                                       <div className="w-5 h-5 rounded-md bg-teal-50 dark:bg-gray-800 flex items-center justify-center text-primary dark:text-teal-300 shrink-0">
+                                          <PiScales className="text-xs" />
+                                       </div>
+                                       <span className="text-[11px] uppercase tracking-wider text-gray-400 dark:text-gray-400 font-semibold">Specialization</span>
                                     </div>
-                                    <div className="min-w-0">
-                                       <span className="text-[11px] uppercase tracking-wider text-gray-400 dark:text-gray-400 block font-medium">Specialization</span>
-                                       <span className="font-semibold text-gray-800 dark:text-gray-200 text-xs md:text-sm block">
-                                          {advocate.specialization}
-                                       </span>
-                                       <span className="text-[11px] text-gray-500 dark:text-gray-400 block mt-0.5 truncate">
-                                          {advocate.secondarySpecialization}
-                                       </span>
+                                    <div className="flex flex-wrap gap-1.5 min-h-[48px] items-start content-start">
+                                       {advocate.specializations?.map((spec, sIdx) => (
+                                          <span
+                                             key={sIdx}
+                                             className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-teal-50/90 dark:bg-gray-800 text-primary dark:text-teal-300 text-xs font-semibold border border-teal-100/70 dark:border-gray-700/70 shadow-2xs"
+                                          >
+                                             {spec}
+                                          </span>
+                                       ))}
                                     </div>
                                  </div>
 
                                  {/* Experience & Mobile Grid */}
-                                 <div className="grid grid-cols-2 gap-2 pt-2">
+                                 <div className="grid grid-cols-2 gap-2 pt-1">
                                     {/* Experience */}
                                     <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800/60 p-2.5 rounded-xl border border-gray-100 dark:border-gray-800/60">
                                        <div className="w-7 h-7 rounded-lg bg-white dark:bg-gray-700 flex items-center justify-center text-primary dark:text-secondary shrink-0 shadow-xs">
@@ -216,11 +258,12 @@ const TrustProof = () => {
                                     </div>
                                  </div>
                               </div>
+
                            </div>
 
                            {/* Card Action */}
                            <div className="mt-5 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center gap-3">
-                              <Link 
+                              <Link
                                  to="/download"
                                  className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-primary hover:bg-primary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-white dark:text-gray-950 text-xs md:text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow group-hover:translate-x-0.5"
                               >
@@ -236,52 +279,52 @@ const TrustProof = () => {
                               </Link>
                            </div>
                         </article>
-                     ))}
-                  </div>
+                     ))
+                  )}
+               </div>
 
-                  {/* Action Buttons: View All & Consult Now */}
-                  <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+               {/* Action Buttons: View All & Consult Now */}
+               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                  <Link
+                     to="/advocates"
+                     className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-primary hover:bg-primary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-white dark:text-gray-950 font-bold text-sm md:text-base shadow-lg shadow-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+                  >
+                     <span>View All</span>
+                     <PiArrowRight className="text-base" />
+                  </Link>
+                  <Link
+                     to="/download"
+                     className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-secondary dark:text-secondary dark:hover:bg-secondary dark:hover:text-gray-950 font-bold text-sm md:text-base transition-all duration-300 hover:-translate-y-0.5 cursor-pointer shadow-sm hover:shadow-md"
+                  >
+                     <span>Consult Now</span>
+                     <PiArrowRight className="text-base" />
+                  </Link>
+               </div>
+
+               {/* Bottom Banner to Join or Browse More */}
+               <div className="mt-12 p-6 md:p-8 rounded-3xl bg-linear-to-r from-teal-900 to-primary text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="text-center md:text-left">
+                     <h4 className="text-lg md:text-xl font-bold mb-1">Are you a practicing Advocate?</h4>
+                     <p className="text-sm text-teal-100 max-w-xl">
+                        Join 2,000+ verified legal experts on MLawyer. Expand your digital client base and consult on your own schedule.
+                     </p>
+                  </div>
+                  <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+                     <Link
+                        to="/register-advocate"
+                        className="px-5 py-2.5 rounded-xl bg-secondary hover:bg-secondary/90 text-white font-bold text-xs md:text-sm transition-all shadow hover:shadow-md"
+                     >
+                        Register as Advocate
+                     </Link>
                      <Link
                         to="/advocates"
-                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-primary hover:bg-primary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-white dark:text-gray-950 font-bold text-sm md:text-base shadow-lg shadow-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+                        className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs md:text-sm border border-white/20 transition-all backdrop-blur-xs"
                      >
-                        <span>View All</span>
-                        <PiArrowRight className="text-base" />
+                        View All Advocates
                      </Link>
-                     <Link
-                        to="/download"
-                        className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-secondary dark:text-secondary dark:hover:bg-secondary dark:hover:text-gray-950 font-bold text-sm md:text-base transition-all duration-300 hover:-translate-y-0.5 cursor-pointer shadow-sm hover:shadow-md"
-                     >
-                        <span>Consult Now</span>
-                        <PiArrowRight className="text-base" />
-                     </Link>
-                  </div>
-
-                  {/* Bottom Banner to Join or Browse More */}
-                  <div className="mt-12 p-6 md:p-8 rounded-3xl bg-linear-to-r from-teal-900 to-primary text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
-                     <div className="text-center md:text-left">
-                        <h4 className="text-lg md:text-xl font-bold mb-1">Are you a practicing Advocate?</h4>
-                        <p className="text-sm text-teal-100 max-w-xl">
-                           Join 2,000+ verified legal experts on MLawyer. Expand your digital client base and consult on your own schedule.
-                        </p>
-                     </div>
-                     <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
-                        <Link
-                           to="/register-advocate"
-                           className="px-5 py-2.5 rounded-xl bg-secondary hover:bg-secondary/90 text-white font-bold text-xs md:text-sm transition-all shadow hover:shadow-md"
-                        >
-                           Register as Advocate
-                        </Link>
-                        <Link
-                           to="/advocates"
-                           className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs md:text-sm border border-white/20 transition-all backdrop-blur-xs"
-                        >
-                           View All Advocates
-                        </Link>
-                     </div>
                   </div>
                </div>
-            </PopIn>
+            </div>
          </div>
       </section>
    );
