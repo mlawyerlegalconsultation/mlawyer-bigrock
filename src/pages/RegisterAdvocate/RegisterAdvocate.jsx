@@ -332,7 +332,7 @@ const RegisterAdvocate = () => {
         <FloatingIcon Icon={() => <FaPhoneAlt className="text-3xl" />} className="top-[55%] left-[4%]" delay={0.5} duration={6} color="secondary" />
         <FloatingIcon Icon={() => <FaFileContract className="text-4xl" />} className="top-[75%] left-[7%]" delay={2} duration={7} color="primary" />
         <FloatingIcon Icon={() => <FaHandshake className="text-5xl" />} className="top-[45%] left-[10%]" delay={3} duration={9} color="secondary" />
-        
+
         {/* Right side icons */}
         <FloatingIcon Icon={() => <FaBalanceScale className="text-5xl" />} className="top-[12%] right-[5%]" delay={1} duration={8} color="primary" />
         <FloatingIcon Icon={() => <FaShieldAlt className="text-4xl" />} className="top-[32%] right-[7%]" delay={2.5} duration={7} color="secondary" />
@@ -834,7 +834,7 @@ const RegisterAdvocate = () => {
                   <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                     Already registered as an advocate?{' '}
                     <Link to="/login" className="text-secondary font-bold hover:underline">
-                      Log in to Advocate Portal
+                      Log in to MLawyer Pro App
                     </Link>
                   </p>
                 </div>

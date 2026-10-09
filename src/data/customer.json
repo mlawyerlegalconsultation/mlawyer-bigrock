@@ -19,32 +19,22 @@
   },
   "howItWorks": {
     "title": "How It Works",
-    "subtitle": "Get legal help in 5 simple steps",
+    "subtitle": "Get legal help in 3 simple steps",
     "steps": [
       {
         "icon": "FaSearch",
-        "title": "Describe Your Legal Issue",
-        "desc": "Choose your category or describe your situation in your own words. Our smart matching system understands your needs."
-      },
-      {
-        "icon": "FaUserTie",
-        "title": "Browse & Choose Your Advocate",
-        "desc": "View detailed advocate profiles, see specializations, experience, ratings, and compare consultation fees."
+        "title": "Find the Right Advocate for You",
+        "desc": "Browse detailed advocate profiles, review their areas of specialization and years of experience."
       },
       {
         "icon": "FaCalendarCheck",
         "title": "Book Your Consultation",
-        "desc": "Select immediate or scheduled consultation and receive instant confirmation."
+        "desc": "Choose between an immediate or scheduled consultation and receive instant confirmation."
       },
       {
-        "icon": "FaComments",
+        "icon": "FaVideo",
         "title": "Get Expert Guidance",
-        "desc": "Secure, encrypted communication. Share documents safely, take notes, and receive follow-up recommendations."
-      },
-      {
-        "icon": "FaStar",
-        "title": "Rate & Review",
-        "desc": "Help other clients by sharing your experience."
+        "desc": "Enjoy secure and encrypted consultations, with the option to record sessions at a nominal cost for future reference."
       }
     ]
   },

@@ -13,32 +13,31 @@ import {
 } from 'react-icons/pi';
 import PopIn from '../../../components/animations/PopIn';
 import { Link } from 'react-router-dom';
-import { normalizeLawyerMock } from '../../../data/advocatesData';
-import { useLawyerMockDetails } from '../../../hooks/useLawyerApi';
+import { dummyAdvocates } from '../../../data/advocatesData';
 import advocateImg from '../../../assets/img/advocate.png';
 
 const trustItems = [
    {
       title: '500+ verified advocates',
-      description: 'Licensed professionals ready to help across key practice areas.',
+      description: 'Access trusted legal experts across a wide range of practice areas.',
       icon: <PiUsers />,
       accentClassName: 'bg-primary/10 text-primary dark:bg-white/10 dark:text-white'
    },
    {
-      title: '10,000+ legal consultations completed',
-      description: 'A strong track record of successful consultations and client support.',
+      title: '1000+ consultations completed',
+      description: 'Trusted by clients for effective legal consultations and dedicated support.',
       icon: <PiSealCheck />,
       accentClassName: 'bg-secondary/10 text-secondary'
    },
    {
       title: '24x7 support',
-      description: 'Get assistance whenever you need it, day or night.',
+      description: 'Access reliable support whenever you need it.',
       icon: <PiClock />,
       accentClassName: 'bg-primary/10 text-primary dark:bg-white/10 dark:text-white'
    },
    {
       title: 'Secured Consultation',
-      description: 'Protected sessions built for safe and reliable online advice.',
+      description: 'Reliable online legal consultations, wherever you are.',
       icon: <PiShieldCheck />,
       accentClassName: 'bg-secondary/10 text-secondary'
    },
@@ -51,14 +50,6 @@ const trustItems = [
 ];
 
 const TrustProof = () => {
-   const { data: mockLawyers, isLoading: isLawyersLoading } = useLawyerMockDetails(0, 3);
-
-   const homeAdvocates = React.useMemo(() => {
-      if (mockLawyers && Array.isArray(mockLawyers) && mockLawyers.length > 0) {
-         return mockLawyers.slice(0, 3).map((item, idx) => normalizeLawyerMock(item, idx));
-      }
-      return [];
-   }, [mockLawyers]);
 
 
    return (
@@ -67,10 +58,10 @@ const TrustProof = () => {
          <div className="container mx-auto px-4 md:px-10 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14">
                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary font-semibold uppercase tracking-[0.2em] text-xs md:text-sm mb-4">
-                  Trusted by clients every day
+                  Trusted by Clients & Advocates
                </span>
                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Built on verified experts, secure consultations, and consistent support
+                  Verified advocates, affordable pricing and secured consultations
                </h2>
             </div>
 
@@ -92,40 +83,7 @@ const TrustProof = () => {
                ))}
             </div>
 
-            {/* Explore Advocates by City Section */}
-            <PopIn delay={0.25}>
-               <div className="max-w-5xl mx-auto mt-12 pt-10 border-t border-gray-100 dark:border-gray-800">
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-6">Explore Advocates by City</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-8">Find verified advocates near you</p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800 group hover:border-teal-200 dark:hover:border-teal-800">
-                        <h4 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-secondary transition-colors">Chennai</h4>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Find top advocates in Chennai for all practice areas.</p>
-                     </div>
-
-                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800 group hover:border-teal-200 dark:hover:border-teal-800">
-                        <h4 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-secondary transition-colors">Coimbatore</h4>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Search verified advocates in Coimbatore.</p>
-                     </div>
-
-                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800 group hover:border-teal-200 dark:hover:border-teal-800">
-                        <h4 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-secondary transition-colors">Madurai</h4>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Local legal support and consultations in Madurai.</p>
-                     </div>
-
-                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800 group hover:border-teal-200 dark:hover:border-teal-800">
-                        <h4 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-secondary transition-colors">Trichy</h4>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Trusted advocates serving Trichy clients.</p>
-                     </div>
-
-                     <div className="block bg-white dark:bg-gray-900 rounded-2xl p-5 shadow hover:shadow-lg transition-all duration-200 border border-gray-100 dark:border-gray-800 group hover:border-teal-200 dark:hover:border-teal-800">
-                        <h4 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-secondary transition-colors">Tirunelveli</h4>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Find local legal expertise in Tirunelveli.</p>
-                     </div>
-                  </div>
-               </div>
-            </PopIn>
 
             {/* Explore Our Advocates Section */}
             <div className="max-w-6xl mx-auto mt-16 pt-12 border-t border-gray-100 dark:border-gray-800">
@@ -137,154 +95,127 @@ const TrustProof = () => {
                      Explore Our Advocates
                   </h3>
                   <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
-                     Connect directly with experienced, bar-certified advocates across key legal specializations.
+                     Grow your legal practice with MLawyer. Join a network of verified advocates, reach more clients online, and offer consultations on your own schedule.
                   </p>
                </div>
 
                {/* Advocates Grid - 3 Cards */}
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {isLawyersLoading ? (
-                     Array.from({ length: 3 }).map((_, idx) => (
-                        <div
-                           key={`skeleton-${idx}`}
-                           className="h-[320px] rounded-3xl p-6 border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 animate-pulse flex flex-col justify-between"
-                        >
-                           <div>
-                              <div className="flex items-center gap-4 mb-4">
-                                 <div className="w-16 h-16 rounded-full bg-gray-200 dark:bg-gray-800 shrink-0" />
-                                 <div className="flex-1 space-y-2">
-                                    <div className="h-4 bg-gray-200 dark:bg-gray-800 rounded w-24" />
-                                    <div className="h-5 bg-gray-200 dark:bg-gray-800 rounded w-40" />
+                  {dummyAdvocates.map((advocate) => (
+                     <article
+                        key={advocate.id}
+                        className="group relative bg-white dark:bg-gray-900 rounded-3xl p-6 border border-gray-100 dark:border-gray-800 hover:border-teal-200 dark:hover:border-gray-700 shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+                     >
+                        <div>
+                           {/* Top Bar: Profile Photo & Full Name */}
+                           <div className="flex items-center gap-4 mb-4">
+                              <div className="relative shrink-0">
+                                 <div className="w-16 h-16 md:w-18 md:h-18 rounded-full bg-teal-50/80 dark:bg-gray-800 p-1.5 ring-2 ring-teal-100 dark:ring-gray-700 shadow-sm flex items-center justify-center overflow-hidden">
+                                    <img
+                                       src={advocateImg}
+                                       alt={advocate.name}
+                                       className="w-full h-full rounded-full object-contain"
+                                       loading="lazy"
+                                    />
                                  </div>
-                              </div>
-                              <div className="space-y-3 pt-3 border-t border-gray-100 dark:border-gray-800">
-                                 <div className="h-4 bg-gray-200 dark:bg-gray-800 rounded w-3/4" />
-                                 <div className="grid grid-cols-2 gap-2 pt-2">
-                                    <div className="h-12 bg-gray-200 dark:bg-gray-800 rounded-xl" />
-                                    <div className="h-12 bg-gray-200 dark:bg-gray-800 rounded-xl" />
-                                 </div>
-                              </div>
-                           </div>
-                           <div className="h-10 bg-gray-200 dark:bg-gray-800 rounded-xl mt-4" />
-                        </div>
-                     ))
-                  ) : (
-                     homeAdvocates.map((advocate) => (
-                        <article
-                           key={advocate.id}
-                           className="group relative bg-white dark:bg-gray-900 rounded-3xl p-6 border border-gray-100 dark:border-gray-800 hover:border-teal-200 dark:hover:border-gray-700 shadow-[0_8px_30px_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
-                        >
-                           <div>
-                              {/* Top Bar: Profile Photo & Full Name */}
-                              <div className="flex items-center gap-4 mb-4">
-                                 <div className="relative shrink-0">
-                                    <div className="w-16 h-16 md:w-18 md:h-18 rounded-full bg-teal-50/80 dark:bg-gray-800 p-1.5 ring-2 ring-teal-100 dark:ring-gray-700 shadow-sm flex items-center justify-center overflow-hidden">
-                                       <img
-                                          src={advocateImg}
-                                          alt={advocate.name}
-                                          className="w-full h-full rounded-full object-contain"
-                                          loading="lazy"
-                                       />
-                                    </div>
-                                    {advocate.verified && (
-                                       <span
-                                          className="absolute -bottom-1 -right-1 bg-white dark:bg-gray-900 rounded-full p-0.5 text-secondary text-lg shadow"
-                                          title="Bar Certified & Verified"
-                                       >
-                                          <PiCheckCircleFill className="text-secondary" />
-                                       </span>
-                                    )}
-                                 </div>
-
-
-                                 <div className="flex-1 min-w-0">
-                                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-md bg-primary/10 text-primary dark:bg-secondary/10 dark:text-secondary mb-1">
-                                       Verified Advocate
+                                 {advocate.verified && (
+                                    <span
+                                       className="absolute -bottom-1 -right-1 bg-white dark:bg-gray-900 rounded-full p-0.5 text-secondary text-lg shadow"
+                                       title="Bar Certified & Verified"
+                                    >
+                                       <PiCheckCircleFill className="text-secondary" />
                                     </span>
-                                    <h4 className="font-bold text-base md:text-lg text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-secondary transition-colors truncate">
-                                       {advocate.name}
-                                    </h4>
+                                 )}
+                              </div>
+
+
+                              <div className="flex-1 min-w-0">
+                                 <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-md bg-primary/10 text-primary dark:bg-secondary/10 dark:text-secondary mb-1">
+                                    Verified Advocate
+                                 </span>
+                                 <h4 className="font-bold text-base md:text-lg text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-secondary transition-colors truncate">
+                                    {advocate.name}
+                                 </h4>
+                              </div>
+                           </div>
+
+                           {/* Details Section */}
+                           <div className="space-y-3 pt-3 border-t border-gray-100 dark:border-gray-800 text-sm">
+                              {/* Specialization as Chip UI */}
+                              <div>
+                                 <div className="flex items-center gap-1.5 mb-2">
+                                    <div className="w-5 h-5 rounded-md bg-teal-50 dark:bg-gray-800 flex items-center justify-center text-primary dark:text-teal-300 shrink-0">
+                                       <PiScales className="text-xs" />
+                                    </div>
+                                    <span className="text-[11px] uppercase tracking-wider text-gray-400 dark:text-gray-400 font-semibold">Specialization</span>
+                                 </div>
+                                 <div className="flex flex-wrap gap-1.5 min-h-[48px] items-start content-start">
+                                    {advocate.specializations?.map((spec, sIdx) => (
+                                       <span
+                                          key={sIdx}
+                                          className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-teal-50/90 dark:bg-gray-800 text-primary dark:text-teal-300 text-xs font-semibold border border-teal-100/70 dark:border-gray-700/70 shadow-2xs"
+                                       >
+                                          {spec}
+                                       </span>
+                                    ))}
                                  </div>
                               </div>
 
-                              {/* Details Section */}
-                              <div className="space-y-3 pt-3 border-t border-gray-100 dark:border-gray-800 text-sm">
-                                 {/* Specialization as Chip UI */}
-                                 <div>
-                                    <div className="flex items-center gap-1.5 mb-2">
-                                       <div className="w-5 h-5 rounded-md bg-teal-50 dark:bg-gray-800 flex items-center justify-center text-primary dark:text-teal-300 shrink-0">
-                                          <PiScales className="text-xs" />
-                                       </div>
-                                       <span className="text-[11px] uppercase tracking-wider text-gray-400 dark:text-gray-400 font-semibold">Specialization</span>
+                              {/* Experience & Mobile Grid */}
+                              <div className="grid grid-cols-2 gap-2 pt-1">
+                                 {/* Experience */}
+                                 <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800/60 p-2.5 rounded-xl border border-gray-100 dark:border-gray-800/60">
+                                    <div className="w-7 h-7 rounded-lg bg-white dark:bg-gray-700 flex items-center justify-center text-primary dark:text-secondary shrink-0 shadow-xs">
+                                       <PiBriefcase className="text-base" />
                                     </div>
-                                    <div className="flex flex-wrap gap-1.5 min-h-[48px] items-start content-start">
-                                       {advocate.specializations?.map((spec, sIdx) => (
-                                          <span
-                                             key={sIdx}
-                                             className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-teal-50/90 dark:bg-gray-800 text-primary dark:text-teal-300 text-xs font-semibold border border-teal-100/70 dark:border-gray-700/70 shadow-2xs"
-                                          >
-                                             {spec}
-                                          </span>
-                                       ))}
+                                    <div className="min-w-0">
+                                       <span className="text-[10px] uppercase text-gray-400 dark:text-gray-400 block font-medium">Experience</span>
+                                       <span className="font-semibold text-xs text-gray-900 dark:text-white truncate block">
+                                          {advocate.experience}
+                                       </span>
                                     </div>
                                  </div>
 
-                                 {/* Experience & Mobile Grid */}
-                                 <div className="grid grid-cols-2 gap-2 pt-1">
-                                    {/* Experience */}
-                                    <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800/60 p-2.5 rounded-xl border border-gray-100 dark:border-gray-800/60">
-                                       <div className="w-7 h-7 rounded-lg bg-white dark:bg-gray-700 flex items-center justify-center text-primary dark:text-secondary shrink-0 shadow-xs">
-                                          <PiBriefcase className="text-base" />
-                                       </div>
-                                       <div className="min-w-0">
-                                          <span className="text-[10px] uppercase text-gray-400 dark:text-gray-400 block font-medium">Experience</span>
-                                          <span className="font-semibold text-xs text-gray-900 dark:text-white truncate block">
-                                             {advocate.experience}
-                                          </span>
-                                       </div>
+                                 {/* Mobile No */}
+                                 <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800/60 p-2.5 rounded-xl border border-gray-100 dark:border-gray-800/60">
+                                    <div className="w-7 h-7 rounded-lg bg-white dark:bg-gray-700 flex items-center justify-center text-primary dark:text-teal-400 shrink-0 shadow-xs">
+                                       <PiPhoneCall className="text-base" />
                                     </div>
-
-                                    {/* Mobile No */}
-                                    <div className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800/60 p-2.5 rounded-xl border border-gray-100 dark:border-gray-800/60">
-                                       <div className="w-7 h-7 rounded-lg bg-white dark:bg-gray-700 flex items-center justify-center text-primary dark:text-teal-400 shrink-0 shadow-xs">
-                                          <PiPhoneCall className="text-base" />
-                                       </div>
-                                       <div className="min-w-0">
-                                          <span className="text-[10px] uppercase text-gray-400 dark:text-gray-400 block font-medium">Mobile No</span>
-                                          <span className="font-semibold text-xs text-gray-900 dark:text-white font-mono tracking-tight block">
-                                             {advocate.mobile}
-                                          </span>
-                                       </div>
+                                    <div className="min-w-0">
+                                       <span className="text-[10px] uppercase text-gray-400 dark:text-gray-400 block font-medium">Mobile No</span>
+                                       <span className="font-semibold text-xs text-gray-900 dark:text-white font-mono tracking-tight block">
+                                          {advocate.mobile}
+                                       </span>
                                     </div>
                                  </div>
                               </div>
-
                            </div>
 
-                           {/* Card Action */}
-                           <div className="mt-5 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center gap-3">
-                              <Link
-                                 to="/download"
-                                 className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-primary hover:bg-primary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-white dark:text-gray-950 text-xs md:text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow group-hover:translate-x-0.5"
-                              >
-                                 <span>Consult Now</span>
-                                 <PiArrowRight className="text-sm" />
-                              </Link>
-                              <Link
-                                 to="/download"
-                                 title="Call via MLawyer App"
-                                 className="p-2.5 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300 transition-colors"
-                              >
-                                 <PiPhoneCall className="text-base" />
-                              </Link>
-                           </div>
-                        </article>
-                     ))
-                  )}
+                        </div>
+
+                        {/* Card Action */}
+                        <div className="mt-5 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center gap-3">
+                           <Link
+                              to="/download"
+                              className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-primary hover:bg-primary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-white dark:text-gray-950 text-xs md:text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow group-hover:translate-x-0.5"
+                           >
+                              <span>Consult Now</span>
+                              <PiArrowRight className="text-sm" />
+                           </Link>
+                           <Link
+                              to="/download"
+                              title="Call via MLawyer App"
+                              className="p-2.5 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300 transition-colors"
+                           >
+                              <PiPhoneCall className="text-base" />
+                           </Link>
+                        </div>
+                     </article>
+                  ))}
                </div>
 
                {/* Action Buttons: View All & Consult Now */}
-               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+               {/* <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                   <Link
                      to="/advocates"
                      className="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-primary hover:bg-primary/90 dark:bg-secondary dark:hover:bg-secondary/90 text-white dark:text-gray-950 font-bold text-sm md:text-base shadow-lg shadow-primary/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
@@ -299,14 +230,14 @@ const TrustProof = () => {
                      <span>Consult Now</span>
                      <PiArrowRight className="text-base" />
                   </Link>
-               </div>
+               </div> */}
 
                {/* Bottom Banner to Join or Browse More */}
                <div className="mt-12 p-6 md:p-8 rounded-3xl bg-linear-to-r from-teal-900 to-primary text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
                   <div className="text-center md:text-left">
                      <h4 className="text-lg md:text-xl font-bold mb-1">Are you a practicing Advocate?</h4>
                      <p className="text-sm text-teal-100 max-w-xl">
-                        Join 2,000+ verified legal experts on MLawyer. Expand your digital client base and consult on your own schedule.
+                        Join verified legal experts on MLawyer. Expand your digital client base and consult on your own schedule.
                      </p>
                   </div>
                   <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">

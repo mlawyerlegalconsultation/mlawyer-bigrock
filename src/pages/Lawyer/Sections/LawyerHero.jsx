@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGavel, FaPhoneAlt, FaShieldAlt, FaFileContract, FaBalanceScale, FaCheckCircle, FaUserTie, FaHandshake, FaGooglePlay } from 'react-icons/fa';
+import { FaGavel, FaPhoneAlt, FaShieldAlt, FaFileContract, FaBalanceScale, FaCheckCircle, FaUserTie, FaHandshake, FaDownload } from 'react-icons/fa';
 import { MdVerified, MdSecurity } from 'react-icons/md';
 import PopIn from '../../../components/animations/PopIn';
 import lawyerData from '../../../data/lawyer.json';
@@ -30,18 +30,18 @@ const LawyerHero = () => {
                 <FloatingIcon Icon={() => <FaPhoneAlt className="text-3xl" />} className="top-[55%] left-[3%]" delay={0.5} duration={6} color="secondary" />
                 <FloatingIcon Icon={() => <FaFileContract className="text-4xl" />} className="top-[75%] left-[10%]" delay={2} duration={7} color="primary" />
                 <FloatingIcon Icon={() => <FaHandshake className="text-5xl" />} className="top-[45%] left-[12%]" delay={3} duration={9} color="secondary" />
-                
+
                 {/* Right side icons */}
                 <FloatingIcon Icon={() => <FaBalanceScale className="text-5xl" />} className="top-[15%] right-[6%]" delay={1} duration={8} color="primary" />
                 <FloatingIcon Icon={() => <FaShieldAlt className="text-4xl" />} className="top-[35%] right-[4%]" delay={2.5} duration={7} color="secondary" />
                 <FloatingIcon Icon={() => <FaCheckCircle className="text-3xl" />} className="top-[60%] right-[8%]" delay={0.8} duration={6} color="primary" />
                 <FloatingIcon Icon={() => <FaUserTie className="text-4xl" />} className="top-[80%] right-[5%]" delay={1.8} duration={8} color="secondary" />
                 <FloatingIcon Icon={() => <MdSecurity className="text-5xl" />} className="top-[50%] right-[12%]" delay={3.5} duration={9} color="primary" />
-                
+
                 {/* Top scattered icons */}
                 <FloatingIcon Icon={() => <MdVerified className="text-3xl" />} className="top-[5%] left-[25%]" delay={2.2} duration={7} color="secondary" />
                 <FloatingIcon Icon={() => <FaGavel className="text-3xl" />} className="top-[8%] right-[25%]" delay={1.2} duration={6} color="primary" />
-                
+
                 {/* Bottom scattered icons */}
                 <FloatingIcon Icon={() => <FaBalanceScale className="text-3xl" />} className="bottom-[10%] left-[20%]" delay={0.3} duration={8} color="secondary" />
                 <FloatingIcon Icon={() => <FaShieldAlt className="text-3xl" />} className="bottom-[15%] right-[22%]" delay={2.8} duration={7} color="primary" />
@@ -70,13 +70,13 @@ const LawyerHero = () => {
                                 <span>{hero.ctaText}</span>
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                             </Link>
-                            <a 
-                                href="https://play.google.com/store/apps/details?id=com.mlawyer.lawyer&hl=en_IN" 
-                                target="_blank" 
+                            <a
+                                href="/download"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto px-8 py-4 bg-secondary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2.5 group"
                             >
-                                <FaGooglePlay className="text-xl group-hover:scale-110 transition-transform" />
+                                <FaDownload className="text-lg group-hover:scale-110 group-hover:translate-y-0.5 transition-transform" />
                                 <span>Download MLawyer Pro</span>
                             </a>
                         </div>

@@ -20,7 +20,7 @@ const heroContent = {
     titlePrefix: 'Your Legal Partner',
     titleSuffix: 'Just a Tap Away',
     subtitle:
-        'MLawyer - An online lawyer consultation booking platform that connects you with verified advocates instantly for expert legal opinions through video consultations.',
+        'MLawyer is a mobile-first lawyer consultation app that instantly connects you with verified advocates for secure video consultations and expert legal opinions.',
     ctaClient: 'I Need Legal Help',
     ctaLawyer: "I'm an Advocate",
     trustText: '',
@@ -59,9 +59,14 @@ const Hero = () => {
                             </span>
                         </h1>
                         <p className="text-lg text-primary/80 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 transition-colors">
-                            MLawyer - An <span className='inline font-semibold'><Link to="/download">online lawyer consultation booking</Link></span> platform that connects you with verified advocates instantly for expert legal opinions through video consultations
+                            MLawyer is a <span className='inline font-semibold'><Link to="/download">mobile-first lawyer consultation app</Link></span> that instantly connects you with verified advocates for secure video consultations and expert legal opinions.
                         </p>
-                        <p className='text-primary/80 dark:text-gray-300'>Available on Android and iOS. Scan here to install the app right away.</p>
+                        <p className="text-base text-primary dark:text-gray-200 font-medium">
+                            No Website — Pay and Consult Directly Through the MLawyer App.
+                        </p>
+                        <p className="text-sm text-primary/70 dark:text-gray-400">
+                            Please read the <Link to="/terms-and-conditions" className="text-secondary font-semibold hover:underline">App Terms &amp; Conditions</Link> carefully before using the platform.
+                        </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <PopIn delay={0.1}>
                                 <Link to="/download" className="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">

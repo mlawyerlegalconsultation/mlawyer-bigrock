@@ -91,7 +91,7 @@ const Services = () => {
         <section className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">Comprehensive Legal Services</h2>
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">Comprehensive Legal Advisors</h2>
                     <p className="text-lg text-gray-600 dark:text-gray-300 transition-colors">Expert assistance across all areas of law.</p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

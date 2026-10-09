@@ -47,12 +47,12 @@ const DownloadApp = () => {
                     href="https://play.google.com/store/apps/details?id=com.mlawyer.customer&pcampaignid=web_share"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-white text-gray-900 px-6 py-3.5 rounded-xl font-bold hover:bg-gray-100 transition-all hover:-translate-y-1 shadow-lg w-48 justify-center cursor-pointer"
+                    className="flex items-center gap-3 bg-white text-gray-900 px-5 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all hover:-translate-y-1 shadow-lg w-52 h-[58px] justify-center cursor-pointer border border-transparent box-border"
                   >
-                    <FaGooglePlay className="text-xl text-emerald-600" />
+                    <FaGooglePlay className="text-2xl text-emerald-600 shrink-0" />
                     <div className="text-left">
-                      <div className="text-[10px] uppercase font-semibold text-gray-500">Get it on</div>
-                      <div className="text-sm leading-none">Google Play</div>
+                      <div className="text-[10px] uppercase font-semibold text-gray-500 whitespace-nowrap">Get it on</div>
+                      <div className="text-sm font-bold leading-tight whitespace-nowrap">Google Play</div>
                     </div>
                   </a>
                 </PopIn>
@@ -61,12 +61,12 @@ const DownloadApp = () => {
                     href="https://apps.apple.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-transparent border border-white/30 text-white px-6 py-3.5 rounded-xl font-bold hover:bg-white/10 transition-all hover:-translate-y-1 w-48 justify-center cursor-pointer"
+                    className="flex items-center gap-3 bg-transparent border border-white/30 text-white px-5 py-3 rounded-xl font-bold hover:bg-white/10 transition-all hover:-translate-y-1 w-52 h-[58px] justify-center cursor-pointer box-border"
                   >
-                    <FaApple className="text-2xl" />
+                    <FaApple className="text-2xl shrink-0" />
                     <div className="text-left">
-                      <div className="text-[10px] uppercase font-semibold text-white/60">Download on the</div>
-                      <div className="text-sm leading-none">App Store</div>
+                      <div className="text-[10px] uppercase font-semibold text-white/70 whitespace-nowrap">Download on the</div>
+                      <div className="text-sm font-bold leading-tight whitespace-nowrap">App Store</div>
                     </div>
                   </a>
                 </PopIn>

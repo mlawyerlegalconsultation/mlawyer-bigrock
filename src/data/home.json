@@ -3,7 +3,7 @@
       "badge": "Trusted Legal Platform",
       "titlePrefix": "Your Legal Partner",
       "titleSuffix": "Just a Tap Away",
-      "subtitle": "MLawyer – An online lawyer consultation booking platform that connects you with verified advocates instantly for expert legal opinions through video consultations.",
+      "subtitle": "MLawyer is a mobile-first lawyer consultation app that instantly connects you with verified advocates for secure video consultations and expert legal opinions.",
       "ctaClient": "I Need Legal Help",
       "ctaLawyer": "I'm an Advocate",
       "trustText": "",
@@ -100,26 +100,66 @@
       "items": [
          {
             "id": 1,
-            "name": "Sarah Jenkins",
+            "name": "Karthik Subramanian",
             "role": "Client",
-            "image": "https://randomuser.me/api/portraits/women/44.jpg",
-            "content": "I needed legal advice for my startup but didn't know where to turn. MLawyer connected me with an expert in minutes. The video consultation was seamless.",
+            "image": "https://randomuser.me/api/portraits/men/46.jpg",
+            "content": "Getting my property documents verified before registry in Chennai was completely stress-free. The advocate pointed out critical clauses I would have missed. Highly recommended!",
             "rating": 5
          },
          {
             "id": 2,
-            "name": "David Chen",
-            "role": "Corporate Lawyer",
-            "image": "https://randomuser.me/api/portraits/men/32.jpg",
-            "content": "This platform has transformed how I manage my practice. I can reach clients nationwide and the integrated tools save me hours of administrative work every week.",
+            "name": "Kavitha Rajendran",
+            "role": "Client",
+            "image": "https://randomuser.me/api/portraits/women/65.jpg",
+            "content": "I needed urgent legal guidance on family property partition in Coimbatore. MLawyer connected me with an expert advocate in minutes. The video consultation was clear and reassuring.",
             "rating": 5
          },
          {
             "id": 3,
-            "name": "Emily Rodriguez",
+            "name": "Venkat Rao Reddy",
             "role": "Client",
-            "image": "https://randomuser.me/api/portraits/women/68.jpg",
-            "content": "Transparent pricing is a game-changer. I knew exactly what I was paying for. The advocate was professional, empathetic, and resolved my issue quickly.",
+            "image": "https://randomuser.me/api/portraits/men/72.jpg",
+            "content": "Drafting vendor agreements and employment contracts for our venture was handled seamlessly. Transparent pricing and actionable legal counsel made the entire process swift.",
+            "rating": 5
+         },
+         {
+            "id": 4,
+            "name": "Lakshmi Prasanna",
+            "role": "Client",
+            "image": "https://randomuser.me/api/portraits/women/79.jpg",
+            "content": "The advocate was extremely understanding and guided me through family mediation with patience. Having a private, secured online consultation gave me confidence and peace of mind.",
+            "rating": 5
+         },
+         {
+            "id": 5,
+            "name": "Rajesh Sharma",
+            "role": "Client",
+            "image": "https://randomuser.me/api/portraits/men/32.jpg",
+            "content": "Finalizing our commercial lease deeds and business partnership terms used to take weeks of delays. With MLawyer, our consultation was scheduled on demand and agreements were finalized effortlessly.",
+            "rating": 5
+         },
+         {
+            "id": 6,
+            "name": "Pooja Verma",
+            "role": "Client",
+            "image": "https://randomuser.me/api/portraits/women/24.jpg",
+            "content": "I needed legal counsel regarding an unresolved e-commerce consumer grievance. The advocate explained consumer protection procedures clearly and helped me draft a solid legal notice.",
+            "rating": 5
+         },
+         {
+            "id": 7,
+            "name": "Mohammed Farooq",
+            "role": "Client",
+            "image": "https://randomuser.me/api/portraits/men/86.jpg",
+            "content": "Consulted a senior advocate regarding supplier contract breach and arbitration clauses. The legal advice was sharp, thorough, and protected our commercial interests completely.",
+            "rating": 5
+         },
+         {
+            "id": 8,
+            "name": "Ayesha Fatima",
+            "role": "Client",
+            "image": "https://randomuser.me/api/portraits/women/48.jpg",
+            "content": "Booking an online legal consultation was quick, confidential, and reassuring. The advocate answered every query with great care, clarity, and professionalism. A truly reliable platform!",
             "rating": 5
          }
       ]

@@ -1,11 +1,13 @@
 import Hero from './Sections/Hero';
+import WhyChooseMLawyer from './Sections/WhyChooseMLawyer';
 import TrustProof from './Sections/TrustProof';
+import ExploreAdvocatesByCity from './Sections/ExploreAdvocatesByCity';
 import ChennaiLegalConsultation from './Sections/ChennaiLegalConsultation';
 import TwoPath from './Sections/TwoPath';
 import WhyChoose from './Sections/WhyChoose';
 import Testimonials from './Sections/Testimonials';
-import FAQ from './Sections/FAQ';
 import DownloadApp from './Sections/DownloadApp';
+import FAQ from './Sections/FAQ';
 import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
@@ -55,12 +57,14 @@ const Home = () => {
         <meta name="twitter:image:alt" content="Online-Lawyer-consultation-App" />
       </Helmet>
       <Hero />
-      <TrustProof />
-      <ChennaiLegalConsultation />
-      <TwoPath />
-      <WhyChoose />
+      <WhyChooseMLawyer />
+      {/* <ChennaiLegalConsultation /> */}
+      {/* <TwoPath /> */}
+      {/* <WhyChoose /> */}
       <Testimonials />
       <DownloadApp />
+      <TrustProof />
+      <ExploreAdvocatesByCity />
       <FAQ />
     </div>
   );

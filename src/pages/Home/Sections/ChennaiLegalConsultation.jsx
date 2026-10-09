@@ -97,7 +97,7 @@ const ChennaiLegalConsultation = () => {
                 </div>
 
                 {/* Services Grid */}
-                <div className="mb-24">
+                {/* <div className="mb-24">
                     <div className="flex items-center gap-4 mb-10">
                         <div className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/20"></div>
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white uppercase tracking-widest text-center">Our Legal Services</h3>
@@ -135,7 +135,7 @@ const ChennaiLegalConsultation = () => {
                             </PopIn>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
                 {/* Why Choose & Register CTA */}
                 <div className="grid lg:grid-cols-2 gap-12 items-stretch">
