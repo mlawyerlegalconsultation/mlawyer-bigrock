@@ -3,7 +3,7 @@ import PopIn from '../../../components/animations/PopIn';
 import { FaCheck, FaArrowRight } from 'react-icons/fa';
 
 const stats = [
-    { value: "₹550", label: "Starting Price", suffix: "+ GST" },
+    { value: "₹599", label: "Starting Price", suffix: "+ GST" },
     { value: "₹0", label: "Travel Cost", suffix: "saved" },
     { value: "15", label: "Minutes", suffix: "avg. consult" },
     { value: "70%", label: "Savings", suffix: "vs traditional" }
@@ -65,27 +65,6 @@ const PricingComparison = () => {
                         </PopIn>
                     ))}
                 </div>
-
-                {/* Horizontal divider */}
-                <div className="w-24 h-1 bg-secondary mx-auto mb-16"></div>
-
-                {/* Features - Horizontal scrolling tags */}
-                <PopIn delay={0.5}>
-                    <div className="text-center mb-8">
-                        <h3 className="text-2xl font-bold text-white mb-8">What's Included</h3>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            {features.map((feature, index) => (
-                                <div
-                                    key={index}
-                                    className="inline-flex items-center gap-2 px-5 py-3 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors duration-300"
-                                >
-                                    <FaCheck className="text-secondary text-sm" />
-                                    <span>{feature}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </PopIn>
             </div>
         </section>
     );

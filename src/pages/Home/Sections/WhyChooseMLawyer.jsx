@@ -200,8 +200,8 @@ const WhyChooseMLawyer = () => {
                     key={item.id}
                     onClick={() => setIndex1(index)}
                     className={`w-full text-left p-3.5 sm:p-4 rounded-2xl transition-all duration-300 flex items-center justify-between gap-3 relative overflow-hidden group border cursor-pointer ${isActive
-                        ? 'bg-primary text-white dark:bg-teal-950 dark:border-teal-700 shadow-lg shadow-teal-900/15 border-primary scale-[1.01]'
-                        : 'bg-white/80 dark:bg-gray-800/80 hover:bg-teal-50/80 dark:hover:bg-gray-750 text-gray-800 dark:text-gray-200 border-gray-100 dark:border-gray-700/60 shadow-xs'
+                      ? 'bg-primary text-white dark:bg-teal-950 dark:border-teal-700 shadow-lg shadow-teal-900/15 border-primary scale-[1.01]'
+                      : 'bg-white/80 dark:bg-gray-800/80 hover:bg-teal-50/80 dark:hover:bg-gray-750 text-gray-800 dark:text-gray-200 border-gray-100 dark:border-gray-700/60 shadow-xs'
                       }`}
                   >
                     {/* Active 2s Progress Bar */}
@@ -218,19 +218,13 @@ const WhyChooseMLawyer = () => {
                     <div className="flex items-center gap-3 min-w-0">
                       <div
                         className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0 transition-colors ${isActive
-                            ? 'bg-secondary text-gray-900 font-bold'
-                            : 'bg-primary/10 text-primary dark:bg-gray-700 dark:text-gray-200 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-secondary dark:group-hover:text-gray-900'
+                          ? 'bg-secondary text-gray-900 font-bold'
+                          : 'bg-primary/10 text-primary dark:bg-gray-700 dark:text-gray-200 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-secondary dark:group-hover:text-gray-900'
                           }`}
                       >
                         <Icon />
                       </div>
                       <div className="min-w-0">
-                        <span
-                          className={`text-xs font-mono font-bold block mb-0.5 ${isActive ? 'text-secondary' : 'text-gray-400 dark:text-gray-500'
-                            }`}
-                        >
-                          POINT {item.id}
-                        </span>
                         <h3
                           className={`text-sm sm:text-base font-bold truncate ${isActive ? 'text-white' : 'text-gray-900 dark:text-white'
                             }`}
@@ -242,8 +236,8 @@ const WhyChooseMLawyer = () => {
 
                     <span
                       className={`text-xs font-semibold px-2 py-1 rounded-md shrink-0 transition-opacity ${isActive
-                          ? 'bg-white/15 text-secondary'
-                          : 'text-gray-400 group-hover:text-primary dark:group-hover:text-secondary'
+                        ? 'bg-white/15 text-secondary'
+                        : 'text-gray-400 group-hover:text-primary dark:group-hover:text-secondary'
                         }`}
                     >
                       #{item.id}
@@ -267,9 +261,7 @@ const WhyChooseMLawyer = () => {
 
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-6">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/10 border border-secondary/20 text-secondary font-bold text-xs uppercase tracking-wider">
-                      <span>Point {active1.id} of 05</span>
-                    </div>
+
                     <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
                       <PiCheckCircleFill className="text-sm" />
                       {active1.highlight}
@@ -306,8 +298,8 @@ const WhyChooseMLawyer = () => {
                         onClick={() => setIndex1(dotIdx)}
                         aria-label={`Go to slide ${dotIdx + 1}`}
                         className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${dotIdx === index1
-                            ? 'w-6 bg-secondary'
-                            : 'w-2 bg-gray-200 dark:bg-gray-700 hover:bg-teal-300 dark:hover:bg-gray-500'
+                          ? 'w-6 bg-secondary'
+                          : 'w-2 bg-gray-200 dark:bg-gray-700 hover:bg-teal-300 dark:hover:bg-gray-500'
                           }`}
                       />
                     ))}
@@ -402,8 +394,8 @@ const WhyChooseMLawyer = () => {
                         onClick={() => setIndex2(dotIdx)}
                         aria-label={`Go to slide ${dotIdx + 1}`}
                         className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${dotIdx === index2
-                            ? 'w-6 bg-secondary'
-                            : 'w-2 bg-gray-200 dark:bg-gray-700 hover:bg-teal-300 dark:hover:bg-gray-500'
+                          ? 'w-6 bg-secondary'
+                          : 'w-2 bg-gray-200 dark:bg-gray-700 hover:bg-teal-300 dark:hover:bg-gray-500'
                           }`}
                       />
                     ))}
@@ -455,8 +447,8 @@ const WhyChooseMLawyer = () => {
                     key={item.id}
                     onClick={() => setIndex2(index)}
                     className={`w-full text-left p-3.5 sm:p-4 rounded-2xl transition-all duration-300 flex items-center justify-between gap-3 relative overflow-hidden group border cursor-pointer ${isActive
-                        ? 'bg-primary text-white dark:bg-teal-950 dark:border-teal-700 shadow-lg shadow-teal-900/15 border-primary scale-[1.01]'
-                        : 'bg-white/80 dark:bg-gray-800/80 hover:bg-teal-50/80 dark:hover:bg-gray-750 text-gray-800 dark:text-gray-200 border-gray-100 dark:border-gray-700/60 shadow-xs'
+                      ? 'bg-primary text-white dark:bg-teal-950 dark:border-teal-700 shadow-lg shadow-teal-900/15 border-primary scale-[1.01]'
+                      : 'bg-white/80 dark:bg-gray-800/80 hover:bg-teal-50/80 dark:hover:bg-gray-750 text-gray-800 dark:text-gray-200 border-gray-100 dark:border-gray-700/60 shadow-xs'
                       }`}
                   >
                     {/* Active 2s Progress Bar */}
@@ -473,8 +465,8 @@ const WhyChooseMLawyer = () => {
                     <div className="flex items-center gap-3 min-w-0">
                       <div
                         className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0 transition-colors ${isActive
-                            ? 'bg-secondary text-gray-900 font-bold'
-                            : 'bg-primary/10 text-primary dark:bg-gray-700 dark:text-gray-200 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-secondary dark:group-hover:text-gray-900'
+                          ? 'bg-secondary text-gray-900 font-bold'
+                          : 'bg-primary/10 text-primary dark:bg-gray-700 dark:text-gray-200 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-secondary dark:group-hover:text-gray-900'
                           }`}
                       >
                         <Icon />
@@ -497,8 +489,8 @@ const WhyChooseMLawyer = () => {
 
                     <span
                       className={`text-xs font-semibold px-2 py-1 rounded-md shrink-0 transition-opacity ${isActive
-                          ? 'bg-white/15 text-secondary'
-                          : 'text-gray-400 group-hover:text-primary dark:group-hover:text-secondary'
+                        ? 'bg-white/15 text-secondary'
+                        : 'text-gray-400 group-hover:text-primary dark:group-hover:text-secondary'
                         }`}
                     >
                       #{item.id}

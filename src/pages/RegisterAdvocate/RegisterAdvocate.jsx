@@ -395,6 +395,9 @@ const RegisterAdvocate = () => {
                   <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm sm:text-base max-w-md mx-auto">
                     Welcome to MLawyer, <span className="font-semibold text-primary dark:text-teal-400">{formData.salutation} {formData.firstName} {formData.lastName}</span>. Your registration has been submitted successfully.
                   </p>
+                  <p className="text-gray-600 dark:text-gray-300 mt-3 text-sm sm:text-base max-w-md mx-auto">
+                    You can continue filling your application by clicking on the "Advocate Login" button on top right corner of the website or download the MLawyer Pro App from Google Play Store or iPhone App Store.
+                  </p>
                 </div>
 
                 <div className="bg-teal-50/70 dark:bg-gray-900/60 border border-teal-100 dark:border-gray-700 rounded-2xl p-5 text-left max-w-md mx-auto space-y-2 text-sm">

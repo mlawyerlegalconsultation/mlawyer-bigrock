@@ -6,27 +6,32 @@ import PopIn from '../../../components/animations/PopIn';
 const cities = [
   {
     name: 'Chennai',
+    badge: 'Tamil Nadu',
     image: '/cities/chennai.png',
     link: '/advocates'
   },
   {
     name: 'Coimbatore',
+    badge: 'Tamil Nadu',
     image: '/cities/coimbatore.png',
     link: '/advocates'
   },
   {
     name: 'Madurai',
+    badge: 'Tamil Nadu',
     image: '/cities/madurai.png',
     link: '/advocates'
   },
   {
     name: 'Trichy',
+    badge: 'Tamil Nadu',
     image: '/cities/trichy.png',
     link: '/advocates'
   },
   {
-    name: 'Tirunelveli',
-    image: '/cities/tirunelveli.png',
+    name: 'All over India',
+    badge: 'Pan India',
+    image: '/cities/india.png',
     link: '/advocates'
   }
 ];
@@ -38,7 +43,7 @@ const ExploreAdvocatesByCity = () => {
         <div className="max-w-4xl mx-auto text-center mb-10 md:mb-14">
           <PopIn delay={0}>
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-teal-300 font-semibold text-xs uppercase tracking-wider mb-3">
-              <PiMapPinBold className="text-secondary text-sm" /> Regional Legal Network
+              <PiMapPinBold className="text-secondary text-sm" /> Regional & National Legal Network
             </span>
           </PopIn>
           <PopIn delay={0.1}>
@@ -48,7 +53,7 @@ const ExploreAdvocatesByCity = () => {
           </PopIn>
           <PopIn delay={0.2}>
             <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Connect with verified legal professionals and experienced advocates across major cities in Tamil Nadu.
+              Connect with verified legal professionals and experienced advocates across major cities and all over India.
             </p>
           </PopIn>
         </div>
@@ -75,7 +80,7 @@ const ExploreAdvocatesByCity = () => {
                 <div className="absolute top-3 left-3 md:top-4 md:left-4 z-10">
                   <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/20 dark:bg-black/30 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20 shadow-xs">
                     <PiMapPinBold className="text-secondary text-xs" />
-                    <span>Tamil Nadu</span>
+                    <span>{city.badge}</span>
                   </span>
                 </div>
 

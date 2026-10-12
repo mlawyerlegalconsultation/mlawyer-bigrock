@@ -1,9 +1,9 @@
 {
     "hero": {
         "badge": "For Legal Professionals",
-        "titlePrefix": "Practice Law on",
-        "titleSuffix": "Your Terms",
-        "subtitle": "Join 2,000+ advocates earning flexible income while helping clients nationwide. No office. No overhead. Just your expertise.",
+        "titlePrefix": "Practice Law Digitally,",
+        "titleSuffix": "On Your Schedule",
+        "subtitle": "Grow your legal practice with MLawyer. Join a network of verified advocates, reach more clients online, and offer consultations on your own schedule.",
         "ctaText": "Start Your Application"
     },
     "whyChoose": {
@@ -16,7 +16,7 @@
                 "items": [
                     "Accept cases during free hours",
                     "Average advocates earn ₹30k-₹80k/mo (extra)",
-                    "Get paid within 24 hours"
+                    "Get paid within 48 hours"
                 ]
             },
             {
@@ -34,7 +34,6 @@
                 "items": [
                     "Reach clients beyond your city",
                     "Build your online reputation",
-                    "Get client reviews and ratings",
                     "Establish yourself as an expert"
                 ]
             },
@@ -61,7 +60,8 @@
                 "items": [
                     "Basic info",
                     "Verify your identity",
-                    "Cell no. & email authentication"
+                    "Cell no. & email authentication",
+                    "Accept Terms & Conditions"
                 ]
             },
             {
@@ -72,7 +72,8 @@
                 "items": [
                     "Create Bio",
                     "Choose specialization",
-                    "Set your own availability"
+                    "Set your own availability",
+                    "Update your bank details"
                 ]
             },
             {
@@ -92,9 +93,9 @@
                 "desc": "Start accepting cases",
                 "img": "lawyer_live.svg",
                 "items": [
-                    "Update your profile",
                     "Access your Dashboard",
-                    "Accept Terms & Conditions"
+                    "Update your profile",
+                    "Earn money within 48 hours"
                 ]
             },
             {

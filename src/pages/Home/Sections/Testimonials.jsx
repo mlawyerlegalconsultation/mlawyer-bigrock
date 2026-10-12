@@ -19,7 +19,7 @@ const testimonials = {
       image: 'https://randomuser.me/api/portraits/men/46.jpg',
       content:
         'Getting my property documents verified before registry in Chennai was completely stress-free. The advocate pointed out critical clauses I would have missed. Highly recommended!',
-      rating: 5
+      rating: 4
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ const testimonials = {
       image: 'https://randomuser.me/api/portraits/men/72.jpg',
       content:
         'Drafting vendor agreements and employment contracts for our venture was handled seamlessly. Transparent pricing and actionable legal counsel made the entire process swift.',
-      rating: 5
+      rating: 4
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ const testimonials = {
       image: 'https://randomuser.me/api/portraits/women/24.jpg',
       content:
         'I needed legal counsel regarding an unresolved e-commerce consumer grievance. The advocate explained consumer protection procedures clearly and helped me draft a solid legal notice.',
-      rating: 5
+      rating: 4
     },
     {
       id: 7,
@@ -73,7 +73,7 @@ const testimonials = {
       image: 'https://randomuser.me/api/portraits/men/86.jpg',
       content:
         'Consulted a senior advocate regarding supplier contract breach and arbitration clauses. The legal advice was sharp, thorough, and protected our commercial interests completely.',
-      rating: 5
+      rating: 4
     },
     {
       id: 8,

@@ -109,24 +109,19 @@
     "subtitle": "Your confidentiality is guaranteed",
     "features": [
       {
+        "icon": "FaUserCheck",
+        "title": "Verified Advocates",
+        "desc": "All advocates are credential-verified with valid Bar Council registration."
+      },
+      {
         "icon": "FaLock",
-        "title": "Secure Communication",
-        "desc": "All conversations are confidentialy."
-      },
-      {
-        "icon": "FaFileShield",
-        "title": "Verified advocate profiles",
-        "desc": "All advocates are credential-verified"
-      },
-      {
-        "icon": "FaUserShield",
-        "title": "Anonymous Consultations",
-        "desc": "Use the platform without revealing identity"
+        "title": "Confidential Consultation",
+        "desc": "End-to-end encrypted consultations protected by attorney-client privilege."
       },
       {
         "icon": "FaShieldAlt",
-        "title": "Data Protection Compliant",
-        "desc": "We follow strict privacy regulations"
+        "title": "Secure Payments",
+        "desc": "Safe payments with upfront pricing, protected escrow, and instant receipts."
       }
     ]
   },

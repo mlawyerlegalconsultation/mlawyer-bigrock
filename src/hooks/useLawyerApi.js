@@ -473,3 +473,98 @@ export const useLawyerMockDetails = (page = 0, size = 10) => {
   });
 };
 
+/**
+ * Hook to add / update lawyer account / bank details
+ * POST /account_details/lawyer/add_bank_account/{lawyerId}
+ */
+export const useUpdateAccountDetailsMutation = (lawyerId, token) => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (payload) => {
+      if (!lawyerId) throw new Error('Lawyer ID is missing.');
+
+      const headers = { 'Content-Type': 'application/json' };
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
+      }
+
+      const response = await fetch(`${BASE_API_URL}/account_details/lawyer/add_bank_account/${lawyerId}`, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(payload),
+      });
+
+      let data;
+      try {
+        data = await response.json();
+      } catch {
+        data = null;
+      }
+
+      if (
+        response.ok &&
+        (data?.statusCode === 200 ||
+          data?.statusCode === 201 ||
+          data?.status === 'OK' ||
+          data?.result ||
+          response.status === 200 ||
+          response.status === 201 ||
+          response.status === 204)
+      ) {
+        return data || { success: true };
+      }
+
+      const errorMsg = data?.error?.message || data?.error || data?.message || 'Failed to save account details.';
+      throw new Error(typeof errorMsg === 'string' ? errorMsg : 'Failed to save account details.');
+    },
+    onSuccess: () => {
+      if (lawyerId) {
+        queryClient.invalidateQueries({ queryKey: ['lawyerAccountDetails', lawyerId] });
+        queryClient.invalidateQueries({ queryKey: ['lawyerProfile', lawyerId] });
+      }
+    },
+  });
+};
+
+/**
+ * Hook to fetch lawyer account / bank details
+ * GET /account_details/lawyer/{lawyerId}
+ */
+export const useLawyerAccountDetails = (lawyerId, token) => {
+  return useQuery({
+    queryKey: ['lawyerAccountDetails', lawyerId],
+    queryFn: async () => {
+      if (!lawyerId) return null;
+
+      const headers = { 'Content-Type': 'application/json' };
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
+      }
+
+      try {
+        const response = await fetch(`${BASE_API_URL}/account_details/lawyer/${lawyerId}`, {
+          method: 'GET',
+          headers,
+        });
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        if (data?.result?.bankDetails || data?.bankDetails) {
+          return data.result?.bankDetails || data.bankDetails;
+        }
+        if (data?.result || data?.accountDetails) {
+          return data.result || data.accountDetails;
+        }
+        return data;
+      } catch {
+        return null;
+      }
+    },
+    enabled: Boolean(lawyerId),
+    staleTime: 1000 * 60 * 3,
+    retry: false,
+  });
+};
+

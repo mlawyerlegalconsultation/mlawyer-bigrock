@@ -30,6 +30,8 @@ import {
   FaApple,
   FaShieldAlt,
   FaSyncAlt,
+  FaUniversity,
+  FaCreditCard,
 } from 'react-icons/fa';
 import { MdVerified, MdErrorOutline, MdCheckCircleOutline } from 'react-icons/md';
 import { useAuth } from '../../context/AuthContext';
@@ -39,6 +41,8 @@ import {
   useUpdateProfileMutation,
   useUploadProfilePhotoMutation,
   useUploadDocumentMutation,
+  useUpdateAccountDetailsMutation,
+  useLawyerAccountDetails,
   useSpecializationsConfig,
   useProofTypesConfig,
   useStatesList,
@@ -57,6 +61,17 @@ const PAN_REGEX = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
 const PINCODE_REGEX = /^[1-9][0-9]{5}$/;
 // Email validation regex
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Helper to format profile photo URL (GET /lawyer/file/file-profile/{fileName})
+const getProfilePhotoUrl = (path) => {
+  if (!path) return null;
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  // Extract clean filename e.g. "b9f4568d-2a8a-40ed-a820-9cf66c8566aa.jpg" from "/file-profile/..."
+  const fileName = path.replace(/^\/?(lawyer\/file\/file-profile\/|file-profile\/|file\/)/, '').replace(/^\//, '');
+  return `${BASE_API_URL}/lawyer/file/file-profile/${fileName}`;
+};
 
 const ProfileAdvocate = () => {
   const navigate = useNavigate();
@@ -79,10 +94,17 @@ const ProfileAdvocate = () => {
     refetch: refetchProfile,
   } = useLawyerProfile(userId, token);
 
+  // Active lawyer details from TanStack query or auth fallback
+  const lawyerDetails = queryLawyerData || authLawyerDetails;
+  const currentStatus = lawyerDetails?.approvalInfo?.approvalStatus || authApprovalStatus || 'PENDING';
+  const isApproved = currentStatus === 'APPROVED';
+
   // TanStack Query Mutations
   const updateProfileMutation = useUpdateProfileMutation(userId, token);
   const uploadPhotoMutation = useUploadProfilePhotoMutation(userId, token);
   const uploadDocMutation = useUploadDocumentMutation(userId, token);
+  const updateAccountMutation = useUpdateAccountDetailsMutation(userId, token);
+  const { data: existingAccountDetails } = useLawyerAccountDetails(userId, token);
 
   // Profile Form State
   const [profileForm, setProfileForm] = useState({
@@ -120,18 +142,47 @@ const ProfileAdvocate = () => {
   const { data: stateList = [], isLoading: isStatesLoading } = useStatesList(token);
   const { data: districtList = [], isLoading: isDistrictsLoading } = useDistrictsList(profileForm.stateCode, token);
 
-  const [activeTab, setActiveTab] = useState('profile'); // 'profile', 'documents', 'account'
+  const [activeTab, setActiveTab] = useState('profile'); // 'profile', 'documents', 'bankDetails', 'account'
   const [saveSuccess, setSaveSuccess] = useState('');
   const [saveError, setSaveError] = useState('');
 
-  // Active lawyer details from TanStack query or auth fallback
-  const lawyerDetails = queryLawyerData || authLawyerDetails;
-  const currentStatus = lawyerDetails?.approvalInfo?.approvalStatus || authApprovalStatus || 'PENDING';
-  const isApproved = currentStatus === 'APPROVED';
+  // Bank & Account Details State
+  const [bankForm, setBankForm] = useState({
+    bankName: '',
+    branchName: '',
+    accountHolderName: '',
+    accountNumber: '',
+    confirmAccountNumber: '',
+    ifsc: '',
+    accountType: 'SAVINGS',
+    primary: true,
+  });
+  const [bankSaveSuccess, setBankSaveSuccess] = useState('');
+  const [bankSaveError, setBankSaveError] = useState('');
+
+  // Sync loaded bank account details
+  useEffect(() => {
+    const bank = existingAccountDetails || lawyerDetails?.bankDetails;
+    if (bank) {
+      setBankForm((prev) => ({
+        bankName: bank.bankName || prev.bankName || '',
+        branchName: bank.branchName || prev.branchName || '',
+        accountHolderName: bank.accountHolderName || prev.accountHolderName || '',
+        accountNumber: bank.accountNumber || prev.accountNumber || '',
+        confirmAccountNumber: bank.accountNumber || prev.confirmAccountNumber || '',
+        ifsc: bank.ifsc || prev.ifsc || '',
+        accountType: bank.accountType || prev.accountType || 'SAVINGS',
+        primary: bank.primary ?? true,
+      }));
+    }
+  }, [existingAccountDetails, lawyerDetails]);
 
   // Photo upload states
   const [photoMessage, setPhotoMessage] = useState({ type: '', text: '' });
+  const [localAvatarUrl, setLocalAvatarUrl] = useState(null);
   const avatarInputRef = useRef(null);
+
+  const avatarUrl = localAvatarUrl || getProfilePhotoUrl(lawyerDetails?.profileUrl);
 
   // Document upload states
   const [uploadingDocKey, setUploadingDocKey] = useState(null);
@@ -287,6 +338,9 @@ const ProfileAdvocate = () => {
 
   // Form validation helper
   const validateProfileForm = () => {
+    if (!avatarUrl && !lawyerDetails?.profileUrl) {
+      return 'Profile picture is required. Please upload your profile photo.';
+    }
     if (!profileForm.firstName.trim()) {
       return 'First Name is required.';
     }
@@ -298,9 +352,6 @@ const ProfileAdvocate = () => {
     }
     if (!profileForm.barCouncilId.trim()) {
       return 'Bar Council ID is required.';
-    }
-    if (!profileForm.enrollmentNo.trim()) {
-      return 'Bar Enrollment Number is required.';
     }
     const exp = Number(profileForm.experience);
     if (isNaN(exp) || exp < 3) {
@@ -354,7 +405,7 @@ const ProfileAdvocate = () => {
       mobileNumber: profileForm.mobileNumber,
       email: profileForm.email.trim(),
       barCouncilId: profileForm.barCouncilId.trim().toUpperCase(),
-      enrollmentNo: profileForm.enrollmentNo.trim().toUpperCase(),
+      enrollmentNo: (profileForm.enrollmentNo || '').trim().toUpperCase(),
       experience: Math.max(3, Number(profileForm.experience) || 3),
       qualification: profileForm.qualification.trim(),
       aboutAs: profileForm.aboutAs.trim(),
@@ -389,6 +440,9 @@ const ProfileAdvocate = () => {
     if (validationError) {
       setSaveError(validationError);
       toast.error(validationError, 'Validation Error');
+      if (!avatarUrl && !lawyerDetails?.profileUrl) {
+        window.scrollTo({ top: 120, behavior: 'smooth' });
+      }
       return;
     }
 
@@ -422,6 +476,9 @@ const ProfileAdvocate = () => {
     if (validationError) {
       setSaveError(validationError);
       toast.error(validationError, 'Validation Error');
+      if (!avatarUrl && !lawyerDetails?.profileUrl) {
+        window.scrollTo({ top: 120, behavior: 'smooth' });
+      }
       return;
     }
 
@@ -467,11 +524,15 @@ const ProfileAdvocate = () => {
     setPhotoMessage({ type: '', text: '' });
 
     try {
+      const previewUrl = URL.createObjectURL(file);
+      setLocalAvatarUrl(previewUrl);
       await uploadPhotoMutation.mutateAsync(file);
       setPhotoMessage({ type: 'success', text: 'Profile photo updated successfully!' });
       toast.success('Your advocate profile photo has been updated!', 'Photo Uploaded');
+      setSaveError('');
       setTimeout(() => setPhotoMessage({ type: '', text: '' }), 3500);
     } catch (err) {
+      setLocalAvatarUrl(null);
       const errorMsg = err.message || 'Failed to upload photo.';
       setPhotoMessage({ type: 'error', text: errorMsg });
       toast.error(errorMsg, 'Upload Failed');
@@ -512,6 +573,115 @@ const ProfileAdvocate = () => {
     }
   };
 
+  // Handle bank input change with numeric/IFSC formatting
+  const handleBankInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    let cleanVal = value;
+    if (name === 'accountNumber' || name === 'confirmAccountNumber') {
+      cleanVal = value.replace(/\D/g, '').slice(0, 18);
+    } else if (name === 'ifsc') {
+      cleanVal = value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 11);
+    }
+    setBankForm((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : cleanVal,
+    }));
+    setBankSaveSuccess('');
+    setBankSaveError('');
+  };
+
+  // Validate bank details form
+  const validateBankForm = () => {
+    if (!bankForm.accountHolderName.trim()) {
+      return 'Account Holder Name is required.';
+    }
+    if (!bankForm.bankName.trim()) {
+      return 'Bank Name is required.';
+    }
+    if (!bankForm.branchName.trim()) {
+      return 'Branch Name is required.';
+    }
+    if (!bankForm.accountNumber.trim()) {
+      return 'Bank Account Number is required.';
+    }
+    if (bankForm.accountNumber.trim().length < 9) {
+      return 'Bank Account Number must be at least 9 digits.';
+    }
+    if (!bankForm.confirmAccountNumber.trim()) {
+      return 'Please confirm your Bank Account Number.';
+    }
+    if (bankForm.accountNumber.trim() !== bankForm.confirmAccountNumber.trim()) {
+      return 'Bank Account Number and Confirm Account Number do not match.';
+    }
+    if (!bankForm.ifsc.trim()) {
+      return 'IFSC Code is required.';
+    }
+    if (!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(bankForm.ifsc.trim().toUpperCase())) {
+      return 'Invalid IFSC Code format. Indian IFSC must be 11 characters (e.g. SBIN0001234, HDFC0000001).';
+    }
+    return null;
+  };
+
+  // Save bank details handler (Save and Finish -> moves to Account & Pro App tab)
+  const handleSaveBankDetails = async (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    setBankSaveSuccess('');
+    setBankSaveError('');
+
+    const validationError = validateBankForm();
+    if (validationError) {
+      setBankSaveError(validationError);
+      toast.error(validationError, 'Bank Details Error');
+      return;
+    }
+
+    const payload = {
+      bankName: bankForm.bankName.trim(),
+      branchName: bankForm.branchName.trim(),
+      accountHolderName: bankForm.accountHolderName.trim(),
+      accountNumber: bankForm.accountNumber.trim(),
+      ifsc: bankForm.ifsc.trim().toUpperCase(),
+      accountType: bankForm.accountType || 'SAVINGS',
+      primary: bankForm.primary ?? true,
+    };
+
+    try {
+      await updateAccountMutation.mutateAsync(payload);
+      setBankSaveSuccess('Bank account details saved successfully!');
+      toast.success('Your settlement bank account details have been saved!', 'Account Details Saved');
+
+      setTimeout(() => {
+        setActiveTab('account');
+        window.scrollTo({ top: 380, behavior: 'smooth' });
+      }, 500);
+    } catch (err) {
+      const errorMsg = err.message || 'Failed to save bank account details.';
+      setBankSaveError(errorMsg);
+      toast.error(errorMsg, 'Save Failed');
+    }
+  };
+
+  // Next button click from Documents tab to Account Details tab
+  const handleSaveDocumentsAndNext = async (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    if (isApproved) {
+      setActiveTab('bankDetails');
+      window.scrollTo({ top: 380, behavior: 'smooth' });
+      return;
+    }
+
+    try {
+      const payload = buildProfilePayload();
+      await updateProfileMutation.mutateAsync(payload);
+    } catch {
+      // Non-blocking if profile update was already performed
+    }
+
+    setActiveTab('bankDetails');
+    window.scrollTo({ top: 380, behavior: 'smooth' });
+    toast.info('Proceeding to Bank & Account Details.', 'Step 3 of 4');
+  };
+
   const getDocumentLabel = (key) => {
     const labels = {
       aadhaarFront: 'Aadhaar Card (Front)',
@@ -534,17 +704,6 @@ const ProfileAdvocate = () => {
       proofUrl: 'Utility bill, postpaid bill, or secondary government identity proof.',
     };
     return descriptions[key] || '';
-  };
-
-  // Helper to format profile photo URL (GET /lawyer/file/file-profile/{fileName})
-  const getProfilePhotoUrl = (path) => {
-    if (!path) return null;
-    if (path.startsWith('http://') || path.startsWith('https://')) {
-      return path;
-    }
-    // Extract clean filename e.g. "b9f4568d-2a8a-40ed-a820-9cf66c8566aa.jpg" from "/file-profile/..."
-    const fileName = path.replace(/^\/?(lawyer\/file\/file-profile\/|file-profile\/|file\/)/, '').replace(/^\//, '');
-    return `${BASE_API_URL}/lawyer/file/file-profile/${fileName}`;
   };
 
   // Helper to format full image URL for documents
@@ -603,11 +762,15 @@ const ProfileAdvocate = () => {
     );
   }
 
-  const avatarUrl = getProfilePhotoUrl(lawyerDetails?.profileUrl);
   const docs = lawyerDetails?.documentUrl || {};
 
   // Compute loader message
-  const isAnyLoading = isProfileLoading || updateProfileMutation.isPending || uploadPhotoMutation.isPending || uploadDocMutation.isPending;
+  const isAnyLoading =
+    isProfileLoading ||
+    updateProfileMutation.isPending ||
+    uploadPhotoMutation.isPending ||
+    uploadDocMutation.isPending ||
+    updateAccountMutation.isPending;
 
   let loaderTitle = 'Processing...';
   let loaderSubtitle = 'Please wait while we connect with MLawyer servers.';
@@ -624,6 +787,9 @@ const ProfileAdvocate = () => {
   } else if (uploadDocMutation.isPending) {
     loaderTitle = `Uploading ${getDocumentLabel(uploadingDocKey)}`;
     loaderSubtitle = 'Submitting KYC document to verification server...';
+  } else if (updateAccountMutation.isPending) {
+    loaderTitle = 'Saving Bank Account Details';
+    loaderSubtitle = 'Connecting to MLawyer secure financial gateway...';
   }
 
   return (
@@ -660,56 +826,77 @@ const ProfileAdvocate = () => {
 
           <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 text-center md:text-left">
             {/* Avatar with Upload button */}
-            <div className="relative shrink-0 group">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden bg-white/10 border-2 border-white/20 shadow-xl flex items-center justify-center">
-                {avatarUrl ? (
-                  <img
-                    src={avatarUrl}
-                    alt={profileForm.firstName || 'Advocate'}
-                    className="w-full h-full rounded-full object-cover"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                    }}
-                  />
-                ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center bg-teal-800 text-teal-200">
-                    <FaUserTie className="text-4xl sm:text-5xl" />
+            {/* Avatar / Profile Picture Upload */}
+            <div className="relative shrink-0 flex flex-col items-center">
+              <div className="relative group">
+                <div className={`w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden bg-white/10 border-2 shadow-xl flex items-center justify-center transition-all ${!avatarUrl ? 'border-amber-400 ring-4 ring-amber-400/40' : 'border-white/20'
+                  }`}>
+                  {avatarUrl ? (
+                    <img
+                      src={avatarUrl}
+                      alt={profileForm.firstName || 'Advocate'}
+                      className="w-full h-full rounded-full object-cover"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-teal-800 text-teal-200">
+                      <FaUserTie className="text-4xl sm:text-5xl" />
+                    </div>
+                  )}
+                </div>
+
+                {/* Upload Overlay Button / Verified Badge */}
+                {isApproved ? (
+                  <div
+                    className="absolute bottom-1 right-1 p-2 rounded-xl bg-emerald-500 text-white shadow-lg flex items-center justify-center text-sm"
+                    title="Verified Profile Photo"
+                  >
+                    <MdVerified className="text-base" />
                   </div>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => avatarInputRef.current?.click()}
+                      disabled={uploadPhotoMutation.isPending}
+                      className="absolute bottom-1 right-1 p-2.5 rounded-xl bg-secondary text-white shadow-lg hover:scale-110 active:scale-95 transition-all cursor-pointer disabled:opacity-70"
+                      title="Upload Profile Photo (Mandatory)"
+                      aria-label="Upload Profile Photo (Mandatory)"
+                    >
+                      {uploadPhotoMutation.isPending ? (
+                        <FaSpinner className="animate-spin text-sm" />
+                      ) : (
+                        <FaCamera className="text-sm" />
+                      )}
+                    </button>
+                    <input
+                      ref={avatarInputRef}
+                      type="file"
+                      accept="image/*"
+                      onChange={handleAvatarFileSelect}
+                      className="hidden"
+                    />
+                  </>
                 )}
               </div>
 
-              {/* Upload Overlay Button / Verified Badge */}
-              {isApproved ? (
-                <div
-                  className="absolute bottom-1 right-1 p-2 rounded-xl bg-emerald-500 text-white shadow-lg flex items-center justify-center text-sm"
-                  title="Verified Profile Photo"
-                >
-                  <MdVerified className="text-base" />
+              {/* Status indicator below avatar */}
+              {!isApproved && (
+                <div className="mt-2">
+                  {avatarUrl ? (
+                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-200 bg-emerald-950/60 px-2.5 py-0.5 rounded-full border border-emerald-500/30">
+                      <MdVerified className="text-xs text-emerald-400" />
+                      <span>Photo Uploaded</span>
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-200 bg-amber-950/70 px-2.5 py-0.5 rounded-full border border-amber-500/50">
+                      <span>Profile Picture</span>
+                      <span className="text-red-400 font-extrabold">*</span>
+                    </span>
+                  )}
                 </div>
-              ) : (
-                <>
-                  <button
-                    type="button"
-                    onClick={() => avatarInputRef.current?.click()}
-                    disabled={uploadPhotoMutation.isPending}
-                    className="absolute bottom-1 right-1 p-2.5 rounded-xl bg-secondary text-white shadow-lg hover:scale-110 active:scale-95 transition-all cursor-pointer disabled:opacity-70"
-                    title="Upload Profile Photo"
-                    aria-label="Upload Profile Photo"
-                  >
-                    {uploadPhotoMutation.isPending ? (
-                      <FaSpinner className="animate-spin text-sm" />
-                    ) : (
-                      <FaCamera className="text-sm" />
-                    )}
-                  </button>
-                  <input
-                    ref={avatarInputRef}
-                    type="file"
-                    accept="image/*"
-                    onChange={handleAvatarFileSelect}
-                    className="hidden"
-                  />
-                </>
               )}
             </div>
 
@@ -730,7 +917,7 @@ const ProfileAdvocate = () => {
                 ) : (
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
                     <FaClock className="text-amber-400" />
-                    <span>Approval Pending Verification</span>
+                    <span>Verification In Progress</span>
                   </span>
                 )}
               </div>
@@ -831,6 +1018,18 @@ const ProfileAdvocate = () => {
 
           <button
             type="button"
+            onClick={() => setActiveTab('bankDetails')}
+            className={`pb-4 px-2 sm:px-4 font-bold text-sm sm:text-base border-b-2 transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${activeTab === 'bankDetails'
+              ? 'border-secondary text-primary dark:text-teal-400'
+              : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+              }`}
+          >
+            <FaUniversity className="text-sm" />
+            <span>Account Details</span>
+          </button>
+
+          <button
+            type="button"
             onClick={() => setActiveTab('account')}
             className={`pb-4 px-2 sm:px-4 font-bold text-sm sm:text-base border-b-2 transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer ${activeTab === 'account'
               ? 'border-secondary text-primary dark:text-teal-400'
@@ -886,6 +1085,69 @@ const ProfileAdvocate = () => {
                       <FaUserTie className="text-secondary" />
                       <span>Personal Details</span>
                     </h3>
+                  </div>
+
+                  {/* Mandatory Profile Picture Field Card */}
+                  <div className="p-4 rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50/70 dark:bg-gray-900/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div className="flex items-center gap-3.5">
+                      <div className={`relative w-14 h-14 rounded-full overflow-hidden bg-teal-800 text-teal-200 shrink-0 border-2 shadow-md flex items-center justify-center ${avatarUrl ? 'border-emerald-500' : 'border-amber-400 ring-2 ring-amber-400/40'
+                        }`}>
+                        {avatarUrl ? (
+                          <img
+                            src={avatarUrl}
+                            alt="Profile"
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.target.style.display = 'none';
+                            }}
+                          />
+                        ) : (
+                          <FaUserTie className="text-2xl" />
+                        )}
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <label className="block text-xs font-bold text-gray-900 dark:text-white">
+                            Profile Picture <span className="text-red-500">*</span>
+                          </label>
+                          {avatarUrl ? (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                              <FaCheckCircle className="text-[9px]" /> Uploaded
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-700">
+                              Mandatory *
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-0.5">
+                          {avatarUrl
+                            ? 'Profile picture is uploaded and active on your advocate profile.'
+                            : 'Clear portrait photo is required for your advocate profile (JPG, PNG, WebP up to 5MB).'}
+                        </p>
+                      </div>
+                    </div>
+
+                    {!isApproved && (
+                      <button
+                        type="button"
+                        onClick={() => avatarInputRef.current?.click()}
+                        disabled={uploadPhotoMutation.isPending}
+                        className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-primary hover:bg-primary/90 text-white text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-xs cursor-pointer disabled:opacity-60 shrink-0"
+                      >
+                        {uploadPhotoMutation.isPending ? (
+                          <>
+                            <FaSpinner className="animate-spin text-xs" />
+                            <span>Uploading...</span>
+                          </>
+                        ) : (
+                          <>
+                            <FaCamera className="text-xs" />
+                            <span>{avatarUrl ? 'Change Photo' : 'Upload Profile Photo *'}</span>
+                          </>
+                        )}
+                      </button>
+                    )}
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
@@ -1028,7 +1290,7 @@ const ProfileAdvocate = () => {
                     {/* Enrollment Number */}
                     <div>
                       <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
-                        Bar Enrollment Number <span className="text-red-500">*</span>
+                        Enrollment Number
                       </label>
                       <input
                         type="text"
@@ -1036,7 +1298,6 @@ const ProfileAdvocate = () => {
                         value={profileForm.enrollmentNo}
                         onChange={handleInputChange}
                         disabled={isApproved}
-                        required
                         className="w-full px-3.5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-secondary/50 uppercase font-mono disabled:bg-gray-100 dark:disabled:bg-gray-800/60 disabled:cursor-not-allowed disabled:text-gray-700 dark:disabled:text-gray-300"
                       />
                     </div>
@@ -1047,10 +1308,10 @@ const ProfileAdvocate = () => {
                     <div>
                       <div className="flex items-center justify-between mb-1.5">
                         <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300">
-                          Active Legal Experience (Years) <span className="text-red-500">*</span>
+                          Experience (Years) <span className="text-red-500">*</span>
                         </label>
                         <span className="text-[11px] font-bold text-secondary">
-                          {profileForm.experience} Years Experience
+                          minimum 3 yrs exp. required
                         </span>
                       </div>
                       <input
@@ -1623,26 +1884,33 @@ const ProfileAdvocate = () => {
                 </button>
 
                 {isApproved ? (
-                  <div className="text-xs font-bold text-emerald-700 dark:text-emerald-300 flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 px-5 py-3.5 rounded-xl border border-emerald-200 dark:border-emerald-800">
-                    <MdVerified className="text-lg text-emerald-500" />
-                    <span>All verification documents are verified & locked.</span>
-                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveTab('bankDetails');
+                      window.scrollTo({ top: 380, behavior: 'smooth' });
+                    }}
+                    className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary/95 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer text-base"
+                  >
+                    <span>Proceed to Account Details</span>
+                    <FaArrowRight className="text-sm" />
+                  </button>
                 ) : (
                   <button
                     type="button"
-                    onClick={handleSaveProfile}
+                    onClick={handleSaveDocumentsAndNext}
                     disabled={updateProfileMutation.isPending}
                     className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary/95 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 text-base"
                   >
                     {updateProfileMutation.isPending ? (
                       <>
                         <FaSpinner className="animate-spin text-lg" />
-                        <span>Saving Profile Changes...</span>
+                        <span>Saving & Proceeding...</span>
                       </>
                     ) : (
                       <>
-                        <FaSave className="text-base" />
-                        <span>Save Profile Changes</span>
+                        <span>Save and Next</span>
+                        <FaArrowRight className="text-sm" />
                       </>
                     )}
                   </button>
@@ -1652,7 +1920,299 @@ const ProfileAdvocate = () => {
           </div>
         )}
 
-        {/* Tab 3: Account & Mobile Pro App */}
+        {/* Tab 3: Bank & Account Details */}
+        {activeTab === 'bankDetails' && (
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-10 shadow-xl border border-teal-100 dark:border-gray-700">
+              {/* Header Title & Subtitle */}
+              <div className="border-b border-gray-100 dark:border-gray-700/80 pb-6 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-secondary mb-1">
+                    <FaShieldAlt className="text-sm" />
+                    <span>Step 3 of 4 · Financial Settlements</span>
+                  </div>
+                  <h3 className="text-2xl font-extrabold text-gray-900 dark:text-white flex items-center gap-2.5">
+                    <FaUniversity className="text-secondary" />
+                    <span>Advocate Bank Account & Settlement Details</span>
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1 max-w-2xl">
+                    Provide your verified Indian bank account details. Consultation fees (70%) are securely transferred directly to this account within 24–48 hours after completed sessions.
+                  </p>
+                </div>
+                <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-teal-50 dark:bg-teal-950/50 border border-teal-200 dark:border-teal-800 text-teal-800 dark:text-teal-300 text-xs font-bold shrink-0 self-start md:self-auto shadow-xs">
+                  <FaShieldAlt className="text-emerald-500 text-sm" />
+                  <span>256-Bit Bank Grade Encryption</span>
+                </div>
+              </div>
+
+              {/* Feedback messages */}
+              {bankSaveSuccess && (
+                <div className="mb-6 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-sm flex items-center gap-3 font-semibold">
+                  <MdCheckCircleOutline className="text-2xl shrink-0" />
+                  <span>{bankSaveSuccess}</span>
+                </div>
+              )}
+              {bankSaveError && (
+                <div className="mb-6 p-4 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 text-sm flex items-center gap-3 font-semibold">
+                  <MdErrorOutline className="text-2xl shrink-0" />
+                  <span>{bankSaveError}</span>
+                </div>
+              )}
+
+              {/* Live Interactive Bank Card Preview */}
+              <div className="mb-8">
+                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-950 via-teal-900 to-slate-900 text-white p-6 sm:p-7 shadow-xl border border-teal-500/20 max-w-md mx-auto sm:mx-0">
+                  <div className="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-secondary/15 blur-2xl pointer-events-none" />
+                  <div className="absolute right-6 top-6 text-2xl font-black italic tracking-wider text-white/20 select-none">
+                    MLAWYER PAYOUT
+                  </div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-11 h-9 rounded-md bg-gradient-to-tr from-amber-300 to-amber-100 shadow-sm flex items-center justify-center">
+                      <div className="w-9 h-7 border border-amber-900/30 rounded flex flex-col justify-around py-1 px-1.5 opacity-80">
+                        <div className="h-0.5 bg-amber-900/40 rounded" />
+                        <div className="h-0.5 bg-amber-900/40 rounded" />
+                        <div className="h-0.5 bg-amber-900/40 rounded" />
+                      </div>
+                    </div>
+                    <span className="text-[11px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-xs border border-white/20 text-teal-200">
+                      {bankForm.accountType === 'CURRENT' ? 'Current Account' : 'Savings Account'}
+                    </span>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div>
+                      <div className="text-[10px] uppercase font-bold tracking-wider text-teal-300/80">
+                        Account Number
+                      </div>
+                      <div className="font-mono text-lg sm:text-xl font-bold tracking-widest text-white">
+                        {bankForm.accountNumber
+                          ? bankForm.accountNumber.replace(/(\d{4})/g, '$1 ').trim()
+                          : '•••• •••• •••• ••••'}
+                      </div>
+                    </div>
+
+                    <div className="flex items-end justify-between pt-1">
+                      <div>
+                        <div className="text-[10px] uppercase font-bold tracking-wider text-teal-300/80">
+                          Account Holder
+                        </div>
+                        <div className="text-sm sm:text-base font-bold tracking-wide uppercase truncate max-w-[200px]">
+                          {bankForm.accountHolderName || 'Advocate Legal Name'}
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-[10px] uppercase font-bold tracking-wider text-teal-300/80">
+                          IFSC Code
+                        </div>
+                        <div className="font-mono text-sm font-bold tracking-wider text-amber-300">
+                          {bankForm.ifsc || '•••••••••••'}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-teal-200/80">
+                      <span>{bankForm.bankName || 'Bank Name Not Specified'}</span>
+                      <span>{bankForm.branchName ? `${bankForm.branchName} Branch` : 'Branch'}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bank Account Form Fields */}
+              <form onSubmit={handleSaveBankDetails} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  {/* Account Holder Name */}
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
+                      Account Holder Legal Name (as per Bank Records) <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="accountHolderName"
+                      value={bankForm.accountHolderName}
+                      onChange={handleBankInputChange}
+                      placeholder="e.g. Adv. Rajesh Kumar"
+                      required
+                      className="w-full px-3.5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-secondary/50"
+                    />
+                    <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">
+                      Must match the legal name on your PAN and Bar Council certificate for automated fee settlements.
+                    </p>
+                  </div>
+
+                  {/* Bank Name */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
+                      Bank Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="bankName"
+                      value={bankForm.bankName}
+                      onChange={handleBankInputChange}
+                      placeholder="e.g. State Bank of India, HDFC Bank, ICICI Bank"
+                      required
+                      className="w-full px-3.5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-secondary/50"
+                    />
+                  </div>
+
+                  {/* Branch Name */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
+                      Branch Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="branchName"
+                      value={bankForm.branchName}
+                      onChange={handleBankInputChange}
+                      placeholder="e.g. High Court Branch / Fort Branch"
+                      required
+                      className="w-full px-3.5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-secondary/50"
+                    />
+                  </div>
+
+                  {/* Bank Account Number */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
+                      Bank Account Number <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      inputMode="numeric"
+                      name="accountNumber"
+                      value={bankForm.accountNumber}
+                      onChange={handleBankInputChange}
+                      placeholder="e.g. 50100234567890"
+                      required
+                      className="w-full px-3.5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm font-mono focus:outline-hidden focus:ring-2 focus:ring-secondary/50"
+                    />
+                  </div>
+
+                  {/* Confirm Bank Account Number */}
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300">
+                        Confirm Bank Account Number <span className="text-red-500">*</span>
+                      </label>
+                      {bankForm.confirmAccountNumber && (
+                        bankForm.accountNumber === bankForm.confirmAccountNumber ? (
+                          <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                            <FaCheckCircle className="text-[10px]" /> Numbers Match
+                          </span>
+                        ) : (
+                          <span className="text-[11px] font-bold text-red-500">
+                            Numbers do not match
+                          </span>
+                        )
+                      )}
+                    </div>
+                    <input
+                      type="text"
+                      inputMode="numeric"
+                      name="confirmAccountNumber"
+                      value={bankForm.confirmAccountNumber}
+                      onChange={handleBankInputChange}
+                      placeholder="Re-enter bank account number"
+                      required
+                      className={`w-full px-3.5 py-3 rounded-xl border text-sm font-mono focus:outline-hidden focus:ring-2 focus:ring-secondary/50 bg-white dark:bg-gray-900 text-gray-900 dark:text-white ${bankForm.confirmAccountNumber && bankForm.accountNumber !== bankForm.confirmAccountNumber
+                        ? 'border-red-400 dark:border-red-600'
+                        : 'border-gray-200 dark:border-gray-700'
+                        }`}
+                    />
+                  </div>
+
+                  {/* IFSC Code */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
+                      IFSC Code <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="ifsc"
+                      value={bankForm.ifsc}
+                      onChange={handleBankInputChange}
+                      placeholder="e.g. SBIN0001234 or HDFC0000001"
+                      maxLength={11}
+                      required
+                      className="w-full px-3.5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm font-mono uppercase focus:outline-hidden focus:ring-2 focus:ring-secondary/50"
+                    />
+                    <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">
+                      11 characters alphanumeric code printed on your cheque leaf or bank passbook.
+                    </p>
+                  </div>
+
+                  {/* Account Type */}
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
+                      Account Type <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      name="accountType"
+                      value={bankForm.accountType}
+                      onChange={handleBankInputChange}
+                      required
+                      className="w-full px-3.5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-secondary/50"
+                    >
+                      <option value="SAVINGS">Savings Account (SAVINGS)</option>
+                      <option value="CURRENT">Current Account (CURRENT)</option>
+                    </select>
+                  </div>
+
+                  {/* Primary Payout Toggle */}
+                  <div className="sm:col-span-2 pt-2">
+                    <label className="inline-flex items-center gap-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        name="primary"
+                        checked={bankForm.primary}
+                        onChange={handleBankInputChange}
+                        className="w-4 h-4 text-primary rounded border-gray-300 focus:ring-secondary"
+                      />
+                      <span className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
+                        Set as Primary Bank Account for consultation fee payouts
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Navigation and Save and Finish Action Buttons */}
+                <div className="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveTab('documents');
+                      window.scrollTo({ top: 380, behavior: 'smooth' });
+                    }}
+                    className="w-full sm:w-auto px-6 py-3.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 font-bold rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer text-sm"
+                  >
+                    <span>← Back to KYC Documents</span>
+                  </button>
+
+                  <button
+                    type="submit"
+                    disabled={updateAccountMutation.isPending}
+                    className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary/95 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 text-base"
+                  >
+                    {updateAccountMutation.isPending ? (
+                      <>
+                        <FaSpinner className="animate-spin text-lg" />
+                        <span>Saving & Finishing...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Save and Finish</span>
+                        <FaArrowRight className="text-sm" />
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+
+        {/* Tab 4: Account & Mobile Pro App */}
         {activeTab === 'account' && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Download MLawyer Pro App */}
@@ -1735,7 +2295,38 @@ const ProfileAdvocate = () => {
                     <span className="text-gray-500 dark:text-gray-400">Verification Status:</span>
                     <span className="font-bold text-emerald-600 dark:text-emerald-400">{currentStatus}</span>
                   </div>
+                  {bankForm.bankName && (
+                    <div className="flex justify-between pt-2 border-t border-gray-200 dark:border-gray-700/80">
+                      <span className="text-gray-500 dark:text-gray-400">Payout Bank:</span>
+                      <span className="font-semibold text-gray-900 dark:text-white truncate max-w-[170px]">
+                        {bankForm.bankName} {bankForm.accountNumber ? `(••••${bankForm.accountNumber.slice(-4)})` : ''}
+                      </span>
+                    </div>
+                  )}
                 </div>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setActiveTab('bankDetails');
+                    window.scrollTo({ top: 380, behavior: 'smooth' });
+                  }}
+                  className="w-full py-3 px-4 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-primary dark:text-teal-300 border border-teal-200 dark:border-teal-800 font-bold hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-all flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm"
+                >
+                  <FaUniversity className="text-sm" />
+                  <span>Manage Bank Account Details</span>
+                </button>
+
+                <p className="text-xs text-center text-gray-500 dark:text-gray-400 pt-1">
+                  If you have any queries, email to{' '}
+                  <a
+                    href="mailto:support@mlawyer.in"
+                    className="font-semibold text-primary dark:text-teal-400 hover:underline inline-flex items-center gap-1 align-baseline"
+                  >
+                    <FaEnvelope className="text-[10px] shrink-0" />
+                    <span>support@mlawyer.in</span>
+                  </a>
+                </p>
               </div>
 
               <div className="pt-4 border-t border-gray-100 dark:border-gray-700/80">

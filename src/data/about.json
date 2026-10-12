@@ -10,17 +10,17 @@
     "items": [
       {
         "title": "Face to Face Consultation",
-        "desc": "Connect personally with experts through high-quality video calls from anywhere, anytime.",
+        "desc": "Connect with verified advocates through high-quality video calls from anywhere, anytime.",
         "icon": "PiVideoCamera"
       },
       {
         "title": "Verified Advocates",
-        "desc": "Access a network of 5000+ thoroughly vetted and experienced legal professionals across India.",
+        "desc": "Access a network of 500+ thoroughly vetted and experienced legal professionals across India.",
         "icon": "PiSealCheck"
       },
       {
         "title": "Affordable Pricing",
-        "desc": "Get top-tier legal advice starting at just ₹550. Transparent pricing with no hidden fees.",
+        "desc": "Get top-tier legal advice starting at just ₹599 + GST. Transparent pricing with no hidden fees.",
         "icon": "PiCurrencyInr"
       },
       {
@@ -34,7 +34,7 @@
         "icon": "PiShieldCheck"
       },
       {
-        "title": "24/7 Availability",
+        "title": "Instant Availability",
         "desc": "Book consultations anytime. Our platform is available round the clock for your convenience.",
         "icon": "PiClock"
       }
