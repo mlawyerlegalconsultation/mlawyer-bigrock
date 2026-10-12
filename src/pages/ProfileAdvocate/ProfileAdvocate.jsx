@@ -353,6 +353,9 @@ const ProfileAdvocate = () => {
     if (!profileForm.barCouncilId.trim()) {
       return 'Bar Council ID is required.';
     }
+    if (!profileForm.enrollmentNo.trim()) {
+      return 'Enrollment Number is required.';
+    }
     const exp = Number(profileForm.experience);
     if (isNaN(exp) || exp < 3) {
       return 'Minimum legal experience required is 3 years.';
@@ -1290,7 +1293,7 @@ const ProfileAdvocate = () => {
                     {/* Enrollment Number */}
                     <div>
                       <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
-                        Enrollment Number
+                        Enrollment Number <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
@@ -1298,6 +1301,7 @@ const ProfileAdvocate = () => {
                         value={profileForm.enrollmentNo}
                         onChange={handleInputChange}
                         disabled={isApproved}
+                        required
                         className="w-full px-3.5 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-secondary/50 uppercase font-mono disabled:bg-gray-100 dark:disabled:bg-gray-800/60 disabled:cursor-not-allowed disabled:text-gray-700 dark:disabled:text-gray-300"
                       />
                     </div>
