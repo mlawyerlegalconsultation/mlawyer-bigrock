@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaFacebook, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 import logo from '../assets/img/images/Logo.webp';
+import { openCookiePreferences } from './CookieConsent';
 
 const Footer = () => {
     const navItems = ['Home', 'For Customers', 'For Lawyers', 'How It Works', 'Pricing', 'About Us', 'Blogs', 'Contact Us'];
@@ -70,6 +71,15 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link to="/terms-and-conditions" className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors">Terms & Conditions</Link>
+                            </li>
+                            <li>
+                                <button
+                                    type="button"
+                                    onClick={openCookiePreferences}
+                                    className="text-gray-600 dark:text-gray-400 hover:text-secondary transition-colors cursor-pointer text-left"
+                                >
+                                    Cookie Preferences
+                                </button>
                             </li>
                         </ul>
                     </div>

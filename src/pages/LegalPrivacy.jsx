@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { openCookiePreferences } from '../components/CookieConsent';
 
 const PrivacyPolicy = () => {
     return (
@@ -158,6 +159,48 @@ const PrivacyPolicy = () => {
                             <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                                 Wherever required under applicable laws in India, we will obtain your explicit and specific consent for particular purposes from time to time before processing your Sensitive Personal Information.
                             </p>
+                        </div>
+
+                        {/* Cookies and Tracking Technologies Section */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Cookies and Tracking Technologies</h2>
+                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                                Our platform uses cookies, local browser storage, and third-party tracking technologies to ensure secure navigation, understand user interactions, and optimize our digital legal consultation services.
+                            </p>
+                            
+                            <div className="space-y-4 mb-6">
+                                <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                                    <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">1. Strictly Necessary Storage</h3>
+                                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                                        We utilize browser local storage (<code>localStorage</code> and <code>sessionStorage</code>) for core functions such as advocate authentication tokens, session validation, device identification, and interface theme preferences. These are essential for the security and operation of the platform.
+                                    </p>
+                                </div>
+
+                                <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                                    <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">2. Analytics Technologies (Google Analytics & Tag Manager)</h3>
+                                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                                        We use Google Analytics (GA4) and Google Tag Manager to collect aggregated, anonymized information about how visitors navigate our site, such as pages visited, session duration, and device specifications. This helps us diagnose technical issues and improve platform responsiveness.
+                                    </p>
+                                </div>
+
+                                <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                                    <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">3. Marketing & Advertising Pixels (Meta Pixel)</h3>
+                                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                                        We use the Meta (Facebook) Pixel to measure the effectiveness of our social campaigns and present relevant legal consultation resources to users who have expressed interest in our services.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                                You can customize your cookie choices at any time by clicking the button below or using the "Cookie Preferences" link in the footer:
+                            </p>
+                            <button
+                                type="button"
+                                onClick={openCookiePreferences}
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-primary/90 text-white font-medium text-sm shadow transition-colors cursor-pointer"
+                            >
+                                Manage Cookie Preferences
+                            </button>
                         </div>
 
                         {/* Contact Section */}

@@ -24,9 +24,9 @@ const ContactCards = () => {
                                 <div className="w-12 h-12 bg-teal-100 dark:bg-gray-700 text-primary dark:text-secondary rounded-2xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform duration-300">
                                     <FiMapPin />
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Office Address</h3>
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Communication Address</h3>
                                 <p className="text-gray-600 dark:text-gray-300 mb-6 flex-grow transition-colors">
-                                    MLawyer Legal Consultation (P) Ltd, Flydesk, 6TH Floor, NO. 116, Kasi Arcade, N Boag Rd, Soch, T. Nagar, Chennai, Tamil Nadu 600017.
+                                    MLawyer Legal Consultation (P) Ltd, NO. 116, 6th Floor, Kasi Arcade, Flydesk, T. Nagar, Chennai, Tamil Nadu - 600017.
                                 </p>
                                 <a href="https://www.google.com/maps/search/?api=1&query=Flydesk+6th+Floor+NO.+116+Kasi+Arcade+N+Boag+Rd+T+Nagar+Chennai+600017" target="_blank" rel="noreferrer" className="text-primary dark:text-secondary font-bold inline-flex items-center gap-2 group/link transition-colors underline decoration-primary/30 hover:decoration-primary">
                                     View on map

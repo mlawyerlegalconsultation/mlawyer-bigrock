@@ -13,6 +13,18 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="bCe87K575R6qU9XcExRh4wzxiJWtQzHNP9kR685N6f0" />
+  <!-- Early Cookie Preference Check -->
+  <script>
+    try {
+      var _storedPrefs = localStorage.getItem('mlawyer_cookie_preferences');
+      if (_storedPrefs) {
+        var _parsed = JSON.parse(_storedPrefs);
+        if (_parsed.analytics === false) {
+          window['ga-disable-G-J8TV4B778J'] = true;
+        }
+      }
+    } catch(e) {}
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8TV4B778J"></script>
   <script>
@@ -33,6 +45,12 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    try {
+      var _storedPrefs = localStorage.getItem('mlawyer_cookie_preferences');
+      if (_storedPrefs && JSON.parse(_storedPrefs).marketing === false) {
+        fbq('consent', 'revoke');
+      }
+    } catch(e) {}
     fbq('init', '2390503424805663');
     fbq('track', 'PageView');
   </script>

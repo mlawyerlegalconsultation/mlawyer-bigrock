@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import LatestFromMLawyer from '../components/LatestFromMLawyer';
 import NotificationBar from '../components/NotificationBar';
 import SuccessToast from '../components/SuccessToast';
+import CookieConsent from '../components/CookieConsent';
 
 const MainLayout = () => {
   const { pathname, search } = useLocation();
@@ -39,6 +40,7 @@ const MainLayout = () => {
       </main>
       <LatestFromMLawyer />
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
