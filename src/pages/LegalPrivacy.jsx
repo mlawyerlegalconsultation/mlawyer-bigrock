@@ -15,199 +15,278 @@ const PrivacyPolicy = () => {
                 <div className="container mx-auto px-4 sm:px-10 max-w-4xl">
                     {/* Page Header */}
                     <div className="mb-12">
+                        <div className="text-xs uppercase font-semibold text-primary dark:text-secondary mb-1">
+                            MLawyer Legal Consultation Private Limited
+                        </div>
                         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                             Privacy Policy
                         </h1>
                         <p className="text-gray-600 dark:text-gray-400 text-lg">
-                            Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                            Last Updated: October 13, 2026
                         </p>
                     </div>
 
                     {/* Content */}
-                    <div className="prose prose-lg dark:prose-invert max-w-none">
-                        {/* Introduction Section */}
+                    <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
+                        {/* 1. Introduction */}
                         <div className="mb-8">
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                We value your privacy and are committed to safeguarding the personal data you share on our platform, including the website and mobile application (hereinafter referred to as the "Application"), developed and operated by MLawyer Legal Consultation Private Limited (hereinafter referred to as the "Service Provider") as a Commercial Service. The Application is provided on an "AS IS" basis.
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">1. Introduction</h2>
+                            <p className="mb-4 leading-relaxed">
+                                MLawyer Legal Consultation Private Limited (&ldquo;MLawyer&rdquo;, &ldquo;Centre&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) operates the Consultation Meet mobile application in Google Play Store and iOS App Store (the &ldquo;App&rdquo;), the website <a href="https://mlawyer.in" className="text-primary dark:text-secondary underline">mlawyer.in</a>, and related services (together, the &ldquo;Platform&rdquo;). The App connects customers/individuals/business entities/agencies (&ldquo;Clients&rdquo;) with independently practicing advocates across India (&ldquo;Advocates&rdquo;) for legal consultations.
                             </p>
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                The term 'Application' shall include all pages associated with or forming part of the website or mobile application. In the event we request information that may identify you while using the application, such information shall be used strictly in accordance with this Privacy Policy.
+                            <p className="mb-4 leading-relaxed">
+                                This Privacy Policy explains what personal data we collect, why we collect it, how we use and share it, how we protect it, and what rights you have over it. It applies to everyone (Advocates and Clients) who creates an account, submit their details book and consultation, pay for it and attends a consultation, or visits the Platform.
                             </p>
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                This Privacy Policy sets out how MLawyer Legal Consultation Private Limited ("MLawyer") collects, uses, stores, shares and protects any information that you provide when you use this application.
-                            </p>
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                This Privacy Policy is applicable to the businesses, or services of MLawyer.
+                            <p className="mb-4 leading-relaxed">
+                                By creating an account or using the Platform, you agree to the practices described here. Where the law requires your specific consent, we will ask for it separately. The users (Advocates and Clients) are requested to read the Privacy Policy and Terms &amp; Conditions document before they start using the Platform.
                             </p>
                         </div>
 
-                        {/* Consent Section */}
+                        {/* 2. Our Role */}
                         <div className="mb-8">
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                By accessing the Application and/or using products or services provided by MLawyer, you agree and accept our Privacy Policy ("Privacy Policy"). This Platform is owned and operated by MLawyer (hereinafter referred to as "MLAWYER" or "MLawyer" or "We" or "Us" or "Our"). By using the application and/or having used or using the services offered by MLawyer, directly or indirectly, in the past, present or future, you expressly consent to our use and disclosure of your Personal Information and Sensitive Personal Information submitted to us in accordance with this Privacy Policy. You further acknowledge and accept that your consent herein shall also be applicable to your Personal Information and Sensitive Personal Information submitted to us, directly or indirectly, in the past.
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">2. Our Role</h2>
+                            <p className="mb-4 leading-relaxed">
+                                MLawyer is a technology-enabled platform that facilitates online legal consultations between Clients and independent Advocates. Clients are required to pay a consultation fee through the Platform, out of which the applicable share shall be remitted to the respective Advocates towards their professional consultation services.
+                            </p>
+                            <p className="mb-4 leading-relaxed">
+                                Advocates are independent professionals. MLawyer does not provide legal advice and is not a law firm. The relationship between a Client and Advocate, including the legal opinion/advice/guidance given and the confidentiality of that opinion/advice/guidance, is governed by the Advocates Act, 1961, the guidelines of Bar Council of India, and the terms agreed between them. For that reason, we handle consultation content as described in Section 5 and do not read it except where this policy allows.
                             </p>
                         </div>
 
-                        {/* User Types Section */}
+                        {/* 3. Information We Collect */}
                         <div className="mb-8">
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">User Types</h2>
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                For the purposes of this Privacy Policy, and wherever the context so requires, the terms "you" or "your" shall, depending on the circumstances and use of our Services, refer to an End Customer, an Advocate, or a Visitor/Guest.
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">3. Information We Collect</h2>
+                            
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-6">3.1 Information you give us</h3>
+                            <div className="mb-4">
+                                <h4 className="font-bold text-gray-900 dark:text-white mb-2">From Clients:</h4>
+                                <ul className="list-disc pl-6 space-y-2 mb-4">
+                                    <li>Name, date of birth (optional), gender, mobile number, email address, and address (optional)</li>
+                                    <li>Account login details (such as a one-time password verified through your mobile number)</li>
+                                    <li>The legal matter you describe, or documents you upload (if any), or messages or complaints you send through the App</li>
+                                    <li>Consultation booking details, such as preferred date and time and mode of payment details in the payment gateway (a third-party provider)</li>
+                                </ul>
+
+                                <h4 className="font-bold text-gray-900 dark:text-white mb-2">From Advocates:</h4>
+                                <ul className="list-disc pl-6 space-y-2 mb-4">
+                                    <li>Name, mobile number, email address, address, city and state</li>
+                                    <li>KYC Documents – Aadhaar (front &amp; back), PAN (front &amp; back), Utility Bill (Gas, Postpaid, Internet, Individual ITR)</li>
+                                    <li>Law Degree</li>
+                                    <li>Bar Council / enrolment number</li>
+                                    <li>Practice areas &amp; years of experience</li>
+                                    <li>Profile photo (professional), bio, and availability</li>
+                                    <li>Bank account details (canceled cheque or bank account passbook in their name) for receiving payouts</li>
+                                </ul>
+                            </div>
+
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-6">3.2 Information we collect automatically</h3>
+                            <ul className="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Device information:</strong> device model, operating system version, App version, unique device identifiers, and push notification token</li>
+                                <li><strong>Usage information:</strong> screens viewed, features used, session duration, and crash reports</li>
+                                <li><strong>Log data:</strong> IP address, date and time of access, and error logs</li>
+                                <li><strong>Approximate location:</strong> only if you allow it, to show nearby or relevant Advocates</li>
+                            </ul>
+
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-6">3.3 Consultation content</h3>
+                            <p className="mb-4 leading-relaxed">
+                                When a consultation takes place, the Advocate and Client may exchange case details, audio, or video related to the case. We do not listen to or watch live consultations. The Client may opt for consultation recording by paying an additional fee. The recording shall be securely stored in the Platform&rsquo;s database and shall not be accessed or reviewed by any Platform personnel unless the Client raises a complaint or grievance. In such cases, the Support or Quality Team shall obtain the Client&rsquo;s prior consent through email, phone, or other official communication channels before accessing the recording for review and resolution, except where access is required by law.
                             </p>
-                            <ul className="space-y-3 mb-4 text-gray-700 dark:text-gray-300">
-                                <li className="flex gap-3">
-                                    <span className="text-primary dark:text-secondary font-bold flex-shrink-0">•</span>
-                                    <span>
-                                        <strong>End Customer:</strong> When you use the application to avail legal consultation services by browsing the list of verified advocates and engaging in video consultations, for which the applicable consultation fee is paid in advance.
-                                    </span>
-                                </li>
-                                <li className="flex gap-3">
-                                    <span className="text-primary dark:text-secondary font-bold flex-shrink-0">•</span>
-                                    <span>
-                                        <strong>Advocate:</strong> When you register on the application by providing the required details and offer consultations to End Customers, for which you receive payment through the application upon successful completion of the consultation.
-                                    </span>
-                                </li>
-                                <li className="flex gap-3">
-                                    <span className="text-primary dark:text-secondary font-bold flex-shrink-0">•</span>
-                                    <span>
-                                        <strong>Visitor/Guest:</strong> When you access the website or application without registering or logging in. This includes users who visit the platform to explore services or seek additional information before deciding to use the application.
-                                    </span>
-                                </li>
+
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-6">3.4 Payment information</h3>
+                            <p className="mb-4 leading-relaxed">
+                                Payments are processed by our payment gateway partners (named in Section 6). We do not store full card numbers (debit and credit cards), CVV, UPI code and net banking credentials. We keep a transaction record, including the amount paid or refunded, date and payment status.
+                            </p>
+
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-6">3.5 Information from other sources</h3>
+                            <p className="mb-4 leading-relaxed">
+                                If you sign in with a third-party account (such as Google, Apple), we receive the basic profile information that you permit that service to share with us.
+                            </p>
+                        </div>
+
+                        {/* 4. How We Use Your Information */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">4. How We Use Your Information</h2>
+                            <p className="mb-3">We use personal data only for the purposes below:</p>
+                            <ul className="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>To provide the Platform:</strong> Creating and managing your account, matching Clients with Advocates, scheduling and joining consultations, and processing payments and payouts.</li>
+                                <li><strong>To verify Advocates:</strong> Checking Bar Council enrolment and credentials before an Advocate can onboard to start using the Platform and accept consultations.</li>
+                                <li><strong>To keep the Platform safe:</strong> Detecting fraud, impersonation, abuse, and misuse, and enforcing our Terms of Use.</li>
+                                <li><strong>To communicate with you:</strong> Sharing confirmation bookings, reminders, payment receipts, security alerts, and service messages by App notification, SMS, email, or WhatsApp where you have opted in.</li>
+                                <li><strong>To provide support:</strong> Responding to your queries, complaints, and grievances.</li>
+                                <li><strong>To improve the Platform:</strong> Understanding how features are used and fixing errors. We use aggregated or de-identified data for this wherever possible.</li>
+                                <li><strong>To comply with the law:</strong> Meeting the tax, accounting, regulatory, and court obligations.</li>
+                            </ul>
+                            <p className="mb-2 font-medium">We do not use consultation content to train AI or machine-learning models without your separate, specific consent.</p>
+                            <p className="mb-4 font-medium">We do not sell your personal data.</p>
+                        </div>
+
+                        {/* 5. Sharing Your Information */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">5. Sharing Your Information</h2>
+                            <p className="mb-3">We share data only in the following situations:</p>
+                            <ul className="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Between Client and Advocate:</strong> When a consultation is booked, the Client&rsquo;s name and the details needed for the consultation are shared with the Advocate, and the Advocate&rsquo;s profile is shown to the Client. Contact details are shared only to the extent needed to carry out the consultation. We share the advocate details and KYC documents with our payment gateway partners as per the RBI guidelines and compliance for payout processing.</li>
+                                <li><strong>Service providers:</strong> We use trusted vendors to run the Platform, such as cloud hosting, databases, SMS or WhatsApp messaging, push notifications, analytics, and Client support tools. These vendors may process data only on our instructions and must protect it.</li>
+                                <li><strong>Payment partners:</strong> To process payments and payouts, as described in Section 6.</li>
+                                <li><strong>Legal requirements:</strong> When required by law, a court order, or a lawful request from a government or regulatory authority, or to protect the rights, safety, or property of MLawyer, our users, or the public.</li>
+                                <li><strong>Business transfers:</strong> In connection with a merger, acquisition, financing, or sale of assets. We will inform you and ensure the receiving party keeps your data protected under this policy.</li>
+                                <li><strong>With your consent:</strong> In any other case, only with your permission.</li>
                             </ul>
                         </div>
 
-                        {/* Policy Overview Section */}
-                        <div className="mb-8 bg-primary/5 dark:bg-gray-800 p-6 rounded-lg">
-                            <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-                                <li className="flex gap-3">
-                                    <span className="text-primary dark:text-secondary font-bold flex-shrink-0">•</span>
-                                    <span>This Privacy Policy outlines how we collect, use, and protect your personal data, your privacy rights, and how applicable laws safeguard such data. You are advised to read this Privacy Policy carefully before using our Services.</span>
-                                </li>
-                                <li className="flex gap-3">
-                                    <span className="text-primary dark:text-secondary font-bold flex-shrink-0">•</span>
-                                    <span>MLawyer Legal Consultation Private Limited ("MLAWYER") reserves the right to update or modify this Privacy Policy from time to time. Any changes will be reflected on this page, and you are encouraged to review it periodically. The revised policy shall become effective upon posting, and your continued use of the Application thereafter shall constitute your acceptance of the updated terms and consent to the continued processing of your personal data in accordance with the revised Privacy Policy.</span>
-                                </li>
+                        {/* 6. Payments */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">6. Payments</h2>
+                            <p className="mb-4 leading-relaxed">
+                                We engaged with Easebuzz as our payment gateway provider and their privacy policies apply to the data they hold. Advocate payouts are made through Easebuzz and we receive transaction status from them, but do not hold your full card, UPI or bank credentials.
+                            </p>
+                        </div>
+
+                        {/* 7. Cookies and Analytics */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">7. Cookies and Analytics</h2>
+                            <p className="mb-3">The website and App use cookies and similar technologies for the following purposes:</p>
+                            <ul className="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Essential:</strong> Keeping you signed in and keeping the Platform secure. These cannot be switched off.</li>
+                                <li><strong>Analytics:</strong> Understanding how the Platform is used. We use analytics tools such as Google Analytics.</li>
+                                <li><strong>Advertising and marketing (only where you consent):</strong> Measuring the effectiveness of our advertising.</li>
                             </ul>
-                        </div>
-
-                        {/* Information Collection Section */}
-                        <div className="mb-8">
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Information Collection and Use</h2>
-                            
-                            <div className="mb-6">
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Personal Information</h3>
-                                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                    Personal Information includes details such as your name, age, gender, enrolment number, Bar Council number, photograph, Permanent Account Number (PAN), and any other information required for identity verification. It also includes your contact details, such as permanent and current address, email address, mobile or telephone numbers, and any additional information you provide while using our application and its services.
-                                </p>
-                            </div>
-
-                            <div className="mb-6">
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Demographic Information</h3>
-                                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                    Demographic Information includes details such as your postcode, preferences, interests, and other similar information that helps us understand user behavior and improve our services.
-                                </p>
-                            </div>
-
-                            <div className="mb-6">
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Transaction Information</h3>
-                                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                    Transaction Information includes details of transactions carried out through our Platform, including the fulfillment of your orders. This may include, but is not limited to, the type or name of the service, description of the transaction, transaction amount, payment gateway charges, applicable taxes such as GST, and related payment details.
-                                </p>
-                            </div>
-
-                            <div className="mb-6">
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">User Information</h3>
-                                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                    User Information includes details relating to your use of the Platform, such as user activity and interactions. This may also include Sensitive Personal Information, such as financial details (including, but not limited to, credit card, debit card, and bank account information), which are collected and processed in a secure, tokenized form, as further described in our Terms and Conditions.
-                                </p>
-                                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                    All payment transactions on the Platform are processed through Easebuzz.
-                                </p>
-                            </div>
-
-                            <div className="mb-6">
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Other Information</h3>
-                                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                    Other Information includes, but is not limited to, your IP address, device information, browser type, operating system, and standard web log data collected in connection with your use of our application and services.
-                                </p>
-                            </div>
-
-                            <div className="mb-6">
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Usage and Analytics Information</h3>
-                                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                    Usage and Analytics Information includes statistics on page views, login and session data, traffic to and from our website (www.mlawyer.in), as well as usage data from our mobile applications on iOS and Android platforms. This may also include information relating to your interactions with advertisements, where applicable.
-                                </p>
-                            </div>
-
-                            <div className="mb-6">
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Additional Information</h3>
-                                <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                    Additional Information includes any other information that we may consider necessary to enhance your experience on the Platform and to provide the highest possible level of security and service.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Data Storage and Consent Section */}
-                        <div className="mb-8">
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Data Storage and Consent</h2>
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                We store your Personal Information on secure servers. By providing your Personal Information, you expressly consent to the collection, transfer, storage, and processing of such information on our servers in accordance with this Privacy Policy.
+                            <p className="mb-4 leading-relaxed">
+                                You can control cookies through your browser settings. You can control App permissions, such as location, notifications, camera, and microphone, through your device settings.
                             </p>
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                For the collection, processing (including use and storage), disclosure, or sharing of your Sensitive Personal Information as described in this Privacy Policy, we hereby provide you with notice and seek your consent for such activities for one or more of the purposes set out herein.
-                            </p>
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                Wherever required under applicable laws in India, we will obtain your explicit and specific consent for particular purposes from time to time before processing your Sensitive Personal Information.
-                            </p>
-                        </div>
-
-                        {/* Cookies and Tracking Technologies Section */}
-                        <div className="mb-8">
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Cookies and Tracking Technologies</h2>
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                Our platform uses cookies, local browser storage, and third-party tracking technologies to ensure secure navigation, understand user interactions, and optimize our digital legal consultation services.
-                            </p>
-                            
-                            <div className="space-y-4 mb-6">
-                                <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-                                    <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">1. Strictly Necessary Storage</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                                        We utilize browser local storage (<code>localStorage</code> and <code>sessionStorage</code>) for core functions such as advocate authentication tokens, session validation, device identification, and interface theme preferences. These are essential for the security and operation of the platform.
-                                    </p>
+                            <div className="mt-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div>
+                                    <h4 className="font-semibold text-gray-900 dark:text-white text-sm">Cookie Preferences</h4>
+                                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">Customize your cookie choices or review consented trackers.</p>
                                 </div>
-
-                                <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-                                    <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">2. Analytics Technologies (Google Analytics & Tag Manager)</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                                        We use Google Analytics (GA4) and Google Tag Manager to collect aggregated, anonymized information about how visitors navigate our site, such as pages visited, session duration, and device specifications. This helps us diagnose technical issues and improve platform responsiveness.
-                                    </p>
-                                </div>
-
-                                <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-                                    <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">3. Marketing & Advertising Pixels (Meta Pixel)</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                                        We use the Meta (Facebook) Pixel to measure the effectiveness of our social campaigns and present relevant legal consultation resources to users who have expressed interest in our services.
-                                    </p>
-                                </div>
+                                <button
+                                    type="button"
+                                    onClick={openCookiePreferences}
+                                    className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary hover:bg-primary/90 text-white font-medium text-xs shadow transition-colors cursor-pointer shrink-0"
+                                >
+                                    Manage Cookie Preferences
+                                </button>
                             </div>
-
-                            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                                You can customize your cookie choices at any time by clicking the button below or using the "Cookie Preferences" link in the footer:
-                            </p>
-                            <button
-                                type="button"
-                                onClick={openCookiePreferences}
-                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-primary/90 text-white font-medium text-sm shadow transition-colors cursor-pointer"
-                            >
-                                Manage Cookie Preferences
-                            </button>
                         </div>
 
-                        {/* Contact Section */}
-                        <div className="mb-8 bg-primary/5 dark:bg-gray-800 p-6 rounded-lg">
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Contact Us</h2>
-                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                                If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please feel free to contact us. We are committed to working with you to resolve any privacy concerns.
+                        {/* 8. Sensitive Personal Data */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">8. Sensitive Personal Data</h2>
+                            <p className="mb-4 leading-relaxed">
+                                Clients may disclose sensitive personal or legal information during consultations, including health, financial, family, or criminal-case details. Such information will be treated with strict confidentiality and made accessible only to the Advocate handling the consultation. Consultation recordings will be stored in our system only if the Client has expressly opted for the recording service. All recordings will remain confidential and may be accessed or used solely, with the Client&rsquo;s consent, when necessary to investigate or resolve complaints or support requests raised by either the Client or the Advocate.
+                            </p>
+                        </div>
+
+                        {/* 9. Data Storage and Security */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">9. Data Storage and Security</h2>
+                            <ul className="list-disc pl-6 space-y-2 mb-4">
+                                <li>Personal data is stored on servers hosted by reputed providers in India or overseas. Where data is processed outside India, we comply with the conditions set by applicable law.</li>
+                                <li>Data is encrypted in transit using HTTPS/TLS. Sensitive data is encrypted at rest.</li>
+                                <li>Access to personal data is limited to authorised staff on a need-to-know basis, and access is logged.</li>
+                                <li>We run periodic security reviews and keep our software updated.</li>
+                            </ul>
+                            <p className="mb-4 leading-relaxed">
+                                No system is completely secure. If a personal data breach occurs that is likely to harm you, we will inform you and the Data Protection Board of India as required by the DPDP Act and Rules.
+                            </p>
+                        </div>
+
+                        {/* 10. Data Retention */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">10. Data Retention</h2>
+                            <ul className="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Account data:</strong> Kept while your account is active.</li>
+                                <li><strong>Consultation records and messages:</strong> Kept for 3–6 months (may vary) after the consultation, so that disputes, refunds, and complaints can be resolved, and then deleted or anonymised.</li>
+                                <li><strong>Transaction and tax records:</strong> Kept for the period of one year (may vary) required by Indian tax and accounting law.</li>
+                                <li><strong>Verification records for Advocates:</strong> Kept for as long as you are listed on the Platform and for a reasonable period afterwards to meet compliance requirements.</li>
+                                <li><strong>Logs:</strong> Kept for 6 months for security purposes.</li>
+                            </ul>
+                            <p className="mb-4 leading-relaxed">
+                                When we no longer need data for these purposes, we delete or anonymise it.
+                            </p>
+                        </div>
+
+                        {/* 11. Your Rights */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">11. Your Rights</h2>
+                            <p className="mb-3">Under the DPDP Act, 2023, you have the right to:</p>
+                            <ul className="list-disc pl-6 space-y-2 mb-4">
+                                <li><strong>Access:</strong> Request a summary of the personal data we hold about you and how it is processed.</li>
+                                <li><strong>Erasure:</strong> Ask us to delete your personal data when it is no longer needed for the purpose it was collected, or when you withdraw consent (subject to legal retention requirements).</li>
+                                <li><strong>Withdraw consent:</strong> Withdraw your consent at any time. Withdrawal does not affect processing done before it was withdrawn. Withdrawing consent may mean we can no longer provide some services to you.</li>
+                                <li><strong>Grievance redressal:</strong> Raise a complaint with our Grievance team (see Section 15).</li>
+                                <li><strong>Nominate:</strong> Nominate another person to exercise your rights if you die or become incapable of doing so.</li>
+                            </ul>
+                            <p className="mb-3 leading-relaxed">
+                                To exercise these rights, email <a href="mailto:grievances@mlawyer.in" className="text-primary dark:text-secondary underline">grievances@mlawyer.in</a> or use the in-app option under Profile &gt; Privacy &gt; Request Data. We will verify your identity before acting on a request and aim to respond within 30 days, or sooner where the law requires.
+                            </p>
+                            <p className="mb-4 leading-relaxed">
+                                You can delete your account at any time from Profile &gt; Settings &gt; Delete/Deactivate Account. Some data will be retained as described in Section 10.
+                            </p>
+                        </div>
+
+                        {/* 12. Children */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">12. Children</h2>
+                            <p className="mb-4 leading-relaxed">
+                                The Platform is not intended for anyone under 18. If you are under 18, you may use the Platform only with the verifiable consent of a parent or lawful guardian. We do not knowingly process children’s data for purposes that are prohibited by law, such as tracking or targeted advertising directed at children. If you believe a child has provided us with personal data without consent, please contact us and we will delete it.
+                            </p>
+                        </div>
+
+                        {/* 13. Links to Other Websites */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">13. Links to Other Websites</h2>
+                            <p className="mb-4 leading-relaxed">
+                                The Platform may contain links to third-party websites or services, including payment pages and social media. We are not responsible for their privacy practices. Please read their privacy policies before sharing personal data with them.
+                            </p>
+                        </div>
+
+                        {/* 14. Changes to This Policy */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">14. Changes to This Policy</h2>
+                            <p className="mb-4 leading-relaxed">
+                                We may update this policy from time to time, for example when the law changes or we add new features or other reasons. We will post the updated version with a new “Last updated” date and, for material changes, notify you through the App or by email before the change takes effect. Continued use of the Platform after the effective date means you accept the updated policy.
+                            </p>
+                        </div>
+
+                        {/* 15. Grievance Officer and Contact */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">15. Grievance Officer and Contact</h2>
+                            <p className="mb-2 leading-relaxed">
+                                For questions, complaints, or requests about this policy or your personal data, contact our Grievances team at{' '}
+                                <a href="mailto:grievances@mlawyer.in" className="text-primary dark:text-secondary underline font-medium">
+                                    grievances@mlawyer.in
+                                </a>.
+                            </p>
+                            <p className="mb-4 leading-relaxed">
+                                We will acknowledge your complaint within 4–5 business days and resolve it within the period required by applicable law.
+                            </p>
+                        </div>
+
+                        {/* 16. Governing Law */}
+                        <div className="mb-8">
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">16. Governing Law</h2>
+                            <p className="mb-4 leading-relaxed">
+                                This Privacy Policy is governed by the laws of India. Subject to any mandatory rights you have under law, the courts at Chennai will have jurisdiction over disputes arising from it.
+                            </p>
+                        </div>
+
+                        {/* Company Details Footer Box */}
+                        <div className="mt-8 p-6 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                            <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">
+                                MLawyer Legal Consultation Private Limited
+                            </h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">
+                                No. 116, 6th Floor, Kasi Arcade, Flydesk, T. Nagar, Chennai, Tamil Nadu - 600 017
+                            </p>
+                            <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                <span className="font-semibold">CIN:</span> U69100TN2025PTC186650
+                            </p>
+                            <p className="text-sm">
+                                <span className="font-semibold text-gray-600 dark:text-gray-300">Website:</span>{' '}
+                                <a href="https://mlawyer.in" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-secondary underline font-medium">
+                                    https://mlawyer.in
+                                </a>
                             </p>
                         </div>
                     </div>
