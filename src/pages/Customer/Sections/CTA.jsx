@@ -31,7 +31,7 @@ const CTA = () => {
                     </PopIn>
                     <PopIn delay={0.2}>
                         <a 
-                            href="https://apps.apple.com"
+                            href="https://apps.apple.com/in/app/mlawyer/id6769993287"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto"

@@ -2262,7 +2262,7 @@ const ProfileAdvocate = () => {
                 </a>
 
                 <a
-                  href="https://apps.apple.com"
+                  href="https://apps.apple.com/in/app/mlawyer-pro/id6770964119"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-3 px-4 py-2.5 bg-black text-white rounded-xl hover:bg-gray-800 transition-all shadow-md group"

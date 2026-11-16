@@ -34,7 +34,7 @@ const LawyerCTA = () => {
                                 </div>
                             </a>
                             <a 
-                                href="https://apps.apple.com" 
+                                href="https://apps.apple.com/in/app/mlawyer-pro/id6770964119" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-3 px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 hover:-translate-y-1 transition-all duration-300 shadow-lg group"

@@ -58,7 +58,7 @@ const DownloadApp = () => {
                 </PopIn>
                 <PopIn delay={0.1}>
                   <a 
-                    href="https://apps.apple.com"
+                    href="https://apps.apple.com/in/app/mlawyer/id6769993287"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 bg-transparent border border-white/30 text-white px-5 py-3 rounded-xl font-bold hover:bg-white/10 transition-all hover:-translate-y-1 w-52 h-[58px] justify-center cursor-pointer box-border"
